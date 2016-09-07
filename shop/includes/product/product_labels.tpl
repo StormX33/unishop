@@ -1,21 +1,17 @@
-<span class="product-photo__labels">
-  {if $model->getHit()}
-    <i class="product-photo__label product-photo__label--hit">
-	    <svg class="svg-icon"><use xlink:href="#svg-icon__hit"></use></svg>
-	    <span class="product-photo__label-text">{tlang('Hit')}</span>
-    </i>
-  {/if}
+{if $model->getHit()}
+	<div class="label__item">
+	    <span class="products__label_icon">{tlang('Hit')}</span>
+	</div>
+{/if}
   {if $model->getHot()}
-    <i class="product-photo__label product-photo__label--hot">
-      <svg class="svg-icon"><use xlink:href="#svg-icon__new"></use></svg>
-      <span class="product-photo__label-text">{tlang('New')}</span>
-    </i>
+  	<div class="label__item">
+    <span class="products__label_icon products__label_latest">{tlang('New')}</span>
+    </div>
   {/if}
   {if $model->getAction()}
-    <i class="product-photo__label product-photo__label--action">
-      <svg class="svg-icon"><use xlink:href="#svg-icon__new"></use></svg>
-      <span class="product-photo__label-text">{tlang('Sale')}</span>
-    </i>
+  <div class="label__item">
+      <span class="products__label_icon products__label_sale">{tlang('Sale')}</span>
+   </div>
   {/if}
   {if $model->firstVariant->getDiscountPercent()}
     <i class="product-photo__label product-photo__label--discount">
@@ -23,4 +19,3 @@
 			<svg class="svg-icon"><use xlink:href="#svg-icon__new"></use></svg>
 		</i>
   {/if}
-</span>

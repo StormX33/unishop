@@ -49,6 +49,7 @@
  */
 $paginationConfig['num_links'] = 2;
 $paginationConfig['page_query_string'] = true;
+$paginationConfig['anchor_class'] = 'page__pagination_link';
 $total_items = ceil($paginationConfig['total_rows'] / $paginationConfig['per_page']);
 
 /* paginator wrapper */
@@ -62,11 +63,11 @@ $paginationConfig['first_tag_close'] = '</li><li class="paginator__item">...</li
 
 /* Previous page */
 $paginationConfig['prev_tag_open'] = '<li class="page__pagination_item pagination__item_prev">';
-$paginationConfig['prev_link'] = 'div class="pagination__mark"></div>';
+$paginationConfig['prev_link'] = '<div class="pagination__mark"></div>';
 $paginationConfig['prev_tag_close'] = '</li>';
 
 /* Page number */
-$paginationConfig['num_tag_open'] = '<li class="paginator__item">';
+$paginationConfig['num_tag_open'] = '<li class="page__pagination_item">';
 $paginationConfig['num_tag_close'] = '</li>';
 
 /* Page number active */

@@ -1,33 +1,17 @@
-<div class="cart-product">
-
-  <div class="cart-product__photo hidden-xs hidden-sm">
-
-    <div class="product-photo">
+    <td class="cart__item_image">
       <a class="product-photo__item product-photo__item--xs" href="{echo shop_url($product_url)}">
         <img class="product-photo__img" src="{echo $product_image}" alt="{echo $product_title}"
              title="{echo $product_title}">
       </a>
-    </div>
+    </td>
 
-  </div><!-- /.__photo -->
 
-  <div class="cart-product__info">
-
-    <!-- Product brand -->
-    {if $product_brand}
-      <div class="cart-product__brand">
-        {echo $product_brand->getName()}
-      </div>
-    {/if}
-
-    <!-- Product title -->
-    <div class="cart-product__title">
-      <a class="cart-product__link" href="{echo shop_url($product_url)}">{echo $product_title}</a>
-    </div>
+  <td class="cart__item_name">
+      <a class="cart__name_link" href="{echo shop_url($product_url)}">{echo $product_title}
+      <span class="cart__item_name-span">{tlang('Sku')} {echo $product_sku}</span>
     <!-- Product option (variant) -->
     {if $variant_title and trim($variant_title) != trim($product_title)}
       <p class="cart-product__option">{echo $variant_title}</p>
     {/if}
-  </div><!-- /.__info -->
-
-</div><!-- /.__product -->
+    </a>
+  </td><!-- /.__info -->

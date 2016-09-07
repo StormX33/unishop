@@ -22,17 +22,12 @@
   {/if}
 
 {else:}
-  <div class="product-actions__ico product-actions__ico--wishlist">
-    <svg class="svg-icon">
-      <use xlink:href="#svg-icon__heart"></use>
-    </svg>
-  </div>
   <!-- Text link, used in product page -->
   {if $class != 'btn inWL'}
-    <a class="product-actions__link" href="{$href}{$login}" data-modal rel="nofollow">{tlang('Add to Wishlist')}</a>
+    <a class="addfavorite detail__tools_link" href="{$href}{$login}" data-modal rel="nofollow"><span class="detail__tools_span">{tlang('Add to Wishlist')}</span></a>
   {else:}
-    <a class="product-actions__link product-actions__link--open" href="{site_url('wishlist')}"
-       rel="nofollow">{tlang('Open in Wishlist')}</a>
+    <a class="addfavorite detail__tools_link" href="{site_url('wishlist')}"
+       rel="nofollow"><span class="detail__tools_span">{tlang('Open in Wishlist')}</span></a>
   {/if}
 
 {/if}

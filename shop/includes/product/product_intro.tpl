@@ -3,22 +3,8 @@
   <!-- Product additional information like brand, number -->
   <div class="product-intro__addition">
 
-    <!-- Product rating -->
-    <div class="product-intro__addition-item">
-      {view('shop/includes/product/product_rating.tpl', [
-      'model' => $model
-      ])}
-    </div>
 
-    <!-- Brand -->
-    {if $model->getBrand()}
-      <div class="product-intro__addition-item">
-        {tlang('Brand')}:
-        <a class="product-intro__addition-link" href="{shop_url('brand/'.$model->getBrand()->getUrl())}">
-          {echo $model->getBrand()->getName()}
-        </a>
-      </div>
-    {/if}
+
 
     <!-- SCU Number -->
     {if $model->firstVariant->getNumber()}
@@ -56,7 +42,7 @@
 
       <!-- Product price -->
       <div class="product-intro__price">
-        {view('shop/includes/product/product_price.tpl', [
+        {view('shop/includes/product/product/price.tpl', [
         'variant' => $model->firstVariant,
         'parent_modifier' => 'product-price--lg'
         ])}
@@ -64,7 +50,7 @@
 
       <!-- Product add to cart buttons -->
       <div class="product-intro__buy">
-        {view('shop/includes/product/product_buy.tpl', [
+        {view('shop/includes/product/product/add_to_cart.tpl', [
         'parent_modifier' => 'product-buy--product',
         'parent_quantity' => true
         ])}

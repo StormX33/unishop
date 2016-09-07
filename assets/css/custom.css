@@ -103,3 +103,14 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 .modal__header-close{
 	border-left: 1px solid #dfe4eb;
 }
+.modal-wrapper{
+    z-index: 10000;
+    right: 0;
+    left: 0;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+	    padding: 10px 10px 0;
+		    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.search-nav__inner-link--active{color:#fff;background:#e42826;border-bottom:1px solid transparent}

@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="{current_language()}">
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
 
     <!-- Page meta params. Should always be placed before any others head info -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Meta data -->
@@ -72,11 +75,7 @@
         
           {$content}
 
-        <!-- Viewed products widget. Hidden on order page -->
-        {if $CI->core->core_data['data_type'] != 'cart'}
-          {widget('products_viewed')}
-        {/if}
-            <!-- Footer -->
+          <!-- Footer -->
       <footer class="footer">
       	<div class="container">
 			<div class="row">
@@ -99,15 +98,16 @@
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.js"></script>
 	<script src="{$THEME}assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="{$THEME}assets/js/custom.js"> </script>
+    <script src="{$THEME}assets/js/mlsMedia.js"></script>
 	<script src="{$THEME}assets/js/superfish.js"> </script>
 	<script src="{$THEME}assets/js/jquery-ui.min.js"> </script>
 	<script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
 	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 	<script src="//yastatic.net/share2/share.js"></script>
-    
     <script src="{$THEME}assets/js/mlsAjax.js"></script>
 	<script src="{$THEME}assets/js/modal.js"></script>
+    <script src="{$THEME}assets/js/mlsCart.js"></script>
+    <script src="{$THEME}assets/js/custom.js"> </script>
 <!--    <script src="{$THEME}_js/vendor.min.js"></script>
     <script src="{$THEME}_js/final.min.js"></script>
 -->   <!--

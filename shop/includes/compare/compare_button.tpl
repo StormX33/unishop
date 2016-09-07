@@ -25,20 +25,13 @@
     </a>
     <!-- Text link, used in product page -->
   {else:}
-    <div class="product-actions__ico product-actions__ico--compare">
-      <svg class="svg-icon">
-        <use xlink:href="#svg-icon__compare"></use>
-      </svg>
-    </div>
     <!-- Item isn't in compare list -->
-    <a class="product-actions__link {echo $state?'hidden':''}" href="{shop_url('compare_api/add/'.$model->getId())}"
-       data-compare-add data-loader="{tlang('Loading...')}" rel="nofollow">
-      {tlang('Add to compare')}
+    <a class="addcompare detail__tools_link {echo $state?'hidden':''}" href="{shop_url('compare_api/add/'.$model->getId())}" data-compare-add data-loader="{tlang('Loading...')}" rel="nofollow">
+      <span class="detail__tools_span">{tlang('Add to compare')}</span>
     </a>
     <!-- Item already is in compare list -->
-    <a class="product-actions__link product-actions__link--open {echo $state?'':'hidden'}" href="{shop_url('compare')}"
-       data-compare-open rel="nofollow">
-      {tlang('Open in compare list')}
+    <a class="addcompare detail__tools_link {echo $state?'':'hidden'}" href="{shop_url('compare')}" data-compare-open rel="nofollow">
+      <span class="detail__tools_span">{tlang('Open in compare list')}</span>
     </a>
   {/if}
 </div>

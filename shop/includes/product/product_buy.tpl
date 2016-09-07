@@ -29,11 +29,11 @@
       <div class="product-buy__buttons {echo $in_cart > 0 ? 'hidden' : '' }"
            data-product-button--add
            data-product-button-item>
-        <button class="product-buy__btn product-buy__btn--buy" type="submit"
+        <button class="products__buy-btn" type="submit"
                 data-product-button--loader>
-          <span>{tlang('Add to Cart')}</span>
+          <span class="products__buy-span">{tlang('Add to Cart')}</span>
           <i class="button--loader hidden"
-             data-button-loader="loader"><svg class="svg-icon"><use xlink:href="#svg-icon__refresh"></use></svg></i>
+             data-button-loader="loader"></i>
         </button>
       </div>
 

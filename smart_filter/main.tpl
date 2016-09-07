@@ -20,7 +20,7 @@
 							<input class="filter__slider-input filter__slider-input_to" type="text" form="catalog-form" name="rp" value="{echo $curMax}" data-filter-price-max="{echo $maxPrice}">
 						</div>
 					</div>
-					<div data-min="{echo $minPrice}" data-max="{echo $maxPrice}" class="filter__slider-element"></div>
+					<div data-min="{echo $minPrice}" data-max="{echo $maxPrice}" class="filter__slider-element" data-range-slider></div>
 				</div>
 			</div>
 		</div>

@@ -29,7 +29,7 @@
 
 <!-- Category pagination -->
 {if $pagination}
-  <div class="content__pagination">
+  <div class="page__pagination">
     {$pagination}
   </div>
 {/if}

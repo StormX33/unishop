@@ -1,28 +1,29 @@
-<div class="cart-summary">
-
-  <div class="cart-summary__items">
-
+<table cellpadding="0" cellspacing="0" class="table table__cart">
+	<thead>
+		<tr>
+			<th class="cart__item_delete-title"></th>
+			<th colspan="2" class="cart__item_name-title">{tlang('Product')}</th>
+			<th class="cart__item_quantity-title">{tlang('Qty')}</th>
+			<th class="cart__item_price-title hidden-xs">{tlang('Price')}</th>
+		</tr>
+	</thead>
+    <tbody>
     {foreach $items as $item}
-
+	<tr>
     <!-- url for item delete button depending on if it's simple product or kit -->
     {$loc_delete_url = $item->instance == 'ShopKit' ? "removeKit" : "removeProductByVariantId"}
 
     <!-- url for change quantity depending on if it's simple product or kit -->
     {$loc_quantity_url = $item->instance == 'ShopKit' ? "setQuantityKitById" : "setQuantityProductByVariantId"}
 
-    <div class="cart-summary__row">
-
       <!-- Delete kit of product -->
-      <div class="cart-summary__cell">
-        <div class="cart-summary__delete">
-          <a class="cart-summary__delete-icon" href="{media_url('shop/cart/'. $loc_delete_url .'/'.$item->getId())}" title="{tlang('Delete')}"
+      <td class="cart__item_delete">
+          <a class="cart__item_link item__delete_link" href="{media_url('shop/cart/'. $loc_delete_url .'/'.$item->getId())}" title="{tlang('Delete')}"
              data-cart-summary--delete
              data-cart-summary--item-id="{echo $item->getId()}"
              data-cart-summary--href="{media_url('shop/cart/api/'. $loc_delete_url .'/'.$item->getId())}">
-            <svg class="svg-icon"><use xlink:href="#svg-icon__delete"></use></svg>
           </a>
-        </div>
-      </div>
+      </td>
 
       <!-- Product kit -->
       {if $item->instance == 'ShopKit'}
@@ -41,23 +42,20 @@
       </div>
       <!-- Simple Product -->
       {else:}
-      <div class="cart-summary__cell">
-        <div class="cart-summary__product">
           {view('shop/includes/cart/cart_product.tpl', [
             'product_url' => 'product/'.$item->getSProducts()->getUrl(),
             'product_image' => $item->getSmallPhoto(),
             'product_title' => $item->getSProducts()->getName(),
             'variant_title' => $item->getName(),
-            'product_brand' => $item->getSProducts()->getBrand()
+            'product_brand' => $item->getSProducts()->getBrand(),
+            'product_sku' => $item->getNumber()
           ])}
-        </div>
-      </div>
       {/if}
       <!-- END Including products -->
 
 
       <!-- Quantity of product -->
-      <div class="cart-summary__cell">
+      <td class="cart__item_quantity">
         <form class="cart-summary__quantity" action="{shop_url('cart/'. $loc_quantity_url .'/' . $item->getId())}" method="get"
         data-cart-summary--quantity
         data-cart-summary--href="{shop_url('cart/api/'. $loc_quantity_url .'/' . $item->getId())}">
@@ -73,32 +71,22 @@
           {/if}
 
         </form>
-      </div>
+      </td>
 
 
       <!-- Product Price -->
-      <div class="cart-summary__cell hidden-xs hidden-sm">
-        <div class="cart-summary__price">
-
-          <div class="cart-price">
-            <div class="cart-price__main cart-price__main--small">
-              {echo emmet_money($item->getFinalPrice() * $item->getQuantity(),'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-    </div><!-- /.__row -->
+      <td class="cart__item_total">
+      	{echo emmet_money($item->getFinalPrice() * $item->getQuantity(),'span.cart-price__main-value', ' ', 'i.cart-price__main-cur')}
+      </td>
+    <tr>
     {/foreach}
-  </div><!-- /.__items -->
-
+    </tbody>
   <!-- Gift coupon -->
+  <tfoot>
   {view('shop/includes/cart/cart_total.tpl', [
     'parent_type' => $parent_type,
     'parent_coupon' => $parent_coupon,
     'model' => $cart
   ])}
-
-</div><!-- /.cart-summary -->
+	</tfoot>
+</table>

@@ -1,76 +1,59 @@
-<div class="cart-summary__subtotal">
-
-  <!-- Total origin price -->
-  {if $model->getOriginPrice() != $model->getFinalPrice()}
-    <div class="cart-summary__subtotal-item">
-      <div class="cart-summary__subtotal-title">
-        {tlang('Subtotal')}
-      </div>
-      <div class="cart-summary__subtotal-value">
-        <div class="cart-price">
-          <div class="cart-price__main cart-price__main--small">
-            {echo emmet_money($model->getOriginPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-          </div>
-        </div>
-      </div>
-    </div>
+{if $model->getOriginPrice() != $model->getFinalPrice()}
+<tr>
+<td colspan="3"></td>
+<td class="cart__item_total">{tlang('Subtotal')}</td>
+<td class="cart__item_total">{echo emmet_money($model->getOriginPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
+</tr>
+ {/if}
+ <!-- Total discount -->
+ {if $model->getDiscountValue() > 0}
+<tr>
+<td colspan="3"></td>
+<td class="cart__item_total">{tlang('Your discount')}</td>
+<td class="cart__item_total">{echo emmet_money($model->getDiscountValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
+</tr>
   {/if}
-
-
-  <!-- Total discount -->
-  {if $model->getDiscountValue() > 0}
-    <div class="cart-summary__subtotal-item">
-      <div class="cart-summary__subtotal-title">
-        {tlang('Your discount')}
-      </div>
-      <div class="cart-summary__subtotal-value">
-        <div class="cart-price">
-          <div class="cart-price__main cart-price__main--small">
-            {echo emmet_money($model->getDiscountValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- Delivery price -->
+{if $model->getDeliveryPrice() > 0}
+<tr>
+<td colspan="3"></td>
+<td class="cart__item_total">{tlang('Shipping')}</td>
+<td class="cart__item_total">{echo emmet_money($model->getDeliveryPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
+</tr>
   {/if}
-
-
-  <!-- Delivery price -->
-  {if $model->getDeliveryPrice() > 0}
-    <div class="cart-summary__subtotal-item">
-      <div class="cart-summary__subtotal-title">
-        {tlang('Shipping')}
-      </div>
-      <div class="cart-summary__subtotal-value">
-        <div class="cart-price">
-          <div class="cart-price__main cart-price__main--small">
-            {echo emmet_money($model->getDeliveryPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-          </div>
-        </div>
-      </div>
-    </div>
-  {/if}
-
-  <!-- Gift card code -->
+    <!-- Gift card code -->
   {if $model->getGiftValue() > 0}
-    <div class="cart-summary__subtotal-item">
-      <div class="cart-summary__subtotal-title">
-        {tlang('Gift card')}
-      </div>
-      <div class="cart-summary__subtotal-value">
-        <div class="cart-price">
-          <div class="cart-price__main cart-price__main--small">
-            {echo emmet_money($model->getGiftValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-          </div>
+<tr>
+<td colspan="3"></td>
+<td class="cart__item_total">{tlang('Gift card')}</td>
+<td class="cart__item_total">{echo emmet_money($model->getGiftValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
+</tr>
+{/if}
+<tr>
+<td colspan="3"></td>
+<td class="cart__item_total">
+      <p>{if $parent_type == 'order'}
+        {tlang('Estimated Total')}
+      {else:}
+        {tlang('Cart modal total price')}
+      {/if}
+      </p></td>
+<td class="cart__item_total">
+	     <div class="item__total_price">
+          {echo emmet_money($model->getFinalPrice(), 'span.cart-price__main-value', '', 'i.cart-price__main-cur')}
         </div>
-      </div>
-    </div>
-  {/if}
-
-</div><!-- /.__subtotal -->
-
-
-<div class="cart-summary__total">
-
+        {$loc_additional_prices = emmet_money_additional($model->getFinalPrice(), 'span.cart-price__addition-value', '', 'span.cart-price__addition-cur')}
+        {if count($loc_additional_prices) > 0}
+          <div class="cart-price__addition">
+            {foreach $loc_additional_prices as $additional_price}
+              <div class="cart-price__addition-item">
+                {$additional_price}
+              </div>
+            {/foreach}
+          </div>
+        {/if}
+</td>
+</tr>
   <!-- Gift coupon. Not visible in order view page -->
   {if $parent_coupon}
     <div class="cart-summary__total-coupon">
@@ -101,33 +84,4 @@
       </form>
     </div>
   {/if}
-
-
-  <div class="cart-summary__total-price {if $parent_type == 'order'}cart-summary__total-price--order{/if}">
-    <div class="cart-summary__total-label">
-      {if $parent_type == 'order'}
-        {tlang('Estimated Total')}
-      {else:}
-        {tlang('Cart modal total price')}
-      {/if}
-    </div>
-    <div class="cart-summary__total-value">
-      <div class="cart-price">
-        <div class="cart-price__main cart-price__main--lg">
-          {echo emmet_money($model->getFinalPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-        </div>
-        {$loc_additional_prices = emmet_money_additional($model->getFinalPrice(), 'span.cart-price__addition-value', '', 'span.cart-price__addition-cur')}
-        {if count($loc_additional_prices) > 0}
-          <div class="cart-price__addition">
-            {foreach $loc_additional_prices as $additional_price}
-              <div class="cart-price__addition-item">
-                {$additional_price}
-              </div>
-            {/foreach}
-          </div>
-        {/if}
-      </div>
-    </div>
-  </div>
-
 </div>

@@ -1,36 +1,30 @@
-<div class="content">
-  <div class="content__container">
-    <div class="row">
+<div class="content-wrapper page__search">
+  <div class="container">
+    <div class="main-content">
 
       <!-- Left side, Categories filter -->
-      <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs">
+      <div class="sidebar pull-left">
+      <div class="main__sidebar_item">
+      	<div class="main__sidebar_title sidebar__title">
+        	{tlang('Categories')}
+        </div>
         {view('shop/includes/search_and_brand/cat_filter.tpl', [
         'parent_url' => "search?category=__item__&".tpl_http_query_filter(['category'])
         ])}
+        </div>
       </div>
 
       <!-- Center -->
-      <div class="col-sm-8 col-md-9 col-lg-10">
+      <div class="content">
 
         <!-- Query title -->
-        <div class="content__header">
-          <h1 class="content__title">
-            {tlang('Result for')} <q class="content__quote">{echo tpl_encode($CI->input->get('text'))}</q>
-          </h1>
-          <span class="content__hinfo">
-            {if $totalProducts > 0}
-              <i class="content__hinfo-number">{echo tpl_encode($CI->input->get('per_page')) ? tpl_encode($CI->input->get('per_page')) : 1}</i>
-               -
-              <i class="content__hinfo-number">{echo tpl_encode($CI->input->get('per_page')) + count($products)}</i>
-              {tlang('of')}
-            {/if}
-            <i class="content__hinfo-number">{$totalProducts}</i>
-            {echo SStringHelper::Pluralize($totalProducts, array(tlang('pluralize item 1'), tlang('pluralize item 2'), tlang('pluralize item 3')))}
+        <div class="main-title">
+            {tlang('Result for')} "{echo tpl_encode($CI->input->get('text'))}" 
+            <span class="main-title-span">{tlang('Found')} {$totalProducts} {echo SStringHelper::Pluralize($totalProducts, array(tlang('pluralize item 1'), tlang('pluralize item 2'), tlang('pluralize item 3')))} 
             {if tpl_encode($CI->input->get('category'))}
               {tlang('in')}
               <q>{tpl_category_active_filter(tpl_encode($CI->input->get('category')), $categories)}</q>
-            {/if}
-          </span>
+              {/if}</span>
         </div>
 
         <!-- Horisontal banner -->

@@ -15,13 +15,14 @@ $(function () {
 
 
     $priceHandler.on('click', function () {
-        $priceText.toggleClass('active');
+		$priceText.toggleClass('active', false);
+        $priceText.next().toggleClass('active');
     });
 });
-var toggleActiveClassClick= (function () {
+/*var toggleActiveClassClick= (function () {
 
     var _changeActiveClass = function ($this) {
-        $this.closest(".menu__item, .page__pagination_item")
+        $this.closest(".menu__item, .lang__switch_link, .page__pagination_item")
             .addClass("active")
             .siblings()
             .removeClass("active");
@@ -29,14 +30,14 @@ var toggleActiveClassClick= (function () {
 
     return {
         init: function () {
-            $(".menu__item, .page__pagination_item").on("click", function (e) {
+            $(".menu__item, .lang__switch_link, .page__pagination_item").on("click", function (e) {
                 e.preventDefault();
                 _changeActiveClass($(this));
             });
         }
     }
 }());
-
+*/
 var toggleActiveClassHover = (function () {
 
     var _changeActiveClass = function ($this) {
@@ -252,17 +253,17 @@ $(document).ready(function (){
     }
 
     /* Init Price Slider */
-    var $sliders = $(".filter__slider-element"); 
+/*    var $sliders = $(".filter__slider-element"); 
     if ($sliders.length){
         sliderWidget.init($sliders);
-    }
+    }*/
 
     if ($(".products__raiting").length){
         ratingWidget.init();
     }
     viewStateCange.init();
-    toggleActiveClassClick.init();
-    toggleActiveClassHover.init();
+/*    toggleActiveClassClick.init();
+*/    toggleActiveClassHover.init();
 
     $(".filter__reset").on("click", function(e){
         var $this = $(this),

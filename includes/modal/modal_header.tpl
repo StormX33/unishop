@@ -1,10 +1,9 @@
-<div class="modal__header">
-  <div class="modal__header-title">
+<header class="popup_header">
+  <div class="popup-window-close" data-modal-close>
+  </div>
+  <div class="popup__header_img-wrap">
+  </div>
+    <div class="modal__header-title">
     {$title}
   </div>
-  <div class="modal__header-close" data-modal-close>
-    <i class="modal__header-close-ico">
-      <svg class="svg-icon"><use xlink:href="#svg-icon__close"></use></svg>
-    </i>
-  </div>
-</div>
+</header>

@@ -4,20 +4,7 @@
     	<div class="products__item-inner">
 			<div class="product__title">{echo $model->getName()}</div>
 			<div class="products__label_content">
-				<div class="label__item">
-                	{if array_key_exists('mod_link', $modules)}
-      					{$sales = module('mod_link')->getLinksByProduct($model->getId())}
-      						{if $sales && $CI->core->core_data['data_type'] != 'page'}
-        						<span class="products__label_icon products__label_sale">
-          							{foreach $sales as $sale}
-            							{if $sale->getPermanent() == false}
-              								<div class="product-cut__sale-item">{echo $sale->getPageData()['title']}</div>
-            							{/if}
-          							{/foreach}
-        						</span>
-      						{/if}
-    				{/if}
-				</div>
+				    {view('shop/includes/product/product_labels.tpl', ['model' => $model])}
 			</div>
         </div><!-- /.products__item-inner-->
     	<div class="products__left">
