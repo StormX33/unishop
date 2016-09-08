@@ -877,6 +877,12 @@
     &.active{
         display: block;
     }
+
+}
+.pane__tab_characteristics.active{
+    .product_characteristics{
+        width: 58.33333333%;
+    }
 }
 // TABS END
 
