@@ -760,6 +760,7 @@
     }
     .produt__price{
         @include inlineblock(middle);
+        line-height: 25px;
     }
     .produt__price{
         line-height: 18px;
