@@ -111,4 +111,25 @@ a{
         float: left;
     }
 }
-
+.scrollup{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: none;
+    cursor: pointer;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 62px;
+    height: 62px;
+    line-height: 70px;
+    @include  border-radius(50%);
+    background: #d23f31;
+    .fa{
+        color: #ffffff;
+        font-size: 23px;
+    }
+    
+}

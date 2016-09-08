@@ -381,4 +381,22 @@ $(document).ready(function(){
     });
 });
 
+/*-----------scrollup----------*/
+$(document).ready(function() {
+    $('#scrollup').mouseover( function(){
+        $(this).animate({opacity: 0.8},100);
+    }).mouseout( function(){
+        $(this).animate({opacity: 1},100);
+    }).click( function(){
+        window.scroll(0 ,0); 
+        return false;
+    });
 
+    $(window).scroll(function(){
+        if ($(document).scrollTop() > 0 ) {
+            $('#scrollup').fadeIn('fast');
+        } else {
+            $('#scrollup').fadeOut('fast');
+        }
+    });
+});

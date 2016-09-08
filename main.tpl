@@ -75,7 +75,10 @@
         </div>
         
           {$content}
-
+          <div id="scrollup" class="scrollup" title="Наверх">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+         
           <!-- Footer -->
       <footer class="footer">
       	<div class="container">
