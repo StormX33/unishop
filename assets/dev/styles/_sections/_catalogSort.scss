@@ -1,0 +1,100 @@
+.sort__list{
+	border-top: 1px solid #e8e7eb;
+	border-bottom: 1px solid #e8e7eb;
+	@include clearfix;
+}
+.sort__item{
+	width:  33.33333333%;
+	float: left;
+	color: $title-color-blue;
+	font-size: em(14px);
+	padding: 19px 14px;
+	display: block;
+	border-right: 1px solid #e8e7eb;
+	&:hover{
+		cursor: pointer;
+	}
+	&:last-child{
+		border-right: none;
+	}
+}
+.sort__title{
+	color: $title-color-blue;
+	padding-right: 10px;
+	position: relative;
+}
+.sort__title_price{
+	.sort__title_text{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+}
+.sort__span{
+	display: block;
+	@include get-sprite($misc-sprite, sort_icon);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	@include transform(translate(0, -50%));
+}
+.sort__view_link{
+	position: relative;
+    display: block;
+    outline: none !important;
+    width: 17px;
+    height: 17px;
+}
+
+.sort__view-icon{
+    @include absolute-center;
+}
+.sort__view_grid{
+	.sort__view-icon{
+		@include get-sprite($misc-sprite, sort_grid);
+	}
+	&:hover,
+	&.active{
+		.sort__view-icon{
+			@include get-sprite($misc-sprite, sort_grid_hover);
+		}
+	}
+}
+.sort__view_rows{
+	.sort__view-icon{
+		@include get-sprite($misc-sprite, sort_lines);
+	}
+	&:hover,
+	&.active{
+		.sort__view-icon{
+			@include get-sprite($misc-sprite, sort_lines_hover);
+		}
+	}
+}
+.sort-view{
+	@include clearfix;
+	.sort__title{
+		float: left;
+	}
+	.sort__view-list{
+		float: right;
+		.sort__view-item{
+			@include inlineblock(middle);
+			position: relative;
+		}
+	}
+	.sort__view-link{
+		display: block;
+		width: 17px;
+		height: 17px;
+	}
+
+}
+
+// .sort__view{
+// 	.sort__title,
+// 	.sort__view-list{
+// 		@include inlineblock(middle);
+// 	}
+// }

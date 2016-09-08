@@ -1,0 +1,32 @@
+.produt__change-count{
+    @include inlineblock();
+    @include clearfix;
+    border: 1px solid $title-color-blue;
+    .amount{
+        float: left;
+        width: 58px;
+        height: 42px;
+        outline: none;
+        border: none;
+        border-right: 1px solid $title-color-blue;
+        text-align: center;
+        font-size: 29px;
+    }
+    .change__count_buttons{
+        float: left;
+    }
+    .count_buttons{
+        display: block;
+        border-bottom: 1px solid $title-color-blue;
+        background: #fff;
+        padding: 0 11px;
+        line-height: 21px;
+        &:last-child{
+            border-bottom: none;
+        }
+        .fa{
+            font-size: 11px;
+            vertical-align: middle;
+        }
+    }
+}

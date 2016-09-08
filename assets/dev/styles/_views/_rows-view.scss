@@ -1,0 +1,125 @@
+.products__list_rows{
+	.products__item{
+		border: none;
+		border-bottom: 1px solid $product-border-color;
+	    display: block;
+	    width: 100%;
+	    padding: 25px 0 18px 0;
+	    @include clearfix;
+	    &:hover{
+	    	border-bottom: 1px solid transparent;
+	    }
+	}
+	.products__left{
+		width: 34.88372093023256%;
+		float: left;
+	}
+	.products__right{
+		width: 65.11627906976744%;
+		display: block;
+		float: right;
+		width: 560px;
+	}
+
+	.products__item-inner{
+		@include clearfix;
+		padding: 0;
+	}
+	.product__title{
+		width: 65.11627906976744%;
+		float: right;
+		margin-bottom: 5px;
+	}
+	.products__info{
+	 	margin-bottom: 15px;
+	}
+	.products__price{
+		display: block;
+		margin-bottom: 20px;
+	}
+	.products__price_item{
+		@include inlineblock(bottom);
+		margin-right: 3px;
+	}
+	.products__info-button{
+		@include inlineblock(top);
+		width: auto;
+		font-size: 21px;
+		margin-right: 30px;
+	}
+	.products__info-button{
+		@include inlineblock(top);
+		width: auto;
+		font-size: 21px;
+		margin-right: 30px;
+	}
+	.detail__tools{
+		@include inlineblock(middle);
+		font-size: 16px;
+		border: 1px solid $title-color-blue;
+		font-size: 0;
+	}
+	.detail__tools_item{
+		@include inlineblock();
+		border-right: 1px solid $title-color-blue;
+		&:last-child{
+			border-right: none;
+		}
+		.detail__tools_link{
+			display: block;
+			white-space: nowrap;
+			padding: 9px 14px;
+			font-size: 14px;
+			min-width: 135px;
+			&:before{
+				content: "";
+				@include inlineblock(middle);
+				margin-right: 10px;
+			}
+		}
+		.addfavorite{
+			&:before{
+				@include get-sprite($misc-sprite, favorite);
+			}	
+		}
+		.addcompare{
+			&:before{
+				@include get-sprite($misc-sprite, compare);
+			}
+		}
+		.detail__tools_span{
+			@include inlineblock(middle);
+		}
+	}
+	.products__buy-btn{
+		padding: 5px 36px;
+	}
+	.productcs__desc-options{
+		margin-bottom: 15px;
+	}
+	.productcs__option-item,
+	.productcs__option-key,
+	.productcs__option-value{
+		display: inline;
+		color: $title-color-blue;
+		font-size: 14px;
+	}
+	.productcs__option-key{
+		font-family: 'PTSansBold', sans-serif;
+	}
+	.products__availability{
+		font-size: 14px;
+		color: #00b400;
+		&:before{
+			content: '';
+			@include inlineblock();
+			@include get-sprite($misc-sprite, availability_icon);
+			margin-right: 5px;
+		}
+	}
+	.products__label_content{
+	    top: 0;
+	}
+}
+
+

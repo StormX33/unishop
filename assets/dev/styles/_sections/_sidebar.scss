@@ -1,0 +1,328 @@
+.sidebar{
+    width: 300px;
+    float: left;
+}
+.sidebar__title {
+    background: $nav-bg;
+    color: $main-color;
+    padding: 0 12px;
+    font-size: em(24px);
+    @include clearfix;
+    line-height: 57px;
+}
+.filter__price{
+    padding: 12px 16px;
+    // border-top: 1px solid #092e4a;
+    background: #e6eaed;
+}
+/* --------- filter--------- */
+.filter{
+    -webkit-box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
+    -moz-box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
+    box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
+}
+.filter__title_text{
+    float: left;
+}
+.filter__reset{
+    color: $main-color;
+    display: block;
+    float: right;
+    font-size: 14px;
+    &:hover,
+    &:active,
+    &:focus{
+        color:  $main-color;
+    }
+    &:before{
+        content: '';
+        @include inlineblock(middle);
+        margin-right: 8px;
+    }
+}
+.filter__reset_price{
+    &:before{
+        @include get-sprite($misc-sprite, filter_arrow);
+    }
+}
+.filter__reset_main{
+    color: #777777;
+    &:hover,
+    &:active,
+    &:focus{
+        color: darken(#777777, 10%);
+    }
+    &:before{
+        @include get-sprite($misc-sprite, filter_reset);
+    }
+}
+.filter__list{
+    overflow: hidden;
+    background: #e6eaed;
+}
+.filter__item{
+    padding: 12px 14px;
+    border-top: 1px solid $title-color-blue;
+    &.active{
+        .filter__title{
+            &:after{
+                @include get-sprite($misc-sprite, top-sb);
+            }
+        }
+    }
+}
+.filter__title{
+    padding-right: 40px;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+    }
+    &:after{
+        content: "";
+        @include get-sprite($misc-sprite, bottom-sb);
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+.filter__title-price{
+    &:after{
+        display: none;
+    }
+}
+.filter__title-link{
+    color: $title-color-blue;
+    font-size: em(22px);
+    text-decoration: none;
+    display: block;
+    &:hover,
+    &:active,
+    &:focus{
+        color: $title-color-blue;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.filter__content{
+    display: none;
+    padding-top: 10px;
+}
+.filter__slider-displays{
+    @include clearfix;
+    margin-bottom: 25px;
+}
+
+.filter__slider-left{
+    float: left;
+    width: 118px;
+    position: relative;
+}
+.filter__slider-right{
+    float: right;
+    width: 118px;
+    position: relative;
+}
+.filter__slider-text{
+    font-size: 16px;
+    color:  $title-color-blue;
+    position: absolute;
+    left: 8px;
+    @include transform(translate(0, 50%));
+}
+.filter__slider-input{
+    width: 118px;
+    @include inlineblock(middle);
+    padding: 10px 12px 10px 30px;
+    border: 1px solid $title-color-blue;
+    color:  $title-color-blue;
+    font-size: 21px;
+    outline: none;
+}
+.filter__chose-text{
+    @include inlineblock(middle);
+    font-size: 16px;
+    line-height: 18px;
+    color: $title-color-blue;
+    max-width: 205px;
+    margin-left: 8px;
+}
+
+.filter__choose-item{
+    margin-top: 16px;
+    @include clearfix;
+}
+.filter__choose-label{
+    display: block;
+    position: relative;
+    float: left;
+    :hover{
+        cursor: pointer;
+    }
+}
+.filter__chose-span{
+    display: block;
+    float: right;
+    color: $title-color-blue;
+}
+/* ---------checkboxes--------- */
+.filter__choose-input{
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+.filter__choose_checkboxes {
+    .filter__choose-input{ 
+        &:checked + .filter__choose-elem{
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+    .filter__choose-elem{
+        width: 15px;
+        height: 15px;
+        border: 1px solid $title-color-blue;
+        background: #ffffff;
+        @include inlineblock(middle);
+        @include transition(.2s);
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            @include absolute-center;
+            opacity: 0;
+            @include transition(.2s);
+            @include get-sprite($misc-sprite, checkbox);
+            width: 10px !important;
+            height: 8px !important;
+        }
+    }
+}
+.filter_reset-wrap{
+    @include clearfix;
+    position: relative;
+    line-height: 45px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+.sidebar{
+    .filter__accept{
+        float: left;
+        font-size: em(21px);
+        line-height: 29px;
+    }
+}
+.content__sidebar-item{
+    margin-bottom: 30px;
+}
+
+.sidebar-nav__item{
+    border-top: 2px solid #0a3455;
+}
+
+.sidebar-nav__link{
+    @include clearfix;
+    display: block;
+    color: $main-color;
+    background: #204664;
+    padding: 17px 16px;
+    @include transition(all 0.25s);
+    min-height: 60px;
+    &:hover{
+        cursor: pointer;
+        color: $main-color;
+        background: #083253;
+        .sidebar-nav__text{
+            font-family: 'PTSansBold', sans-serif;
+            font-size:em(19px);
+        }
+    }
+}
+.sidebar-nav__text{
+    float: left;
+    font-size:em(18px);
+}
+.sidebar-nav__span{
+    float: right;
+    display: block;
+    font-size:em(14px);
+}
+.active-filters__wrapper{
+    background: #ececec;
+    padding: 15px 15px 8px;
+    border-bottom: 1px solid $title-color-blue;
+}
+
+.active-filters__item{
+    @include inlineblock();
+    margin: 0 40px 12px 0;
+}
+
+.active-filters__btn-link,
+.active-filters__btn-ico{
+    @include inlineblock();
+}
+.active-filters__btn{
+    display: inline-block;
+    position: relative;
+    padding-left: 17px;
+    background: #204664;
+    max-width: 240px;
+    color: $main-color;
+
+    &:before{
+        content:"";
+        display: block;
+        width: 12px;
+        height: 50%;
+        left: 0px;
+        top: 0%;
+        background: linear-gradient(to right top, #ececec 50%, transparent 50%);
+        position: absolute;
+    }
+    &:after{
+        content:"";
+        display: block;
+        width: 12px;
+        height: 50%;
+        left: 0px;
+        top: 50%;
+        background: linear-gradient(to right bottom, #ececec 50%, transparent 50%);
+        position: absolute;
+    }
+    &:hover{
+        cursor: pointer;
+        background: $nav-bg;
+        .active-filters__btn-ico{
+            background: $nav-bg;
+        }
+    }
+
+}
+
+.active-filters__btn-link{
+    font-family: "PTSansRegular", sans-serif;
+    font-size: em(16px);
+    padding: 7px 6px 7px 0;
+    position: relative;
+}
+.active-filters__btn-ico{
+    width: 34px;
+    border-left: 1px solid #ececec;
+    position: absolute;
+    height: 100%;
+    background: #204664;
+    z-index: 1;
+    top: 0;
+    right: -34px;
+    &:before{
+        content:"";
+        display: block;
+        @include get-sprite($misc-sprite, active_filters_ico);
+        @include absolute-center;
+    }
+}
+

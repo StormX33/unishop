@@ -1,0 +1,61 @@
+.use, .orders{
+    .section__wrapper{
+        padding: 30px 0;
+    }
+    .section__title{
+        margin-bottom: 45px;
+        
+        @include respond-to(mobile){
+            margin-bottom: 35px;
+        }
+        @include respond-to(extraSmall-screens){
+            margin-bottom: 35px;
+        }
+    }
+    .section__title_text{
+        color: $title-color-blue;
+        text-transform: uppercase;
+    }
+    .section__title_span{
+        text-transform: lowercase;
+    }
+    .slick-slider {
+        padding: 0 30px;
+        margin-bottom: 37px;
+    }
+    .paginations{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .slick__use_item{
+        padding: 0 15px;
+    }
+    .section_content{
+        position: relative;
+    }
+}
+
+.use, .orders{
+    .pagination__button{
+        width: 31px;
+        height: 31px;
+        @include border-radius(50%);
+        background: #f1f1f1;
+        span{
+            color: #a1a1a1;
+        }
+        &:hover, &:active{
+            background: darken(#f1f1f1, 5%);
+            span{
+                color: darken(#a1a1a1, 20%);
+            }
+        }
+    }
+}
+.use__button_prev{
+    left: 0;
+}
+.use__button_next{
+    right: 0;
+}

@@ -1,0 +1,117 @@
+.menu__products{
+	margin-bottom: 50px;
+	.section__title{
+		padding-bottom: 23px;
+		border-bottom: 3px solid $accent-color;
+	}
+	.section__title_text{
+		text-align: left;
+	}
+}
+
+
+.menu__content{
+	background: #da251c url(../../images/bg/bg_menuProducts.png)  -335px 34px no-repeat;
+	background-size: cover;
+} 
+.menu__list{
+	border-bottom: 2px dashed $main-color;
+}
+.menu__link{
+	color: $main-color;
+	font-size: em(18px);
+	font-family: 'PTSansBold', sans-serif;
+	display: block;
+   	white-space: nowrap;
+   	&:hover, 
+   	&:active,
+   	&:focus{
+   		color: $main-color;
+   	}
+}
+.menu__item{
+	padding: 8px 0 8px 18px;
+	&.active{
+		background: $main-color;
+		.menu__link{
+			font-family: "PTSansRegular",sans-serif;
+			color: $title-color-black;
+		}
+	}
+}
+.menu__button_link{
+	display: block;
+	padding:  8px 20px 20px 20px;
+	color: $main-color;
+	&:hover, 
+   	&:active,
+   	&:focus{
+   		color: $main-color;
+   	}
+}
+
+.menu__button_span{
+    @include inlineblock(middle);
+   text-decoration: underline;
+    &:before{
+        content: '';
+        @include inlineblock(middle);
+        @include get-sprite($misc-sprite, menu_icon);
+        margin-right: 10px;
+    }
+}
+.menu__products_list{
+	font-size: 0;
+	position: relative;
+	padding-top: 14px;
+	&:before{
+		content: "";
+		display: block;
+		width: 2px;
+		height: 100%;
+		position: absolute;
+		background: $main-color;
+		right: 0;
+		top: 0;
+	}
+}
+.menu__products_item{
+	@include inlineblock();
+	width: 33.33333333333333%;
+	font-size: 0;
+	border-right: 1px solid #e8e7eb;
+    border-bottom: 1px solid #e8e7eb;
+}
+.menu__products_link{
+	font-size: 0;
+	display: block;
+	padding: 31px 15px 31px 0;
+}
+.menu__products_img-wrap,
+.products_item_inner{
+	@include inlineblock(middle);
+	font-size: 14px;
+}
+
+.menu__products_img-wrap{
+ 	position: relative;
+ 	width: 40%;
+ 	height: 1px;
+}
+.products_item_inner{
+	width: 60%;
+}
+.menu__products_img{
+	@include absolute-center;
+}
+.products__item_title{
+	font-family: 'PTSansRegular', sans-serif;
+}
+.products__item_price-main{
+	font-family: 'PTSansBold', sans-serif;
+	font-size: 18px;
+	color: $title-color-black;
+}
+.products__item_price{
+	color: #aeaeae;
+}

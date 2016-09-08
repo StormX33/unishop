@@ -1,0 +1,20 @@
+.page__search{
+	padding-top: 20px;
+}
+
+.sidebar__inner_item{
+	&:last-child{
+		.main__sidebar_link{
+			border-bottom: none;
+		}
+	}
+}
+
+.page__search{
+	.main-title{
+		margin: 15px 0;
+	} 
+	.main-title-span{
+		font-size: 16px;
+	}
+}

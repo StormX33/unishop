@@ -1,0 +1,43 @@
+.projects{
+	.section__wrapper{
+		padding: 50px 0;
+	}
+	.section__content{
+		position: relative;
+		border-bottom: 3px solid #0d014d;
+	}
+	.section__title_text{
+		margin-bottom: 28px;
+	}
+	.section__slick_projects{
+		margin-bottom: 57px;
+	}
+	.submit__btn_main{
+		position: absolute;
+		@include transform(translate(-50%, -50%));
+		left: 50%;
+	}
+	.paginations{
+		top: 40%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+	.slick__projects_content{
+    	padding: 0 15px; 
+	}
+	.item_title_text{
+		margin: 20px 0; 
+		font-size: em(21px);
+		color: $title-color-blue;
+	}
+
+}
+
+.projects__button_prev{
+	@include get-sprite($misc-sprite, advantages_arrow_prev);
+	left: -17px;
+}
+.projects__button_next {
+	@include get-sprite($misc-sprite, advantages_arrow_next);
+	right: -17px;
+}

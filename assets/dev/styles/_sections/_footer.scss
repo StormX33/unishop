@@ -1,0 +1,110 @@
+// FOOTER START
+.footer{
+    background: $footer-bg;
+    padding: 21px 0; 
+
+}
+.footer__info_block{
+    margin-bottom: 16px;
+}
+.footer__info_block-title{
+    font-family: 'PTSansRegular', sans-serif;
+    margin-bottom: 12px;
+}
+.subscription{
+    font-size: 14px;
+}
+.subscription_form{
+    margin-bottom: 12px;
+}
+.subscription__form-input{
+    border: 1px solid #dee2e5;
+    padding: 8px 6px;
+    width: 63.69426751592357%;
+    margin-right: -6px;
+}
+.subscription_form-submit{
+    width: 36.94267515923567%;
+    height: 34px;
+    background: $orange;
+    color: #ffffff;
+    font-family: 'PTSansBold', sans-serif;
+    border: 1px solid $orange;
+    &:hover, 
+    &:focus,
+    &:active{
+        background: lighten($orange, 5%);
+    }
+}
+.subscription__text{
+    font-size: 10px;
+}
+.footer__list, 
+.footer__item_link,
+.footer__title{
+    color: $text-color;
+}
+.footer__menu{
+    margin-bottom: 50px;
+}
+.page__footer_menu{
+    font-size: 0;
+}
+.footer__menu{
+    font-family: 'PTSansRegular', sans-serif;
+    font-size: 16px;
+    @include inlineblock();
+    width: 25%;
+}
+.footer__title{
+    font-size: em(18px);
+    margin-bottom: 15px;
+}
+.footer__item{
+    line-height: 24px;
+}
+.footer__item_link{
+    color: $text-color;
+    &:hover,
+    &:active,
+    &:focus{
+        color: lighten($text-color, 15%);
+    }
+}
+.socials__link{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    @include inlineblock(middle);
+}
+.socials__icon{
+    @include absolute-center;
+} 
+.footer__socials{
+  .socials__icon{
+        @include absolute-center;
+        @include get-sprite($misc-sprite, fb);
+    }  
+}
+
+.studio__copyright{
+    font-size: 14px;
+    color: #000;
+    font-family: 'OpenSans', sans-serif;
+}
+.copyright_text{
+    float: left;
+}
+.studio__copyright_span{
+    color: $text-color;
+    display: block;
+    float: right;
+}
+.studio__link{
+    &:hover,
+    &:active,
+    &:focus{
+        color: #1bae62;
+    }
+}
+// FOOTER END

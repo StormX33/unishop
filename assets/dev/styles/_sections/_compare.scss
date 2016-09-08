@@ -1,0 +1,154 @@
+$compare-border: #ececec;
+
+
+.compare-wrapper{
+	margin-bottom: 200px;
+	.main-title{
+ 	text-align: center;
+ 	margin: 30px 0 15px;
+	}
+}
+.compare__sort_list{
+	max-width: 335px;
+	margin: 0 auto;
+	border: 1px solid $tabs-color;
+	font-size: 0;
+}
+.compare__sort_item{
+	@include inlineblock();
+	&.active{
+		.compare__sort_link{
+			background: $tabs-color;
+		}
+	}
+}
+.compare__sort_link{
+	display: block;
+	color: $title-color-blue;
+	font-size: 18px;
+	font-family: 'PTSansBold', sans-serif;
+	text-transform: uppercase;
+	padding: 12px 10px;
+	text-align: center;
+	&:hover{
+		cursor: pointer;
+	}
+}
+.compare__menu{
+	margin-bottom: 20px;
+}
+// TABLE COMPERE START 
+.table>thead>tr>td, 
+.table>thead>tr>th{
+	padding: 12px 12px 20px;
+}
+.table__compare{
+	border-top: 1px solid $compare-border;
+	border-bottom: 1px solid $compare-border;
+	color: $title-color-blue;
+}
+thead{
+	.compare-col_first,
+	.compare-col_last{
+		padding: 0 5px;
+	}
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th{
+	border-top: 2px solid  $compare-border;
+}
+
+.table>tbody>tr>td.compare-col_first{
+	padding: 12px;
+    box-sizing: border-box;
+    width: 17.6%;
+    min-width: 14.6em;
+}
+// .table>tbody>tr>td.compare-col{
+// 	padding: 12px 14px;
+// }
+
+.compare-col_first,
+.compare-col{
+	border-right: 1px solid $compare-border;
+}
+.compare-col{
+	box-sizing: border-box;
+    width: 24.5%;
+    min-width: 15.4em;
+    .products__price{
+    	@include clearfix;
+    	margin-bottom: 8px;
+    }
+    .products__buy-btn{
+    	width: 160px;
+    	margin: 0 auto;
+    	font-size: 21px;
+    	padding: 6px 30px;
+    }
+    .products__buy-span{
+        &:before{
+            @include get-sprite($misc-sprite, catalog_cart-lg);
+        }
+    }
+}
+.compare-col_last{
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -1px;
+		width: 1px;
+		height: 100%;
+		background: #fff;
+		display: block;
+	}
+}
+.compare__img_link{
+	display: block;
+	position: relative;
+	height: 180px;
+}
+.img__wrap_inner{
+	position: relative;
+}
+.compare__img{
+	@include absolute-center;
+	max-width: 110px;
+	max-height: 150px;
+	width: auto;
+	height: auto;
+}
+.compare__delete_icon{
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 25%;
+	&:before{
+		content: '';
+		display: block;
+		@include get-sprite($misc-sprite, compare_delete);
+	}
+}
+.compare__col_title{
+	line-height: 16px;
+	margin-bottom: 12px;
+}
+.compare__title_link{
+	color: $title-color-blue;
+	font-family: 'PTSansBold', sans-serif;
+	font-size: em(14px);
+}
+tbody{
+	.compare-col_first{
+		font-size: em(14px);
+		font-family: "PTSansRegular",sans-serif;
+	}
+	.compare-col{
+		font-family: 'PTSansBold', sans-serif;
+		padding: 12px 14px;
+	}
+}
+
+// TABLE COMPERE END

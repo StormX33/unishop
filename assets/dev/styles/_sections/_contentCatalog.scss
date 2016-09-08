@@ -1,0 +1,16 @@
+.main-title{
+	font-family: 'PTSansBold', sans-serif;
+	color: $title-color-blue;
+	font-size: em(34px);
+	margin-bottom: 10px;
+}
+.main-content{
+    @include clearfix;
+    // margin-bottom: 70px;
+}
+
+.content{
+    float: right;
+    width: 860px;
+    margin-bottom: 70px;
+}

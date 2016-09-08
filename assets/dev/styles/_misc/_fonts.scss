@@ -1,0 +1,8 @@
+@include font-face("OpenSans", "/fonts/OpenSans/OpenSans", $file-formats: eot woff ttf);
+@include font-face("OpenSansBold", "/fonts/OpenSansBold/OpenSansBold", $file-formats: eot woff ttf);
+@include font-face("OpenSansSemibold", "/fonts/OpenSansSemibold/OpenSansSemibold", $file-formats: eot woff ttf);
+@include font-face("OpenSansLight", "/fonts/OpenSansLight/OpenSansLight", $file-formats: eot woff ttf);
+
+@include font-face("PTSansRegular", "/fonts/PTSansRegular/PTSansRegular", $file-formats: eot woff ttf);
+@include font-face("PTSansBold", "/fonts/PTSansBold/PTSansBold", $file-formats: eot woff ttf);
+@include font-face("PTSansItalic", "/fonts/PTSansItalic/PTSansItalic", $file-formats: eot woff ttf);

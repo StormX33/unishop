@@ -1,0 +1,12 @@
+// PRODUCT RATING
+.products__rating-stars-item{
+    @include inlineblock(middle);
+}
+.product_ective-element{
+	@include clearfix;
+	padding: 0  14px;
+}
+.products__raiting{
+	float: left;
+}
+

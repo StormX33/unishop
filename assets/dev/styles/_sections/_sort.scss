@@ -1,0 +1,95 @@
+.sort{
+    @include clearfix;
+    padding-top: 4px;
+    margin-bottom: 21px;
+}
+
+.product__page{
+   .sort__title{
+        font-size: em(18px);
+        background: $tabs-color;
+        border-radius: 5px 0 0px 5px;
+        padding: 12px 15px;
+        text-transform: uppercase;
+        font-family: 'PTSansBold', sans-serif;
+        @include inlineblock(middle);
+        margin-right: -5px;
+        line-height: 20px;
+   } 
+}
+.sort__select{
+    @include inlineblock(middle);
+}
+// SELECT START
+$select-map: sprite-map('icons/select/*.png', $spasing: 70px);
+
+.select2-container--default .select2-selection--single{
+    border: 1px solid #a3a3a3 !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+}
+
+.select2-container{
+    width: 375px !important; 
+
+    *{
+        outline: none !important;
+    }
+    .select2-selection--single{
+        height: 44px !important;
+    }
+
+    .select2-selection__arrow{
+        width: 47px !important;
+        height: 44px !important;
+        border-left: 1px solid #a3a3a3;
+       
+        b{
+            @include get-sprite($select-map, bottom);
+            height: 9px !important; 
+            width: 13px !important; 
+            border: 0 none !important;
+            margin: auto !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+        }
+    }
+
+    &.select2-container--open{
+        b{
+            @include get-sprite($select-map, top);
+        }
+    }
+
+    .select2-selection__rendered{
+        font-size: 18px; 
+        color: $title-color-blue !important;
+        font-family: 'PTSansRegular', sans-serif;
+        line-height: 44px !important;
+        padding-right: 46px !important;
+        padding-left: 19px !important;
+    }
+
+    .select2-dropdown{
+        margin-top: 2px;
+        bottom: 0 none;
+        @include box-shadow(0 0 5px 0 rgba(134, 134, 134, .75));
+        @include border-radius (5px); 
+        background: #ffffff; 
+
+        .select2-results__option{
+            background: #ffffff; 
+            font-size: 18px;
+            line-height: 20px;
+            font-family: 'PTSansRegular', sans-serif;
+            color: lighten($title-color-blue, 10%);
+            padding-left: 19px;
+
+            &.select2-results__option--highlighted{
+                color: $title-color-blue;
+            }
+        }
+    }
+}

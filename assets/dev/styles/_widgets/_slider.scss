@@ -1,0 +1,22 @@
+.ui-slider-horizontal{
+    height: 5px;
+    background: #cbcbcb;
+    @include border-radius(0);
+    border: 0 none;
+    margin-bottom: 35px;
+    * {
+        outline: none !important;
+    }
+
+    .ui-slider-range{
+        background: $nav-bg;
+    }
+
+    .ui-slider-handle{
+        @include get-sprite($misc-sprite, slider_control);
+        top: -10px;
+        border: 0 none;
+        @include border-radius(0);
+        cursor: pointer;
+    }
+}

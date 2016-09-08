@@ -1,0 +1,79 @@
+.map{
+	position: relative;
+	min-height: 600px;
+}
+.map__content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.map__content_img{
+	display: block;
+	max-width: 100%;
+	height: 100%;
+}
+.feedback{
+	background: $main-color;
+	padding: 40px 36px;
+	border: 1px solid $title-color-blue;
+	width: 38.03418803418803%;
+	position: absolute;
+	right: 0;
+	top: -50px;
+}
+.feedback__title{
+	text-align: center;
+	margin-bottom: 35px;
+}
+.feedback__title_text{
+	font-size: em(32px);
+	color: $title-color-blue;
+	margin-bottom: 25px;
+}
+.feedback__text{
+	font-size: em(21px);
+}
+.feedback__wrap{
+	margin-bottom: 25px;
+}
+.feedback__form_label{
+	display: block;
+	color: $title-color-black;
+	font-weight: 400;
+	font-size: 21px;
+}
+.feedback__form-input{
+	width: 100%;
+	background: transparent;
+    outline: none;
+    border: none;
+    border: 1px solid #707070;
+    color: $title-color-black;
+    padding: 15px 10px 10px 10px;
+    font-size: 18px;
+}
+.feedback__form-input::-webkit-input-placeholder{ 
+    font-family: 'PTSansItalic', sans-serif;
+    color: #323232;
+    font-size: 18px;
+    font-weight: normal;
+}
+.feedback__form-input:-moz-placeholder{
+    font-family: 'PTSansItalic', sans-serif;
+    color: #323232;
+    font-size: 18px;
+    font-weight: normal;
+}
+.feedback__form-input:-ms-input-placeholder{ 
+    font-family: 'PTSansItalic', sans-serif;
+    color: #323232;
+    font-size: 18px;
+    font-weight: normal;
+}
+.feedback__button{
+	text-align: center;
+	.feedback-submit{
+	    outline: none;
+	    border: transparent;
+	}
+}

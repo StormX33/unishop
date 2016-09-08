@@ -1,0 +1,110 @@
+// ADVANTAGES START
+.advantages{
+    background: url(../../images/bg/bg_advantages.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    -webkit-box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
+    .section__wrapper{
+        padding: 26px 0 36px;
+    }
+    .section__title{
+        margin-bottom: 40px;
+    }
+
+    .advantages__button_prev{
+        @include get-sprite($misc-sprite, advantages_arrow_prev);
+        left: 0;
+    }
+    .advantages__button_next{
+        @include get-sprite($misc-sprite, advantages_arrow_next);
+        right: 0;
+    }
+    
+}
+
+.advantages_content{
+    text-align: center;
+}
+.advantages__list{
+    @include clearfix;
+    margin-bottom: 30px;
+    margin-left: -30px;
+    padding: 0 40px;
+}
+.advantages__item{
+    text-align: left;
+    color: $text-color;
+    float: left;
+    outline: none;
+    // padding: 10px 0 40px;
+
+    // @include respond-to(mobile){
+    //     width: 100%;
+    // }
+    // @include respond-to(wide-screens) {
+    //     width: 33.33333333333333%;
+    //     margin-bottom: 0;
+    // }
+    // &:last-child{
+    //     .advantages__item_content{
+    //         margin-right: 0;
+    //     }
+    // }
+}
+.advantages__item_content{
+    padding: 18px 15px 40px;
+    margin-left: 31px;
+    background: rgba(255,255,255, 0.7);
+    border: 1px solid #c7c8c8;
+}
+.advantages__img_wrap{
+    position: relative;
+    margin-bottom: 12px;
+    height: 64px;
+}
+.advantages__img{
+    @include absolute-center;
+    display: none;
+}
+.advantages{
+    .slick-slide img{
+        display: none !important;
+    }
+}
+.item_title{
+    font-size: em(21px);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.item_text{
+    margin-bottom: 15px;
+    &:last-child{
+        margin-bottom: 0; 
+    }
+}
+
+.item_text_advantage{
+    position: relative;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        @include get-sprite($misc-sprite, check_advantage);
+    }
+}
+.item_text_span{
+    display: block;
+    margin-left: 32px;
+}
+.submit__btn_span{
+     @include inlineblock(middle);
+    &:before{
+        content: '';
+        @include inlineblock(middle);
+        @include get-sprite($misc-sprite, icon_btn);
+        margin-right: 12px;
+    }
+}
+// ADVANTAGES END

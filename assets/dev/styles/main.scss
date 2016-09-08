@@ -1,0 +1,81 @@
+@import "compass";
+@import "../../bower/bourbon//app/assets/stylesheets/bourbon";
+
+/* --------- normalize --------- */
+
+@import "_misc/_normalize";
+
+/* --------- fonts --------- */
+@import '../fonts/stylesheet.css';
+// @import "_misc/_fonts";
+/* --------- mixins --------- */
+@import "_misc/_mixins";
+
+/* --------- adjustment --------- */
+
+@import "_misc/_adjustment";
+
+/* ---------misc icons sprite --------- */
+$misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
+
+/* ---------colors --------- */
+$main-color: #ffffff;
+$accent-color: #da251c;
+$text-color: #333333;
+$title-color-blue: #092e4a;
+$title-color-black: #323232;
+
+/* ---------services--------- */
+$grey: #f8f8f8;
+
+$button-bg: #ffe000;
+$link-color: #3fbce6;
+
+
+/* ---------header --------- */
+$border-color: #f5f5f5;
+$nav-bg: #e42826;
+
+/* --------articles --------- */
+$articles-bg: #ebebeb;
+$red: #bd0d1a;
+
+/* ---------products---------- */
+$product-border-color: #e8e7eb;
+
+/* ---------footer---------- */
+$footer-bg: #f4f6f7;
+$orange: #e72f19;
+
+/* ---------breadcrumbs --------- */
+
+$blue: #0054a6;
+
+/* ---------catalog colors --------- */
+$grey: #e5e5e5; 
+
+/* ---------tabs--------- */
+$tabs-color: #d4d9dc;
+
+/* ---------product page--------- */
+$green-color: #02b502;
+
+/* ---------contacts colors --------- */
+$icon-grey: #6d6d6d;
+$border-contacts: #e4e4e4;
+$purple: #85549b;
+$contacts-text: #282828;
+
+/* --------- sections--------- */
+@import "_plugins/**/*";
+
+/* --------- widgets--------- */
+@import "_widgets/**/*";
+
+/* --------- sections--------- */
+@import "_sections/**/*";
+
+
+
+
+

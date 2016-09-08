@@ -1,0 +1,30 @@
+{
+  "name": "winterm",
+  "version": "1.0.0",
+  "description": "template for good works",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.7",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "main-bower-files": "^2.11.0",
+    "gulp-jade": "^1.1.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
