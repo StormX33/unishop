@@ -3,7 +3,7 @@
            <a class="user__login" href="{site_url('auth')}" data-modal="login_popup" rel="nofollow">
              <div class="user__login_title"> <img src="{$THEME}images/logos/wt_prof.png" alt="WT-PROF"></div>
              <div class="user__login_link">
-             <span>{tlang('Sign in')}</span>
+             <span>Для партнеров</span>
              </div>
             </a>
       {else:}

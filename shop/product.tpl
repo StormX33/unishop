@@ -80,52 +80,91 @@
             <div class="description__product_block">
             	<div class="row">
                 	<div class="col-md-9">
-                    	<div class="description_main_col-left">
-                        	<div class="row">
-                            	{if trim(strip_tags($model->getFullDescription())) != ""}
-                            	<div class="col-md-7">
-                                	<div class="product__description">
-                                    	<a name="description" id="description" class="anchor"></a>
-                                        <!-- Product full description -->
-  										
-        									<h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
-      										<div class="product__description_content">
-        											<div class="description_text">{echo $model->getFullDescription()}</div>
-      										</div>
-
-                                    </div>
-                                </div>
+                         <div class="description_main_col-left">
+                         	<ul id="tabs__controls" class="tabs__controls_list">
+								<li data-class="tab_about" class="tabs__controls_item active"><a href="#" class="tabs__controls_link">Все о товаре</a></li>
+								<li data-class="tab_characteristics" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Характеристики</a></li>
+                                {if trim(strip_tags($model->getFullDescription())) != ""}
+								<li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
                                 {/if}
-                                <div class="col-md-5">
-                                	<div class="product__description product_characteristics">
-                                    	<a name="characteristics" id="characteristics" class="anchor"></a>
-                                        	{$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
-											{if count($loc_params) > 0}
-                                        		<h3 class="product__description_title">{tlang('All specifications')}</h3>
-                                                <div class="product__description_content">
-												    {view('shop/includes/product/product_properties.tpl', [
-        'items' => $loc_params
-        ])}
+								<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
+							</ul>
+                            <ul id="description__list" class="description_list">
+								<li class="tab__pane pane__tab_about active">
+									<div class="row">
+                                    	{if trim(strip_tags($model->getFullDescription())) != ""}
+											<div class="col-md-7">
+												<div class="product__description"><a name="description" id="description" class="anchor"></a>
+                                            		<h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
+													<div class="product__description_content">
+														<div class="description_text">{echo $model->getFullDescription()}</div>
+                                                    </div>
                                                 </div>
-                                            {/if}
+                                            </div>
+                                		{/if}
+                                		<div class="col-md-5">
+                                			<div class="product__description product_characteristics">
+                                    			<a name="characteristics" id="characteristics" class="anchor"></a>
+                                        		{$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
+												{if count($loc_params) > 0}
+                                        			<h3 class="product__description_title">{tlang('All specifications')}</h3>
+                                                	<div class="product__description_content">
+												   		{view('shop/includes/product/product_properties.tpl', ['items' => $loc_params])}
+                                                	</div>
+                                            	{/if}
+                                   		 	</div>
+                                		</div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Product commetns -->
-                            {if $model->enable_comments == 0}
-                            	<div class="product__reviews">
-    <div id="comments-list"></div>
-    <div class="product-fullinfo__item">
-      <div class="product-fullinfo__header">
-        <div class="product-fullinfo__title">{tlang('Customer Reviews')}</div>
-      </div>
-      <div class="product-fullinfo__inner" data-comments>
-        {tpl_load_comments()}
-      </div>
-    </div>
-                            	</div>
-                            {/if}
-                        </div>
+                            		<!-- Product commetns -->
+                            		{if $model->enable_comments == 0}
+                            			<div class="product__reviews">
+    										<div id="comments-list"></div>
+    										<div class="product-fullinfo__item">
+      											<div class="product-fullinfo__header">
+        											<div class="product-fullinfo__title">{tlang('Customer Reviews')}</div>
+      											</div>
+      											<div class="product-fullinfo__inner" data-comments>
+        											{tpl_load_comments()}
+												</div>
+											</div>
+                            			</div>
+                            		{/if}
+                                </li>
+                                <li class="tab__pane pane__tab_characteristics">
+                                	<div class="product__description product_characteristics">
+										{$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
+										{if count($loc_params) > 0}
+                                        	<h3 class="product__description_title">{tlang('All specifications')}</h3>
+                                            <div class="product__description_content">
+												{view('shop/includes/product/product_properties.tpl', ['items' => $loc_params])}
+                                            </div>
+                                        {/if}
+                                    </div>
+                                 </li>
+                                 {if trim(strip_tags($model->getFullDescription())) != ""}
+                                 	<li class="tab__pane pane__tab_description">
+										<div class="product__description">
+                                            <h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
+											<div class="product__description_content">
+												<div class="description_text">{echo $model->getFullDescription()}</div>
+                                            </div>
+                                        </div>
+                                 	</li>
+                                 {/if}
+                                 {if $model->enable_comments == 1}
+									<li class="tab__pane pane__tab_reviews"> 
+										<div class="product__reviews">
+											<div class="product__reviews_title">
+        											<h3 class="product__reviews_title-text">{tlang('Customer Reviews')}</h3>
+      										</div>
+      										<div class="product-fullinfo__inner" data-comments>
+        										{tpl_load_comments()}
+											</div>
+                            			</div>
+                                   	</li>
+                            	{/if}
+                            </ul>
+                       </div>
                     </div>
                     <div class="col-md-3">
                     	<div class="description_main_col-right">

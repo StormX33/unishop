@@ -1,119 +1,94 @@
-<div class="content__row">
-  <div class="order-details">
-    <div class="order-details__group">
-      <div class="typo">
-        <p>{tlang('Thank you for shopping at')} {echo $_SERVER['HTTP_HOST']}</p><p>{tlang('Your order details are below')}</p>
-      </div>
-    </div>
-    <div class="order-details__group">      
-      <!-- Order id number -->
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Order ID')}</div>
-        <div class="order-details__item">{echo $model->getId()}</div>
-      </div>
-      
-      <!-- Order status -->
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Order status')}</div>
-        <div class="order-details__item">{echo $model->getSOrderStatuses()->setLocale(MY_Controller::getCurrentLocale())->getName()}</div>
-      </div>
-
-      <!-- Order date -->
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Order date')}</div>
-        <div class="order-details__item">{tpl_locale_date('d F Y', $model->getDateCreated())}</div>
-      </div>
-    </div><!-- /.order-details__group -->
-
-    <div class="order-details__group">      
-      <!-- Shipping method -->
-      {if $model->getSDeliveryMethods()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Shipping method')}</div>
-        <div class="order-details__item">{echo $model->getSDeliveryMethods()->getName()}</div>
-      </div>
-      {/if}
-
-      {if $paymentMethod}
-      <!-- Payment method -->
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Payment method')}</div>
-        <div class="order-details__item">{echo $paymentMethod->getName()}</div>
-      </div>
-      {/if}
-
-      <!-- Payment status -->
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Payment status')}</div>
-        <div class="order-details__item">{echo $model->getPaid() ? tlang('Paid successfully') : tlang('Not paid')}</div>
-      </div>
-      
-      {if $paymentMethod and !$model->getPaid() and $paymentMethod->getPaymentSystemName()}
-      <div class="btn-order">
-        {echo $paymentMethod->getPaymentForm($model)}
-      </div>
-      {/if}
-    </div><!-- /.order-details__group -->
-
-    <div class="order-details__group">      
-      <!-- User name  -->
-      {if $model->getUserFullName()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Name')}</div>
-        <div class="order-details__item">{echo $model->getUserFullName()}</div>
-      </div>
-      {/if}
-
-      <!-- User email -->
-      {if $model->getUserEmail()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('E-mail')}</div>
-        <div class="order-details__item">{echo $model->getUserEmail()}</div>
-      </div>
-      {/if}
-
-      <!-- User phone number -->
-      {if $model->getUserPhone()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Phone number')}</div>
-        <div class="order-details__item">{echo $model->getUserPhone()}</div>
-      </div>
-      {/if}
-
-      <!-- User shipping address -->
-      {if $model->getUserDeliverTo()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Shipping address')}</div>
-        <div class="order-details__item">{echo $model->getUserDeliverTo()}</div>
-      </div>
-      {/if}
-
-      <!-- User shipping address -->
-      {if $model->getUserComment()}
-      <div class="order-details__list">
-        <div class="order-details__item order-details__item--title">{tlang('Comments about your order')}</div>
-        <div class="order-details__item">{echo nl2br($model->getUserComment())}</div>
-      </div>
-      {/if}
-      
-      <!-- Custom fields -->
-      {foreach ShopCore::app()->CustomFieldsHelper->getCustomFielsdAsArray('order', $model->getId()) as $item}
-        {if $item.field_data}
-        <div class="order-details__list">
-          <div class="order-details__item order-details__item--title">{$item.field_label}</div>
-          <div class="order-details__item">
-          {if $item.field_type_id == 3}
-            <a class="btn btn--va-m btn-default btn-xs" href="{media_url($item.field_data)}" target="_blank">
-              <i class="btn-default__ico btn-default__ico--download"><svg class="svg-icon"><use xlink:href="#svg-icon__download"></use></svg></i>
-              <span> {tlang('Download')}</span>
-            </a>
-          {else:}
-            {nl2br($item.field_data)}
-          {/if}
-          </div>
-        </div>
-        {/if}
-      {/foreach}
-    </div><!-- /.order-details__group -->
-  </div><!-- /.order-details -->
+<div class="table-responsive">
+	<table class="table order__table" cellspacing="0">
+		<tbody>
+        	<!-- Order id number -->
+			<tr>
+            	<td>{tlang('Order ID')}</td>
+                <td>{echo $model->getId()}</td>
+            </tr>
+        	<!-- Order status -->
+			<tr>
+            	<td>{tlang('Order status')}</td>
+                <td>{echo $model->getSOrderStatuses()->setLocale(MY_Controller::getCurrentLocale())->getName()}</td>
+            </tr>
+        	<!-- Order date -->
+			<tr>
+            	<td>{tlang('Order date')}</td>
+                <td>{tpl_locale_date('d F Y', $model->getDateCreated())}</td>
+            </tr>
+        	<!-- User name  -->
+            {if $model->getUserFullName()}
+			<tr>
+            	<td>{tlang('Name')}</td>
+                <td>{echo $model->getUserFullName()}</td>
+            </tr>
+            {/if}
+        	<!-- User phone number -->
+            {if $model->getUserPhone()}        	
+			<tr>
+            	<td>{tlang('Phone number')}</td>
+                <td>{echo $model->getUserPhone()}</td>
+            </tr>
+            {/if}
+			<!-- User email -->
+            {if $model->getUserEmail()}
+			<tr>
+            	<td>{tlang('E-mail')}</td>
+                <td>{echo $model->getUserEmail()}</td>
+            </tr>
+            {/if}
+        	<!-- User shipping address -->
+      		{if $model->getUserDeliverTo()}
+			<tr>
+            	<td>{tlang('Shipping address')}</td>
+                <td>{echo $model->getUserDeliverTo()}</td>
+            </tr>
+            {/if}
+        	<!-- Shipping method -->
+      		{if $model->getSDeliveryMethods()}
+			<tr>
+            	<td>{tlang('Shipping method')}</td>
+                <td>{echo $model->getSDeliveryMethods()->getName()}</td>
+            </tr>
+            {/if}
+			{if $paymentMethod}
+			<!-- Payment method -->
+			<tr>
+            	<td>{tlang('Payment method')}</td>
+                <td>{echo $paymentMethod->getName()}</td>
+            </tr>
+            {/if}
+        	 <!-- Payment status -->
+			<tr>
+            	<td>{tlang('Payment status')}</td>
+                <td>{echo $model->getPaid() ? tlang('Paid successfully') : tlang('Not paid')}</td>
+            </tr>
+        	{if $paymentMethod and !$model->getPaid() and $paymentMethod->getPaymentSystemName()}
+			<tr>
+            	<td></td>
+                <td>{echo $paymentMethod->getPaymentForm($model)}</td>
+            </tr>
+            {/if}
+        	{foreach ShopCore::app()->CustomFieldsHelper->getCustomFielsdAsArray('order', $model->getId()) as $item}
+            	{if $item.field_data}
+				<tr>
+            		<td>{$item.field_label}</td>
+                    {if $item.field_type_id == 3}
+						<td><a class="btn btn--va-m btn-default btn-xs" href="{media_url($item.field_data)}" target="_blank"><span>{tlang('Download')}</span>
+            				</a>
+                        </td>
+                    {else:}
+            			<td>{nl2br($item.field_data)}</td>
+          			{/if}
+            	</tr>
+                {/if}
+        	{/foreach}
+            {if $model->getUserComment()}
+			<tr>
+            	<td>{tlang('Comments about your order')}</td>
+                <td>{echo nl2br($model->getUserComment())}</td>
+            </tr>
+			{/if}
+		</tbody>
+	</table><!-- /.order-details -->
 </div><!-- /.content__row -->

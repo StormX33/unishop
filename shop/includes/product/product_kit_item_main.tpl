@@ -1,43 +1,20 @@
-<article class="product-thumb">
-
-  <!-- Photo  -->
-  <div class="product-thumb__photo hidden-xs">
-    <div class="product-photo">
-      <span class="product-photo__item product-photo__item--sm">
-        <img class="product-photo__img" src="{echo $model->firstVariant->getSmallPhoto()}"
-             alt="{echo $model->getName()}" title="{echo $model->getName()}">
-      </span>
+<div class="related__products">
+	<a href="#" class="related__products_link">
+		<img src="{echo $model->firstVariant->getSmallPhoto()}" alt="{echo $model->getName()}" class="products__img" title="{echo $model->getName()}">
+	</a>
+</div>
+<div class="related__product_title">{echo $model->getName()}</div>
+<div class="related__products_price">
+	<div class="products__price_item products__price_old"></div>
+	<div class="products__price_item products__price_new">
+    	{echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__main-value', '', 'span.product-price__main-cur')}
     </div>
-  </div>
-
-  <!-- Title -->
-  <h2 class="product-thumb__title">
-    {echo $model->getName()}
-  </h2>
-
-  <!-- Price -->
-  <div class="product-thumb__price">
-
-    <div class="product-price">
-      <div class="product-price__item">
-        <div class="product-price__main">
-          {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__main-value', '', 'span.product-price__main-cur')}
-        </div>
-      </div>
-      {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__addition-value', '', 'span.product-price__addition-cur')}
-      {if count($loc_additional_prices) > 0}
-        <div class="product-price__item">
-          <div class="product-price__addition">
-            {foreach $loc_additional_prices as $additional_price}
-              <div class="product-price__addition-item">
-                {$additional_price}
-              </div>
-            {/foreach}
-          </div>
-        </div>
-      {/if}
-    </div>
-
-  </div>
-
-</article>
+	{$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__addition-value', '', 'span.product-price__addition-cur')}
+	{if count($loc_additional_prices) > 0}
+		{foreach $loc_additional_prices as $additional_price}
+			<div class="products__price_item products__price_eur">
+				{$additional_price}
+			</div>
+		{/foreach}
+	{/if}
+</div>

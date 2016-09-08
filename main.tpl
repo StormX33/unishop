@@ -40,6 +40,7 @@
 		<link href="{$THEME}assets/css/superfish-navbar.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
+        <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
         <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
         <script src="{$THEME}assets/js/jquery.min.js"></script>
 		<script type="text/javascript" src="{$THEME}assets/js/parallax.min.js"> </script>

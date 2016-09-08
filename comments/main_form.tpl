@@ -85,11 +85,10 @@
     <div class="form__label">{tlang('Rating')}</div>
     <div class="form__inner">
 
-      <div class="star-voting">
+<!--      <div class="star-voting">
         <div class="star-voting__wrap">
           {for $i = 5; $i > 0; $i--}
-            <input class="star-voting__input"
-                   id="star-voting-{$i}"
+            <input class="star-voting__input" id="star-voting-{$i}"
                    type="radio"
                    name="ratec"
                    value="{$i}" {if $i == $old_ratec} checked{/if}>
@@ -99,7 +98,7 @@
           {/for}
         </div>
       </div>
-
+-->
     </div>
   </div>
   <!-- END Rating field -->

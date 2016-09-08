@@ -1,3 +1,12 @@
+;(function($){
+
+  /* Remove ajax loader */
+  $(document).on('ajaxStop', function(){
+    $.mlsAjax.preloaderHide();
+  });
+})(jQuery);
+
+
 /* Component functions */
 (function($){
 

@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table cellpadding="0" cellspacing="0" class="table table__cart">
 	<thead>
 		<tr>
@@ -78,7 +79,7 @@
       <td class="cart__item_total">
       	{echo emmet_money($item->getFinalPrice() * $item->getQuantity(),'span.cart-price__main-value', ' ', 'i.cart-price__main-cur')}
       </td>
-    <tr>
+    </tr>
     {/foreach}
     </tbody>
   <!-- Gift coupon -->
@@ -90,3 +91,4 @@
   ])}
 	</tfoot>
 </table>
+</div>

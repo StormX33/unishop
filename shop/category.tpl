@@ -42,9 +42,6 @@
           'parent_default_order' => $category->getOrderMethod()
         ])}
 
-        <!-- Filter selected results -->
-        {view('smart_filter/includes/filter_results.tpl')}
-
         <!-- Product list -->
         <div class="products">
           {view('shop/includes/category/category_products.tpl')}

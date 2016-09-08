@@ -1,6 +1,12 @@
+{if $parent_type == 'order2'}
+{$colspan = 1} 
+{else:}
+{$colspan = 3}
+{/if}
+
 {if $model->getOriginPrice() != $model->getFinalPrice()}
 <tr>
-<td colspan="3"></td>
+<td colspan="{$colspan}"></td>
 <td class="cart__item_total">{tlang('Subtotal')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getOriginPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -8,7 +14,7 @@
  <!-- Total discount -->
  {if $model->getDiscountValue() > 0}
 <tr>
-<td colspan="3"></td>
+<td colspan="{$colspan}"></td>
 <td class="cart__item_total">{tlang('Your discount')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getDiscountValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -16,7 +22,7 @@
 <!-- Delivery price -->
 {if $model->getDeliveryPrice() > 0}
 <tr>
-<td colspan="3"></td>
+<td colspan="{$colspan}"></td>
 <td class="cart__item_total">{tlang('Shipping')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getDeliveryPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -24,15 +30,15 @@
     <!-- Gift card code -->
   {if $model->getGiftValue() > 0}
 <tr>
-<td colspan="3"></td>
+<td colspan="{$colspan}"></td>
 <td class="cart__item_total">{tlang('Gift card')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getGiftValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
 {/if}
 <tr>
-<td colspan="3"></td>
+<td colspan="{$colspan}"></td>
 <td class="cart__item_total">
-      <p>{if $parent_type == 'order'}
+      <p>{if $parent_type == 'order' || $parent_type == 'order2'}
         {tlang('Estimated Total')}
       {else:}
         {tlang('Cart modal total price')}
@@ -55,7 +61,7 @@
 </td>
 </tr>
   <!-- Gift coupon. Not visible in order view page -->
-  {if $parent_coupon}
+<!--  {if $parent_coupon}
     <div class="cart-summary__total-coupon">
       <form class="form" action="{shop_url('cart')}" method="post" data-cart-summary--coupon>
         {if $model->getGiftValue() > 0}
@@ -83,5 +89,5 @@
         {form_csrf()}
       </form>
     </div>
-  {/if}
+  {/if}-->
 </div>

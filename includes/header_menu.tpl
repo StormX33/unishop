@@ -14,7 +14,7 @@
 		<div id="navbar-collapse-grid" class="navbar-collapse collapse">
 			<ul class="nav__list nav navbar-nav">
 				<li class="nav__item dropdown">
-                	<a href="#" data-toggle="dropdown" class="nav__link dropdown-toggle">{tlang('Product Catalog')}<span class="nav__span_arrow"></span></a>
+                	<a href="/katalog" data-toggle="dropdown" class="nav__link dropdown-toggle">{tlang('Product Catalog')}<span class="nav__span_arrow"></span></a>
 					<ul class="dropdown-menu">
 						<li>
 							<div class="yamm-content">
@@ -159,7 +159,7 @@
             	<img src="{$THEME}images/logos/wt_prof.png" alt="WT-PROF">
             </div>
             <a href="{site_url('auth')}" class="user__login_link" data-modal="login_popup" rel="nofollow">
-            	<span>{tlang('Sign in')}</span>
+            	<span>Для партнеров</span>
             </a>
 		</div>
 	</div>

@@ -15,11 +15,10 @@ $(function () {
 
 
     $priceHandler.on('click', function () {
-		$priceText.toggleClass('active', false);
-        $priceText.next().toggleClass('active');
+        $priceText.toggleClass('active');
     });
 });
-/*var toggleActiveClassClick= (function () {
+var toggleActiveClassClick= (function () {
 
     var _changeActiveClass = function ($this) {
         $this.closest(".menu__item, .lang__switch_link, .page__pagination_item")
@@ -37,11 +36,11 @@ $(function () {
         }
     }
 }());
-*/
+
 var toggleActiveClassHover = (function () {
 
     var _changeActiveClass = function ($this) {
-        $this.closest(".menu__item, .anchors__controls_item")
+        $this.closest(".menu__item")
             .addClass("active")
             .siblings()
             .removeClass("active");
@@ -49,7 +48,7 @@ var toggleActiveClassHover = (function () {
 
     return {
         init: function () {
-            $(".menu__item, .anchors__controls_item").on("hover", function (e) {
+            $(".menu__item").on("hover", function (e) {
                 e.preventDefault();
                 _changeActiveClass($(this));
             });
@@ -253,17 +252,17 @@ $(document).ready(function (){
     }
 
     /* Init Price Slider */
-/*    var $sliders = $(".filter__slider-element"); 
+    var $sliders = $(".filter__slider-element"); 
     if ($sliders.length){
         sliderWidget.init($sliders);
-    }*/
+    }
 
     if ($(".products__raiting").length){
         ratingWidget.init();
     }
     viewStateCange.init();
-/*    toggleActiveClassClick.init();
-*/    toggleActiveClassHover.init();
+    //toggleActiveClassClick.init();
+    toggleActiveClassHover.init();
 
     $(".filter__reset").on("click", function(e){
         var $this = $(this),
@@ -384,7 +383,23 @@ $(window).bind('resize', (function ($) {
     };
 })($));
 
+/*-----------tabs----------*/
+$(document).ready(function(){
 
+    $('#tabs__controls .tabs__controls_link').on('click', function(e){
+        e.preventDefault();
+
+        var item = $(this).closest('.tabs__controls_item'),
+            contentItem = $('.tab__pane'),
+            itemPosition = item.data('class');
+
+        contentItem.filter('.pane__'+ itemPosition)
+            .add(item)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+    });
+});
 
 
 

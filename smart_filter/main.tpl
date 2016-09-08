@@ -1,6 +1,9 @@
 <div class="sidebar__title"> 
-	<div class="filter__title_text">{tlang('Filter')}</div><a href="#" class="filter__reset filter__reset_price">{tlang('Reset')}</a>
+	<div class="filter__title_text">{tlang('Filter')}</div>
+    <!--<a href="#" class="filter__reset filter__reset_price">{tlang('Reset')}</a>-->
 </div>
+        <!-- Filter selected results -->
+        {view('smart_filter/includes/filter_results.tpl')}
 <div class="filter" data-filter data-filter-category="{shop_url('category/'.$category->getFullPath())}">
 	<!-- Price -->
 	{if $curMax > 0}
