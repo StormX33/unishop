@@ -1,4 +1,5 @@
-<form class="form form--bg" action="{site_url('shop/order/make_order')}" method="post" data-cart-checkout-form>
+<form class="check__wrap" action="{site_url('shop/order/make_order')}" method="post" data-cart-checkout-form>
+<div class="check__content">
 <div class="row">
 	{$loc_validation_errors = $CI->session->flashdata('validation_errors')}
 	{if $loc_validation_errors}
@@ -106,8 +107,9 @@
           </div>
           {/if}
 	</div>
-</div>    
-<div class="row">
+</div>  
+</div>  
+
           <button class="products__buy-btn" type="submit" value="{tlang('Confirm your order')}" data-cart-checkout-form-button>{tlang('Confirm your order')}</button>
 
       <div class="hidden" data-ajax-inject="cart-coupon">
@@ -118,5 +120,5 @@
       </div>
     
       {form_csrf()}
-      </div>
+
 </form>

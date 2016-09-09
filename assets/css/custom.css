@@ -144,3 +144,26 @@ li.top__header_nav-item:nth-last-child(2) a:before, li.top__header_nav-item:nth-
     margin-right: 2px;
     margin-top: -5px;
 	}
+select.sort__title_price{
+	outline: 0px;
+    -webkit-appearance: button;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+      border: 1px solid transparent;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	width: 100%;
+	 background-image:  url('../../images/icons/_misc-s24e0fc74bb.png') ;
+
+  background-position:0 -5886px
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}

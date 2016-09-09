@@ -5,14 +5,25 @@
 		<li class="sort__item"> 
     	   {$loc_current_sort = tpl_get_default_sorting($parent_default_order)}
  	       {$loc_default_sort = tpl_get_default_sorting($parent_default_order, false)}
-			<div class="sort__title sort__title_price" data-catalog-order-select>
+<!--			<div class="sort__title sort__title_price" data-catalog-order-select>
             	{foreach $loc_sorting_list as $key => $order}
                 	<div class="sort__title_text {if $loc_current_sort == $order.get}active{/if}" data-title="{$order.get}">{$order.name_front}</div>
                 {/foreach}
                 <span class="sort__span"></span>
-			</div>
+			</div>-->
+               <select class="sort__title sort__title_price" form="catalog-form" name="order" data-catalog-order-select>
+                {foreach $loc_sorting_list as $key => $order}
+                  <option value="{$order.get}"
+                          {if $loc_current_sort == $order.get}selected{/if}
+                          {if $loc_default_sort == $order.get}data-catalog-default{/if}
+                  >{$order.name_front}</option>
+                {/foreach}
+    </select>
+          
 		</li>
 	{/if}
+
+    
   	<!-- END Order -->
     <!-- Per page items BEGIN -->
 	<li class="sort__item">

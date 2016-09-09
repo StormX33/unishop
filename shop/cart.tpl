@@ -11,11 +11,9 @@
                           'parent_coupon' => true
                           ])}
 					</div>
-					<div class="check__wrap">
-						<div class="check__content">
                            	{view('shop/includes/cart/cart_checkout.tpl')}
-                        </div>
-                    </div>
+
+
 				</div>
 			{else:}
 				<div data-ajax-grab="cart-empty">
