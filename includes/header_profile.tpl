@@ -7,15 +7,11 @@
              </div>
             </a>
       {else:}
+      <div class="user__login">
         <!-- User profile menu. Visible when user is logged in -->
-        <div class="overlay__item">
-          <a class="overlay__link" href="{shop_url('profile')}" rel="nofollow">{tlang('Your Account')}</a>
+          <a class="user__login_link" href="{shop_url('profile')}" rel="nofollow">{tlang('Your Account')}</a>
+			<br/>
+          <a class="user__login_link" href="{site_url('auth/logout')}" rel="nofollow">{tlang('Sign out')}</a>
         </div>
-        <div class="overlay__item">
-          <a class="overlay__link" href="{site_url('auth/change_password')}"
-             rel="nofollow">{tlang('Change Password')}</a>
-        </div>
-        <div class="overlay__item">
-          <a class="overlay__link" href="{site_url('auth/logout')}" rel="nofollow">{tlang('Sign out')}</a>
-        </div>
+
       {/if}
