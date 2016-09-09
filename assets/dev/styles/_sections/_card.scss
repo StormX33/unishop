@@ -376,7 +376,6 @@ $table-border: #e1e1e1;
 .delivery__check_inner{
     @include inlineblock();
     font-size: 16px;
-    width: 95%;
 }
 .delivery__check_title{
     font-family: 'PTSansBold', sans-serif;
