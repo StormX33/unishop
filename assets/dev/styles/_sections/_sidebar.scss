@@ -131,11 +131,12 @@
     position: absolute;
     left: 8px;
     @include transform(translate(0, 50%));
+    display: none;
 }
 .filter__slider-input{
     width: 118px;
     @include inlineblock(middle);
-    padding: 10px 12px 10px 30px;
+    padding: 10px 12px 10px 10px;
     border: 1px solid $title-color-blue;
     color:  $title-color-blue;
     font-size: 21px;
@@ -229,9 +230,9 @@
     display: block;
     color: $main-color;
     background: #204664;
-    padding: 17px 16px;
+    padding: 13px 16px;
     @include transition(all 0.25s);
-    min-height: 60px;
+    min-height: 54px;
     &:hover{
         cursor: pointer;
         color: $main-color;
