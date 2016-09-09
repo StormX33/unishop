@@ -208,6 +208,13 @@
 		opacity: 1;
 	}
 }
+.description__image.description__image_main{
+	&:hover{
+		opacity: 0;
+		cursor: pointer;
+	}
+}
+
 .description__item_title{
 	padding: 0 10px;
 }
