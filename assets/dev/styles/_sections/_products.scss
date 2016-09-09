@@ -5,8 +5,6 @@
 	.products__item{
 		font-size: 16px;
 		&:hover{
-			box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px 1px;
-	        transition: 0.2s;
 	        cursor: pointer;
 		}
 	}
@@ -130,6 +128,7 @@
 		height: 395px;
 	    &:hover{
 	    	.products__item_long{
+	    		width: 100%;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -140,6 +139,7 @@
 				-webkit-box-shadow: 0px 5px 54px 0px rgba(0, 0, 0, 0.73);
 				-moz-box-shadow:    0px 5px 54px 0px rgba(0, 0, 0, 0.73);
 				box-shadow:         0px 5px 54px 0px rgba(0, 0, 0, 0.73);
+				@include transition(all 0.2s);
 			}	
 		}
 	}
