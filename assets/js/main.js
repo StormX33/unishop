@@ -342,7 +342,7 @@ $(function() {
 });
 
 // COUNT PRODUCT 
-$(function() {
+/*$(function() {
     $('.produt__change-count').each(function() {
         var $this = $(this);
         
@@ -363,7 +363,7 @@ $(function() {
         });
         
     });
-});
+});*/
 
 
 //SERVICES MAX HEIGHT

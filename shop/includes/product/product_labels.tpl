@@ -1,6 +1,6 @@
 {if $model->getHit()}
 	<div class="label__item">
-	    <span class="products__label_icon">{tlang('Hit')}</span>
+	    <span class="products__label_icon products__label_latest">{tlang('Hit')}</span>
 	</div>
 {/if}
   {if $model->getHot()}

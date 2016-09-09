@@ -1,6 +1,4 @@
-<article class="content-wrapper">
-  <div class="container">
-		<div class="main-title">{$title}</div>
+	<div class="main-title">{$title}</div>
     <div class="main-content">
 
       <!-- Left BEGIN -->
@@ -58,6 +56,4 @@
       <!-- END Center -->
 
     </div>
-  </div><!-- /.content__container -->
   {view('shop/includes/category/category_form.tpl')}
-</article><!-- /.content -->
