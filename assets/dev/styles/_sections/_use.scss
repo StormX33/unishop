@@ -5,19 +5,41 @@
     .section__title{
         margin-bottom: 45px;
         
-        @include respond-to(mobile){
-            margin-bottom: 35px;
+        @include respond-to(mobile) {
+            margin-bottom: 30px;
         }
-        @include respond-to(extraSmall-screens){
-            margin-bottom: 35px;
+        @include respond-to(extraSmall-screens) {
+            margin-bottom: 30px;
+        }
+        @include respond-to(small-screens) {
+            margin-bottom: 30px;
+        }
+        @include respond-to(medium-screens) {
+            margin-bottom: 30px;
         }
     }
     .section__title_text{
-        color: $title-color-blue;
         text-transform: uppercase;
+        @include respond-to(mobile){
+            font-size: em(28px);
+            text-transform: uppercase;
+        }
+        @include respond-to(extraSmall-screens){
+            font-size: em(28px);
+            text-transform: uppercase;
+        }
+        @include respond-to(small-screens){
+            font-size: em(35px);
+        }
     }
     .section__title_span{
         text-transform: lowercase;
+          @include respond-to(mobile){
+            text-transform: uppercase;
+        }
+        @include respond-to(extraSmall-screens){
+            text-transform: uppercase;
+        }
     }
     .slick-slider {
         padding: 0 30px;
@@ -33,6 +55,9 @@
     }
     .section_content{
         position: relative;
+    }
+    .slick__image{
+        margin: 0 auto;
     }
 }
 

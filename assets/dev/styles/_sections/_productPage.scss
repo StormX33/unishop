@@ -1,4 +1,7 @@
 // PRODUCT INFO BLOCK START
+.content__page-wrapper.product__page{
+    padding-top: 0;
+}
 .detail__main_col{
     margin-bottom: 30px;
     @include clearfix;

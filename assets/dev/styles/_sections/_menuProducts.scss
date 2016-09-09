@@ -7,6 +7,16 @@
 	.section__title_text{
 		text-align: left;
 	}
+	@include respond-to(mobile){
+		display: none;
+	} 
+	@include respond-to(extraSmall-screens){
+		display: none;
+	}
+	@include respond-to(small-screens){
+		display: none;
+	}
+
 }
 
 

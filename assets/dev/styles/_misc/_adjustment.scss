@@ -21,11 +21,9 @@ body{
     @include clearfix;
     @include respond-to(mobile){
         width: 100%;
-        padding: 0;
     } 
     @include respond-to(extraSmall-screens){
         width: 100%;
-        padding: 0;
     }
     @include respond-to(small-screens){
         width: 750px;
@@ -86,13 +84,10 @@ h4, h5, h6{
     font-weight: normal;
     font-family: 'PTSansBold', sans-serif;
 }
-h2{
-    text-align: center;
-    font-size: em(38px);
-    @include respond-to(mobile){
-        font-size: em(34px);
-    }
-}
+// h2{
+//     text-align: center;
+//     font-size: em(38px);
+// }
 
 a{
     color: #333333;

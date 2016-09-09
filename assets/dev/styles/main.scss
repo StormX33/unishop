@@ -18,6 +18,13 @@
 /* ---------misc icons sprite --------- */
 $misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
 
+/* --------- adjustment style --------- */
+.section__title_text{
+    text-align: center;
+    font-size: em(38px);
+}
+
+
 /* ---------colors --------- */
 $main-color: #ffffff;
 $accent-color: #da251c;

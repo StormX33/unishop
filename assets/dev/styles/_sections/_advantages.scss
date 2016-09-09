@@ -38,26 +38,21 @@
     color: $text-color;
     float: left;
     outline: none;
-    // padding: 10px 0 40px;
+    // @include respond-to(mobile){} 
 
-    // @include respond-to(mobile){
-    //     width: 100%;
-    // }
-    // @include respond-to(wide-screens) {
-    //     width: 33.33333333333333%;
-    //     margin-bottom: 0;
-    // }
-    // &:last-child{
-    //     .advantages__item_content{
-    //         margin-right: 0;
-    //     }
-    // }
+    // @include respond-to(extraSmall-screens){}
+    // @include respond-to(small-screens){}
+
+
 }
 .advantages__item_content{
     padding: 18px 15px 40px;
     margin-left: 31px;
     background: rgba(255,255,255, 0.7);
     border: 1px solid #c7c8c8;
+    @include respond-to(medium-screens){
+        min-height: 446px;
+    }
 }
 .advantages__img_wrap{
     position: relative;

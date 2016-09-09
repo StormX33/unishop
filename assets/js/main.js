@@ -342,7 +342,7 @@ $(function() {
 });
 
 // COUNT PRODUCT 
-/*$(function() {
+$(function() {
     $('.produt__change-count').each(function() {
         var $this = $(this);
         
@@ -363,7 +363,7 @@ $(function() {
         });
         
     });
-});*/
+});
 
 
 //SERVICES MAX HEIGHT
@@ -430,7 +430,42 @@ $(function () {
         slidesToScroll: 1,
         arrows: true,
         prevArrow: $('.advantages__button_prev'),
-        nextArrow: $('.advantages__button_next')
+        nextArrow: $('.advantages__button_next'),
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    unslick: true
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            }
+        ]
+
     };
     $('.advantages__list').slick(advantagesSlickOpts);
 });
@@ -464,7 +499,15 @@ $(function () {
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     dots: false,
                 }
@@ -472,7 +515,7 @@ $(function () {
             {
                 breakpoint: 481,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,
                 }
@@ -510,7 +553,15 @@ $(function () {
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     dots: false,
                 }
@@ -518,7 +569,7 @@ $(function () {
             {
                 breakpoint: 481,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,
                 }

@@ -66,7 +66,9 @@
             font-size: em(12px);
         }
     }
- 
+    .contacts{
+        margin-top: 0;
+    }
     .nav__item-affix{
         display: none;
     }
@@ -305,6 +307,7 @@
         }
     }
     .cart_price_span{
+        @include inlineblock(middle);
         margin-right: 5px;
         @include respond-to(small-screens){
             margin-right: 0;
@@ -312,6 +315,12 @@
         &:last-child{
             font-size: em(21px);
             margin-right: 0;
+        }
+    }
+    .cart_price_text{
+        display: none;
+        @include respond-to(wide-screens){
+            @include inlineblock(middle);
         }
     }
 }
