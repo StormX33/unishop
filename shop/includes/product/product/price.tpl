@@ -4,7 +4,7 @@
         	{tlang('Price')}
         </span>
         <span class="current__price pull-right">
-{echo emmet_money($variant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]', 'span.product-price__item-cur')}        </span>
+{echo emmet_money($variant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}        </span>
     </div>
     <div class="produt__price">
       <!-- Discount -->

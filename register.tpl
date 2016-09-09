@@ -1,5 +1,5 @@
-<div class="content">
-	<div class="content__container">
+	<article class="content-wrapper">
+					<div class="container">
 
 		<div class="content__header">
 			<h1 class="content__title">
@@ -127,4 +127,4 @@
 		</div>
 
 	</div><!-- /.content__container -->
-</div><!-- /.content -->
+</article><!-- /.content -->

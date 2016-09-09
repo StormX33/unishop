@@ -1,3 +1,3 @@
-	<ul class="top__header_nav">
-		{$wrapper}
-	</ul>
+<ul class="top__header_nav">
+{$wrapper}
+</ul>

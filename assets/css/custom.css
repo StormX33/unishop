@@ -123,3 +123,24 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 .contacts__link_span{
 	display:inline-block;
 }
+.color_icons{
+	float:right;
+}
+li.top__header_nav-item:nth-last-child(2) a{color: rgb(0, 183, 1)}
+li.top__header_nav-item:nth-last-child(1) a{color: #da251c}
+li.top__header_nav-item:nth-last-child(1) a:before{
+	background: url('../../images/icons/_misc-s24e0fc74bb.png') 0 -5432px no-repeat;
+    height: 11px;
+    width: 10px;}
+	li.top__header_nav-item:nth-last-child(2) a:before{
+	background: url('../../images/icons/_misc-s24e0fc74bb.png') 0 -2471px no-repeat;
+    height: 13px;
+    width: 12px;
+	}
+li.top__header_nav-item:nth-last-child(2) a:before, li.top__header_nav-item:nth-last-child(1) a:before{
+		content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    margin-top: -5px;
+	}

@@ -1,7 +1,7 @@
 <!-- Top Headline -->
 <div class="header__top">
   <div class="container">
-    <div class="left__collumn pull-left"> {load_menu('info_header')} </div>
+    <div class="left__collumn pull-left">{load_menu('info_header')}</div>
     <div class="right__collumn pull-right"> {view('includes/header_rightblock.tpl')} </div>
   </div>
 </div>

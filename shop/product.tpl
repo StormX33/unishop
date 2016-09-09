@@ -44,7 +44,7 @@
                         {view('shop/includes/product/product_cart.tpl')}
                     </div>
                     <div class="buy__click">
-						<form class="buy__click_form">
+                    	<form class="buy__click_form">
 							<input name="" type="tel" placeholder="+38(000) 000-00-00" class="buy__click_form-input">
 							<input name="" type="submit" value="Заказ в 1 клик" class="buy__click_form-submit">
 						</form>
