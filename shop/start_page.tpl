@@ -137,11 +137,15 @@
 					<div class="section__content">
 						<!--PRODUCT PAGE-->
 						<div class="services__item individuals">
-							<div class="services__description">
-								<h3 class="item__title"> <span class="item__title_span"> Услуги для частных лиц </span>Личный подход  </h3>
-								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div><a href="#" class="item__content_link">Подробнее об услуге  </a><a href="#" class="submit__btn_accent">Заказать бесплатный замер </a>
-							</div>
 							<div class="item__image_wrap"></div>
+							<div class="services__description">
+								<h3 class="item__title"> <span class="item__title_span">Услуги для частных лиц </span>Личный подход  </h3>
+								<div class="item__content_text">
+									Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+								</div>
+								<a href="#" class="item__content_link">Подробнее об услуге  </a>
+								<a href="#" class="submit__btn_accent">Заказать бесплатный замер </a>
+							</div>
 							<div class="services__description_wrap">
 								<div class="services__description_inner"> 
 									<ul class="services__description_list">
@@ -166,11 +170,6 @@
 							</div>
 						</div>
 						<div class="services__item professionals">
-							<div class="services__description">
-								<h3 class="item__title"> <span class="item__title_span">Для профессионалов </span>Говорим на одном языке </h3>
-								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div><a href="#" class="item__content_link">Подробнее об услуге </a><a href="#" class="submit__btn_accent">Начать сотрудничество  </a>
-							</div>
-							<div class="item__image_wrap"></div>
 							<div class="services__description_wrap">
 								<div class="services__description_inner"> 
 									<ul class="services__description_list">
@@ -188,18 +187,27 @@
 										</li>
 										<li class="services__description_item">
 											<div class="description__image_wrap"><img src="{$THEME}images/services/professionalsIcon4.png" alt="professionalsIcon4" class="description__image description__image_main"><img src="{$THEME}images/services/professionalsIconHover4.png" alt="professionalsIconHover4" class="description__image"></div>
-											<div class="description__item_title">Широкий ассортимент   </div>
+											<div class="description__item_title">Широкий ассортимент </div>
 										</li>
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div class="services__item dealers">
 							<div class="services__description">
-								<h3 class="item__title"> <span class="item__title_span"> Для дилеров </span>С нами выгодно  </h3>
-								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div><a href="#" class="item__content_link">Подробнее об услуге  </a><a href="#" class="submit__btn_accent">Узнать свою скидку </a>
+								<h3 class="item__title"> <span class="item__title_span">Для профессионалов </span>Говорим на одном языке </h3>
+								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+								<a href="#" class="item__content_link">Подробнее об услуге </a>
+								<a href="#" class="submit__btn_accent">Начать сотрудничество</a>
 							</div>
 							<div class="item__image_wrap"></div>
+						</div>
+						<div class="services__item dealers">
+							<div class="item__image_wrap"></div>
+							<div class="services__description">
+								<h3 class="item__title"> <span class="item__title_span"> Для дилеров </span>С нами выгодно  </h3>
+								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+								<a href="#" class="item__content_link">Подробнее об услуге  </a>
+								<a href="#" class="submit__btn_accent">Узнать свою скидку </a>
+							</div>
 							<div class="services__description_wrap">
 								<div class="services__description_inner"> 
 									<ul class="services__description_list">

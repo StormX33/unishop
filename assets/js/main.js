@@ -371,6 +371,9 @@ $(function() {
 $(window).bind('resize', (function ($) {
     "use strict";
     return function() {
+        if($(window).width() < 768){
+            return;
+        }
         var blockText = $(".services__description");
         var textOffset = blockText.offset();
         
