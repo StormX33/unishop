@@ -21,6 +21,7 @@ body{
     @include clearfix;
     @include respond-to(mobile){
         width: 100%;
+        padding: 0;
     } 
     @include respond-to(extraSmall-screens){
         width: 100%;

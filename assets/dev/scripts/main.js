@@ -403,3 +403,23 @@ $(document).ready(function() {
         }
     });
 });
+
+/*---------Header hamburger menu-------*/
+$(function () {
+    var touch = $('.top__menu_icon'),
+        menu = $('.top__header_nav');
+
+    touch.click(function () {
+        $(this).toggleClass("on");
+        menu.slideToggle();
+        return false;
+    });
+
+
+    $(window).resize(function () {
+        var wid = $(window).width();
+        if (wid > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+});

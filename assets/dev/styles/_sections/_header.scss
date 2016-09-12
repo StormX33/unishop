@@ -177,6 +177,12 @@
 .top__header_nav-item{
     @include inlineblock(middle);
     font-size: em(14px);
+    @include respond-to(mobile){
+        display: block;
+    } 
+    @include respond-to(extraSmall-screens){
+        display: block;
+    }
 }
 .top__header_nav-link{
     display: block;
@@ -263,6 +269,12 @@
 }
 .card__button{
     padding: 0 20px;
+    @include respond-to(mobile){
+        padding: 0;
+    } 
+    @include respond-to(extraSmall-screens){
+        padding: 0;
+    }
     @include respond-to(small-screens){
         padding: 0 8px;
     }
@@ -274,6 +286,12 @@
     &:focus{
         color: $main-color;
         background: #062c4a;
+        @include respond-to(mobile){
+            background: transparent;
+        }
+        @include respond-to(extraSmall-screens){
+            background: transparent;
+        }
         .card__button_content{
             &:after{
                 @include get-sprite($misc-sprite, nav_arrow);   
@@ -539,6 +557,10 @@
     padding-right: 39px;
     padding-bottom: 3px;
     position: relative;
+    @include respond-to(mobile){
+        padding-right: 24px;
+        font-size: em(22px);
+    } 
     @include respond-to(small-screens){
         font-size: em(19px);
         padding-right: 25px;
@@ -586,6 +608,9 @@
     border: 1px solid;
     border-top: none;
     font-size: 21px;
+    @include respond-to(mobile){
+        padding: 14px;
+    } 
     @include respond-to(small-screens){
         font-size: 19px;
         padding: 10px 11px;
@@ -625,7 +650,7 @@
         content: "";
         display: block;
         position: absolute;
-        z-index: 1000;
+        z-index: 1;
         width: 0;
         height: 0;
         border-style: solid;
@@ -734,9 +759,15 @@
     float: left;
     @include respond-to(mobile){
         display: block;
+        &:hover{
+            cursor: pointer;
+        }
     } 
     @include respond-to(extraSmall-screens){
         display: block;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 .top__cart_icon{
@@ -752,51 +783,109 @@
 }
 // MEDIA
 .header__top{
-    .left__collumn,
-    .right__collumn{
+    @include respond-to(mobile){
+        padding: 17px 0;
+    } 
+    @include respond-to(extraSmall-screens){
+        padding: 17px 0;
+    }
+    .top__header_nav,
+    .lang__switch,
+    .card__button_content{
+        @include respond-to(mobile){
+            display: none;
+            position: absolute;
+            z-index: 2;
+            top: 45px;
+            width: 100%;
+            left: 0;
+            background: #fff;
+        } 
         @include respond-to(extraSmall-screens){
             display: none;
+            position: absolute;
+            z-index: 2;
+            top: 45px;
+            width: 100%;
+            left: 0;
+            background: #fff;
         }
     }
-
 }
 .header__bottom{
     .header__bottom_content{
         @include respond-to(extraSmall-screens){
-            padding: 16px 0;
+            padding: 10px 0 16px;
         }
     }
     .logo{
-        @include respond-to(extraSmall-screens){
-            max-width: 100%;
-            width: 100%;
-            position: relative;
+        @media screen and (max-width: 400px) and (min-width: 320px){
+            max-width: 190px;
+            width: 190px;
+            position: absolute;
             float: none;
             @include clearfix;
-            margin-bottom: 25px;
+            @include transform(translate(-50%, -100%));
+            left: 50%;
+            top: -28px;
+        }
+        @media screen and (max-width: 479px) and (min-width: 401px){
+            max-width: 260px;
+            width: 260px;
+            position: absolute;
+            float: none;
+            @include clearfix;
+            @include transform(translate(-50%, -100%));
+            left: 50%;
+            top: -17px;
+        } 
+        @include respond-to(extraSmall-screens){
+            max-width: 260px;
+            width: 260px;
+            position: absolute;
+            float: none;
+            @include clearfix;
+            @include transform(translate(-50%, -100%));
+            left: 50%;
+            top: -17px;
+                
         }
     }
     .logo__img_wrap{
+        @media screen and (max-width: 400px) and (min-width: 320px){
+            width: 190px;
+        }
+        @media screen and (max-width: 479px) and (min-width: 401px){
+            width: 260px;
+        } 
         @include respond-to(extraSmall-screens){
             width: 260px;
-            position: absolute;
-            transform: translate(-50%, 0);
-            left: 50%;
         }
     }
     .logo__item_text,
     .search,
     .header__socials{
+        @include respond-to(mobile){
+            display: none;
+        }
         @include respond-to(extraSmall-screens){
             display: none;
         }
     }
     .contacts{
+        @include respond-to(mobile){
+            margin-right: 0;
+        }
         @include respond-to(extraSmall-screens){
             margin-right: 0;
         }
     }
     .header__right_collumn{
+        @include respond-to(mobile){
+            @include clearfix;
+            float: none;
+            margin-bottom: 8px;
+        }
         @include respond-to(extraSmall-screens){
             @include clearfix;
             float: none;
@@ -804,6 +893,12 @@
         }
     }
     .user__login{
+        @include respond-to(mobile){
+            position: static;
+            float: right;
+            padding: 14px 20px;
+            @include transform(translate(0, 0));
+        }
         @include respond-to(extraSmall-screens){
             position: static;
             float: right;

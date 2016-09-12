@@ -1,3 +1,4 @@
+<i class="top__menu_icon"></i>
 <ul class="top__header_nav">
 {$wrapper}
 	<li class="top__header_nav-item nav__item_credit">
