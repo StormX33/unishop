@@ -50,9 +50,13 @@
     margin-left: 31px;
     background: rgba(255,255,255, 0.7);
     border: 1px solid #c7c8c8;
+    @include respond-to(extraSmall-screens){
+        min-height: 446px;
+    }
     @include respond-to(medium-screens){
         min-height: 446px;
     }
+
 }
 .advantages__img_wrap{
     position: relative;

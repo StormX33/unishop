@@ -20,17 +20,17 @@
     }
     .section__title_text{
         text-transform: uppercase;
-        @include respond-to(mobile){
-            font-size: em(28px);
-            text-transform: uppercase;
-        }
-        @include respond-to(extraSmall-screens){
-            font-size: em(28px);
-            text-transform: uppercase;
-        }
-        @include respond-to(small-screens){
-            font-size: em(35px);
-        }
+        // @include respond-to(mobile){
+        //     font-size: em(28px);
+        //     text-transform: uppercase;
+        // }
+        // @include respond-to(extraSmall-screens){
+        //     font-size: em(28px);
+        //     text-transform: uppercase;
+        // }
+        // @include respond-to(small-screens){
+        //     font-size: em(35px);
+        // }
     }
     .section__title_span{
         text-transform: lowercase;
