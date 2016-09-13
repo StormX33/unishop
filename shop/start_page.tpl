@@ -470,7 +470,7 @@
 									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все статьи</a></div>
 								</div>
 								<ul class="articles__list row">
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item1.png" alt="item1" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
@@ -478,7 +478,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item2.png" alt="item2" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -486,7 +486,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item3.png" alt="item3" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -504,7 +504,7 @@
 									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все новости </a></div>
 								</div>
 								<ul class="articles__list row">
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img1.png" alt="img1" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
@@ -512,7 +512,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img2.png" alt="img2" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -520,7 +520,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-md-4"> 
+									<li class="col-sm-4"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img3.png" alt="img3" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>

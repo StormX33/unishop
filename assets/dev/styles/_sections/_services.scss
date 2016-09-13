@@ -3,12 +3,14 @@
 	.section__title_text{
 		margin-bottom: 50px;
 	}
+	.services__item{
+		box-shadow: 0px 5px 54px 0px rgba(0,0,0,0.73);
+	}
 }
 .services__item{
 	overflow: hidden;
 	position: relative;
     z-index: 1;
-    box-shadow: 0px 5px 54px 0px rgba(0,0,0,0.73);
     background: #ffffff;
     
     .services__description,

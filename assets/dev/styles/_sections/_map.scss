@@ -6,6 +6,12 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	@include respond-to(mobile){
+		display: none;
+	} 
+	@include respond-to(extraSmall-screens){
+		display: none;
+	}
 }
 .map__content_img{
 	display: block;
@@ -16,7 +22,7 @@
 	background: $main-color;
 	padding: 40px 36px;
 	border: 1px solid $title-color-blue;
-	width: 38.03418803418803%;
+	width: 456px;
 	position: absolute;
 	right: 0;
 	top: -50px;
@@ -29,6 +35,9 @@
 	font-size: em(32px);
 	color: $title-color-blue;
 	margin-bottom: 25px;
+	@include respond-to(mobile){
+		font-size: em(27px);
+	}
 }
 .feedback__text{
 	font-size: em(21px);
@@ -75,5 +84,60 @@
 	.feedback-submit{
 	    outline: none;
 	    border: transparent;
+	}
+}
+
+.map{
+	@include respond-to(mobile){
+		min-height: 190px;
+	} 
+	@include respond-to(extraSmall-screens){
+		min-height: 190px;
+	}
+	.feedback{
+		@include respond-to(mobile){
+			width: 100%;
+			border: none;
+			padding: 40px 15px;
+			position: static;
+		} 
+		@include respond-to(extraSmall-screens){
+			width: 100%;
+			border: none;
+			padding: 40px 15px;
+			position: static;
+		}
+	}
+	.feedback__title{
+		@include respond-to(mobile){
+			margin-bottom: 16px;
+		} 
+		@include respond-to(extraSmall-screens){
+			margin-bottom: 16px;
+		}
+	}
+	.feedback__title_text{
+		@include respond-to(mobile){
+			margin-bottom: 0;
+		} 
+		@include respond-to(extraSmall-screens){
+			margin-bottom: 0;
+		}
+	}
+	.feedback__text{
+		@include respond-to(mobile){
+			display: none;
+		} 
+		@include respond-to(extraSmall-screens){
+			display: none;
+		}
+	}
+	.feedback__wrap{
+		@include respond-to(mobile){
+			display: none;
+		} 
+		@include respond-to(extraSmall-screens){
+			display: none;
+		}
 	}
 }

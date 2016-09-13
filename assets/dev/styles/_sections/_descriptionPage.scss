@@ -5,6 +5,12 @@
 
 .description__page{
     padding-bottom: 20px;
+    @include respond-to(mobile){
+        display: none;
+    } 
+    @include respond-to(extraSmall-screens){
+        display: none;
+    }
     h2 {
 		text-align: left;
 		font-family: 'PTSansRegular', sans-serif;

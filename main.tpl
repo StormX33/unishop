@@ -56,7 +56,7 @@
           type="image/x-icon">
   </head>
   <body data-spy="scroll" data-target="#header" data-offset="1">
-        <!-- Main content frame -->
+    <!-- Main content frame -->
     <div id="page-start" class="wrapper__main">
       <div class="maincontent">
           <!-- Header -->
@@ -86,20 +86,19 @@
           <div id="scrollup" class="scrollup" title="Наверх">
             <i class="fa fa-chevron-up" aria-hidden="true"></i>
           </div>
-         
-          <!-- Footer -->
-      <footer class="footer">
-      	<div class="container">
-			<div class="row">
-        		{view('includes/footer.tpl')}
-        	</div>
+      </div><!-- .maincontent -->
+           <!-- Footer -->
+    </div><!-- .wrapper__main -->
+    <footer id="footer" class="footer">
+        <div class="container">
+         <div class="row">
+            {view('includes/footer.tpl')}
+          </div>
         </div>
       </footer>
-		</div><!-- .maincontent -->
-    </div><!-- .wrapper__main -->
 
     <!-- Final compiled and minified JS -->
-    <script type="text/javascript" src="{$THEME}assets/js/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="{$THEME}assets/js/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/slick.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.bpopup.min.js"></script>

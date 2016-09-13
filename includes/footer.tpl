@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 col-hidden-mb">
 	<div class="footer__info_block">
 		<h3 class="footer__info_block-title">Новости </h3>
 		<div class="subscription">
@@ -29,35 +29,37 @@
 </div>
 <div class="col-md-9">
 	<div class="page__footer_menu">
-		<div class="footer__menu">
-			<h3 class="footer__title">{tlang('Conditions')}</h3>
-			{load_menu('footer_cond')}
-		</div>
-		<div class="footer__menu">
-			<h3 class="footer__title">{tlang('Store')}</h3>
-			{load_menu('info_footer')}
-		</div>
-		<div class="footer__menu">
-			<h3 class="footer__title">{tlang('User menu')}</h3>
-			{view('includes/footer_profile.tpl')}
-		</div>
-		<div class="footer__menu">
-			<h3 class="footer__title">{tlang('Contacts')}</h3>
-				<ul class="footer__list">
-					{if trim(siteinfo('mainphone')) != ""}
-						{$phones = explode("|",siteinfo('mainphone'))}
-						{foreach $phones as $phone}
-							<li class="footer__item"><span>{$phone}</span></li>
-						{/foreach}
-					{/if}
-					{if trim(siteinfo('adminemail')) != ""}
-						<li class="footer__item"><span>{siteinfo('adminemail')}</span></li>
-        			{/if}
-        			<li class="footer__item">
-        				<a class="footer__item_link" href="{site_url('feedback')}" data-modal="feedback_modal" rel="nofollow"> {tlang('Feedback')} </a>
-        			</li>
-      			</ul>
-		</div>
+		<ul class="footer__menu_list">
+			<li class="footer__menu_item">
+				<h3 class="footer__title">{tlang('Conditions')}</h3>
+				{load_menu('footer_cond')}
+			</li>
+			<li class="footer__menu_item">
+				<h3 class="footer__title">{tlang('Store')}</h3>
+				{load_menu('info_footer')}
+			</li>
+			<li class="footer__menu_item">
+				<h3 class="footer__title">{tlang('User menu')}</h3>
+				{view('includes/footer_profile.tpl')}
+			</li>
+			<li class="footer__menu_item">
+				<h3 class="footer__title">{tlang('Contacts')}</h3>
+					<ul class="footer__list">
+						{if trim(siteinfo('mainphone')) != ""}
+							{$phones = explode("|",siteinfo('mainphone'))}
+							{foreach $phones as $phone}
+								<li class="footer__item"><span>{$phone}</span></li>
+							{/foreach}
+						{/if}
+						{if trim(siteinfo('adminemail')) != ""}
+							<li class="footer__item"><span>{siteinfo('adminemail')}</span></li>
+	        			{/if}
+	        			<li class="footer__item">
+	        				<a class="footer__item_link" href="{site_url('feedback')}" data-modal="feedback_modal" rel="nofollow"> {tlang('Feedback')} </a>
+	        			</li>
+	      			</ul>
+			</li>
+		</ul>
 		<div class="studio__copyright">
 			<div class="copyright_text">
             {if trim(siteinfo('companytype')) != ""}
