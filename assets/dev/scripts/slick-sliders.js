@@ -22,7 +22,7 @@ $(function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     dots: false,
-                    arrows: false
+                    arrows: true
                 }
             },
             {
@@ -30,7 +30,7 @@ $(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: false,
+                    dots: true,
                 }
             },
             {
@@ -38,8 +38,8 @@ $(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: false,
-                    arrows: false
+                    dots: true,
+                    arrows: true
                 }
             }
         ]

@@ -32,15 +32,15 @@
         //     font-size: em(35px);
         // }
     }
-    .section__title_span{
-        text-transform: lowercase;
-          @include respond-to(mobile){
-            text-transform: uppercase;
-        }
-        @include respond-to(extraSmall-screens){
-            text-transform: uppercase;
-        }
-    }
+    // .section__title_span{
+    //     text-transform: lowercase;
+    //       @include respond-to(mobile){
+    //         text-transform: uppercase;
+    //     }
+    //     @include respond-to(extraSmall-screens){
+    //         text-transform: uppercase;
+    //     }
+    // }
     .slick-slider {
         padding: 0 30px;
         margin-bottom: 37px;

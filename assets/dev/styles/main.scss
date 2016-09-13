@@ -34,6 +34,15 @@ $misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
 		font-size: em(35px);
 	}
 }
+.section__title_span{
+    text-transform: lowercase;
+      @include respond-to(mobile){
+        text-transform: uppercase;
+    }
+    @include respond-to(extraSmall-screens){
+        text-transform: uppercase;
+    }
+}
 
 
 /* ---------colors --------- */
