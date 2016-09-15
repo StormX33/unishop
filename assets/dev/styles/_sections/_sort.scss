@@ -8,7 +8,6 @@
    .sort__title{
         font-size: em(18px);
         background: $tabs-color;
-        border-radius: 5px 0 0px 5px;
         padding: 12px 15px;
         text-transform: uppercase;
         font-family: 'PTSansBold', sans-serif;
@@ -30,7 +29,7 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
 }
 
 .select2-container{
-    width: 375px !important; 
+    width: 385px !important; 
 
     *{
         outline: none !important;

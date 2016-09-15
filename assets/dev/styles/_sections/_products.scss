@@ -63,47 +63,6 @@
 	.products__buy-btn{
 		float: right;
 	}
-	//  item label 
-	.products__label_content{
-	 	position: absolute;
-	    left: 14px;
-	    z-index: 1;
-	    min-width: 140px;
-	}
-	.label__item{
-		@include clearfix;
-	}
-	.products__label_sale{
-		background: $accent-color;
-		&:after{
-			border-color: transparent transparent transparent $accent-color;
-		} 
-	}
-	.products__label_latest{
-		background: #1fb122;
-		&:after{
-			border-color: transparent transparent transparent #1fb122;
-		}
-	}
-	.products__label_icon{
-		display: block;
-	    padding: 2px 9px;
-	    color: #fff;
-	    position: relative;
-	    float: left;
-	    font-size: 13px;
-	    &:after{
-			content: "";
-			display: block;
-			position: absolute;
-			right: -7px;
-			top: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 11.5px 0 11.5px 7px;
-		}
-	}
 	.products__desc_title{
 		font-size: em(16px);
 		color:  $title-color-blue;

@@ -101,10 +101,50 @@
 }
 .detail__main_col{
     .product__description_content{
-    	width: 83.5%;
     	color: $title-color-blue;
     	font-size: em(16px);
         line-height: 20px;
+    }
+}
+.pane__tab_about.active{
+    .box-hide{
+        height: 515px;
+        overflow: hidden;
+        position: relative;
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 30px;
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #fff));
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        }
+    }
+}
+.text-description-more{
+    text-align: right;
+}
+.text-description-more-link{
+    color: #3e77aa;
+    font-size: 17px;
+    text-decoration: none;
+}
+.text-description-more-link:hover{
+    color: #fb3f4c;
+}
+.arrow-link-inner{
+    border-bottom: 1px dotted;
+}
+.pane__tab_about.active{
+    .product__description{
+        margin-bottom: 0;
     }
 }
 .description_list{
@@ -367,7 +407,7 @@
     .detail__tools_link{
         display: block;
         white-space: nowrap;
-        padding: 9px 23px;
+        padding: 10px 23px;
         font-size: 14px;
         min-width: 148px;
         box-sizing: border-box;
@@ -726,7 +766,6 @@
 
     .product__buy_header{
         width: 475px;
-        float: left;
     }
     .product__buy_title{
         border: 1px solid #e8e7eb;
@@ -736,30 +775,17 @@
         padding: 30px 15px;
         background-color: $main-color;
     }
-    .produt__price_buy{
-        float: left;
-        @include clearfix;
-        padding: 0;
-        margin-bottom: 0;
+    .produt__offer{
         background: #f2f4f6;
+        padding: 0 15px;
     }
     .price__buy_content{
         width: 380px;
         border-top: 1px solid #e8e7eb;
         border-bottom: 1px solid #e8e7eb;
-        // float: left;
     }
     .produt__funcs-buttons{
-        margin-bottom: 0;
         width: 300px;
-        // float: left;
-    }
-    .price__buy_content,
-    .produt__funcs-buttons{
-        display: table-cell;
-        vertical-align: middle;
-        height: 88px;
-        padding: 0 15px;
     }
     .produt__price{
         @include inlineblock(middle);
@@ -767,7 +793,7 @@
     }
     .produt__price{
         line-height: 18px;
-        margin-right: 35px;
+        margin-right: 15px;
     }
     .old__price,
     .current__price_eur{
@@ -848,7 +874,6 @@
 .tabs__controls_list{
     border-bottom: 1px solid $tabs-color;
     font-size: 0;
-    // @include inlineblock();
     margin-bottom: 21px;
 }
 .tabs__controls_item{
@@ -858,7 +883,9 @@
     &:last-child{
         border-right: 1px solid $tabs-color;
     } 
-    &.active,
+    &.active{
+        background: $tabs-color;
+    }
     &:hover{
         background: #e6eaed;
     }
@@ -868,7 +895,7 @@
     color: $title-color-blue;
     text-transform: uppercase;
     font-family: 'PTSansBold', sans-serif;
-    padding: 14px 18px;
+    padding: 10px 18px;
     display: block;
     &:hover,
     &:focus,
@@ -884,8 +911,13 @@
 
 }
 .pane__tab_characteristics.active{
-    .product_characteristics{
-        width: 58.33333333%;
+    .description_item{
+        div{
+            width: 50%;
+            &:last-child{
+                text-align: left;
+            }
+        }
     }
 }
 // TABS END
