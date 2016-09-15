@@ -2,10 +2,12 @@
 <div class="over__wraper">
 	<div class="products__item_long">	
     	<div class="products__item-inner">
-			<div class="product__title">{echo $model->getName()}</div>
+        
+			<div class="product__title"><a class="products__link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
 			<div class="products__label_content">
 				    {view('shop/includes/product/product_labels.tpl', ['model' => $model])}
 			</div>
+            
         </div><!-- /.products__item-inner-->
     	<div class="products__left">
         	<div class="products__img_wrap">
