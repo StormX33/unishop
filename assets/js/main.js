@@ -390,9 +390,9 @@ $(window).bind('resize', (function ($) {
         if($(window).width() < 768){
             return;
         }
-        var blockText = $(".services__description");
-        var textOffset = blockText.offset();
-        
+        var blockText = $(".services__description"),
+            textOffset = blockText.offset();
+     
         if (!blockText){
             return;
         }
@@ -468,6 +468,18 @@ $(function () {
         }
     });
 });
+
+$(document).ready(function(){
+    $('.text-description-more').click(function(e){
+        e.preventDefault();
+        $('#short_text').removeClass('box-hide');
+        $(this).css('display', 'none');
+    })
+});
+
+
+
+
 // Projects
 $(function () {
     var advantagesSlickOpts = {
