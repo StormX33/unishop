@@ -13,7 +13,6 @@
 .product__right__collumn{
     width: 300px;
     float: right;
-
 }
 .product__right_inner{
     background: #e6eaed;
@@ -22,6 +21,9 @@
     -webkit-box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
     -moz-box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
     box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
+}
+.content__page-wrapper.shop_category__page{
+    padding-top: 0;
 }
 // PRODUCT SLIDESHOW
 
@@ -763,7 +765,9 @@
 .product__buy{
     @include clearfix;
     margin-bottom: 49px;
-
+    table>td>tr{
+        vertical-align: middle;
+    }
     .product__buy_header{
         width: 475px;
     }
