@@ -2,10 +2,7 @@
 	<div class="footer__info_block">
 		<h3 class="footer__info_block-title">Новости </h3>
 		<div class="subscription">
-			<form class="subscription_form">
-				<input name="" type="text" placeholder="Ваш адрес эл.почты" class="subscription__form-input">
-				<input name="" type="submit" value="Подписаться" class="subscription_form-submit">
-			</form>
+            {echo $CI->load->module('mailer')->getForm ()}
 			<div class="subscription__text">Получайте обновления любимого магазина или товара </div>
 		</div>
 	</div>
