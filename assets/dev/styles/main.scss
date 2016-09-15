@@ -43,7 +43,14 @@ $misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
         text-transform: uppercase;
     }
 }
-
+.menu-hidden{
+	@media screen and (max-width: 1199px) and (min-width: 1024px){
+		display: none !important;
+	}
+	@media screen and (max-width: 1023px) and (min-width: 768px){
+		display: block !important;
+	}
+}
 
 /* ---------colors --------- */
 $main-color: #ffffff;

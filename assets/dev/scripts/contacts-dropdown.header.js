@@ -9,12 +9,12 @@ $(function () {
     });
 });
 
-$(function () {
-    var $priceHandler = $('.sort__title_price'),
-    	$priceText = $('.sort__title_text');
+// $(function () {
+//     var $priceHandler = $('.sort__title_price'),
+//     	$priceText = $('.sort__title_text');
 
 
-    $priceHandler.on('click', function () {
-        $priceText.toggleClass('active');
-    });
-});
+//     $priceHandler.on('click', function () {
+//         $priceText.toggleClass('active');
+//     });
+// });

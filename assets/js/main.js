@@ -9,15 +9,15 @@ $(function () {
     });
 });
 
-$(function () {
-    var $priceHandler = $('.sort__title_price'),
-    	$priceText = $('.sort__title_text');
+// $(function () {
+//     var $priceHandler = $('.sort__title_price'),
+//     	$priceText = $('.sort__title_text');
 
 
-    $priceHandler.on('click', function () {
-        $priceText.toggleClass('active');
-    });
-});
+//     $priceHandler.on('click', function () {
+//         $priceText.toggleClass('active');
+//     });
+// });
 // Footer bottom
 function footerToBottom() {
 	var browserHeight = $(window).height(),
@@ -338,23 +338,23 @@ $(window).on('scroll', function () {
 
 
 /*-----------menu----------*/
-$(function(){
-    $('ul.nav__list').superfish({
-            minWidth:   12,
-            maxWidth:   25, 
-            animation: {height:'show', height:'show'}, 
-            delay:  100,
-            speed:  'fast',                          
-            autoArrows:  false,                         
-            dropShadows: false                        
-        });
-});
-
 $(function() {
-    window.prettyPrint && prettyPrint()
-    $(document).on('click', '.yamm .dropdown-menu', function(e) {
-      e.stopPropagation()
-    })
+    $('.cbp-hrmenu .nav__list').menuAim({
+      triggerEvent:       'hover',
+      activateCallback:   activate,
+      deactivateCallback: deactivate,
+      submenuDirection:   'below',
+      openClassName:      'cbp-hropen',
+      activationDelay:    200
+    });
+
+    function activate(row) {
+      $(row).addClass('cbp-hropen');
+    }
+
+    function deactivate(row) {
+      $(row).removeClass('cbp-hropen');
+    }
 });
 
 // COUNT PRODUCT 
@@ -443,17 +443,26 @@ $(document).ready(function() {
 /*---------Header hamburger menu-------*/
 $(function () {
     var touch = $('.top__menu_icon'),
-        menu = $('.top__header_nav');
+        menu = $('.top__header_nav'),
+        toggleButton = $('.toggle-mnu'),
+        navMenu =$('.nav__list');
 
     touch.click(function () {
         $(this).toggleClass("on");
         menu.slideToggle();
         return false;
     });
-
+    toggleButton.click(function () {
+        $(this).toggleClass("on");
+        navMenu.slideToggle();
+        return false;
+    });
 
     $(window).resize(function () {
         var wid = $(window).width();
+        if (wid > 1023 && navMenu.is(':hidden')) {
+            navMenu.removeAttr('style');
+        }
         if (wid > 760 && menu.is(':hidden')) {
             menu.removeAttr('style');
         }

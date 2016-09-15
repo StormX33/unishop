@@ -109,8 +109,9 @@
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.js"></script>
 	<script src="{$THEME}assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="{$THEME}assets/js/mlsMedia.js"></script>
+  <script src="{$THEME}assets/js/mlsMedia.js"></script>
 	<script src="{$THEME}assets/js/superfish.js"> </script>
+  <script src="{$THEME}assets/bower/jQuery-menu-aim/jquery.menu-aim.js"></script>
 	<script src="{$THEME}assets/js/jquery-ui.min.js"> </script>
 	<script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
 	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>

@@ -38,6 +38,10 @@
 	@include respond-to(mobile){
 		font-size: em(27px);
 	}
+	@include respond-to(extraSmall-screens){
+		font-size: em(30px);
+	}
+
 }
 .feedback__text{
 	font-size: em(21px);
