@@ -1,6 +1,6 @@
 <div class="related__products">
 	<a href="{shop_url('product/'.$model->getSProducts()->getUrl())}" class="related__products_link">
-		<img src="{echo $model->firstVariant->getSmallPhoto()}" alt="{echo $model->getSProducts()->getName()}" title="{echo $model->getSProducts()->getName()}" class="products__img">
+		<img src="{echo $model->getSProducts()->firstVariant->getSmallPhoto()}" alt="{echo $model->getSProducts()->getName()}" title="{echo $model->getSProducts()->getName()}" class="products__img">
 	</a>
 </div>
 <div class="related__product_title">{echo $model->getSProducts()->getName()}</div>
@@ -18,7 +18,7 @@
 	<div class="products__price_item products__price_new">
     	{echo emmet_money($model->getFinalPrice())}
     </div>
-	{$loc_additional_prices = emmet_money_additional($model->getFinalPrice(), 'span.product-price__addition-value', '', 'span.product-price__addition-cur')}
+	{$loc_additional_prices = emmet_money_additional($model->getFinalPrice())}
 	{if count($loc_additional_prices) > 0}
 		{foreach $loc_additional_prices as $additional_price}
 			<div class="products__price_item products__price_eur">

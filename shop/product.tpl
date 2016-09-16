@@ -136,13 +136,14 @@
             	{view('shop/includes/product/product_cart.tpl')}
         	</div>
             <div class="buy__click">
-            	<form method="post" class="buy__click_form" action="{echo $CI->load->module('Buy_one_click')->buy ()}">
+             {echo $CI->load->module('one_click_buy')->getBuyForm ()}
+ <!--           	<form method="post" class="buy__click_form" action="{site_url('/')}buy_one_click" onsubmit="return false;">
 					<input name="UserPhone" type="tel" placeholder="+38(000) 000-00-00" class="buy__click_form-input" value="">
 					<input name="" type="submit" value="Заказ в 1 клик" class="buy__click_form-submit" onclick="buy_one_click(this)">
                     <input type="hidden" name="ProductId" value="{echo $model->getId()}"/>
 					<input type="hidden" name="VariantId" value="{echo $model->firstVariant->getId()}"/>
 					<input type="hidden" name="Price" value="{echo $model->firstVariant->toCurrency()}"/>
-				</form>
+				</form>-->
                 
 			</div><!-- ./buy__click -->
             <div class="product_info_block">

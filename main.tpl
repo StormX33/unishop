@@ -119,6 +119,7 @@
     <script src="{$THEME}assets/js/mlsAjax.js"></script>
 	<script src="{$THEME}assets/js/modal.js"></script>
     <script src="{$THEME}assets/js/mlsCart.js"></script>
+    <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
     <script src="{$THEME}assets/js/custom.js"> </script>
 <!--    <script src="{$THEME}_js/vendor.min.js"></script>
     <script src="{$THEME}_js/final.min.js"></script>
