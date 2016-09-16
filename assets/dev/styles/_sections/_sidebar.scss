@@ -62,7 +62,7 @@
     background: #e6eaed;
 }
 .filter__item{
-    padding: 12px 14px;
+    padding: 10px 14px;
     border-top: 1px solid $title-color-blue;
     &.active{
         .filter__title{
@@ -82,7 +82,7 @@
         content: "";
         @include get-sprite($misc-sprite, bottom-sb);
         position: absolute;
-        top: 5px;
+        top: -3px;
         right: 5px;
     }
 }
@@ -93,7 +93,7 @@
 }
 .filter__title-link{
     color: $title-color-blue;
-    font-size: em(22px);
+    font-size: em(16.5px);
     text-decoration: none;
     display: block;
     &:hover,
@@ -152,7 +152,7 @@
 }
 
 .filter__choose-item{
-    margin-top: 16px;
+    // margin-top: 16px;
     @include clearfix;
 }
 .filter__choose-label{

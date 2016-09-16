@@ -97,13 +97,13 @@ $contacts-text: #282828;
 	}
 }
 .section__title_span{
-    text-transform: lowercase;
-      @include respond-to(mobile){
-        text-transform: uppercase;
-    }
-    @include respond-to(extraSmall-screens){
-        text-transform: uppercase;
-    }
+    text-transform: uppercase;
+    //  @include respond-to(mobile){
+    //     text-transform: uppercase;
+    // }
+    // @include respond-to(extraSmall-screens){
+    //     text-transform: uppercase;
+    // }
 }
 .menu-hidden{
 	@media screen and (max-width: 1199px) and (min-width: 1024px){
