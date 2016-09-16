@@ -32,7 +32,7 @@
 						</div>
 					</div>
 				</li>
-				{load_menu('main_navi')}
+				{load_menu('sticked')}
 			</ul>
 	
 		<div class="contacts">
