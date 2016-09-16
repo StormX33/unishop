@@ -9,7 +9,7 @@
 					<div class="container">
 						<div class="section__wrapper">
 							<div class="section__title">
-								<h2 class="section__title_text">Winterm -<span class="section__title_span">{tlang('authorized dealer')}</span></h2>
+								<h2 class="section__title_text">Винтерм - <span class="section__title_span">{tlang('authorized dealer')}</span></h2>
 							</div>
 							<div class="section_content">
 								<ul class="section__list_use">
