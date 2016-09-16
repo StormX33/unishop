@@ -76,7 +76,7 @@
         {if $CI->core->core_data['data_type'] == 'main'}
         	{$content}
         {else:}
-        	<article class="content-wrapper content__page-wrapper {echo $CI->core->core_data['data_type']}__page">
+        	<article class="content-wrapper {echo $CI->core->core_data['data_type']}__page">
 				<div class="container">
                 {$content}
                 </div>
