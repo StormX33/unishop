@@ -1,55 +1,57 @@
 <div class="main-content">
     <aside class="sidebar pull-right">
-    <div class="form-wrap">
-    	<header class="form_header">
-			<div class="form__header_img-wrap"><img src="{$THEME}images/services/personIconHover1.png" /></div>
-			<div class="popup__header_title">
-				<h3 class="popup__header_title-text"></h3>
-			</div>
-		</header>
+      <div class="form-wrap">
+      	<header class="form_header">
+  			<div class="form__header_img-wrap">
+          <img src="{$THEME}images/icons/popup/for_calc.png" />
+        </div>
+  			<div class="popup__header_title">
+  				<h3 class="popup__header_title-text">Расчет объекта</h3>
+  			</div>
+  		</header>
 
-    
-			<form action="{site_url('callbacks')}" method="post" data-form-ajax="callback_modal" class="feedback_form popup__feedback_form"> 
-				{if !$success}
-					<div class="form__input_wrap">
-                      <!-- User Name field -->
-                      {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('Name'),
-                        'type' => 'text',
-                        'name' => 'Name',
-                        'value' => get_value('Name'),
-                        'required' => true
-                      ])}
-                      
-                      <!-- User Phone field -->
-                      {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('Phone number'),
-                        'type' => 'text',
-                        'name' => 'Phone',
-                        'value' => get_value('Phone'),
-                        'required' => true
-                      ])}
-                       <!-- User Email field -->
-                      {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('E-mail'),
-                        'type' => 'email',
-                        'name' => 'email',
-                        'value' => get_value('email'),
-                        'required' => true
-                         ])}
-                  	</div>
-              {else:}
-                <div class="typo">{$success}</div>
-              {/if}
-    <!-- /.modal__content -->
-				<div class="feedback__button">
-					{if !$success}
-						<input class="submit__btn_accent feedback-submit" type="submit" value="Хочу расчет">
-        			{/if}
-                </div>
-    {form_csrf()}
-  </form>
-  </div>
+      
+  			<form action="{site_url('callbacks')}" method="post" data-form-ajax="callback_modal" class="feedback_form popup__feedback_form"> 
+  				{if !$success}
+  					<div class="form__input_wrap">
+                        <!-- User Name field -->
+                        {view('includes/forms/input-base.tpl', [
+                          'label' => tlang('Name'),
+                          'type' => 'text',
+                          'name' => 'Name',
+                          'value' => get_value('Name'),
+                          'required' => true
+                        ])}
+                        
+                        <!-- User Phone field -->
+                        {view('includes/forms/input-base.tpl', [
+                          'label' => tlang('Phone number'),
+                          'type' => 'text',
+                          'name' => 'Phone',
+                          'value' => get_value('Phone'),
+                          'required' => true
+                        ])}
+                         <!-- User Email field -->
+                        {view('includes/forms/input-base.tpl', [
+                          'label' => tlang('E-mail'),
+                          'type' => 'email',
+                          'name' => 'email',
+                          'value' => get_value('email'),
+                          'required' => true
+                           ])}
+                    	</div>
+                {else:}
+                  <div class="typo">{$success}</div>
+                {/if}
+      <!-- /.modal__content -->
+  				<div class="feedback__button">
+  					{if !$success}
+  						<input class="submit__btn_accent feedback-submit" type="submit" value="Хочу расчет">
+          			{/if}
+                  </div>
+      {form_csrf()}
+    </form>
+    </div>
 
     </aside>
     <div class="content pull-left">
