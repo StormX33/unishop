@@ -1,5 +1,6 @@
-<div class="content">
+<div class="main-content">
   <div class="content__container">
+  
 
     <!-- Gallery H1 Title -->
     <div class="content__header">
@@ -73,4 +74,4 @@
     </div>
 
   </div><!-- /.content__container -->
-</div><!-- /.content -->
+</div><!-- /.main-content -->
