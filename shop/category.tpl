@@ -3,7 +3,7 @@
 	<!-- Left BEGIN -->
 	<div class="sidebar">
 		<!-- Sub categories -->
-		<div class="hidden-xs">
+		<div class="category_sidebar_wrap">
   			{view('shop/includes/category/category_subnav.tpl')}
 		</div>
 <!-- Filter toggle button on mobile devices -->

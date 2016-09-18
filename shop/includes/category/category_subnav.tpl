@@ -1,7 +1,9 @@
 {$loc_items = $category->getChildsByParentIdI18n($category->getId())}
 {if count($loc_items)}
 <div class="sidebar__title">
-<div class="filter__title_text">{tlang("Categories")}</div>
+	<button class="category_sidebar_btn visible-xs"></button>
+	<div class="filter__title_text">{tlang("Categories")}</div>
+	
 </div>
 <div class="content__sidebar-item">
   <ul class="sidebar-nav">

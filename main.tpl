@@ -91,7 +91,7 @@
     </div><!-- .wrapper__main -->
     <footer id="footer" class="footer">
         <div class="container">
-         <div class="row">
+         <div class="row row-mob">
             {view('includes/footer.tpl')}
           </div>
         </div>

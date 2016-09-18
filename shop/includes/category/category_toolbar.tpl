@@ -15,7 +15,7 @@
 	{/if}
 	<!-- END Order -->
 	<!-- Per page items BEGIN -->
-	<li class="sort__item">
+	<li class="sort__item hidden-xs hidden-sm">
 		{$loc_per_page_items = tpl_per_page_array()}
 		{if count($loc_per_page_items) > 1}
 			<div class="sort__title">
@@ -30,8 +30,8 @@
 	<!-- END Per page items -->
 	<!-- Change View BEGIN -->
 	<li class="sort__item sort-view">
-		<div class="sort__title">{$totalProducts}</div>
-		<ul class="sort__view-list">
+		<div class="sort__title">Выбрано товаров: {$totalProducts}</div>
+		<ul class="sort__view-list hidden-xs">
 			<li data-view="grid" class="{if !$_COOKIE['catalog_view'] || $_COOKIE['catalog_view'] == 'card'}active{/if} sort__view-item sort__view_grid">
 				<a href="#" class="sort__view-link" title={tlang("Card")}>
 					<div class="sort__view-icon"></div>

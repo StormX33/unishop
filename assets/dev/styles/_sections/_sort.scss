@@ -14,6 +14,9 @@
         @include inlineblock(middle);
         margin-right: -5px;
         line-height: 20px;
+        @include respond-to(medium-screens){
+            padding: 12px 6px; 
+        }
    } 
 }
 .sort__select{
@@ -30,19 +33,16 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
 
 .select2-container{
     width: 385px !important; 
-
     *{
         outline: none !important;
     }
     .select2-selection--single{
         height: 44px !important;
     }
-
     .select2-selection__arrow{
         width: 47px !important;
         height: 44px !important;
         border-left: 1px solid #a3a3a3;
-       
         b{
             @include get-sprite($select-map, bottom);
             height: 9px !important; 
@@ -90,5 +90,10 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
                 color: $title-color-blue;
             }
         }
+    }
+}
+@include respond-to(medium-screens){
+    .select2-container{
+        width: 250px !important;
     }
 }

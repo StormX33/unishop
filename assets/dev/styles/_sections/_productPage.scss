@@ -151,30 +151,14 @@
 }
 .description_list{
 	margin-bottom: 10px;
-    // padding: 0 15px;
     .description_item{
         @include clearfix;
         line-height: 34px;
-        // margin-bottom: 8px;
         border-bottom: 1px dotted $title-color-blue;
-        // @include respond-to(mobile){
-        //     font-size: em(12px);
-        //     margin-bottom: 5px;
-        // }
-        // @include respond-to(extraSmall-screens){
-        //     font-size: em(14px);
-        // }
-        // @include respond-to(small-screens){
-        //     font-size: em(16px);
-        // }
-        // @include respond-to(medium-screens){
-        //     font-size: em(16px);
-        // }
     }
 }
 .description_item{
     div{
-    	// padding: 6px 0;
         &:first-child{
             float: left;
         }
@@ -666,38 +650,6 @@
     margin-bottom: 8px;
 }
 
-// .socials__list{
-//     float: right;
-// }
-// .socials__item{
-//     @include inlineblock(middle); 
-//     margin-left: 1px;
-
-//     &:first-child{
-//         margin-left: 0;
-//     }
-// }
-
-// .socials__link{
-//     display: block;
-//     width: 25px;
-//     height: 25px;
-//     position: relative;
-// }
-
-// .socials__icon{
-//     @include absolute-center; 
-// }
-
-// $socials: vk, fb, tw, gplus;   
-// $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
-// @each $social in $socials {
-//     .socials__item_#{$social}{
-//         .socials__icon {
-//             @include get-sprite($socials-map, $social);
-//         }
-//     }
-// }
 
 // SHARE END
 // REVIEWS START
@@ -765,31 +717,37 @@
 .product__buy{
     @include clearfix;
     margin-bottom: 49px;
+    table{
+        width: 100%;
+        border: 1px solid #e8e7eb;
+    }
     table>td>tr{
         vertical-align: middle;
     }
     .product__buy_header{
-        width: 475px;
+        // width: 475px;
+        width: 40%;
     }
     .product__buy_title{
-        border: 1px solid #e8e7eb;
         border-right: none;
         color: $title-color-blue;
         text-align: center;
         padding: 30px 15px;
         background-color: $main-color;
+        font-size: 17px;
     }
     .produt__offer{
         background: #f2f4f6;
         padding: 0 15px;
     }
     .price__buy_content{
-        width: 380px;
-        border-top: 1px solid #e8e7eb;
-        border-bottom: 1px solid #e8e7eb;
+        // width: 380px;
+        width: 30%;
     }
     .produt__funcs-buttons{
-        width: 300px;
+        // width: 300px;
+        width: 30%;
+        margin-bottom: 0;
     }
     .produt__price{
         @include inlineblock(middle);
@@ -807,10 +765,6 @@
     .produt__count{
         font-size: 0;
     }
-    .produt__funcs-buttons{
-        margin-bottom: 0;
-    }
-
     .products__buy-btn{
         @include inlineblock();
         font-size: 21px;
@@ -822,7 +776,7 @@
             @include get-sprite($misc-sprite, catalog_cart-lg);
         }
     }
-    .produt__funcs-buttons{
+    .produt__offer .produt__funcs-buttons{
         width: auto;
     }
 }
@@ -925,11 +879,6 @@
     }
 }
 // TABS END
-
-
-
-
-
 // RECENT PRODUCTS END
 
 //  PRODUCTS ANCORS START
@@ -947,10 +896,10 @@
 #description{
     height: 785px;
 }
-// #reviews{
-//     height: 161px;
-//     top: -62px;
-// }
-
-
-//  PRODUCTS ANCORS  END 636
+//  PRODUCTS ANCORS  END 
+//MEDIA
+@include respond-to(medium-screens){
+    .product__left_collumn{
+        width: 65%;
+    }
+}

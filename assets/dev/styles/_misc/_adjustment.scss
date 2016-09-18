@@ -49,6 +49,12 @@ body{
 }
 .maincontent{
     padding-top: 220px;
+    @include respond-to(mobile){
+        padding-top: 250px;
+    } 
+    @include respond-to(extraSmall-screens){
+        padding-top: 250px;
+    }
 }
 
 // footer{

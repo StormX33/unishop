@@ -2,6 +2,7 @@
 	border-top: 1px solid #e8e7eb;
 	border-bottom: 1px solid #e8e7eb;
 	@include clearfix;
+	background: #fff;
 }
 .sort__item{
 	width:  33.33333333%;
@@ -91,7 +92,65 @@
 	}
 
 }
-
+@include respond-to(mobile){
+	.sort__list{
+		position: relative;
+		height: 125px;
+	}
+	.sort__item{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 6px;
+		@include transform(translate(0, 100%));
+		float: none;
+		border-right: none;
+	}
+	.sort-view{
+		top: 0;
+		@include transform(none);
+		float: none;
+		font-size: em(27px);
+		font-family: 'PTSansBold', sans-serif;
+		.sort__title{
+			text-align: center;
+			float: none;
+			padding-right: 0;
+		}
+	}
+} 
+@include respond-to(extraSmall-screens){
+	.sort__list{
+		position: relative;
+		height: 125px;
+	}
+	.sort__item{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 6px;
+		@include transform(translate(0, 100%));
+		float: none;
+		border-right: none;
+	}
+	.sort-view{
+		top: 0;
+		@include transform(none);
+		float: none;
+		font-size: em(27px);
+		font-family: 'PTSansBold', sans-serif;
+		.sort__title{
+			text-align: center;
+			float: none;
+			padding-right: 0;
+		}
+	}
+}
+@include respond-to(small-screens){
+	.sort__item{
+		width: 50%;
+	}
+}
 // .sort__view{
 // 	.sort__title,
 // 	.sort__view-list{

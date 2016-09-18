@@ -138,7 +138,7 @@
         background: darken(#da251c, 5%);
     }
 }
-.products__buy-span{
+.products__buy-content{
     @include inlineblock(middle);
     &:before{
         content: "";
@@ -146,6 +146,19 @@
         @include get-sprite($misc-sprite, catalog_cart);
         margin-right: 8px;
     }
+    @include respond-to(mobile){
+        &:before{
+            @include get-sprite($misc-sprite, catalog_cart_mob);
+             margin-right: 0;
+        }
+    }
+    @include respond-to(extraSmall-screens){
+        &:before{
+            @include get-sprite($misc-sprite, catalog_cart_mob);
+             margin-right: 0;
+        }
+    }
+
 }
 
 // PAGE PRODUCT BLUE BUTTON

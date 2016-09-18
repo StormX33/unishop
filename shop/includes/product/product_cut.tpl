@@ -1,9 +1,9 @@
 <!-- Block visible once page is loaded -->
 <div class="over__wraper">
 	<div class="products__item_long">	
-    	<div class="products__item-inner">
+    	<div class="products__item-inner hidden-xs">
         
-			<div class="product__title"><a class="products__link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
+			<div class="product__title"><a class="products__title_link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
 			<div class="products__label_content">
 				    {view('shop/includes/product/product_labels.tpl', ['model' => $model])}
 			</div>
@@ -14,9 +14,14 @@
 				<a class="products__link" href="{shop_url('product/'.$model->getUrl())}">
                 	{view('shop/includes/product/product_cut_photo.tpl', ['model' => $model])}
 				</a>
-                <div class="product_ective-element">
+                <div class="product_ective-element hidden-xs">
                 	{view('shop/includes/product/product_rating.tpl', ['model' => $model])}
                 </div>
+                <div class="products__item-inner visible-xs">
+                    <div class="product__title"><a class="products__title_link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
+                    <div class="products__label_content">
+                            {view('shop/includes/product/product_labels.tpl', ['model' => $model])}
+                    </div>
             </div>
         </div>
         <div class="products__right">
@@ -37,6 +42,9 @@
                 </div>
                 <ul class="detail__tools">
                 </ul>
+            </div>
+            <div class="product_ective-element visible-xs-block">
+                {view('shop/includes/product/product_rating.tpl', ['model' => $model])}
             </div>
             <!-- Main properties BEGIN -->
             {$loc_main_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model, true)}

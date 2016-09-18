@@ -5,7 +5,6 @@
     -webkit-box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 28px 30px 0px rgba(0,0,0,0.33),0px -5px 10px 0px rgba(0,0,0,0.3);
-
 }
 .footer__info_block{
     margin-bottom: 16px;
@@ -144,4 +143,10 @@
         display: block;
     }
 }
+@include respond-to(mobile){
+    .row-mob{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+} 
 // FOOTER END

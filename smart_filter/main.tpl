@@ -1,10 +1,11 @@
 <div class="sidebar__title"> 
+	<button class = 'filter__toggle_btn visible-xs'></button>
 	<div class="filter__title_text">{tlang('Filter')}</div>
     <!--<a href="#" class="filter__reset filter__reset_price">{tlang('Reset')}</a>-->
 </div>
         <!-- Filter selected results -->
         {view('smart_filter/includes/filter_results.tpl')}
-<div class="filter" data-filter data-filter-category="{shop_url('category/'.$category->getFullPath())}">
+<div id="filter-content" class="filter" data-filter data-filter-category="{shop_url('category/'.$category->getFullPath())}">
 	<!-- Price -->
 	{if $curMax > 0}
 		<div class="filter__price">

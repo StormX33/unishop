@@ -3,14 +3,28 @@
 	color: $title-color-blue;
 	font-size: em(34px);
 	margin-bottom: 10px;
+    @media screen and (max-width: 382px) and (min-width: 320px){
+        font-size: em(28px);
+    }
 }
 .main-content{
     @include clearfix;
-    // margin-bottom: 70px;
 }
 
 .content{
     float: right;
     width: 860px;
     margin-bottom: 70px;
+    @include respond-to(mobile){
+        width: 100%;
+    } 
+    @include respond-to(extraSmall-screens){
+        width: 100%;
+    }
+    @include respond-to(medium-screens){
+    	width: 75%;
+    }
+    @include respond-to(small-screens){
+        width: 70%;
+    }
 }

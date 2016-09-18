@@ -901,6 +901,9 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .header__bottom{
     .header__bottom_content{
+        @include respond-to(mobile){
+            padding: 10px 0 16px;
+        }
         @include respond-to(extraSmall-screens){
             padding: 10px 0 16px;
         }

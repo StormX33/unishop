@@ -24,7 +24,7 @@
 		{/if}
 	</div>
 </div>
-<div class="col-md-9">
+<div class="col-md-9 col-xs-12">
 	<div class="page__footer_menu">
 		<ul class="footer__menu_list">
 			<li class="footer__menu_item">
