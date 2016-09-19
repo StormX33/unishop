@@ -234,3 +234,71 @@ select.sort__title_price{
 .page__page .popup__feedback_form{
     padding: 0 15px;
 }
+.project__item{
+	display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: 430px;
+}
+.project__img{
+	width:100%;
+}
+.project__title{
+    height: 45px;
+    overflow: hidden;
+	font-size: 16px;
+    text-align: center;
+}
+
+
+.project__desc{
+    border-top: 1px solid #e8e7eb;
+    color: #092e4a;
+    padding: 8px 14px 15px;
+	font-size: 14px;
+    text-align: center;
+}
+.gallery-menu__item:before, .gallery-menu__item_active:before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 50%;
+    left: 0px;
+    top: 0%;
+    background: linear-gradient(to right top, #ececec 50%,rgba(0,0,0,0) 50%);
+    position: absolute;
+}
+.gallery-menu__item, .gallery-menu__item_active {
+    display: inline-block;
+    position: relative;
+    padding-left: 17px;
+    background: #204664;
+    max-width: 240px;
+    color: #fff;
+}
+.gallery-menu__item:hover, .gallery-menu__item_active{
+	background:#e42826;
+	color:#fff;
+}
+.gallery-menu__item:after, .gallery-menu__item_active:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 50%;
+    left: 0px;
+    top: 50%;
+    background: linear-gradient(to right bottom, #ececec 50%,rgba(0,0,0,0) 50%);
+    position: absolute;
+}
+
+.gallery-menu__link, .gallery-menu__active, .gallery-menu__link:hover {
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 1em;
+    padding: 7px 6px 7px 0;
+    position: relative;
+	color:#fff;
+}
+.gallery-menu__link, .gallery-menu__active{
+    display: inline-block;
+    vertical-align: top;
+}
