@@ -92,6 +92,11 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
         }
     }
 }
+@include respond-to(small-screens){
+    .select2-container{
+        width: 250px !important;
+    }
+}
 @include respond-to(medium-screens){
     .select2-container{
         width: 250px !important;
