@@ -234,3 +234,12 @@ select.sort__title_price{
 .page__page .popup__feedback_form{
     padding: 0 15px;
 }
+.project__item{
+	display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: 430px;
+}
+.project__img{
+	width:100%;
+}
