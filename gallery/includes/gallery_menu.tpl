@@ -1,6 +1,10 @@
 <nav class="gallery-menu">
 	<ul class="gallery-menu__list">
+    	{if $current_category.id}
 		<li class="gallery-menu__item">
+        	{else:}
+        <li class="gallery-menu__item_active">
+        {/if}
 			{if $current_category.id}
 				<a class="gallery-menu__link" href="{site_url('gallery')}">{tlang('All categories')}</a>
 			{else:}

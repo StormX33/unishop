@@ -18,7 +18,7 @@
                     		<li class="col-md-3 project__item">
                             	<div class="products__item_long">
                                 	<div class="products__item-inner">
-                                    	<div class="product__title">
+                                    	<div class="project__title">
                                         	{echo strip_tags(trim($item.title));}
                                     	</div>
                                  	</div>
@@ -31,7 +31,7 @@
                                 	</div>
                                		<div class="products__right">
                                 		{if strip_tags(trim($item.description)) != ""}
-											<div class="products__desc">
+											<div class="project__desc">
 												{$item.description}
 											</div>
 										{/if}

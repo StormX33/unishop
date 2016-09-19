@@ -1,5 +1,5 @@
 <div class="main-content">
-	<aside class="sidebar pull-right">
+	<aside class="top-sidebar">
 		{if count($gallery_category) > 1}
 			<!-- Categories Navigation -->
 			<div class="content__row content__row--sm">
@@ -7,7 +7,7 @@
 			</div>
 		{/if}
 	</aside>	
-	<div class="content pull-left content__sale">
+	<div class="content__sale">
 		<div class="page__teaser_wrapper">
 			{$loc_main_title = $current_category.id ? $current_category.name : tlang('Gallery')}
 			<h1 class="content__title">{$loc_main_title}</h1>
