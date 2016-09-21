@@ -3,10 +3,10 @@
   	<div class="detail__main_col">
     	<div class="product__left_collumn">
         <div class="row">
-        	<div class="col-sm-4">
+        	<div class="col-xs-4 col-mob">
             {view('shop/includes/product/product_photo.tpl', ['model' => $model])}
         	</div>
-          <div class="col-sm-8">
+          <div class="col-xs-8 col-mob">
             <!-- <div class="product__description">
               <div class="product__description_content"> -->
                 <!-- Product main properties list -->
@@ -39,15 +39,22 @@
               <div class="buy__click">
                 {echo $CI->load->module('one_click_buy')->getBuyForm ()}
               </div><!-- ./buy__click -->
-              <div class="product_info_block visible-xs-block">
+              <div class="product_info_block visible-xs-mob">
                 <div class="product_info_content"> 
                   <h4 class="info__block_title">Действует программа лояльности! </h4>
                   <p class="info__block_text">Государство компенсирует 20%</p>
                 </div>
                 <a href="#" class="calculate_btn"> <span class="calculate_btn_span">Рассчитать кредит</span></a>
               </div><!-- ./product_info_block -->
+              <ul class="detail__tools visible-xs-mob">
+                <li class="detail__tools_item">
+                  {module('wishlist')->renderWLButton($model->firstVariant->getId(), ['type' => 'link']);}
+                </li>
+                <li class="detail__tools_item">
+                  {view('shop/includes/compare/compare_button.tpl', ['model' => $model, 'type' => 'link'])}
+                </li>
+              </ul>
             </div>
-            
             <div class="sort">
       				<div class="sort__select-wrapper">
       					<div class="sort__title">Модификации</div>
@@ -73,15 +80,15 @@
       	{/if}
         <div class="description_main_col-left">
       		<ul id="tabs__controls" class="tabs__controls_list">
-      			<li data-class="tab_about" class="tabs__controls_item active"><a href="#" class="tabs__controls_link">Все о товаре</a></li>
-      			<li data-class="tab_characteristics" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Характеристики</a></li>
+      			<!-- <li data-class="tab_about" class="tabs__controls_item active"><a href="#" class="tabs__controls_link">Все о товаре</a></li> -->
+      			<li data-class="tab_characteristics" class="tabs__controls_item active"><a href="#" class="tabs__controls_link">Характеристики</a></li>
             {if trim(strip_tags($model->getFullDescription())) != ""}
       			 <li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
             {/if}
       			<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
       		</ul><!-- ./tabs__controls -->
           <ul id="description__list" class="description_list">
-      			<li class="tab__pane pane__tab_about active">
+      		<!-- 	<li class="tab__pane pane__tab_about active">
       				<div class="row">
                 {if trim(strip_tags($model->getFullDescription())) != ""}
       						<div class="col-sm-7">
@@ -96,8 +103,8 @@
                         <span class="arrow-link-inner">Читать полностью</span>&nbsp;→
                       </a>
                     </div>
-                  </div><!-- ./col-sm-7 -->
-                {/if}
+                  </div> --><!-- ./col-sm-7 -->
+                <!-- {/if}
                 <div class="col-sm-5">
                   <div class="product__description product_characteristics"><a name="characteristics" id="characteristics" class="anchor"></a>
                     {$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
@@ -108,11 +115,11 @@
                         </div>
                       {/if}
                   </div>
-                </div><!-- ./col-sm-5 -->
-              </div><!-- ./row -->
+                </div> --><!-- ./col-sm-5 -->
+              <!-- </div> --><!-- ./row -->
               
-            </li><!-- ./tab__pane pane__tab_about -->
-            <li class="tab__pane pane__tab_characteristics">
+            <!-- </li> --><!-- ./tab__pane pane__tab_about -->
+            <li class="tab__pane pane__tab_characteristics active">
               <div class="product__description product_characteristics">
       					{$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
       					{if count($loc_params) > 0}
@@ -127,9 +134,14 @@
               <li class="tab__pane pane__tab_description">
         				<div class="product__description">
                   <h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
-        					<div class="product__description_content">
+        					<div id="short_text" class="product__description_content box-hide">
         					 <div class="description_text">{echo $model->getFullDescription()}</div>
                   </div>
+                </div>
+                <div class="text-description-more">
+                  <a href="#" id='short_text_show_link' class="text-description-more-link">
+                      <span class="arrow-link-inner">Читать полностью</span>&nbsp;→
+                  </a>
                 </div>
               </li><!-- ./tab__pane pane__tab_description -->
             {/if}

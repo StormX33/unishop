@@ -454,11 +454,11 @@ $(document).ready(function() {
 $(function () {
     var touch = $('.top__menu_icon'),
         menu = $('.top__header_nav'),
-        toggleButton = $('.toggle-mnu'),
+        toggleButton = $('.toggle-mnu, .menu-hidden'),
         navMenu = $('.nav__list'),
-        categoryToggle = $('.category_sidebar_btn'),
+        categoryToggle = $('.category_sidebar_btn, #category__title, .category__toggle_arrow'),
         categoryContent = $('.content__sidebar-item'),
-        filterToggle = $('.filter__toggle_btn'),
+        filterToggle = $('.filter__toggle_btn, #filter__title, .filter__toggle_arrow'),
         filterContent = $('#filter-content');
 
     touch.click(function () {

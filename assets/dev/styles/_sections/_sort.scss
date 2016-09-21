@@ -92,6 +92,43 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
         }
     }
 }
+
+
+@media screen and (max-width: 570px) and (min-width: 481px){
+    .sort{
+        display: none;
+    }
+}
+@media screen and (max-width: 608px) and (min-width: 571px){
+    .product__page .sort__title{
+        font-size: em(16px);
+        padding: 12px 10px
+    }
+    .select2-container{
+        width: 200px !important;
+    }
+}
+@media screen and (max-width: 676px) and (min-width: 609px){
+    .select2-container{
+        width: 200px !important;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 677px){
+    .select2-container{
+        width: 246px !important;
+    }
+}
+@include respond-to(extraSmall-screens){
+    // .product__page .sort__title{
+    //     font-size: em(16px);
+    //     background: $tabs-color;
+    //     padding: 12px 6px;
+    // }
+    // .select2-container{
+    //     width: 153px !important;
+    // }
+}
+
 @include respond-to(small-screens){
     .select2-container{
         width: 250px !important;

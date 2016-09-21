@@ -62,9 +62,6 @@
     @include respond-to(extraSmall-screens){
         border-right: none;
     }
-    // @include respond-to(small-screens){
-    //     font-size: 16px;
-    // }
     @include respond-to(medium-screens){
         font-size: 20px;
     }
@@ -104,31 +101,12 @@
 }
 .cbp-hrmenu .nav__list>li{
     @include inlineblock(middle);
-    // @include respond-to(mobile){
-    //     display: block;
-    // } 
-    // @include respond-to(extraSmall-screens){
-    //     display: block;
-    // }
     &:last-child{
         a{
             border-right: none;
         }
     }
 }
-// .cbp-hrmenu .nav__list>.open>a, 
-// .cbp-hrmenu .nav__list>.open>a:focus, 
-// .cbp-hrmenu .nav__list>.open>a:hover{
-//     color: #ffffff;
-//     text-decoration: none;
-//     background: #ce1d1b;
-//     border-right: 1px solid transparent;
-// }
-
-// .cbp-hrmenu .nav__list>li>a:focus, 
-// .cbp-hrmenu .nav__list>li>a:hover{
-//     color: #ffffff;
-// }
 
 .nav__item_dropdown.cbp-hropen{
     .nav__link{
@@ -244,6 +222,7 @@
         margin-bottom: 6px;
         .item__title_text{
             font-size: 19px;
+            font-family: "PTSansRegular", sans-serif;
         }
      
     }
@@ -303,6 +282,11 @@
         }
     }
 }
+.menu-hidden{
+    &:hover{
+        cursor: pointer;
+    }
+}
 .toggle-mnu,
 .toggle-search{
     display: none;
@@ -310,6 +294,7 @@
         display: block;
         position: absolute;
         top: 15px;
+        z-index: 3;
     }
     @include respond-to(mobile){
         display: block;
@@ -412,13 +397,19 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 5px;
+            top: 0;
             @include get-sprite($misc-sprite, cbp-hrsub-arrow);
         }
     }
     .navigation .item__title_link{
         color: #0a2e4c;
     }
+    .cbp-hrmenu .nav__list .nav__item_dropdown.cbp-hropen>a{
+        .nav__span_arrow{
+            @include get-sprite($misc-sprite, nav_arrow_mob_up);
+        }
+    }
+ 
 }
 
 @include respond-to(extraSmall-screens){
@@ -444,7 +435,7 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 5px;
+            top: 0px;
             @include get-sprite($misc-sprite, cbp-hrsub-arrow);
         }
     }
@@ -482,7 +473,11 @@
     .cbp-hrmenu .cbp-hrsub {
         position: relative;
     }
-    
+    .cbp-hrmenu .nav__list .nav__item_dropdown.cbp-hropen>a{
+        .nav__span_arrow{
+            @include get-sprite($misc-sprite, nav_arrow_mob_up);
+        }
+    }
   // .cbp-hrsub h4 {
   //   padding-top: 0.6em;
   // }
@@ -545,7 +540,7 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 5px;
+            top: 0px;
             @include get-sprite($misc-sprite, cbp-hrsub-arrow);
         }
     }

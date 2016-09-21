@@ -3,6 +3,17 @@
 }
 .breadcrumbs__list{
     padding: 12px 0 8px 0;
+    margin-left: 30px;
+    position: relative;
+    &:before{
+        content: '';
+        display: block;
+        @include get-sprite($misc-sprite, home_breadcrumbs);
+        left: -30px;
+        top: 7px;
+        position: absolute;
+        @include transform(translate(0, 50%));
+    }
 }
 
 .breadcrumbs__item{
@@ -14,13 +25,13 @@
         margin: 0 10px 0 14px;
         @include get-sprite($misc-sprite, breadcrumbs_next);
     }
-    &:first-child:before{
-        content: '';
-        @include inlineblock(middle);
-        @include get-sprite($misc-sprite, home_breadcrumbs);
-        margin-right: 8px;
+    // &:first-child:before{
+    //     content: '';
+    //     @include inlineblock(middle);
+    //     @include get-sprite($misc-sprite, home_breadcrumbs);
+    //     margin-right: 8px;
 
-    }
+    // }
     &:last-child{
         &:after{
             display: none;

@@ -9,6 +9,9 @@
     font-size: em(24px);
     @include clearfix;
     line-height: 57px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 .filter__price{
     padding: 12px 16px;
@@ -231,13 +234,13 @@
 }
 
 .sidebar-nav__link{
-    @include clearfix;
+    // @include clearfix;
     display: block;
-    color: $main-color;
+    color: rgba(255, 255, 255, 0.8);
     background: #204664;
-    padding: 13px 16px;
+    padding: 10px 16px;
     @include transition(all 0.25s);
-    min-height: 54px;
+    min-height: 42px;
     &:hover{
         cursor: pointer;
         color: $main-color;
@@ -333,6 +336,16 @@
         @include absolute-center;
     }
 }
+.filter__toggle_arrow,
+.category__toggle_arrow{
+    @include get-sprite($misc-sprite, nav_arrow_mob);
+}
+.sidebar__title.on{
+    .filter__toggle_arrow,
+    .category__toggle_arrow{
+        @include get-sprite($misc-sprite, nav_arrow_mob_up);
+    }
+}
 //media
 @include respond-to(mobile){
     .sidebar{
@@ -346,6 +359,9 @@
         float: none;
         text-align: center;
         text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .sidebar__title{
         position: relative;
@@ -356,6 +372,15 @@
         left: 15px;
         transform: translate(0, 50%);
         top: 10px;
+        z-index: 3;
+    }
+    .filter__toggle_arrow,
+    .category__toggle_arrow{
+        position: absolute;
+        right: 15px;
+        transform: translate(0, 50%);
+        top: 10px;
+        z-index: 3;
     }
     .filter__toggle_btn{
         @include get-sprite($misc-sprite, filter_toggle_icon);
@@ -372,6 +397,26 @@
     }
     #filter-content{
         display: none;
+    }
+    .filter__slider-input{
+        text-align: center;
+    }
+    .sidebar-nav__link{
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            @include get-sprite($misc-sprite, category_arrow); 
+            right: 15px;
+            top: 0;
+            @include transform(translate(0, 50%));
+        }
+        &:hover{
+            &:after{
+                @include get-sprite($misc-sprite, category_arrow_hover); 
+            }
+        }
     }
 } 
 @include respond-to(extraSmall-screens){
@@ -386,6 +431,9 @@
         float: none;
         text-align: center;
         text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .sidebar__title{
         position: relative;
@@ -396,6 +444,15 @@
         left: 15px;
         transform: translate(0, 50%);
         top: 10px;
+        z-index: 3;
+    }
+    .filter__toggle_arrow,
+    .category__toggle_arrow{
+        position: absolute;
+        right: 15px;
+        transform: translate(0, 50%);
+        top: 10px;
+        z-index: 3;
     }
     .filter__toggle_btn{
         @include get-sprite($misc-sprite, filter_toggle_icon);
@@ -412,6 +469,23 @@
     }
     #filter-content{
         display: none;
+    }
+    .sidebar-nav__link{
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            @include get-sprite($misc-sprite, category_arrow); 
+            right: 15px;
+            top: 0;
+            @include transform(translate(0, 50%));
+        }
+        &:hover{
+            &:after{
+                @include get-sprite($misc-sprite, category_arrow_hover); 
+            }
+        }
     }
 }
 @include respond-to(small-screens){
@@ -435,6 +509,7 @@
     }
     .filter__slider-input{
         font-size: 19px;
+        text-align: center;
     }
     .active-filters__wrapper{
         padding: 15px 10px 8px;

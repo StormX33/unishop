@@ -113,6 +113,33 @@ $contacts-text: #282828;
 		display: block !important;
 	}
 }
+.col-mob{
+	@media screen and (max-width: 570px) and (min-width: 320px){
+		float: none;
+		width: 100%;
+	}
+}
+.visible-xs-mob{
+	display: none;
+	@include respond-to(mobile){
+		display: block;
+	}
+	@media screen and (max-width: 570px) and (min-width: 481px){
+		display: block;
+	}
+}
+.col-price-buy{
+	@include respond-to(mobile){
+		width: 46.875%;
+	} 
+}
+@include respond-to(mobile){
+	.col-footer-mob{
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+} 
 
 //  item label 
 .products__label_content{

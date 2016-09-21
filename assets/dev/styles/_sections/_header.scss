@@ -364,7 +364,8 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .card__button{
-    padding: 0 20px;
+    // padding: 0 20px;
+    padding: 0 5px;
     @include respond-to(mobile){
         padding: 0;
     } 

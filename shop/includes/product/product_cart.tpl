@@ -7,7 +7,7 @@
         ])}
 <!-- SCU Number -->
 {if $model->firstVariant->getNumber()}
-	<div class="product__code">
+	<div class="product__code col-price-buy">
 		{tlang('Number')}: <div class="product__code_span" data-product-number>{echo $model->firstVariant->getNumber()}</div>
 	</div>
 {/if}

@@ -24,7 +24,7 @@
 		{/if}
 	</div>
 </div>
-<div class="col-md-9 col-xs-12">
+<div class="col-md-9 col-footer-mob">
 	<div class="page__footer_menu">
 		<ul class="footer__menu_list">
 			<li class="footer__menu_item">
@@ -56,8 +56,18 @@
 	        			</li>
 	      			</ul>
 			</li>
+			<li class="studio__copyright-xs visible-xs-inline-block">
+				<div class="studio__copyright">
+				<div class="copyright_text">
+					{if trim(siteinfo('companytype')) != ""}
+						{siteinfo('companytype')}
+					{/if}
+				</div>
+				<span class="studio__copyright_span">Разработано в <a href="http://spoonstudio.com.ua/" target="_blank" class="studio__link">SpoonStudio</a></span> 
+				</div>
+			</li>
 		</ul>
-		<div class="studio__copyright">
+		<div class="studio__copyright hidden-xs">
 			<div class="copyright_text">
             {if trim(siteinfo('companytype')) != ""}
             {siteinfo('companytype')}
