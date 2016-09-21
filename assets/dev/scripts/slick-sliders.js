@@ -276,9 +276,27 @@ $(function () {
         nextArrow: $('.recent__products_next'),
         responsive: [
             {
-                breakpoint: 1023,
+                breakpoint: 1200,
                 settings: {
                     unslick: true
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
                 }
             },
             {
@@ -305,9 +323,27 @@ $(function () {
         nextArrow: $('.similar__products_next'),
         responsive: [
             {
-                breakpoint: 1023,
+                breakpoint: 1200,
                 settings: {
                     unslick: true
+                }
+            },
+               {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
                 }
             },
             {
