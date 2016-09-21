@@ -9,7 +9,7 @@
 	</aside>	
 	<div class="content__sale">
 		<div class="page__teaser_wrapper">
-			{$loc_main_title = $current_category.id ? $current_category.name : tlang('Gallery')}
+			{$loc_main_title = $current_category.id ? $current_category.name : tlang('Projects')}
 			<h1 class="content__title">{$loc_main_title}</h1>
 			<!-- Categories List -->
 			{if count($albums) > 0}

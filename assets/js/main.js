@@ -234,7 +234,7 @@ var accordeon = (function(){
     }
 }());
 /*-----------product slide----------*/
-var slideShow = (function () {
+/*var slideShow = (function () {
 
     var _changeSlide = function ($this) {
         var container = $this.closest(".products__slideshow"),
@@ -260,7 +260,7 @@ var slideShow = (function () {
             });
         }
     }
-}());
+}());*/
 
 $(document).ready(function (){
     if ($(".filter").length){
@@ -291,9 +291,9 @@ $(document).ready(function (){
         return false;
     });
     
-    if ($(".products__slideshow").length) {
+/*    if ($(".products__slideshow").length) {
         slideShow.init();
-    }
+    }*/
     // select
     if ($(".sort__select-element").length) {
         $(".sort__select-element").select2({

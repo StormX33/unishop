@@ -189,7 +189,14 @@ $(document).on('change', '[data-catalog-perpage-select]', function(){
 
 /********************************** CATALOG FILTERS **********************************************/
 $(document).ready(function () {
-
+	$('.products__slideshow-thumbs').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.products__slideshow-img',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
 
     /*
      * Toggle filter visibility on mobile devices
