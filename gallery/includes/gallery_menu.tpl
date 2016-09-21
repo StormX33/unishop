@@ -13,7 +13,7 @@
 		</li>
 		
 		{foreach $gallery_category as $item}
-		<li class="gallery-menu__item">
+		<li class="gallery-menu__item{if $current_category.id == $item.id}_active{/if}">
 			{if $current_category.id != $item.id}
 				<a class="gallery-menu__link" href="{site_url('gallery/category/'.$item.id)}">{$item.name}</a>
 			{else:}
