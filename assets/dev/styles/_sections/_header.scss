@@ -428,8 +428,12 @@ li.top__header_nav-item:nth-last-child(1){
             margin-right: 0;
         }
         &:last-child{
-            font-size: em(21px);
+            font-size: em(16px);
             margin-right: 0;
+            @include respond-to(wide-screens){
+                font-size: em(21px);
+            }
+      
         }
     }
     .cart_price_text{

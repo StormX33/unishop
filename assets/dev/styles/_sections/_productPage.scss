@@ -242,7 +242,7 @@
         font-size: 21px;
         padding: 7px 36px;
     }
-    .products__buy-span{
+    .products__buy-content{
         &:before{
             @include get-sprite($misc-sprite, catalog_cart-lg);
         }
@@ -445,15 +445,19 @@
     padding-top: 12px;
 }
 .related__products_list{
-    padding: 0 30px;
     font-size: 0;
 }
 .related__products_item{
     font-size: 16px;
     @include inlineblock(top);
+    .products__label_content{
+        @include transform(translate(0, -100%));
+        top: 45px;
+        left: 30px;
+    }
 }
 .products_item{
-    width: 255px;
+    width: 21.5%;
 }
 .related__products_link{
     display: block;
@@ -470,6 +474,8 @@
     color: $title-color-blue;
     border-bottom: 1px solid #e8e7eb;
     padding-bottom: 15px;
+    height: 82px;
+    overflow: hidden;
 }
 .related__products_price{
     @include clearfix;
@@ -477,7 +483,7 @@
 
     .products__price_item{
         min-width: 107px;
-        float: right;
+        float: left;
         span{
             text-align: left;
         }
@@ -501,26 +507,38 @@
 }
 .related__product_span{
     line-height: 200px;
-    font-size: 70px;
+    font-size: 65px;
     color: #da261d;
-}
+    @include respond-to(small-screens){
+        font-size: 40px;
+    }
+    @include respond-to(medium-screens){
+        font-size: 40px;
+    }
 
+}
 .related__price_item{
     .products__info{
-        margin-left: 2.45em;
         margin-top: 4.5em;
+        white-space: nowrap;
     }
     .products__price{
-        padding: 5px 25px 5px;
+        padding: 5px 20px 5px;
+        @include respond-to(medium-screens){
+            padding: 5px;
+        }
     }
     .products__price_old{
+        white-space: nowrap;
         font-size: 19px;
     }
     .products__price_new{
         font-size: 22px;
+        white-space: nowrap;
     }
     .products__price_eur{
         font-size: 17px;
+        white-space: nowrap;
     }
     .products__buy-btn{
         text-align: center;
@@ -528,12 +546,18 @@
         font-weight: bold;
         padding: 8px 35px;
         @include inlineblock();
-        .products__buy-span{
+        .products__buy-content{
             &:before{
                 @include get-sprite($misc-sprite, catalog_cart-lg);
             }
+            @include respond-to(medium-screens){
+                &:before{
+                    margin-right: 0;
+                    @include get-sprite($misc-sprite, catalog_cart);
+                }
+            } 
         }
-    }
+    }        
 }
 .detail__related_products{
     .related__products_prev{
@@ -773,8 +797,9 @@
         font-size: 21px;
         margin-right: 15px;
         padding: 6px 36px;
+
     }
-    .products__buy-span{
+    .products__buy-content{
         &:before{
             @include get-sprite($misc-sprite, catalog_cart-lg);
         }
@@ -1112,6 +1137,30 @@ buy-btn-wrap
     .product__right__collumn{
         display: none;
     }
+    .products_item{
+        width: 21%;
+    }
+    .related__product_span{
+        font-size: 40px;
+    }
+    .related__price_item{
+        .products__buy-btn{
+            padding: 8px 25px;
+        } 
+        .products__price_new{
+            font-size: 20px;
+        }
+    } 
+    .detail__related_products .slick-slider{
+        margin-bottom: 0;
+    }
+    .related__products_link{
+        height: 160px;
+    }
+    .related__product_span{
+        line-height: 160px;
+    }
+
  }
 @include respond-to(small-screens){
     .product__left_collumn{
@@ -1123,6 +1172,18 @@ buy-btn-wrap
     //         display: none;
     //     }
     // }
+    .products_item{
+        width: 21%;
+    }
+    .related__price_item{
+        .products__buy-btn{
+            padding: 8px 25px;
+        } 
+        .products__price_new{
+            font-size: 20px;
+        }
+    } 
+
     .product__buy{
         .produt__price{
             margin-right: 0;
@@ -1131,8 +1192,11 @@ buy-btn-wrap
             padding: 0 5px;
         }
         .products__buy-btn{
-            padding: 8px 28px;
+            padding: 8px 20px;
             margin-right: 10px;
+        }
+        .related__price_item .products__buy-btn{
+            padding: 8px 20px;
         }
         .produt__change-count .amount{
             width: 42px;
@@ -1143,5 +1207,8 @@ buy-btn-wrap
 @include respond-to(medium-screens){
     .product__left_collumn{
         width: 65%;
+    }
+    .related__price_item .products__buy-btn{
+        padding: 8px 20px;
     }
 }

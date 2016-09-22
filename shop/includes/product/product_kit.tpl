@@ -18,7 +18,7 @@
             <li class="related__products_item">
 				<div class="related__products"><span class="related__product_span">= </span></div>
 			</li>
-            <li class="related__products_item related__price_item">
+            <li class="related__products_item related__price_item products_item">
 				<div class="products__info">
 					<div class="products__price">
 						<div class="products__price_item products__price_old">

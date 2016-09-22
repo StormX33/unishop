@@ -72,6 +72,12 @@
 		color:  $title-color-blue;
 		margin-bottom: 5px;
 	}
+	.visible-xs-grid{
+		display: none;
+	}
+	.product-buy__buttons{
+		@include clearfix;
+	}
 }
 
 .products__list,
@@ -222,6 +228,7 @@
 			padding: 5px 8px;
 		}
 	}
+
 	@include respond-to(mobile){
 		.products__buy-span{
 			display: none;
@@ -283,10 +290,22 @@
 			overflow: hidden;
 		}
 		.products__left{
-			padding: 18px 0;
+			padding-top: 18px;
+		}
+		.hidden-xs-grid{
+			display: none;
+		}
+		.visible-xs-grid{
+			display: block;
 		}
 	} 
 	@include respond-to(extraSmall-screens){
+		.hidden-xs-grid{
+			display: none;
+		}
+		.visible-xs-grid{
+			display: block;
+		}
 		.products__buy-span{
 			display: none;
 		}
@@ -346,7 +365,7 @@
 			overflow: hidden;
 		}
 		.products__left{
-			padding: 16px 0;
+			padding-top: 16px;
 		}
 	}
 }

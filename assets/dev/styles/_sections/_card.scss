@@ -60,12 +60,12 @@ $table-border: #e1e1e1;
         }
     }
     .cart__item_name-title{
-        @include respond-to(mobile) {
-           visibility: hidden;
-        }
-        @include respond-to(extraSmall-screens) {
-            visibility: hidden;      
-        }
+        // @include respond-to(mobile) {
+        //    visibility: hidden;
+        // }
+        // @include respond-to(extraSmall-screens) {
+        //     visibility: hidden;      
+        // }
     }
     .cart__item_delete-title{
         width: 4.5%;
@@ -85,15 +85,15 @@ $table-border: #e1e1e1;
     .cart__item_image{
         max-width: 137px;
         text-align: center;
-        @include respond-to(mobile) {
-            vertical-align: top;
-        }
-        @include respond-to(extraSmall-screens) {
-            vertical-align: top;
-        }
-        @include respond-to(small-screens) {
-            width: 125px;
-        }
+        // @include respond-to(mobile) {
+        //     vertical-align: top;
+        // }
+        // @include respond-to(extraSmall-screens) {
+        //     vertical-align: top;
+        // }
+        // @include respond-to(small-screens) {
+        //     width: 125px;
+        // }
     }
     .cart__image_link{
         display: block;
@@ -125,16 +125,16 @@ $table-border: #e1e1e1;
     }
     .cart__item_name{
         white-space: normal !important;
-        @include respond-to(mobile) {
-            text-align: left;
-            line-height: 12px;
-            padding: 0 0.5em;
-        }
-        @include respond-to(extraSmall-screens) {
-            text-align: left;
-            line-height: 17px;
-            padding: 1.313em 0.5em;
-        }
+        // @include respond-to(mobile) {
+        //     text-align: left;
+        //     line-height: 12px;
+        //     padding: 0 0.5em;
+        // }
+        // @include respond-to(extraSmall-screens) {
+        //     text-align: left;
+        //     line-height: 17px;
+        //     padding: 1.313em 0.5em;
+        // }
         .cart__name_link{
             display: block;
             font-family: 'PTSansBold', sans-serif;
@@ -143,15 +143,15 @@ $table-border: #e1e1e1;
             &:hover, &:active, &:focus{
                 color: $title-color-blue;
             }
-            @include respond-to(mobile){
-                font-size: em(12px);
-            }
-            @include respond-to(extraSmall-screens){
-                font-size: em(14px);
-            }
-            @include respond-to(small-screens){
-                font-size: em(19px);
-            }
+            // @include respond-to(mobile){
+            //     font-size: em(12px);
+            // }
+            // @include respond-to(extraSmall-screens){
+            //     font-size: em(14px);
+            // }
+            // @include respond-to(small-screens){
+            //     font-size: em(19px);
+            // }
         }
         .cart__item_name-span{
             display: block;
@@ -176,26 +176,26 @@ $table-border: #e1e1e1;
         span{
             margin-right: 10px;
             font-family: 'PTSansBold', sans-serif;
-            @include respond-to(mobile){
-                font-size: 16px;
-            }
-            @include respond-to(extraSmall-screens){
-                font-size: 18px;
-            }
-            @include respond-to(small-screens){
-                font-size: 22px;
-            }
+            // @include respond-to(mobile){
+            //     font-size: 16px;
+            // }
+            // @include respond-to(extraSmall-screens){
+            //     font-size: 18px;
+            // }
+            // @include respond-to(small-screens){
+            //     font-size: 22px;
+            // }
         }
         p{
-            @include respond-to(mobile){
-                font-size: 10px;
-            }
-            @include respond-to(extraSmall-screens){
-                font-size: 10px;
-            }
-            @include respond-to(small-screens){
-                font-size: 17px;
-            }
+            // @include respond-to(mobile){
+            //     font-size: 10px;
+            // }
+            // @include respond-to(extraSmall-screens){
+            //     font-size: 10px;
+            // }
+            // @include respond-to(small-screens){
+            //     font-size: 17px;
+            // }
         }
     } 
     .cart__item_price{
@@ -218,9 +218,9 @@ $table-border: #e1e1e1;
                 font-family: 'PTSansBold', sans-serif;
             }
             span{
-                @include respond-to(mobile){
-                    font-size: 12px;
-                }
+                // @include respond-to(mobile){
+                //     font-size: 12px;
+                // }
             }
         }
     }

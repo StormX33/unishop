@@ -119,6 +119,24 @@
 	.products__label_content{
 	    top: 0;
 	}
+	@include respond-to(small-screens){
+		.products__left{
+			width: 40%;
+		}
+		.products__right,
+		.product__title{
+			width: 60%;
+		}
+	}
+	@include respond-to(medium-screens){
+		.products__left{
+			width: 40%;
+		}
+		.products__right,
+		.product__title{
+			width: 60%;
+		}
+	}
 }
 
 

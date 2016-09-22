@@ -7,7 +7,9 @@
    data-product-kit--modal-url="{shop_url('cart')}"
    data-product-kit--modal-template="includes/cart/cart_modal"
 >
-    <span class="products__buy-span">{tlang('Buy')}</span>
+	<div class="products__buy-content">
+    	<span class="products__buy-span">{tlang('Buy')}</span>
+    </div>
 </a>
 
 

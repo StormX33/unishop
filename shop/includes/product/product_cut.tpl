@@ -1,7 +1,7 @@
 <!-- Block visible once page is loaded -->
 <div class="over__wraper">
 	<div class="products__item_long">	
-    	<div class="products__item-inner hidden-xs">
+    	<div class="products__item-inner hidden-xs-grid">
         
 			<div class="product__title"><a class="products__title_link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
 			<div class="products__label_content">
@@ -17,12 +17,13 @@
                 <div class="product_ective-element hidden-xs">
                 	{view('shop/includes/product/product_rating.tpl', ['model' => $model])}
                 </div>
-                <div class="products__item-inner visible-xs">
+                <div class="products__item-inner visible-xs-grid">
                     <div class="product__title"><a class="products__title_link" href="{shop_url('product/'.$model->getUrl())}">{echo $model->getName()}</a></div>
                     <div class="products__label_content">
                             {view('shop/includes/product/product_labels.tpl', ['model' => $model])}
                     </div>
             </div>
+        </div>
         </div>
         <div class="products__right">
         	<div class="products__info">
