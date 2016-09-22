@@ -50,7 +50,7 @@ button.mfp-arrow,button.mfp-close{
 .mfp-close{width:44px;height:44px;line-height:44px;right:0;top:0;text-decoration:none;opacity:.65;filter:alpha(opacity=65);padding:0 0 18px 10px;color:#fff;font-style:normal;font-size:28px;font-family:Arial,Baskerville,monospace}
 .mfp-close:focus,.mfp-close:hover{opacity:1;filter:alpha(opacity=100)}
 .mfp-close:active{top:1px}
-.mfp-close-btn-in .mfp-close{color:#333}
+.mfp-close-btn-in .mfp-close{color:#333; display:none;}
 .mfp-iframe-holder .mfp-close,.mfp-image-holder .mfp-close{color:#fff;right:-6px;text-align:right;padding-right:6px;width:100%}.mfp-counter{position:absolute;top:0;right:0;color:#CCC;font-size:12px;line-height:18px;white-space:nowrap}
 .mfp-figure,img.mfp-img{line-height:0}
 .mfp-arrow{position:absolute;opacity:.65;filter:alpha(opacity=65);margin:-55px 0 0;top:50%;padding:0;width:90px;height:110px}
