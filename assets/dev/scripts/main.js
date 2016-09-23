@@ -314,20 +314,19 @@ $(window).on('scroll', function () {
 /*-----------menu----------*/
 $(function() {
     $('.cbp-hrmenu .nav__list').menuAim({
-      triggerEvent:       'hover',
-      activateCallback:   activate,
-      deactivateCallback: deactivate,
-      submenuDirection:   'below',
-      openClassName:      'cbp-hropen',
-      activationDelay:    200
+        triggerEvent:       'hover',
+        activateCallback:   activate,
+        deactivateCallback: deactivate,
+        submenuDirection:   'below',
+        openClassName:      'cbp-hropen',
+        activationDelay:   200
     });
-
     function activate(row) {
-      $(row).addClass('cbp-hropen');
+      $(row).find('.cbp-hrsub').slideDown();
     }
 
     function deactivate(row) {
-      $(row).removeClass('cbp-hropen');
+      $(row).find('.cbp-hrsub').slideUp();
     }
 });
 
@@ -471,5 +470,15 @@ $(document).ready(function(){
     })
 });
 
+/*-----------map----------*/
+$(function() {
+    var overlay = $('#overlay__div');
 
+    overlay.on("click", function () {
+        $(this).attr('style', '');
+    });
+    $(window).scroll(function(){ 
+        overlay.attr('style', 'width:100%; height:600px; position:absolute; z-index:20;');
+    });
+});
 
