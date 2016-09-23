@@ -25,7 +25,7 @@
 <!--   <link rel="stylesheet" href="{$THEME}_css/final.min.css">
 -->	<!--theme styles -->
     
-    	<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap.min.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap.min.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap-theme.min.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/font-awesome.min.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick.css" media="screen, projection, print">
@@ -57,7 +57,7 @@
   </head>
   <body data-spy="scroll" data-target="#header" data-offset="1">
     <!-- Main content frame -->
-    <div id="page-start" class="wrapper__main">
+    <div class="wrapper__main">
       <div class="maincontent">
           <!-- Header -->
         <section id="header" data-spy="affix" data-offset-top="1" class="header">

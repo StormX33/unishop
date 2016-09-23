@@ -80,6 +80,15 @@
 		cursor: pointer;
 	}
 }
+.articles .col-mob{
+	@include respond-to(extraSmall-screens){
+		width: 50%;
+		float: left;
+	}
+	@media screen and (max-width: 650px) and (min-width: 320px){
+		width: 100%;
+	}
+}
 .articles__list li {
 	@include respond-to(mobile){
 		display: none;
@@ -88,9 +97,9 @@
 		}
 	}
 	@include respond-to(extraSmall-screens){
-		display: none;
-		&:first-child{
-			display: block;
+		display: block;
+		&:last-child{
+			display: none;
 		}
 	}
 }

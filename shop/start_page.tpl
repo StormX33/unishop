@@ -470,7 +470,7 @@
 									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все статьи</a></div>
 								</div>
 								<ul class="articles__list row">
-									<li class="col-sm-4"> 
+									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item1.png" alt="item1" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
@@ -478,7 +478,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-sm-4"> 
+									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item2.png" alt="item2" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -504,7 +504,7 @@
 									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все новости </a></div>
 								</div>
 								<ul class="articles__list row">
-									<li class="col-sm-4"> 
+									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img1.png" alt="img1" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
@@ -512,7 +512,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-sm-4"> 
+									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img2.png" alt="img2" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -520,7 +520,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="col-sm-4"> 
+									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
 											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img3.png" alt="img3" class="article__img"></div>
 											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
@@ -535,7 +535,12 @@
 				</section>
 				<section class="map">
 					<div class="map__content">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4503454489122!2d30.380115242113934!3d50.45133806038038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc88f16706c5%3A0xfcbfd060d3da673a!2z0LLRg9C70LjRhtGPINCc0LjRhdCw0LnQu9CwINCa0L7RgtC10LvRjNC90LjQutC-0LLQsCwgMzMsINCa0LjRl9CyLCAwMzExNQ!5e0!3m2!1sru!2sua!4v1470564272804" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<div style="position:relative;z-index:30;">
+							<div id="overlay__div" style="width:100%;height:600px; position:absolute; z-index:20;" class="overlay__div"></div>
+							<div style="position:relative; z-index:10;">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4503454489122!2d30.380115242113934!3d50.45133806038038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc88f16706c5%3A0xfcbfd060d3da673a!2z0LLRg9C70LjRhtGPINCc0LjRhdCw0LnQu9CwINCa0L7RgtC10LvRjNC90LjQutC-0LLQsCwgMzMsINCa0LjRl9CyLCAwMzExNQ!5e0!3m2!1sru!2sua!4v1470564272804" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
 					</div>
 					<div class="container"> 
 						<div class="feedback">

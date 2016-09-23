@@ -1,6 +1,6 @@
 <nav class="navigation cbp-hrmenu" role="navigation">
 	<div class="container">
-    	<a href="#page-start" class="logo">
+    	<a href="{site_url('')}" class="logo">
 			<div class="logo__img_wrap"><img src="{$THEME}images/logos/logo_affix.png" alt="{echo $CI->core->settings['site_title']}" class="logo__img logo__affix img-responsive"></div>
         </a>
 		<div class="navbar-header">

@@ -111,25 +111,25 @@
 .nav__item_dropdown.cbp-hropen{
     .nav__link{
         position: relative;
-        &:before{
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: 9999;
-            transform: translate(-50%, 50%);
-            left: 50%;
-            bottom: 8px;
-            @include get-sprite($misc-sprite, sumMenu_icon);
-            @media screen and (max-width: 1023px) and (min-width: 768px){
-                display: none;
-            }
-            @include respond-to(extraSmall-screens){
-                display: none;
-            }
-            @include respond-to(mobile){
-                display: none;
-            }
-        }
+        // &:before{
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     z-index: 9999;
+        //     transform: translate(-50%, 50%);
+        //     left: 50%;
+        //     bottom: 8px;
+        //     @include get-sprite($misc-sprite, sumMenu_icon);
+        //     @media screen and (max-width: 1023px) and (min-width: 768px){
+        //         display: none;
+        //     }
+        //     @include respond-to(extraSmall-screens){
+        //         display: none;
+        //     }
+        //     @include respond-to(mobile){
+        //         display: none;
+        //     }
+        // }
     }
 }
 .nav__list{
@@ -153,17 +153,16 @@
 
 /* sub-menu */
 .cbp-hrmenu .cbp-hrsub {
-    // display: block;
-  display: none;
-  position: absolute;
-  background: $main-color;
-  width: 100%;
-  left: 15px;
-  border: 1px solid rgba(0,0,0,.15);
+    display: none;
+    position: absolute;
+    background: $main-color;
+    width: 100%;
+    left: 15px;
+    border: 1px solid rgba(0,0,0,.15);
 }
 
 .cbp-hropen .cbp-hrsub {
-  display: block;
+  // display: block;
   padding-bottom: 2em;
 }
 
