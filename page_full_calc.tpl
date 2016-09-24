@@ -3,7 +3,7 @@
       <div class="form-wrap">
       	<header class="form_header">
   			<div class="form__header_img-wrap">
-          <img src="{$THEME}images/icons/popup/for_calc.png" />
+          <img src="{$THEME}images/services/personIconHover1.png" />
         </div>
   			<div class="popup__header_title">
   				<h3 class="popup__header_title-text">Расчет объекта</h3>
