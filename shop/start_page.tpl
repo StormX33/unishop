@@ -551,12 +551,12 @@
 							</div>
 							<form action="#" method="POST" id="feedback__form" class="feedback__form">
 								<div class="feedback__wrap">
-									<label for="name" class="feedback__form_label">Ваше имя </label>
-									<input type="text" name="name" placeholder="Например Дмитрий" class="feedback__form-input">
+									<!-- <label for="name" class="feedback__form_label">Ваше имя </label> -->
+									<input type="text" name="name" placeholder="Ваше имя" class="feedback__form-input">
 								</div>
 								<div class="feedback__wrap">
-									<label for="phone" class="feedback__form_label">Номер телефона </label>
-									<input type="tel" name="phone" placeholder="+38 (_ _ _) _ _ _ - _ _ - _ _" class="feedback__form-input">
+									<!-- <label for="phone" class="feedback__form_label">Номер телефона </label> -->
+									<input type="tel" name="phone" placeholder="Ваш телефон" class="feedback__form-input">
 								</div>
 								<div class="feedback__button">
 									<input type="submit" value="Получить консультацию" data-loading-text="Отправка..." data-complete-text="Сообщение отправлено" class="submit__btn_accent feedback-submit">

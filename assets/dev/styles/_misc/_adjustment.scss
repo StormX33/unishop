@@ -48,7 +48,7 @@ body{
     min-height: 100%;
 }
 .maincontent{
-    padding-top: 227px;
+    padding-top: 220px;
     @include respond-to(mobile){
         padding-top: 250px;
     } 
