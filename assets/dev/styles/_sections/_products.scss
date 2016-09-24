@@ -111,7 +111,7 @@
 				-webkit-box-shadow: 0px 5px 54px 0px rgba(0, 0, 0, 0.73);
 				-moz-box-shadow:    0px 5px 54px 0px rgba(0, 0, 0, 0.73);
 				box-shadow:         0px 5px 54px 0px rgba(0, 0, 0, 0.73);
-				@include transition(all 0.2s);
+				@include transition(box-shadow 0.2s, border 0.2s);
 			}
 		}
 	}
@@ -177,7 +177,7 @@
 			text-align: center;
 		}
 		.productcs__desc-options{
-			height: 103px;
+			// height: 103px;
 			overflow: hidden;
 			margin-bottom: 5px;
 		}

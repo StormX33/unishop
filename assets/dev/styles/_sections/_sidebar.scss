@@ -69,7 +69,7 @@
     &.active{
         .filter__title{
             &:after{
-                @include get-sprite($misc-sprite, top-sb);
+                @include get-sprite($misc-sprite, bottom-sb);
             }
         }
     }
@@ -82,10 +82,10 @@
     }
     &:after{
         content: "";
-        @include get-sprite($misc-sprite, bottom-sb);
+        @include get-sprite($misc-sprite, top-sb);
         position: absolute;
         top: -3px;
-        right: 5px;
+        right: 0;
     }
 }
 .filter__title-price{
@@ -109,7 +109,7 @@
 }
 
 .filter__content{
-    display: none;
+    // display: none;
     padding-top: 10px;
 }
 .filter__slider-displays{

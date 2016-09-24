@@ -217,10 +217,10 @@ var accordeon = (function(){
 
 
             container.addClass("active");
-            content.stop(true, true).slideDown();
+            content.stop(true, true).slideUp()
         }else{
             container.removeClass("active");
-            content.stop(true, true).slideUp();
+            content.stop(true, true).slideDown();
         }
     }
 
@@ -518,7 +518,14 @@ $(function() {
     });
 });
 
-
+// $(function() {
+//     var nav =  $('.nav__link'),
+//     header =  $('#header').find('.top__header_nav-item'),
+//      headerBottom =  $('#header').find('.user__login_link');
+//     console.log(nav.text());
+//     console.log(header.text());
+//     console.log(headerBottom.text());
+// });  
 // Projects
 $(function () {
     var advantagesSlickOpts = {

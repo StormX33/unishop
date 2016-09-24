@@ -15,7 +15,7 @@
 					<div class="cbp-hrsub">
 						<div class="cbp-hrsub-inner">
 							<div class="sub__menu_content">
-								<div class="inner__title"> 
+								<!-- <div class="inner__title"> 
 									<div class="inner__title_text">
                                     	<span class="inner__title_text">{tlang('Recommended')}:</span>
                                     </div>
@@ -24,7 +24,7 @@
 										<li class="inner__title_item"><a href="#" class="inner__title_link">Электрические бойлеры</a></li>
 										<li class="inner__title_item"><a href="#" class="inner__title_link">Электрические конвекторы</a></li>
 									</ul>
-								</div>
+								</div> -->
 								<div class="cbp-hrsub-content">
                                 	{load_catalog_menu('navs/catalog_tree')}
 								</div>

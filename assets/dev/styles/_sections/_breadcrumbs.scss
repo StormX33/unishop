@@ -10,7 +10,7 @@
         display: block;
         @include get-sprite($misc-sprite, home_breadcrumbs);
         left: -30px;
-        top: 7px;
+        top: 5px;
         position: absolute;
         @include transform(translate(0, 50%));
     }
@@ -54,7 +54,6 @@
     font-size: em(14px);
     line-height: 16px;
     text-decoration: underline;
-    @include inlineblock(middle);
     &:hover, &:active, &:focus{
         color: $blue;
         text-decoration: underline;

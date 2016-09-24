@@ -462,13 +462,12 @@
 				<section class="articles">
 					<div class="container">
 						<div class="section__wrapper">
-							<div class="section__content">
-								<div class="section__header">
-									<div class="section__content_title">
-										<h3 class="content_title_text">Полезные статьи</h3>
-									</div>
-									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все статьи</a></div>
+							<div class="section__header">
+								<div class="section__content_title">
+									<h3 class="content_title_text">Новости/Статьи</h3>
 								</div>
+							</div>
+							<div class="section__content">
 								<ul class="articles__list row">
 									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
@@ -495,14 +494,6 @@
 										</div>
 									</li>
 								</ul>
-							</div>
-							<div class="section__content">
-								<div class="section__header">
-									<div class="section__content_title">
-										<h3 class="content_title_text">Новости рынка </h3>
-									</div>
-									<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все новости </a></div>
-								</div>
 								<ul class="articles__list row">
 									<li class="col-sm-4 col-mob"> 
 										<div class="articles__item">
@@ -529,6 +520,16 @@
 										</div>
 									</li>
 								</ul>
+								<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все статьи</a></div>
+							</div>
+						<!-- 	<div class="section__content">
+								<div class="section__header">
+									<div class="section__content_title">
+										<h3 class="content_title_text">Новости</h3>
+									</div>
+								</div>
+								
+								<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все новости </a></div> -->
 							</div>
 						</div>
 					</div>
