@@ -18,7 +18,8 @@
     "Yamm3": "yamm3#^1.1.0",
     "superfish": "^1.7.9",
     "jquery-ui": "~1.12.0",
-    "jQuery-menu-aim": "https://github.com/banesto/jQuery-menu-aim.git"
+    "jQuery-menu-aim": "https://github.com/banesto/jQuery-menu-aim.git",
+    "webfontloader": "^1.6.26"
   },
   "devDependencies": {}
 }

@@ -482,11 +482,11 @@ $(function() {
     });
 });
 
-// $(function() {
-//     var nav =  $('.nav__link'),
-//     header =  $('#header').find('.top__header_nav-item'),
-//      headerBottom =  $('#header').find('.user__login_link');
-//     console.log(nav.text());
-//     console.log(header.text());
-//     console.log(headerBottom.text());
-// });  
+/*-----------fonts----------*/
+WebFont.load({
+    custom: {
+      families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic']
+    }
+});
+
+  

@@ -1,8 +1,7 @@
 .cbp-hrmenu{
     border-radius: 0;
     margin-bottom: 0;
-    min-height: 50px;
-    max-height: 70px;
+    min-height: 70px;
     .container{
         @include respond-to(mobile){
             padding: 0;
@@ -49,7 +48,7 @@
     display: block;
     border-right: 1px solid #c1150d;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 18px;
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -62,9 +61,6 @@
     } 
     @include respond-to(extraSmall-screens){
         border-right: none;
-    }
-    @include respond-to(medium-screens){
-        font-size: 20px;
     }
 
     &:hover{
@@ -98,6 +94,12 @@
         @include respond-to(medium-screens){
             right: 1em;
         }
+    }
+}
+.wf-ptsansregular-n4-active .nav__list>li>a{
+    font-size: 21px;
+    @include respond-to(medium-screens){
+        font-size: 20px;
     }
 }
 .cbp-hrmenu .nav__list>li{

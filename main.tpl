@@ -113,14 +113,16 @@
 	<script src="{$THEME}assets/js/superfish.js"> </script>
   <script src="{$THEME}assets/bower/jQuery-menu-aim/jquery.menu-aim.js"></script>
 	<script src="{$THEME}assets/js/jquery-ui.min.js"> </script>
+  <script src="{$THEME}assets/bower/webfontloader/webfontloader.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
 	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 	<script src="//yastatic.net/share2/share.js"></script>
-    <script src="{$THEME}assets/js/mlsAjax.js"></script>
+  <script src="{$THEME}assets/js/mlsAjax.js"></script>
 	<script src="{$THEME}assets/js/modal.js"></script>
-    <script src="{$THEME}assets/js/mlsCart.js"></script>
-    <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
-    <script src="{$THEME}assets/js/custom.js"> </script>
+  <script src="{$THEME}assets/js/mlsCart.js"></script>
+  <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
+  <script src="{$THEME}assets/js/custom.js"> </script>
+
 <!--    <script src="{$THEME}_js/vendor.min.js"></script>
     <script src="{$THEME}_js/final.min.js"></script>
 -->   <!--
