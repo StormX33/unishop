@@ -7,8 +7,7 @@ $(".buy__click_form-input").mask("+38(099) 999-99-99");
   });
 })(jQuery);
 
-
-/* Component functions */
+/* Component functions */		
 (function($){
 
 	$.mshButtons = {
