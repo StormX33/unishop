@@ -419,9 +419,9 @@ $(function () {
         menu = $('.top__header_nav'),
         toggleButton = $('.toggle-mnu, .menu-hidden'),
         navMenu = $('.nav__list'),
-        categoryToggle = $('.category_sidebar_btn, #category__title, .category__toggle_arrow'),
+        categoryToggle = $('#category__title'),
         categoryContent = $('.content__sidebar-item'),
-        filterToggle = $('.filter__toggle_btn, #filter__title, .filter__toggle_arrow'),
+        filterToggle = $('#filter__title'),
         filterContent = $('#filter-content');
 
     touch.click(function () {

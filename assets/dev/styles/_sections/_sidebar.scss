@@ -37,7 +37,6 @@
     left: 15px;
     transform: translate(0, 50%);
     top: 10px;
-    z-index: 3;
     &:hover{
         cursor: default;
     }
@@ -371,6 +370,7 @@
         @include get-sprite($misc-sprite, nav_arrow_mob_up);
     }
 }
+
 //media
 @include respond-to(mobile){
     .sidebar{
@@ -390,11 +390,9 @@
     }
     .category_sidebar_btn,
     .filter__toggle_btn{
-        position: absolute;
-        left: 15px;
-        transform: translate(0, 50%);
-        top: 10px;
-        z-index: 3;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .filter__toggle_arrow,
     .category__toggle_arrow{
@@ -402,14 +400,7 @@
         right: 15px;
         transform: translate(0, 50%);
         top: 10px;
-        z-index: 3;
     }
-    // .filter__toggle_btn{
-    //     @include get-sprite($misc-sprite, filter_toggle_icon);
-    // }
-    // .category_sidebar_btn{
-    //     @include get-sprite($misc-sprite, category_sidebar_icon);
-    // }
     .content__sidebar-item{
         display: none;
     }
@@ -459,11 +450,9 @@
     }
     .category_sidebar_btn,
     .filter__toggle_btn{
-        position: absolute;
-        left: 15px;
-        transform: translate(0, 50%);
-        top: 10px;
-        z-index: 3;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .filter__toggle_arrow,
     .category__toggle_arrow{
@@ -471,14 +460,10 @@
         right: 15px;
         transform: translate(0, 50%);
         top: 10px;
-        z-index: 3;
+        &:hover{
+            cursor: pointer;
+        }
     }
-    // .filter__toggle_btn{
-    //     @include get-sprite($misc-sprite, filter_toggle_icon);
-    // }
-    // .category_sidebar_btn{
-    //     @include get-sprite($misc-sprite, category_sidebar_icon);
-    // }
     .content__sidebar-item{
         display: none;
     }
