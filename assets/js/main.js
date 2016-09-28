@@ -470,17 +470,24 @@ $(function () {
         navMenu.slideToggle();
         return false;
     });
-    categoryToggle.click(function () {
-        $(this).toggleClass("on");
+    categoryToggle.click(function(){
+        if( $(window).width() > 768 && !$(this).hasClass('on')){
+           return false;
+        }
+        $(this).toggleClass('on');
         categoryContent.slideToggle();
-        return false;
+     
+       return false;
     });
-    filterToggle.click(function () {
-        $(this).toggleClass("on");
-        filterContent.slideToggle();
-        return false;
-    });
+    filterToggle.click(function(){
+        if( $(window).width() > 768 && !$(this).hasClass('on')){
+            return false;
+        }
+        $(this).toggleClass('on');
+            filterContent.slideToggle();
 
+        return false;
+    });
     $(window).resize(function () {
         var wid = $(window).width();
         if (wid > 768 && filterContent.is(':hidden')) {

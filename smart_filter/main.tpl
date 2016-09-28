@@ -1,5 +1,5 @@
 <div id="filter__title" class="sidebar__title"> 
-	<button class = "filter__toggle_btn visible-xs"></button>
+	<button class = "filter__toggle_btn"></button>
 	<div class="filter__title_text">{tlang('Filter')}</div>
 	<button class = "filter__toggle_arrow visible-xs"></button>
     <!--<a href="#" class="filter__reset filter__reset_price">{tlang('Reset')}</a>-->

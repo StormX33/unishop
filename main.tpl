@@ -31,19 +31,13 @@
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick-theme.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/select2.min.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/colorbox.css" media="screen, projection, print">
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
-		<link href="{$THEME}assets/css/yamm.css" rel="stylesheet">
-		<link href="{$THEME}assets/css/superfish.css" rel="stylesheet" media="screen">
-		<link href="{$THEME}assets/css/superfish-vertical.css" rel="stylesheet" media="screen">
-		<link href="{$THEME}assets/css/superfish-navbar.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
         <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
-        <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
-        <script src="{$THEME}assets/js/jquery.min.js"></script>
-		<script type="text/javascript" src="{$THEME}assets/js/parallax.min.js"> </script>
+    <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
+    <script src="{$THEME}assets/js/jquery.min.js"></script>
 		<script src="{$THEME}assets/js/bootstrap.min.js"></script>
     <!--
     * Uncomment this file if you want to put custom styles and do not want to use Sass and Gulp
@@ -100,27 +94,23 @@
     <!-- Final compiled and minified JS -->
   <script type="text/javascript" src="{$THEME}assets/js/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/slick.js"></script>
-	<script type="text/javascript" src="{$THEME}assets/js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.bpopup.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/select2.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.easing.compatibility.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/remodal.min.js"></script>
-	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript" src="{$THEME}assets/js/jquery.mixitup.js"></script>
-	<script src="{$THEME}assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="{$THEME}assets/js/jquery.magnific-popup.min.js"></script>
   <script src="{$THEME}assets/js/mlsMedia.js"></script>
-	<script src="{$THEME}assets/js/superfish.js"> </script>
   <script src="{$THEME}assets/bower/jQuery-menu-aim/jquery.menu-aim.js"></script>
 	<script src="{$THEME}assets/js/jquery-ui.min.js"> </script>
   <script src="{$THEME}assets/bower/webfontloader/webfontloader.js"></script>
-	<script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
 	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 	<script src="//yastatic.net/share2/share.js"></script>
   <script src="{$THEME}assets/js/mlsAjax.js"></script>
 	<script src="{$THEME}assets/js/modal.js"></script>
   <script src="{$THEME}assets/js/mlsCart.js"></script>
   <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
+  <script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
   <script src="{$THEME}assets/js/custom.js"> </script>
 
 <!--    <script src="{$THEME}_js/vendor.min.js"></script>
