@@ -128,13 +128,13 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 	float:right;
 }
 
-select.sort__title_price{
+/*select.sort__title_price{
 	outline: 0px;
     -webkit-appearance: button;
     -webkit-padding-end: 20px;
     -webkit-padding-start: 2px;
     -webkit-user-select: none;
-      border: 1px solid transparent;
+    border: 1px solid transparent;
     margin: 0;
     overflow: hidden;
     padding-top: 2px;
@@ -142,7 +142,7 @@ select.sort__title_price{
     text-overflow: ellipsis;
     white-space: nowrap;
 	width: 100%;
-	 background-image:  url('../../images/icons/_misc-s24e0fc74bb.png') ;
+	background-image:  url('../../images/icons/_misc-s24e0fc74bb.png') ;
 
   background-position:0 -5886px
   background-size:
@@ -150,7 +150,7 @@ select.sort__title_price{
     5px 5px,
     1px 1.5em;
   background-repeat: no-repeat;
-}
+}*/
 
 /*CALC OBJECT*/
 .page__full_article h2{

@@ -314,7 +314,6 @@ li.top__header_nav-item:nth-last-child(1){
             content: "";
             @include inlineblock(middle);
             margin-right: 2px;
-            margin-top: -5px;
         }
     }
 }
@@ -403,7 +402,7 @@ li.top__header_nav-item:nth-last-child(1){
         }
     }
     .card__button_content{
-        font-family: 'OpenSansBold', sans-serif;
+        font-family: 'HeliosCondBold', sans-serif;
         @include inlineblock(middle); 
         &:before{
             content: '';
@@ -593,7 +592,7 @@ li.top__header_nav-item:nth-last-child(1){
     background: #ffffff;
     border: none;
     outline: none;
-    font-family: 'PTSansRegular', sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     @include inlineblock();
     font-size: 16px;
     @include respond-to(small-screens){
@@ -659,7 +658,7 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .contacts__tel{
     font-size: em(23px);
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     padding-right: 39px;
     padding-bottom: 3px;
     position: relative;
@@ -709,7 +708,7 @@ li.top__header_nav-item:nth-last-child(1){
     background: #fff;
     z-index: 1000;
     top: 30px;
-    padding: 10px 24px;
+    padding: 10px 23px;
     border-radius: 0 0 5px 5px;
     border: 1px solid;
     border-top: none;
@@ -776,7 +775,7 @@ li.top__header_nav-item:nth-last-child(1){
 .callback__link{
     color: $accent-color; 
     font-size: em(15px);
-    font-family: "PTSansRegular", sans-serif;
+    font-family: "HeliosCondRegular", arial;
     &:hover, &:active, &:focus{
         color: $accent-color; 
     }

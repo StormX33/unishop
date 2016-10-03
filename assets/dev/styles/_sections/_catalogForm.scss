@@ -12,7 +12,7 @@
 .catalog__form_title{
 	font-size: em(24px);
 	color: $main-color;
-	font-family: PTSansBold, sans-serif;
+	font-family: 'HeliosCondBold', arial;
 	margin-bottom: 12px;
 	&:after{
 	    content: '';
@@ -35,19 +35,19 @@
 }
 
 .catalog__form-input::-webkit-input-placeholder{ 
-    font-family: "PTSansRegular", sans-serif;
+    font-family: "HeliosCondRegular", arial;
     color: $title-color-blue;
     font-size: 14px;
     font-weight: normal;
 }
 .catalog__form-input:-moz-placeholder{
-    font-family: "PTSansRegular", sans-serif;
+    font-family: "HeliosCondRegular", arial;
     color: $title-color-blue;
     font-size: 14px;
     font-weight: normal;
 }
 .catalog__form-input:-ms-input-placeholder{ 
-    font-family: "PTSansRegular", sans-serif;
+    font-family: "HeliosCondRegular", arial;
     color: $title-color-blue;
     font-size: 14px;
     font-weight: normal;

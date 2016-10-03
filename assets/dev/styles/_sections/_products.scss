@@ -11,7 +11,7 @@
 	.products__title_link{
 		font-size: em(17px);
 		color: $title-color-blue;
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold', arial;
 		line-height: 20px;
 		&:hover{
 			color: $accent-color;
@@ -55,7 +55,7 @@
 	}
 	.products__price_new{
 		color: $title-color-blue;
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold', arial;
 		font-size: em(18px);
 		@media screen and (max-width: 352px) and (min-width: 320px){
 			font-size: em(17px);
@@ -199,7 +199,7 @@
 			float: right;
 			text-align: right;
 			font-size: em(14px);
-			font-family: 'PTSansBold', sans-serif;
+			font-family: 'HeliosCondBold', arial;
 		}
 		.products__availability{
 			display: none;
@@ -235,7 +235,7 @@
 		}
 		.products__title_link{
 			font-size: em(16px);
-			font-family: "PTSansRegular", sans-serif;
+			font-family: "HeliosCondBold", arial;
 			line-height: 18px;
 		}
 		.products__link{

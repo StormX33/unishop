@@ -10,7 +10,7 @@
     margin-bottom: 16px;
 }
 .footer__info_block-title{
-    font-family: 'PTSansRegular', sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     margin-bottom: 12px;
 }
 .subscription{
@@ -33,7 +33,7 @@
     height: 34px;
     background: $orange;
     color: #ffffff;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     border: 1px solid $orange;
     @include respond-to(medium-screens){
         font-size: em(13px);
@@ -67,7 +67,7 @@
 //     font-size: 0;
 // }
 .footer__menu_item{
-    font-family: 'PTSansRegular', sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     font-size: 16px;
     @include inlineblock();
     width: 25%;
@@ -114,7 +114,7 @@
 .studio__copyright{
     font-size: em(14px);
     color: #000;
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     @include clearfix;
 }
 .copyright_text{

@@ -72,3 +72,43 @@
     font-style: normal;
 }
 
+/* font-family: "HeliosCondRegular"; */
+@font-face {
+    font-family: "HeliosCondRegular";
+    src: url("./HeliosCond/HeliosCondRegular/HeliosCondRegular.eot");
+    src: url("./HeliosCond/HeliosCondRegular/HeliosCondRegular.eot?#iefix")format("embedded-opentype"),
+    url("./HeliosCond/HeliosCondRegular/HeliosCondRegular.woff") format("woff"),
+    url("./HeliosCond/HeliosCondRegular/HeliosCondRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "HeliosCondItalic"; */
+@font-face {
+    font-family: "HeliosCondItalic";
+    src: url("./HeliosCond/HeliosCondItalic/HeliosCondItalic.eot");
+    src: url("./HeliosCond/HeliosCondItalic/HeliosCondItalic.eot?#iefix")format("embedded-opentype"),
+    url("./HeliosCond/HeliosCondItalic/HeliosCondItalic.woff") format("woff"),
+    url("./HeliosCond/HeliosCondItalic/HeliosCondItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "HeliosCondBold"; */
+@font-face {
+    font-family: "HeliosCondBold";
+    src: url("./HeliosCond/HeliosCondBold/HeliosCondBold.eot");
+    src: url("./HeliosCond/HeliosCondBold/HeliosCondBold.eot?#iefix")format("embedded-opentype"),
+    url("./HeliosCond/HeliosCondBold/HeliosCondBold.woff") format("woff"),
+    url("./HeliosCond/HeliosCondBold/HeliosCondBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "HeliosCondBoldItalic"; */
+@font-face {
+    font-family: "HeliosCondBoldItalic";
+    src: url("./HeliosCond/HeliosCondBoldItalic/HeliosCondBoldItalic.eot");
+    src: url("./HeliosCond/HeliosCondBoldItalic/HeliosCondBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("./HeliosCond/HeliosCondBoldItalic/HeliosCondBoldItalic.woff") format("woff"),
+    url("./HeliosCond/HeliosCondBoldItalic/HeliosCondBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

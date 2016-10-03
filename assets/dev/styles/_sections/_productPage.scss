@@ -165,17 +165,17 @@
         }
         &:last-child{
             float: right;
-            font-family: 'PTSansBold', sans-serif;
+            font-family: 'HeliosCondBold', arial;
         }
     }
     p{
-        font-family: OpenSans, sans-serif;
+        font-family: 'HeliosCondRegular', arial;
         font-size: 18px;
         color: $title-color-blue;
         margin-bottom: 30px;
     }
     h2, h3, h4, h5{
-        font-family: OpenSansBold, sans-serif;
+        font-family: 'HeliosCondRegular', arial;
         margin-bottom: 10px;
     }
 }
@@ -222,7 +222,7 @@
 }
 .current__price{
     font-size: em(26px);
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
 
 }
 .old__price{
@@ -311,7 +311,7 @@
     height: 44px;
     background: #083354;
     color: #ffffff;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     border: 1px solid #204664;
     &:hover, 
     &:focus,
@@ -359,7 +359,7 @@
     -moz-box-shadow:    0px 3px 0px 0px rgba(3, 141, 3, 1);
     box-shadow:         0px 3px 0px 0px rgba(3, 141, 3, 1);
     font-size: 18px;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     padding: 9px;
     &:hover, &:active, &:focus{
         color: $main-color;
@@ -498,7 +498,7 @@
 }
 .products__price_new{
     color: $title-color-blue;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     font-size: em(18px);
     line-height: 20px;
 }
@@ -733,7 +733,7 @@
     }
     .review_title,
     .review__author{
-        font-family: 'PTSansBold', sans-serif;
+        font-family: 'HeliosCondBold', arial;
     }
     .review__date{
         font-size: em(14px);
@@ -880,7 +880,7 @@
     font-size: 18px;
     color: $title-color-blue;
     text-transform: uppercase;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     padding: 10px 18px;
     display: block;
     text-align: center;

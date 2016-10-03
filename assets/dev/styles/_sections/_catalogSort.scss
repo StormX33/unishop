@@ -12,12 +12,35 @@
 	padding: 17px 14px;
 	display: block;
 	border-right: 1px solid #e8e7eb;
+	position: relative;
 	&:hover{
 		cursor: pointer;
 	}
 	&:last-child{
 		border-right: none;
 	}
+}
+select.sort__title_price{
+    position: relative;
+    outline: 0px;
+    -webkit-appearance: button;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    & + .sort__span{
+        right: 14px;
+    }
+    &:hover{
+    	cursor: pointer;
+    }
 }
 .sort__title{
 	color: $title-color-blue;
@@ -111,7 +134,7 @@
 		@include transform(none);
 		float: none;
 		font-size: em(27px);
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold', arial;
 		.sort__title{
 			text-align: center;
 			float: none;
@@ -138,7 +161,7 @@
 		@include transform(none);
 		float: none;
 		font-size: em(27px);
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold', arial;
 		.sort__title{
 			text-align: center;
 			float: none;
