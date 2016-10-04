@@ -708,7 +708,7 @@ li.top__header_nav-item:nth-last-child(1){
     background: #fff;
     z-index: 1000;
     top: 30px;
-    padding: 10px 23px;
+    padding: 10px;
     border-radius: 0 0 5px 5px;
     border: 1px solid;
     border-top: none;
@@ -724,6 +724,9 @@ li.top__header_nav-item:nth-last-child(1){
     //     padding: 10px 11px;
     // }
 }
+// .contacts__inner-item{
+//     margin-bottom: 3px;
+// }
 .phone{
     color: #686868;
     position: relative;
@@ -743,7 +746,35 @@ li.top__header_nav-item:nth-last-child(1){
         color: $text-color;
     }
 }
+.phone__inner_link{
+    margin-left: 26px;
+}
+.contacts__inner-span{
+    position: relative;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -30px;
+    }
+}
+.lifecell-logo{
+    &:before{
+        @include get-sprite($misc-sprite, lifecell-logo);
+    }
+}
+.kievstar-logo{
+    &:before{
+        @include get-sprite($misc-sprite, kievstar-logo);
+    }
+}
+.vodafone-logo{
+    &:before{
+        @include get-sprite($misc-sprite, vodafone-logo);
+    }
 
+}
 .contacts__callback{
     border-top: 1px solid #aeaeae;
     position: relative;
