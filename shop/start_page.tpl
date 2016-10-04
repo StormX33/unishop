@@ -43,6 +43,7 @@
 						<div class="section__title">
 							<h2 class="section__title_text">Выбор покупателей </h2>
 						</div>
+                       
 						<div class="section__content">
 							<div class="row">
 								<div class="col-md-3">
@@ -143,8 +144,8 @@
 								<div class="item__content_text">
 									Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
 								</div>
-								<a href="#" class="item__content_link">Подробнее об услуге  </a>
-								<a href="#" class="submit__btn_accent">Заказать бесплатный замер </a>
+								<a href="/uslugi" class="item__content_link">Подробнее об услуге  </a>
+								<a href="{site_url('callbacks')}?subj=3" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent">Заказать бесплатный замер </a>
 							</div>
 							<div class="services__description_wrap">
 								<div class="services__description_inner"> 
@@ -183,7 +184,7 @@
 										</li>
 										<li class="services__description_item">
 											<div class="description__image_wrap"><img src="{$THEME}images/services/professionalsIcon3.png" alt="professionalsIcon3" class="description__image description__image_main"><img src="{$THEME}images/services/professionalsIconHover3.png" alt="professionalsIconHover3" class="description__image"></div>
-											<div class="description__item_title">Информационная и техническая поддержка            </div>
+											<div class="description__item_title">Информационная и техническая поддержка</div>
 										</li>
 										<li class="services__description_item">
 											<div class="description__image_wrap"><img src="{$THEME}images/services/professionalsIcon4.png" alt="professionalsIcon4" class="description__image description__image_main"><img src="{$THEME}images/services/professionalsIconHover4.png" alt="professionalsIconHover4" class="description__image"></div>
@@ -206,7 +207,7 @@
 								<h3 class="item__title"> <span class="item__title_span"> Для дилеров </span>С нами выгодно  </h3>
 								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
 								<a href="#" class="item__content_link">Подробнее об услуге  </a>
-								<a href="#" class="submit__btn_accent">Узнать свою скидку </a>
+								<a href="{site_url('callbacks')}?subj=4" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent">Узнать свою скидку </a>
 							</div>
 							<div class="services__description_wrap">
 								<div class="services__description_inner"> 
@@ -221,11 +222,11 @@
 										</li>
 										<li class="services__description_item">
 											<div class="description__image_wrap"><img src="{$THEME}images/services/dealersIcon3.png" alt="dealersIcon3" class="description__image description__image_main"><img src="{$THEME}images/services/dealersIconHover3.png" alt="dealersIconHover3" class="description__image"></div>
-											<div class="description__item_title">Быстрая доставка            </div>
+											<div class="description__item_title">Быстрая доставка</div>
 										</li>
 										<li class="services__description_item">
 											<div class="description__image_wrap"><img src="{$THEME}images/services/dealersIcon4.png" alt="dealersIcon4" class="description__image description__image_main"><img src="{$THEME}images/services/dealersIconHover4.png" alt="dealersIconHover4" class="description__image"></div>
-											<div class="description__item_title">Система скидок   </div>
+											<div class="description__item_title">Система скидок</div>
 										</li>
 									</ul>
 								</div>
@@ -368,172 +369,13 @@
 											<button class="pagination__button advantages__button_next"> </button>
 										</li>
 									</ul>
-								</div><a href="#" class="submit__btn_accent"><span class="submit__btn_span">Получить консультацию</span></a>
+								</div><a href="{site_url('callbacks')}?subj=2" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent"><span class="submit__btn_span">Получить консультацию</span></a>
 							</div>
 						</div>
 					</div>
 				</section>
-<section class="projects">
-					<div class="container">
-						<div class="section__wrapper">
-							<h2 class="section__title_text">Наши проекты</h2>
-							<div class="section__content">
-								<!--PRODUCT PAGE-->
-								<ul class="section__slick_projects">
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/gasStations.png" alt="gasStations" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Сеть заправок</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/house.png" alt="house" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Загородный дом</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/playschool.png" alt="playschool" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Детский сад</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/аshan.png" alt="аshan" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">ТРЦ Ашан</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/gasStations.png" alt="gasStations" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Сеть заправок</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/house.png" alt="house" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Загородный дом</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/playschool.png" alt="playschool" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">Детский сад</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-									<li class="slick__projects_item">
-										<div class="slick__projects_content"><a href="#" class="projects_item_link"><img src="{$THEME}images/projects/аshan.png" alt="аshan" class="projects__item_image"></a>
-											<div class="projects__item_title"> 
-												<h4 class="item_title_text">ТРЦ Ашан</h4>
-											</div>
-											<div class="project__item_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-										</div>
-									</li>
-								</ul>
-								<div class="paginations">
-									<ul class="pagination__list">
-										<li class="pagination__item">
-											<button class="pagination__button projects__button_prev"> </button>
-										</li>
-										<li class="pagination__item">
-											<button class="pagination__button projects__button_next"> </button>
-										</li>
-									</ul>
-								</div><a href="#" class="submit__btn_main">Все проекты </a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="articles">
-					<div class="container">
-						<div class="section__wrapper">
-							<div class="section__header">
-								<div class="section__content_title">
-									<h3 class="content_title_text">Новости/Статьи</h3>
-								</div>
-							</div>
-							<div class="section__content">
-								<ul class="articles__list row">
-									<li class="col-sm-4 col-mob"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item1.png" alt="item1" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-									<li class="col-sm-4 col-mob"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item2.png" alt="item2" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-									<li class="col-sm-4"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/item3.png" alt="item3" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<ul class="articles__list row">
-									<li class="col-sm-4 col-mob"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img1.png" alt="img1" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает.</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-									<li class="col-sm-4 col-mob"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img2.png" alt="img2" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-									<li class="col-sm-4 col-mob"> 
-										<div class="articles__item">
-											<div class="articles__img_wrap"><img src="{$THEME}images/articles/img3.png" alt="img3" class="article__img"></div>
-											<div class="item__link_content"><a href="#" class="articles__item_link">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешае..</a>
-												<div class="date__item"><span class="date__item_span">23.04.2016</span><a href="#" class="date__item_link">Подробнее</a></div>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все статьи</a></div>
-							</div>
-						<!-- 	<div class="section__content">
-								<div class="section__header">
-									<div class="section__content_title">
-										<h3 class="content_title_text">Новости</h3>
-									</div>
-								</div>
-								
-								<div class="section__content_title-link"><a href="#" class="submit__btn_main">Все новости </a></div> -->
-							</div>
-						</div>
-					</div>
-				</section>
+                {widget(projects)}
+                {widget (latest_news)}
 				<section class="map">
 					<div class="map__content">
 						<div style="position:relative;z-index:30;">
@@ -543,27 +385,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="container"> 
-						<div class="feedback">
-							<div class="feedback__title"> 
-								<h4 class="feedback__title_text">Получите бесплатную косультацию и выезд на ваш объект</h4>
-								<p class="feedback__text">Наш менеджер свяжется с вами в ближайшее время и уточнит детали</p>
-							</div>
-							<form action="#" method="POST" id="feedback__form" class="feedback__form">
-								<div class="feedback__wrap">
-									<!-- <label for="name" class="feedback__form_label">Ваше имя </label> -->
-									<input type="text" name="name" placeholder="Ваше имя" class="feedback__form-input">
-								</div>
-								<div class="feedback__wrap">
-									<!-- <label for="phone" class="feedback__form_label">Номер телефона </label> -->
-									<input type="tel" name="phone" placeholder="Ваш телефон" class="feedback__form-input">
-								</div>
-								<div class="feedback__button">
-									<input type="submit" value="Получить консультацию" data-loading-text="Отправка..." data-complete-text="Сообщение отправлено" class="submit__btn_accent feedback-submit">
-								</div>
-							</form>
-						</div>
-					</div>
+                    {view ('callbacks/callback.tpl')}
 				</section>
                 {if widget('start_page_seo_text') && $CI->core->core_data['data_type'] == 'main'}
   <article class="description__page">

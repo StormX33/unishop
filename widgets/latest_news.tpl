@@ -1,41 +1,41 @@
 {$loc_items_num = count($recent_news)}
 {if $loc_items_num > 0}
-  <!-- URL to Widget First Category | Used to Make Link to All Items Page -->
-  {$loc_cat_url = str_replace(strrchr($recent_news[0]['full_url'], "/"), "", $recent_news[0]['full_url'])}
-  <section class="widget-secondary">
-    <div class="widget-secondary__header">
-      <h2 class="widget-secondary__title">{getWidgetTitle('latest_news')}</h2>
-      <div class="widget-secondary__viewall">
-        <a class="widget-secondary__hlink" href="{site_url($loc_cat_url)}">{tlang('View all')}</a>
-      </div>
-    </div>
-    <div class="widget-secondary__inner">
-      <div class="row row--ib row--vindent-s">
-        {foreach $recent_news as $item}
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <article class="small-post">
-              {if trim($item.field_list_image) != ""}
-                <a class="small-post__image" href="{site_url($item.full_url)}">
-                  <img src="{$item.field_list_image}" alt="{$item.title}">
-                </a>
-              {/if}
-              <div class="small-post__inner">
-                <time class="small-post__date"
-                      datetime="{date('Y-m-d', $item.publish_date)}">{tpl_locale_date('d F Y', $item.publish_date)}</time>
-                <h3 class="small-post__title">
-                  <a class="small-post__title-link" href="{site_url($item.full_url)}">{$item.title}</a>
-                </h3>
-                {if trim($item.prev_text) != ""}
-                  <div class="small-post__desc">
-                    <div class="typo typo--sub-color">{$item.prev_text}</div>
-                  </div>
-                  <a class="small-post__readmore" href="{site_url($item.full_url)}">{tlang('Read more')}</a>
-                {/if}
-              </div>
-            </article>
-          </div>
-        {/foreach}
-      </div>
-    </div>
-  </section>
+	 <!-- URL to Widget First Category | Used to Make Link to All Items Page -->
+	{$loc_cat_url = str_replace(strrchr($recent_news[0]['full_url'], "/"), "", $recent_news[0]['full_url'])}
+	<section class="articles">
+		<div class="container">
+			<div class="section__wrapper">
+				<div class="section__header">
+					<div class="section__content_title">
+						<h3 class="content_title_text">{getWidgetTitle('latest_news')}</h3>
+					</div>
+				</div>
+				<div class="section__content">
+                	<ul class="articles__list row">
+                		{foreach $recent_news as $item}
+                        	<li class="col-sm-4 col-mob"> 
+								<div class="articles__item">
+									<div class="articles__img_wrap">
+                                    	{if trim($item.field_list_image) != ""}
+                                        	<a href="{site_url($item.full_url)}">
+                                        		<img src="{$item.field_list_image}" alt="{$item.title}" class="article__img">
+                                            </a>
+                                        {/if}
+                                    </div>
+									<div class="item__link_content">
+                                    	<a href="{site_url($item.full_url)}" class="articles__item_link">{$item.title}</a>
+										<div class="date__item">
+                                        	<span class="date__item_span">{tpl_locale_date('d F Y', $item.publish_date)}</span>
+                                            <a href="{site_url($item.full_url)}" class="date__item_link">{tlang('Read more')}</a>
+                                        </div>
+									</div>
+								</div>
+							</li>
+                       	{/foreach}
+                    </ul>
+                    <div class="section__content_title-link"><a href="{site_url($loc_cat_url)}" class="submit__btn_main">Все статьи</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
 {/if}

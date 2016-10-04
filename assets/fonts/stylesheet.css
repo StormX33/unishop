@@ -71,6 +71,42 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'HeliosCondBold';
+    src: url('HeliosCondBold.eot');
+    src: url('HeliosCondBold.eot?#iefix') format('embedded-opentype'),
+         url('HeliosCondBold.woff') format('woff'),
+         url('HeliosCondBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HeliosCondBoldItalic';
+    src: url('HeliosCondBoldItalic.eot');
+    src: url('HeliosCondBoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('HeliosCondBoldItalic.woff') format('woff'),
+         url('HeliosCondBoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HeliosCondItalic';
+    src: url('HeliosCondItalic.eot');
+    src: url('HeliosCondItalic.eot?#iefix') format('embedded-opentype'),
+         url('HeliosCondItalic.woff') format('woff'),
+         url('HeliosCondItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HeliosCondRegular';
+    src: url('HeliosCondRegular.eot');
+    src: url('HeliosCondRegular.eot?#iefix') format('embedded-opentype'),
+         url('HeliosCondRegular.woff') format('woff'),
+         url('HeliosCondRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* font-family: "HeliosCondRegular"; */
 @font-face {
