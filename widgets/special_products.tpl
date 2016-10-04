@@ -1,10 +1,12 @@
 {if count($products) > 0}
-  <div class="start-page__row">
-    <div class="start-page__container">
-      {view('widgets/includes/widget_primary.tpl', [
+	<section class="menu__products">
+    	<div class="container">
+      {view('widgets/includes/widget_hits.tpl', [
       'parent_products' => $products,
+      'category_id' => $idCategory,
       'parent_title' => getWidgetTitle('special_products')
       ])}
-    </div>
-  </div>
+      
+    	</div>
+	</section>
 {/if}

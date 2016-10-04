@@ -1,11 +1,17 @@
 <div class="modal-wrapper">
+{$subj = $_GET['subj']}
 	<div class="remodal remodal-is-initialized remodal-is-opened">
 	<!-- Modal Header -->
 		<header class="popup_header">
 			<button class="popup-window-close" data-modal-close></button>
 			<div class="popup__header_img-wrap"><img src="{$THEME}images/icons/popup/for_popup1.png" /></div>
 			<div class="popup__header_title">
-				<h3 class="popup__header_title-text">{tlang('Request a Call back')}</h3>
+				<h3 class="popup__header_title-text">
+                {if $subj == 1}{tlang('Request a Call back')}{/if}
+                {if $subj == 2}Получить консультацию{/if}
+                {if $subj == 3}Заказать бесплатный замер{/if}
+                {if $subj == 4}Узнать свою скидку{/if}
+                </h3>
 			</div>
 		</header>
 		<div class="form__popup_content">  
@@ -42,6 +48,7 @@
         			{/if}
                 </div>
     <input type="hidden" name="template" value="callbacks_modal">
+    <input type="hidden" name="subj" value="{$_GET['subj']}">
     {form_csrf()}
   </form>
 </div><!-- /.modal -->
