@@ -166,7 +166,7 @@
 }
 .services__description{
 	.item__title{
-		font-family: 'OpenSansLight', sans-serif;
+		font-family: 'HeliosCondRegular', arial;
 		margin-bottom: 30px;
 		font-size: 27px;
 		line-height: 30px;
@@ -191,7 +191,7 @@
 
 	}
 	.item__title_span{
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold', arial;
 		display: block;
 		font-size: 32px;
 		// @media screen and (max-width: 360px) and (min-width: 0px){
@@ -203,7 +203,7 @@
 
 	}
 	.item__content_text{
-		font-family: 'Arial', sans-serif;
+		font-family: 'HeliosCondRegular', arial;
 		font-size: em(18px);
 		margin-bottom: 18px;
 		@include respond-to(mobile){
@@ -268,7 +268,7 @@
 	font-size: 15px;
 	text-align: center;
 	color: $title-color-blue;
-	font-family: 'OpenSans', sans-serif;
+	font-family: 'HeliosCondRegular', arial;
 	margin-bottom: 30px;
 }
 .description__image_wrap{

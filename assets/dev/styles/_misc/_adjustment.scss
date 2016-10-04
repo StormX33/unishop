@@ -1,7 +1,7 @@
 /* --------- adjustment --------- */
 $container-width: 1200px;
 $footer-height: 272px;
-$body-font: 'PTSansRegular', sans-serif;
+$body-font: 'HeliosCondRegular', arial;
 
 // html{
 //     height: 100%;
@@ -86,12 +86,12 @@ h1, h2, h3,h4, h5, h6{
     margin: 0;
 }
 h1, h2, h3{
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     font-weight: normal;
 }
 h4, h5, h6{
     font-weight: normal;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
 }
 // h2{
 //     text-align: center;

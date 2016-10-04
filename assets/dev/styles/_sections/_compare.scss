@@ -26,7 +26,7 @@ $compare-border: #ececec;
 	display: block;
 	color: $title-color-blue;
 	font-size: 18px;
-	font-family: 'PTSansBold', sans-serif;
+	font-family: 'HeliosCondBold', arial;
 	text-transform: uppercase;
 	padding: 12px 10px;
 	text-align: center;
@@ -137,16 +137,16 @@ thead{
 }
 .compare__title_link{
 	color: $title-color-blue;
-	font-family: 'PTSansBold', sans-serif;
+	font-family: 'HeliosCondBold', arial;
 	font-size: em(14px);
 }
 tbody{
 	.compare-col_first{
 		font-size: em(14px);
-		font-family: "PTSansRegular",sans-serif;
+		font-family: "HeliosCondRegular", arial;
 	}
 	.compare-col{
-		font-family: 'PTSansBold', sans-serif;
+		font-family: 'HeliosCondBold"', arial;
 		padding: 12px 14px;
 	}
 }

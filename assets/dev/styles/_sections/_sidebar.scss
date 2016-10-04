@@ -20,6 +20,7 @@
     -moz-box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
     box-shadow: 0px 40px 40px -15px rgba(13,48,81,0.4);
     border: 1px solid #cdd3d7;
+    border-top: none;
 }
 .filter__title_text{
     text-align: center;
@@ -161,7 +162,7 @@
 .filter__slider-input{
     max-width: 90%;
     @include inlineblock(middle);
-    padding: 10px 12px 10px 10px;
+    padding: 5px 10px;
     border: 1px solid $title-color-blue;
     color:  $title-color-blue;
     font-size: 21px;
@@ -269,6 +270,7 @@
         cursor: pointer;
         color: $main-color;
         background: #083253;
+        box-shadow: none;
         .sidebar-nav__text{
             font-family: 'PTSansBold', sans-serif;
             font-size:em(19px);
@@ -287,8 +289,10 @@
 .active-filters__wrapper{
     background: #ececec;
     padding: 15px 15px 8px;
-    border-bottom: 1px solid $title-color-blue;
-
+    border-bottom: 1px solid #c3cbcf;
+    -webkit-box-shadow: inset 0px -1px 1px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow:    inset 0px -1px 1px 0px rgba(255, 255, 255, 1);
+    box-shadow:         inset 0px -1px 1px 0px rgba(255, 255, 255, 1);
 }
 
 .active-filters__item{
@@ -308,26 +312,26 @@
     max-width: 240px;
     color: $main-color;
 
-    &:before{
-        content:"";
-        display: block;
-        width: 12px;
-        height: 50%;
-        left: 0px;
-        top: 0%;
-        background: linear-gradient(to right top, #ececec 50%, transparent 50%);
-        position: absolute;
-    }
-    &:after{
-        content:"";
-        display: block;
-        width: 12px;
-        height: 50%;
-        left: 0px;
-        top: 50%;
-        background: linear-gradient(to right bottom, #ececec 50%, transparent 50%);
-        position: absolute;
-    }
+    // &:before{
+    //     content:"";
+    //     display: block;
+    //     width: 12px;
+    //     height: 50%;
+    //     left: 0px;
+    //     top: 0%;
+    //     background: linear-gradient(to right top, #ececec 50%, transparent 50%);
+    //     position: absolute;
+    // }
+    // &:after{
+    //     content:"";
+    //     display: block;
+    //     width: 12px;
+    //     height: 50%;
+    //     left: 0px;
+    //     top: 50%;
+    //     background: linear-gradient(to right bottom, #ececec 50%, transparent 50%);
+    //     position: absolute;
+    // }
     &:hover{
         cursor: pointer;
         background: $nav-bg;

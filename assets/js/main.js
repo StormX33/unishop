@@ -528,7 +528,7 @@ $(function() {
 /*-----------fonts----------*/
 WebFont.load({
     custom: {
-      families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic']
+      families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic', 'HeliosCondRegular']
     }
 });
 

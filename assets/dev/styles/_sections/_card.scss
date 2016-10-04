@@ -32,7 +32,7 @@ $table-border: #e1e1e1;
         background: $main-color;
     }
     th{
-        font-family: 'PTSansBold', sans-serif;
+        font-family: 'HeliosCondBold', arial;
         font-size: em(18px);
         color: $title-color-blue;
     }
@@ -137,7 +137,7 @@ $table-border: #e1e1e1;
         // }
         .cart__name_link{
             display: block;
-            font-family: 'PTSansBold', sans-serif;
+            font-family: 'HeliosCondBold', arial;
             font-size: em(18px);
             text-align: left;
             &:hover, &:active, &:focus{
@@ -155,7 +155,7 @@ $table-border: #e1e1e1;
         }
         .cart__item_name-span{
             display: block;
-            font-family: 'PTSansRegular', sans-serif;
+            font-family: 'HeliosCondRegular', arial;
             font-size: 14px;
         }
     }
@@ -175,7 +175,7 @@ $table-border: #e1e1e1;
         color: $title-color-blue;
         span{
             margin-right: 10px;
-            font-family: 'PTSansBold', sans-serif;
+            font-family: 'HeliosCondBold', arial;
             // @include respond-to(mobile){
             //     font-size: 16px;
             // }
@@ -215,7 +215,7 @@ $table-border: #e1e1e1;
             text-transform: uppercase;
             p{
                 font-size: em(21px);
-                font-family: 'PTSansBold', sans-serif;
+                font-family: 'HeliosCondBold', arial;
             }
             span{
                 // @include respond-to(mobile){
@@ -295,19 +295,19 @@ $table-border: #e1e1e1;
     outline: none;
 }
 .contacts__form-input::-webkit-input-placeholder{ 
-    font-family: 'PTSansRegular',sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     color: $title-color-blue;
     font-size: 16px;
     font-weight: normal;
 }
 .contacts__form-input:-moz-placeholder{
-    font-family: 'PTSansRegular',sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     color: $title-color-blue;
     font-size: 16px;
     font-weight: normal;
 }
 .contacts__form-input:-ms-input-placeholder{ 
-    font-family: 'PTSansRegular',sans-serif;
+    font-family: 'HeliosCondRegular', arial;
     color: $title-color-blue;
     font-size: 16px;
     font-weight: normal;
@@ -378,7 +378,7 @@ $table-border: #e1e1e1;
     font-size: 16px;
 }
 .delivery__check_title{
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     font-size: em(18px);
     margin-bottom: 10px;
 }

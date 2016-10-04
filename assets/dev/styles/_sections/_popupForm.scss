@@ -74,7 +74,7 @@
     }
 
     .form__popup_title{
-        font-family: "RalewayBold", sans-serif;
+        font-family: "HeliosCondBold", arial;
         font-size: 32px;
         margin: 0 0 6px 0;
         @include respond-to(mobile){
@@ -182,7 +182,7 @@
         border: none; 
         margin-bottom: 5px;
         th{
-            font-family: "PTSansRegular", sans-serif;
+            font-family: "HeliosCondBold", arial;
             font-size: em(16px);
             border: none;
         } 

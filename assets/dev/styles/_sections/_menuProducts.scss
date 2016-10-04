@@ -31,7 +31,7 @@
 .menu__link{
 	color: $main-color;
 	font-size: em(18px);
-	font-family: 'PTSansBold', sans-serif;
+	font-family: 'HeliosCondBold', arial;
 	display: block;
    	white-space: nowrap;
    	&:hover, 
@@ -45,7 +45,7 @@
 	&.active{
 		background: $main-color;
 		.menu__link{
-			font-family: "PTSansRegular",sans-serif;
+			font-family: "HeliosCondRegular", arial;
 			color: $title-color-black;
 		}
 	}
@@ -116,10 +116,10 @@
 	@include absolute-center;
 }
 .products__item_title{
-	font-family: 'PTSansRegular', sans-serif;
+	font-family: 'HeliosCondRegular', arial;
 }
 .products__item_price-main{
-	font-family: 'PTSansBold', sans-serif;
+	font-family: 'HeliosCondBold', arial;
 	font-size: 18px;
 	color: $title-color-black;
 }

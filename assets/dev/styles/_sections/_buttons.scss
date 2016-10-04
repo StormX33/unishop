@@ -1,7 +1,7 @@
 .submit__btn_accent{
     @include inlineblock;
     text-align: center;
-    font-family: PTSansRegular, sans-serif;
+    font-family: HeliosCondRegular, arial;
     font-size: em(21px);
     color: $main-color;
     background: $nav-bg;
@@ -124,7 +124,7 @@
 //PRODUCT BUY
 .products__buy-btn{
     @extend  .filter__accept;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     background: #da251c;
     text-align: center;
     -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
@@ -175,7 +175,7 @@ $login-submit: #083253;
     background: $login-submit;
     @include transition(all 0.3s ease-out);
     color: #ffffff;
-    font-family: 'PTSansBold', sans-serif;
+    font-family: 'HeliosCondBold', arial;
     font-size: 21px;
     text-transform: uppercase;
     width: 315px;

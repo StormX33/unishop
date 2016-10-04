@@ -11,6 +11,7 @@
 >{$order.name_front}</option>
 				{/foreach}
 			</select>
+			<span class="sort__span"> </span>
 		</li>
 	{/if}
 	<!-- END Order -->
