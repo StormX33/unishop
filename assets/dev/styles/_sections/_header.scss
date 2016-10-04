@@ -281,7 +281,7 @@
         display: block;
     }
 }
-.wf-ptsansregular-n4-active .top__header_nav-item{
+.wf-helioscondregular-n4-active .top__header_nav-item{
     font-size: 14px;
 }
 .top__header_nav-link{
@@ -716,17 +716,20 @@ li.top__header_nav-item:nth-last-child(1){
     @include respond-to(mobile){
         padding: 14px;
     } 
-    @include respond-to(small-screens){
-        font-size: 19px;
-        padding: 10px 11px;
-    }
-    // @include respond-to(medium-screens){
+    // @include respond-to(small-screens){
+    //     font-size: 19px;
     //     padding: 10px 11px;
     // }
+    // @include respond-to(medium-screens){
+    //     font-size: 19px;
+    // }
 }
-// .contacts__inner-item{
-//     margin-bottom: 3px;
-// }
+.contacts__inner-item{
+    margin-bottom: 3px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
 .phone{
     color: #686868;
     position: relative;
@@ -755,8 +758,9 @@ li.top__header_nav-item:nth-last-child(1){
         content: '';
         display: block;
         position: absolute;
-        top: 0;
+        top: 50%;
         left: -30px;
+        @include transform(translate(0, -50%));
     }
 }
 .lifecell-logo{
@@ -1039,5 +1043,58 @@ li.top__header_nav-item:nth-last-child(1){
     .user__login_link{
         font-size: 12px;
     }
-
+}
+@include respond-to(small-screens){
+    .contacts__content_list{
+        font-size: 17px;
+        padding: 10px 7px;
+    }
+    .phone__inner_link{
+        margin-left: 19px
+    }
+    .contacts__inner-span:before{
+        left: -22px;
+    }
+    .lifecell-logo{
+        &:before{
+            @include get-sprite($misc-sprite, lifecell-logo-middle);
+        }
+    }
+    .kievstar-logo{
+        &:before{
+            @include get-sprite($misc-sprite, kievstar-logo-middle);
+        }
+    }
+    .vodafone-logo{
+        &:before{
+            @include get-sprite($misc-sprite, vodafone-logo-middle);
+        }
+    }
+}
+@include respond-to(medium-screens){
+    .contacts__content_list{
+        font-size: 19px;
+        padding: 10px 7px;
+    }
+    .phone__inner_link{
+        margin-left: 19px
+    }
+    .contacts__inner-span:before{
+        left: -22px;
+    }
+    .lifecell-logo{
+        &:before{
+            @include get-sprite($misc-sprite, lifecell-logo-middle);
+        }
+    }
+    .kievstar-logo{
+        &:before{
+            @include get-sprite($misc-sprite, kievstar-logo-middle);
+        }
+    }
+    .vodafone-logo{
+        &:before{
+            @include get-sprite($misc-sprite, vodafone-logo-middle);
+        }
+    }
 }

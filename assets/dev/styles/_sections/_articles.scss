@@ -78,6 +78,7 @@
 	-moz-box-shadow:    0px 5px 20px 0px rgba(0, 0, 0, 0.33);
 	box-shadow:         0px 5px 20px 0px rgba(0, 0, 0, 0.33);
 	@include transition(all 0.2s);
+	margin-bottom: 30px;
 	&:hover{
 		box-shadow: none;
 		cursor: pointer;
@@ -92,11 +93,7 @@
 		width: 100%;
 	}
 }
-.articles__list{
-	&:first-child{
-		margin-bottom: 60px;
-	}
-}
+
 .articles__list li {
 	@include respond-to(mobile){
 		display: none;
@@ -112,14 +109,25 @@
 	}
 }
 .articles__img_wrap{
+	height: 233px;
+	overflow: hidden;
 	margin-bottom: 20px;
+	position: relative;
+	a{
+		display: block;
+		height: 233px;
+	}
 }
 .item__link_content{
 	padding: 0 14px;
+	display: table;
+	width: 100%;
 }
 .article__img{
 	display: block;
 	width: 100%;
+	max-height: 100%;
+	@include absolute-center;
 }
 .date__item,
 .date__item_link{
@@ -129,6 +137,11 @@
 	@include clearfix;
 }
 .articles__item_link{
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+	height: 50px;
+	overflow: hidden;
 	font-size: 18px;
 	color: $title-color-blue;
 	display: block;
