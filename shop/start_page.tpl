@@ -240,8 +240,13 @@
 						</div>
 					</div>
 				</section>
-                {widget(projects)}
-                {widget (latest_news)}
+                {widget('projects')}
+                <section class="articles">
+                	<div class="container">
+                		{widget('latest_news')}
+                		{widget('latest_sales')}
+                	</div>
+                </section>
 				<section class="map">
 					<div class="map__content">
 						<div style="position:relative;z-index:30;">
