@@ -51,7 +51,7 @@
         transform: translate(-50%, -50%);
     }
     .slick__use_item{
-        padding: 0 15px;
+        margin: 0 15px;
     }
     .section_content{
         position: relative;
@@ -59,6 +59,17 @@
     .slick__image{
         margin: 0 auto;
     }
+    // .slick__image_link{
+    //     width: 185px;
+    //     height: 60px;
+    //     position: relative;
+    //     display: block;
+    //     img{
+    //         max-width: 100%;
+    //         height: auto;
+    //         @include absolute-center;
+    //     }
+    // }
 }
 
 .use, .orders{

@@ -495,5 +495,8 @@ WebFont.load({
       families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic', 'HeliosCondRegular']
     }
 });
-
-  
+// /*-----------img----------*/
+// $(function() {
+//    var $sliderImages = $('img.projects__item_image');
+//    objectFitImages($sliderImages);
+// });

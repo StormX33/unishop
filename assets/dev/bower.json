@@ -13,7 +13,8 @@
     "bourbon": "^4.2.7",
     "jquery-ui": "~1.12.0",
     "jQuery-menu-aim": "https://github.com/banesto/jQuery-menu-aim.git",
-    "webfontloader": "^1.6.26"
+    "webfontloader": "^1.6.26",
+    "object-fit-images": "*"
   },
   "devDependencies": {}
 }

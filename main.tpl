@@ -35,7 +35,7 @@
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
-        <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
+            <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
 		<script src="{$THEME}assets/js/bootstrap.min.js"></script>
@@ -110,6 +110,7 @@
 	<script src="{$THEME}assets/js/modal.js"></script>
   <script src="{$THEME}assets/js/mlsCart.js"></script>
   <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
+ <!--  <script src="{$THEME}assets/bower/object-fit-images/dist/ofi.browser.js"></script> -->
   <script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
   <script src="{$THEME}assets/js/custom.js"> </script>
 
