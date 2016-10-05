@@ -1,139 +1,5 @@
-{if count($brands) > 0}
-<section class="use">
-	<div class="container">
-    widget('brands_top')
-	</div>
-</section>
-{/if}
-				<section class="use">
-					<div class="container">
-						<div class="section__wrapper">
-							<div class="section__title">
-								<h2 class="section__title_text">Винтерм - <span class="section__title_span">{tlang('authorized dealer')}</span></h2>
-							</div>
-							<div class="section_content">
-								<ul class="section__list_use">
-									<li class="slick__use_item"><a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand1.png" alt="brand1" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item"><a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand2.png" alt="brand2" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand3.png" alt="brand3" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand4.png" alt="brand4" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand5.png" alt="brand5" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand1.png" alt="brand1" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand2.png" alt="brand2" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand3.png" alt="brand3" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand4.png" alt="brand4" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand5.png" alt="brand5" class="img-responsive slick__image"></a></li>
-								</ul>
-								<div class="paginations">
-									<ul class="pagination__list">
-										<li class="pagination_item">
-											<button class="pagination__button use__button_prev"> <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></button>
-										</li>
-										<li class="pagination_item">
-											<button class="pagination__button use__button_next"> <span aria-hidden="true" class="glyphicon  glyphicon-menu-right">   </span></button>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="menu__products">
-					<div class="container">
-						<div class="section__title">
-							<h2 class="section__title_text">Выбор покупателей </h2>
-						</div>
-                       
-						<div class="section__content">
-							<div class="row">
-								<div class="col-md-3">
-									<div class="menu__content"> 
-										<ul class="menu__list"> 
-											<li class="menu__item"><a href="" class="menu__link">Твердотопливные котлы</a></li>
-											<li class="menu__item active"><a href="" class="menu__link">Газовые котлы</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Солнечные коллектора</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Бойлеры</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Радиаторы</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Теплоаккумуляторы</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Расширительные баки</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Тепловые насосы</a></li>
-											<li class="menu__item"><a href="" class="menu__link"> Системы быстрого монтажа</a></li>
-											<li class="menu__item"><a href="" class="menu__link">Насосы</a></li>
-											<li class="menu__item"><a href="" class="menu__link"> Трубы и фитинги</a></li>
-										</ul><a href="#" class="menu__button_link"> <span class="menu__button_span">Смотреть все категории</span></a>
-									</div>
-								</div>
-								<div class="col-md-9">
-									<ul class="menu__products_list">
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-										<li class="menu__products_item"><a href="#" class="menu__products_link">
-												<div class="menu__products_img-wrap"><img src="{$THEME}images/products/img.png" alt="Viadrus U 22 D 4 SEC" class="menu__products_img"></div>
-												<div class="products_item_inner">
-													<h4 class="products__item_title">Твердотопливный котел Viadrus U 22 D 4 SEC</h4>
-													<div class="products__item_price-main"> 16779.50 грн</div>
-													<div class="products__item_price">(590.83 EUR)</div>
-												</div></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+{widget('brands_top')}
+{widget('product_hits')}
 				<section class="services">
 					<div class="section__content">
 						<!--PRODUCT PAGE-->
@@ -374,8 +240,13 @@
 						</div>
 					</div>
 				</section>
-                {widget(projects)}
-                {widget (latest_news)}
+                {widget('projects')}
+                <section class="articles">
+                	<div class="container">
+                		{widget('latest_news')}
+                		{widget('latest_sales')}
+                	</div>
+                </section>
 				<section class="map">
 					<div class="map__content">
 						<div style="position:relative;z-index:30;">
