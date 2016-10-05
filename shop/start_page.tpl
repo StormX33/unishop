@@ -1,43 +1,4 @@
-{if count($brands) > 0}
-<section class="use">
-	<div class="container">
-    widget('brands_top')
-	</div>
-</section>
-{/if}
-				<section class="use">
-					<div class="container">
-						<div class="section__wrapper">
-							<div class="section__title">
-								<h2 class="section__title_text">Винтерм - <span class="section__title_span">{tlang('authorized dealer')}</span></h2>
-							</div>
-							<div class="section_content">
-								<ul class="section__list_use">
-									<li class="slick__use_item"><a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand1.png" alt="brand1" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item"><a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand2.png" alt="brand2" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand3.png" alt="brand3" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand4.png" alt="brand4" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand5.png" alt="brand5" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand1.png" alt="brand1" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand2.png" alt="brand2" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand3.png" alt="brand3" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand4.png" alt="brand4" class="img-responsive slick__image"></a></li>
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/use/brand5.png" alt="brand5" class="img-responsive slick__image"></a></li>
-								</ul>
-								<div class="paginations">
-									<ul class="pagination__list">
-										<li class="pagination_item">
-											<button class="pagination__button use__button_prev"> <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></button>
-										</li>
-										<li class="pagination_item">
-											<button class="pagination__button use__button_next"> <span aria-hidden="true" class="glyphicon  glyphicon-menu-right">   </span></button>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+{widget('brands_top')}
 				<section class="menu__products">
 					<div class="container">
 						<div class="section__title">
