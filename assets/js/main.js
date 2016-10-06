@@ -312,12 +312,12 @@ var $headerTop = $('.header__top'),
 $(window).on('scroll', function () {
     if ($(window).scrollTop() >= headerTopHeight) {
         $headerTop.slideUp();
-        $content.css('padding-top', '160px');
+        $content.css('padding-top', '150px');
         $header.addClass('scroll').find($headerContent).hide();
 
     } else {
         $headerTop.slideDown();
-        $content.css('padding-top', '220px');
+        $content.css('padding-top', '202px');
         $header.removeClass('scroll').find($headerContent).show();
     }
     $(function () {
@@ -326,7 +326,7 @@ $(window).on('scroll', function () {
             if ($(window).scrollTop() >= headerTopHeight) {
                 $content.css('padding-top', '230px');
             } else {
-                $content.css('padding-top', '250px');
+                $content.css('padding-top', '225px');
             }
         }
     });
@@ -596,7 +596,7 @@ $(function () {
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 6,
-		arrows: true,
+        arrows: true,
         prevArrow: $('.use__button_prev'),
         nextArrow: $('.use__button_next'),
         responsive: [
