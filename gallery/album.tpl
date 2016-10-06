@@ -16,15 +16,16 @@
 							{$item.loc_thumb_url = $album_url ."_thumbs/" .$item['full_name'];}
 							{$item.loc_filter_desc = strip_tags(trim($item.description));}
                     		<li class="page__teaser page__sale">
+                            <a href="{media_url($item.loc_image_url)}" data-gallery-image-item data-gallery-image-title="{$item.loc_filter_desc}">
                              <!--    <div class="products__item-inner">
                                 	<div class="project__title">
                                     	{echo strip_tags(trim($item.title));}
                                 	</div>
                              	</div> -->
                                 <div class="page__teaser_image">
-                                	<a class="gallery-album__image" href="{media_url($item.loc_image_url)}" data-gallery-image-item data-gallery-image-title="{$item.loc_filter_desc}">
+                                	<span class="gallery-album__image">
 										<img class="img-responsive project__img" src="{media_url($item.loc_prev_url)}" alt="{$item.loc_filter_desc}">
-                                	</a>
+                                	</span>
                                 </div>
                                 <div class="page__teaser_content">
                                     <header class="content__gallery_header">
@@ -38,6 +39,7 @@
                                         </div>
                                     {/if}
                                 </div>
+                                </a>
   					        </li>
 						{/foreach}
 					</ul>

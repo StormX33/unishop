@@ -17,27 +17,27 @@
 					{foreach $albums as $item}
 						{if $item.count > 0}
 							{$loc_cover_url = "uploads/gallery/" .$item.id ."/" .$item.cover_name ."_prev".$item.cover_ext}
-	                        <article class="page__teaser page__sale"> 
+	                        <article class="page__teaser page__sale">
+                            <a href="{site_url('gallery/album/'.$item['id'])}"> 
 								<div class="page__teaser_image">
 									{if $item['cover_name']}
-										<a class="gallery-album__image" href="{site_url('gallery/album/'.$item['id'])}">
 											<img class="img-responsive" src="{media_url($loc_cover_url)}" alt="{$item.name}">
-										</a>
 									{/if}
 								</div>
 	                            <div class="page__teaser_content">
 	                            	<header>
 	                                	<h3 class="page__teaser_title">
-	                                    	<a class="gallery-album__title-link" href="{site_url('gallery/album/'.$item['id'])}">{$item.name}</a>
+	                                    	<span class="gallery-album__title-link" href="{site_url('gallery/album/'.$item['id'])}">{$item.name}</span>
 	                                    </h3>
 	                                </header>
 	                                {if strip_tags(trim($item.description)) != ""}
 	                                	<div class="page__teaser_text gallery__item_text">
 	                                		{$item.description}
 	                                	</div>
-	                                    <a class="page__teaser_link" href="{site_url('gallery/album/'.$item['id'])}">Подробнее</a>
+	                                    <span class="page__teaser_link" href="{site_url('gallery/album/'.$item['id'])}">Подробнее</span>
 	                                {/if}
 	                            </div>
+                                </a>
 							</article>
 						{/if}
 					{/foreach}
