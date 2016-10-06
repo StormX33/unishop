@@ -117,5 +117,37 @@
         font-size: 16px;
         margin-bottom: 0;
     }
+    .gallery-album__image{
+        display: block;
+        height: 170px;
+        overflow: hidden;
+    }
+    .content__gallery_header{
+        // display: table;
+        // width: 100%;
+        margin-bottom: 0;
+        .content__gallery_title{
+            font-size: em(17px);
+        }
+    }
+    .content__gallery_title{
+        overflow: hidden;
+        height: 50px;
+        color: #092e4a;
+        font-family: 'HeliosCondBold', arial;
+    }
+    .gallery__item_text{
+        height: 52px;
+        overflow: hidden;
+    }
 }
 
+.gallery__list{
+    border-top: 1px solid #e8e7eb; 
+    .page__sale{
+        border-top: 1px solid transparent;
+    }
+}
+.gallery__album_header{
+    margin-bottom: 16px;
+}
