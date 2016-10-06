@@ -1,8 +1,8 @@
 <div class="main_container">
     <aside class="sidebar pull-right sidebar__blog">
         <ul class="main__sidebar__list">
-            {view('includes/cat_list.tpl', ['cat_id' => $category.id])}
-            {view('includes/cat_list.tpl', ['cat_id' => 69])}
+            {view('includes/cat_list.tpl', ['cat_id' => 72, 'cat_title_class' => 'fa fa-tag'])}
+            {view('includes/cat_list.tpl', ['cat_id' => 69, 'cat_title_class' => 'fa fa-newspaper-o'])}
         </ul>
                         
     </aside>

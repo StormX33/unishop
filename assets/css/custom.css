@@ -273,6 +273,12 @@ content: '';
 .use .pagination__button{
 	top:-7px;
 }
+.title-cat{
+	position: absolute;
+    left: 15px;
+    transform: translate(0, 50%);
+    top: 5px;
+}
 ./*gallery-menu__item:before, .gallery-menu__item_active:before {
     content: "";
     display: block;
