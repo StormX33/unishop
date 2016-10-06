@@ -253,7 +253,7 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 	font-size: 14px;
     text-align: center;
 }
-.gallery-menu__item:before, .gallery-menu__item_active:before {
+./*gallery-menu__item:before, .gallery-menu__item_active:before {
     content: "";
     display: block;
     width: 12px;
@@ -296,4 +296,4 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 .gallery-menu__link, .gallery-menu__active{
     display: inline-block;
     vertical-align: top;
-}
+}*/

@@ -18,6 +18,7 @@
 
 .breadcrumbs__item{
     @include inlineblock(middle);
+    font-size: em(16px);
 
     &:after{
         content: '';
@@ -51,7 +52,6 @@
 .breadcrumbs__link{
     font-family: 'HeliosCondRegular', arial;
     color: $blue;
-    font-size: em(14px);
     line-height: 16px;
     text-decoration: underline;
     &:hover, &:active, &:focus{

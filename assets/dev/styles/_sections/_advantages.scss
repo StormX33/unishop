@@ -98,17 +98,17 @@
 .advantages__img_wrap{
     position: relative;
     margin-bottom: 12px;
-    height: 64px;
+    height: 83px;
 }
 .advantages__img{
     @include absolute-center;
     display: none;
 }
-.advantages{
-    .slick-slide img{
-        display: none !important;
-    }
-}
+// .advantages{
+//     .slick-slide img{
+//         display: none !important;
+//     }
+// }
 .item_title{
     font-size: em(21px);
     margin-bottom: 15px;

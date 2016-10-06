@@ -110,7 +110,7 @@
 	<script src="{$THEME}assets/js/modal.js"></script>
   <script src="{$THEME}assets/js/mlsCart.js"></script>
   <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
- <!--  <script src="{$THEME}assets/bower/object-fit-images/dist/ofi.browser.js"></script> -->
+  <script src="{$THEME}assets/bower/jQuery.dotdotdot/src/jquery.dotdotdot.min.js"></script>
   <script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
   <script src="{$THEME}assets/js/custom.js"> </script>
 
