@@ -254,7 +254,7 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
     text-align: center;
 }
 .slick__use_item:before{
-content: '';
+    content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;	
@@ -273,7 +273,7 @@ content: '';
 .use .pagination__button{
 	top:-7px;
 }
-./*gallery-menu__item:before, .gallery-menu__item_active:before {
+/*gallery-menu__item:before, .gallery-menu__item_active:before {
     content: "";
     display: block;
     width: 12px;
