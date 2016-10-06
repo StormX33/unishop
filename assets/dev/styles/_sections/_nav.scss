@@ -49,9 +49,12 @@
     color: #ffffff;
     font-size: 18px;
     text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     position: relative;
+    -webkit-box-shadow: 1px 0px 1px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow:    1px 0px 1px 0px rgba(255, 255, 255, 0.4);
+    box-shadow:         1px 0px 1px 0px rgba(255, 255, 255, 0.4);
     @media screen and (max-width: 1023px) and (min-width: 768px){
         border-right: none;
     }
@@ -96,7 +99,7 @@
     }
 }
 .wf-helioscondregular-n4-active .nav__list>li>a{
-    font-size: 21px;
+    font-size: 20px;
     @include respond-to(medium-screens){
         font-size: 20px;
     }
@@ -106,6 +109,7 @@
     &:last-child{
         a{
             border-right: none;
+            box-shadow: none;
         }
     }
 }
@@ -113,25 +117,6 @@
 .nav__item_dropdown.cbp-hropen{
     .nav__link{
         position: relative;
-        // &:before{
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     z-index: 9999;
-        //     transform: translate(-50%, 50%);
-        //     left: 50%;
-        //     bottom: 8px;
-        //     @include get-sprite($misc-sprite, sumMenu_icon);
-        //     @media screen and (max-width: 1023px) and (min-width: 768px){
-        //         display: none;
-        //     }
-        //     @include respond-to(extraSmall-screens){
-        //         display: none;
-        //     }
-        //     @include respond-to(mobile){
-        //         display: none;
-        //     }
-        // }
     }
 }
 .nav__list{
@@ -169,19 +154,57 @@
 }
 
 .cbp-hrmenu .cbp-hrsub-content > ul {
-  width: 25%;
+  width: 33.33333333%;
   float: left;
   padding: 0 2em 0;
+
 }
 .cbp-hrsub-inner,
 .cbp-hrsub-content{
     @include clearfix;
 }
-
+.cbp-hrsub-inner{
+    position: relative;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 34.1%;
+        background: #d9d9d9;
+        @media screen and (max-width: 1023px) and (min-width: 320px){
+            display: none;
+        }
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 34.1%;
+        background: #d9d9d9;
+        @media screen and (max-width: 1023px) and (min-width: 320px){
+            display: none;
+        }
+    }
+}
 .cbp-hrmenu .cbp-hrsub-inner > div a {
   line-height: 1.5em;
+  padding: 9px 15px;
+  display: block;
+  &:hover{
+    background: #063255;
+    color: $main-color;
+    @media screen and (max-width: 1023px) and (min-width: 320px){
+        background: transparent;
+        color: #0a2e4c;
+    }
+  }
 }
-
 .navigation{
     .inner__title{
        font-size: 18px; 
@@ -219,8 +242,7 @@
         margin-bottom: 23px;
     }
     .item__title_link{
-        color: $nav-bg;
-        margin-bottom: 6px;
+        color: $title-color-black;
         .item__title_text{
             font-size: 19px;
             font-family: "HeliosCondRegular", arial;
@@ -237,9 +259,6 @@
             color: darken(#0a2e4c, 10%);
         }
     }
-    .collumn{
-        margin-bottom: 14px;
-    }
     .navbar-header{
         position: relative;
          @media screen and (max-width: 1023px) and (min-width: 768px){
@@ -247,7 +266,7 @@
         }
         b{
             display: block;
-            line-height: 69px;
+            line-height: 50px;
             color: $main-color;
             font-size: 24px;
             padding: 0 15px;
@@ -282,6 +301,7 @@
             }
         }
     }
+
 }
 .menu-hidden{
     &:hover{
@@ -294,18 +314,23 @@
     @media screen and (max-width: 1023px) and (min-width: 768px){
         display: block;
         position: absolute;
-        top: 15px;
+        top: 50%;
         z-index: 3;
+        @include transform(translate(0, -50%));
     }
     @include respond-to(mobile){
         display: block;
         position: absolute;
-        top: 15px;
+        top: 50%;
+        z-index: 3;
+        @include transform(translate(0, -50%));
     } 
     @include respond-to(extraSmall-screens){
         display: block;
         position: absolute;
-        top: 15px;
+        top: 50%;
+        z-index: 3;
+        @include transform(translate(0, -50%));
     }
 }
 .toggle-mnu{

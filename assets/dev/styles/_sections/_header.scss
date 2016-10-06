@@ -35,7 +35,7 @@
         .logo__img_wrap{
             width: 230px;
             position: relative;
-            height: 60px;
+            height: 50px;
             opacity: 1;
             @media screen and (max-width: 1066px) and (min-width: 1024px){
                 width: 187px;
@@ -75,6 +75,9 @@
         float: left;
         margin-left: 15px; 
         border-left: 1px solid #c1150d;
+        -webkit-box-shadow: inset 1px 0px 1px 0px rgba(255,255,255,0.4);
+        -moz-box-shadow: inset 1px 0px 1px 0px rgba(255,255,255,0.4);
+        box-shadow: inset 1px 0px 1px 0px rgba(255,255,255,0.4);
         @media screen and (max-width: 1023px) and (min-width: 768px){
             display: none;
             margin-left: 0;
@@ -147,17 +150,17 @@
     }
     .cbp-hrmenu .nav__list>li>a{
         font-size: 17px;
-        padding: 20px 15px;
+        padding: 14px 15px;
         .nav__span_arrow{
             right: 1em;
         }
         @media screen and (max-width: 1199px) and (min-width: 1110px){
             font-size: 16px;
-            padding: 20px 12px;
+            padding: 14px 12px;
         }
         @media screen and (max-width: 1109px) and (min-width: 1024px){
             font-size: 15px;
-            padding: 20px 10px;
+            padding: 14px 10px;
         }
     }
     .phone{
@@ -183,7 +186,7 @@
     .contacts__tel{
         display: table-cell;
         vertical-align: middle;
-        height: 60px;
+        height: 50px;
         padding: 0 30px 0 15px;
         @include respond-to(mobile){
             font-size: 20px;
@@ -205,7 +208,7 @@
         position: relative;
         min-width: 100px;
         float: left;
-        height: 60px;
+        height: 50px;
         @media screen and (max-width: 1023px) and (min-width: 768px){
             float: right;
         }
@@ -218,7 +221,7 @@
         
     }
     .user__login{
-        top: 45px;
+        top: 35px;
         transform: translate(0, -50%);
         padding: 6px 20px;
         background: $accent-color;
@@ -229,7 +232,7 @@
         box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.3);
         z-index: 2;
         right: -31px;
-        padding: 21px 20px;
+        padding: 12px 20px;
         @media screen and (max-width: 1023px) and (min-width: 768px){
             right: 0;
         }
@@ -243,7 +246,7 @@
             position: absolute;
             right: 0;
             // top: 35px;
-            padding: 14px 20px
+            padding: 14px 20px;
         }
     }
 
@@ -508,7 +511,7 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .logo__item_text{
     width: 38.29787234042553%;
-    padding-left: 9.148936170212766%;
+    padding-left: 34px;
     position:  relative;
     @include respond-to(small-screens){
         display: none;
@@ -524,7 +527,7 @@ li.top__header_nav-item:nth-last-child(1){
         position: absolute;
         background-color: $accent-color;
         top: 0;
-        left: 18px;
+        left: 16px;
         @include respond-to(medium-screens){
             left: 10px;
         }
@@ -549,7 +552,7 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .header__socials{
     float: left;
-    margin-right: 17px;
+    margin-right: 14px;
     @include respond-to(small-screens){
         display: none;
     }
@@ -574,7 +577,7 @@ li.top__header_nav-item:nth-last-child(1){
 .search{
     float: left;
     @include border-radius(2px);
-    margin: 0 11px 0 36px;
+    margin: 0 14px 0 23px;
     @include respond-to(small-screens){
         margin: 0 10px 0 10px;
     }
@@ -584,11 +587,11 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .search__form{
     font-size: 0;
-    border: 1px solid #eeeeee;
+    border: 1px solid #44596b;
 }
 .search__form-input{
     padding: 14px 15px;
-    width: 153px;
+    width: 223px;
     background: #ffffff;
     border: none;
     outline: none;
@@ -596,10 +599,10 @@ li.top__header_nav-item:nth-last-child(1){
     @include inlineblock();
     font-size: 16px;
     @include respond-to(small-screens){
-        width: 135px;
+        width: 147px;
     }
     @include respond-to(medium-screens){
-        width: 145px;
+        width: 173px;
     }
 }
 .search__form-submit{
@@ -646,7 +649,7 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .contacts{
     float: left;
-    margin-right: 30px;
+    margin-right: 14px;
     margin-top: -3px;
     line-height: 26px;
     @include respond-to(small-screens){
