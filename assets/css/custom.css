@@ -253,6 +253,26 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 	font-size: 14px;
     text-align: center;
 }
+.slick__use_item:before{
+content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;	
+}
+.slick__use_item{
+	float:none !important;
+	display:inline-block !important;
+	
+}
+.slick__use_item img{
+	display: inline-block !important;
+}
+.use .section__title{
+	margin-bottom: 18px !important;
+}
+.use .pagination__button{
+	top:-7px;
+}
 ./*gallery-menu__item:before, .gallery-menu__item_active:before {
     content: "";
     display: block;

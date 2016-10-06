@@ -1,8 +1,20 @@
 <div class="main_container">
     <aside class="sidebar pull-right sidebar__blog">
         <ul class="main__sidebar__list">
-            {view('includes/cat_list.tpl', ['cat_id' => $category.id])}
-            {view('includes/cat_list.tpl', ['cat_id' => 69])}
+            {if load_menu('useful_articles')}
+            <li class="main__sidebar_item">
+                <h3 class="main__sidebar_title sidebar__title">Полезные статьи</h3>
+                {load_menu('useful_articles')}
+            </li>
+            {/if}
+            <li class="main__sidebar_item">
+                <h3 class="main__sidebar_title sidebar__title">Новости</h3>
+                {load_menu('news')}
+            </li>
+            <li class="main__sidebar_item">
+                <h3 class="main__sidebar_title sidebar__title">Скидки и акции</h3>
+                {load_menu('shares')}
+            </li>
         </ul>
                         
     </aside>

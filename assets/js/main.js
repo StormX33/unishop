@@ -596,7 +596,7 @@ $(function () {
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 6,
-        arrows: true,
+		arrows: true,
         prevArrow: $('.use__button_prev'),
         nextArrow: $('.use__button_next'),
         responsive: [
