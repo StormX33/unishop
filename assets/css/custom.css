@@ -273,7 +273,17 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 .use .pagination__button{
 	top:-7px;
 }
+<<<<<<< HEAD
 /*gallery-menu__item:before, .gallery-menu__item_active:before {
+=======
+.title-cat{
+	position: absolute;
+    left: 15px;
+    transform: translate(0, 50%);
+    top: 5px;
+}
+./*gallery-menu__item:before, .gallery-menu__item_active:before {
+>>>>>>> edd629987159b5db817d3537ff343268d5892a5f
     content: "";
     display: block;
     width: 12px;

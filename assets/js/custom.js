@@ -1,8 +1,13 @@
 $(".buy__click_form-input").mask("+38(099) 999-99-99");
 ;(function($){
+ $('ul#product-cat').autocolumnlist({
+                columns: 3,
+                classname: 'col-md-4',
+                min: 9
+            });
 
   /* Remove ajax loader */
-  $(document).on('ajaxStop', function(){
+$(document).on('ajaxStop', function(){
     $.mlsAjax.preloaderHide();
   });
 })(jQuery);
