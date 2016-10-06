@@ -99,10 +99,7 @@
     }
 }
 .wf-helioscondregular-n4-active .nav__list>li>a{
-    font-size: 20px;
-    @include respond-to(medium-screens){
-        font-size: 20px;
-    }
+    font-size: 18px;
 }
 .cbp-hrmenu .nav__list>li{
     @include inlineblock(middle);
@@ -155,7 +152,6 @@
 
 .cbp-hrmenu .cbp-hrsub-content > ul {
   padding: 0 2em 0;
-
 }
 .cbp-hrsub-inner,
 .cbp-hrsub-content{

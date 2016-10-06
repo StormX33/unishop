@@ -317,7 +317,7 @@ $(window).on('scroll', function () {
 
     } else {
         $headerTop.slideDown();
-        $content.css('padding-top', '202px');
+        $content.css('padding-top', '200px');
         $header.removeClass('scroll').find($headerContent).show();
     }
     $(function () {
