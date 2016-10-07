@@ -280,10 +280,8 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
     transform: translate(0, 50%);
     top: 5px;
 }
-.mfp-produt__price_buy{
-padding: 16px 14px 10px
-}
-.mfp-lightbox{
-background: #fff;
-padding: 15px;
+.popup-lightbox .popup_footer:before, .popup-lightbox .popup_footer:after{
+	content: "";
+    display: table;
+	clear: both;
 }
