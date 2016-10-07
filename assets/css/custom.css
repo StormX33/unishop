@@ -73,7 +73,7 @@ button.mfp-arrow,button.mfp-close{
 .mfp-iframe-scaler{width:100%;height:0;overflow:hidden;padding-top:56.25%}
 .mfp-iframe-scaler iframe{position:absolute;display:block;top:0;left:0;width:100%;height:100%;box-shadow:0 0 8px rgba(0,0,0,.6);background:#000}
 .mfp-figure:after,img.mfp-img{width:auto;height:auto;display:block}
-img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
+img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
 .mfp-figure:after{position:absolute;left:0;top:40px;bottom:40px;right:0;z-index:-1;box-shadow:0 0 8px rgba(0,0,0,.6);background:#fff}
 .cols-nav,.overlay,.tree-nav{box-shadow:0 3px 4px rgba(0,0,0,.15)}
 .mfp-figure small{color:#BDBDBD;display:block;font-size:12px;line-height:14px}
@@ -280,10 +280,8 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
     transform: translate(0, 50%);
     top: 5px;
 }
-.mfp-produt__price_buy{
-padding: 16px 14px 10px
-}
-.mfp-lightbox{
-background: #fff;
-padding: 15px;
+.popup-lightbox .popup_footer:before, .popup-lightbox .popup_footer:after{
+	content: "";
+    display: table;
+	clear: both;
 }

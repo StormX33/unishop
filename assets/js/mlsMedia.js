@@ -14,7 +14,8 @@
                 var imgPreArr;
                 var imgShiftArr;
 				var title = $('.main-title').html();
-				var produt__price_buy = $('.produt__price_buy').html();
+				var product_price = $('td.price__buy_content').html();
+				var product_butt = $('td.produt__funcs-buttons').html();
 							
 				if (thumbList.size() > 0) {
                     thumbList.each(function () {
@@ -35,25 +36,38 @@
                         enabled: true,
                         tCounter: '%curr% of %total%',
                     },
-                    overflowY: "hidden",
-                    image: {
-						markup: '<div class="mfp-lightbox">'+
-            					'<div class="mfp-close"></div>'+
-								'<div class="mfp-title"></div>'+
-            					'<div class="mfp-img"></div>'+
-            					'<div class="mfp-produt__price_buy"></div>'+
-            					'</div>',
-                       titleSrc: function(item){
-							return title;
-					   }
+					closeMarkup:'<button class="popup-window-close" data-modal-close=""></button>',
+                    overflowY: "auto",
+					fixedContentPos:true,
+					image: {
+						markup: '<div class="modal-wrapper">'+
+									'<div class="remodal remodal__cart remodal-is-initialized remodal-is-opened popup-lightbox">'+
+										'<header class="popup_header">'+
+											'<div class="mfp-close"></div>'+
+											'<div class="popup__header_title">'+
+												'<h3 class="popup__header_title-text"></h3>'+
+											'</div>'+
+										'</header>'+
+										'<div class="form__popup_content">'+
+											'<div class="mfp-img"></div>'+
+										'</div>'+
+										'<div class="popup_footer">'+
+											'<div class="pull-left">'+
+											'</div>'+
+											'<div class="pull-right">'+ 
+											'</div>'+
+										'</div>'+
+            						'</div>'+
+								'</div>',
                     },
-			  callbacks: {
-    markupParse: function(template, values, item) {
-      // optionally apply your own logic - modify "template" element based on data in "values"
-	  return template.find('.mfp-produt__price_buy').html(produt__price_buy);
-      console.log('Parsing:', template, values, item);
-    }
-  }
+			  		callbacks: {
+    					markupParse: function(template, values, item) {
+							template.find('.popup__header_title-text').html(title);
+	  						template.find('.pull-left').html(product_price);
+							template.find('.pull-right').html(product_butt);
+							return;
+    					}
+  					}
                 });
 
             });
