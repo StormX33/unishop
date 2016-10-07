@@ -63,7 +63,7 @@
 								<h3 class="item__title"> <span class="item__title_span">Для профессионалов </span>Говорим на одном языке </h3>
 								<div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
 								<a href="#" class="item__content_link">Подробнее об услуге </a>
-								<a href="#" class="submit__btn_accent">Начать сотрудничество</a>
+								<a href="{site_url('auth/register')}" class="submit__btn_accent" data-modal="register_popup" rel="nofollow">Начать сотрудничество</a>
 							</div>
 							<div class="item__image_wrap"></div>
 						</div>
@@ -108,7 +108,7 @@
 							</div>
 							<div class="section_content">
 								<ul class="section__list_orders">
-									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/orders/brand1.png" alt="brand1" class="img-responsive slick__image"></a></li>
+									<li class="slick__use_item"><img src="{$THEME}images/orders/brand1.png" alt="brand1" class="img-responsive slick__image"></li>
 									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/orders/brand2.png" alt="brand2" class="img-responsive slick__image"></a></li>
 									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/orders/brand3.png" alt="brand3" class="img-responsive slick__image"></a></li>
 									<li class="slick__use_item">                                       <a href="#" class="slick__image_link"><img src="{$THEME}images/orders/brand4.png" alt="brand4" class="img-responsive slick__image"></a></li>
