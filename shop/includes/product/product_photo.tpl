@@ -31,8 +31,7 @@
          data-magnific-galley-thumb
          data-magnific-galley-title="{echo $model->getName()}"
       >
-        <img class="products__slideshow-thumbs-img" src="{media_url($model->firstVariant->getSmallPhoto())}" alt="{echo $model->getName()}" title="{echo $model->getName()}"
-             data-product-photo-main-thumb>
+        <img class="products__slideshow-thumbs-img" src="{media_url($model->firstVariant->getSmallPhoto())}" alt="{echo $model->getName()}" title="{echo $model->getName()}" data-magnific-galley-title="{echo $model->getName()}" data-product-photo-main-thumb>
       </a>
     </li>
     
