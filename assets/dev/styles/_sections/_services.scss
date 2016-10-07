@@ -204,7 +204,7 @@
 	}
 	.item__content_text{
 		font-family: 'Arial';
-		font-size: em(18px);
+		font-size: em(16px);
 		margin-bottom: 18px;
 		@include respond-to(mobile){
 			display: none;
@@ -265,7 +265,7 @@
 .services__description_item{
 	@include inlineblock(top);
 	width: 50%;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: center;
 	color: $title-color-blue;
 	font-family: 'Arial';
