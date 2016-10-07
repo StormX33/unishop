@@ -13,8 +13,10 @@
                 var imgStartArr = [];
                 var imgPreArr;
                 var imgShiftArr;
-
-                if (thumbList.size() > 0) {
+				var title = $('.main-title').html();
+				var produt__price_buy = $('.produt__price_buy').html();
+							
+				if (thumbList.size() > 0) {
                     thumbList.each(function () {
                         var imgSrc = {
                             src: $(this).attr('href')
@@ -29,14 +31,29 @@
                 mainImage.magnificPopup({
                     items: imgShiftArr,
                     type: "image",
-                    gallery: {
+					gallery: {
                         enabled: true,
-                        tCounter: '%curr% of %total%'
+                        tCounter: '%curr% of %total%',
                     },
                     overflowY: "hidden",
                     image: {
-                        titleSrc: 'data-magnific-galley-title'
-                    }
+						markup: '<div class="mfp-lightbox">'+
+            					'<div class="mfp-close"></div>'+
+								'<div class="mfp-title"></div>'+
+            					'<div class="mfp-img"></div>'+
+            					'<div class="mfp-produt__price_buy"></div>'+
+            					'</div>',
+                       titleSrc: function(item){
+							return title;
+					   }
+                    },
+			  callbacks: {
+    markupParse: function(template, values, item) {
+      // optionally apply your own logic - modify "template" element based on data in "values"
+	  return template.find('.mfp-produt__price_buy').html(produt__price_buy);
+      console.log('Parsing:', template, values, item);
+    }
+  }
                 });
 
             });

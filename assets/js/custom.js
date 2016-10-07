@@ -527,7 +527,7 @@ $(document).on('ready', function () {
 /* JS linking to product page instead of <a> element by SEO demand */
 $(document).on('click', '[data-product-photo-href]', function () {
     var href = $(this).attr('data-product-photo-href');
-    location.assign(href);
+	location.assign(href);
 });
 
 
@@ -537,7 +537,7 @@ $(document).on('click', '[data-product-photo-thumb]', function (e) {
 
     var currThumb = $(this);
     var context = currThumb.closest('[data-product-photo-scope]');
-
+	
     var allThumbs = '[data-product-photo-thumb]';
     var activeThumb = '[data-product-photo-thumb-active]';
     var activeThumbPosition;
