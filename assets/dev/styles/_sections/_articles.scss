@@ -17,35 +17,7 @@
 	.section__content{
 		position: relative;
 		padding-bottom: 63px;
-		// margin-bottom: 60px;
     	border-bottom: 3px solid #0d014d;
-		// &:last-child{
-		// 	margin-bottom: 0;
-		// }
-		// &:before{
-		// 	content: "";
-		// 	display: block;
-		// 	width: 580px;
-		// 	height: 3px;
-		// 	background: #0d014d;
-		// 	position: absolute;	
-		// 	@include transform(translate(50%, 50%));
-		// 	top: 25px;
-		// 	@include respond-to(mobile){
-		// 		display: none;
-		// 	} 
-		// 	@include respond-to(extraSmall-screens){
-		// 		display: none;
-		// 	}
-		// 	@include respond-to(small-screens){
-		// 		width: 250px;
-		// 	    left: 140px;
-		// 	}
-		// 	@include respond-to(medium-screens){
-		// 		width: 400px;
-		// 		left: 90px;
-		// 	}
-		// }
 	}
 }
 .section__header{
@@ -53,7 +25,6 @@
 	margin-bottom: 20px;
 }
 .section__content_title{
-	// float: left;
 	text-align: center;
 }
 

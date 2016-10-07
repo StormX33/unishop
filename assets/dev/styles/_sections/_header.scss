@@ -677,11 +677,22 @@ li.top__header_nav-item:nth-last-child(1){
         font-size: em(21px);
         padding-right: 25px;
     }
+    &.opened{
+        .contacts__tel_arrow{
+            &:after{
+                @include get-sprite($misc-sprite, arrow_up);
+            }
+        }
+    }
 }
 .contacts__tel_arrow{
     width: 39px;
     height: 31px;
     position: absolute;
+    display: block;
+    @include transform(translate(-50%, -50%));
+    right: -20px;
+    top: 50%;
     &:hover{
         cursor: pointer;
     }
@@ -689,16 +700,9 @@ li.top__header_nav-item:nth-last-child(1){
         content: "";        
         display: block;
         @include get-sprite($misc-sprite, arrow_down);
-        position: absolute;
-        top: 12px;
-        right: 21px;
+        @include absolute-center;
         @include respond-to(medium-screens){
             right: 7px;
-        }
-    }
-    &.opened{
-        &:after{
-            @include get-sprite($misc-sprite, arrow_up);
         }
     }
     @include respond-to(medium-screens){
@@ -713,19 +717,13 @@ li.top__header_nav-item:nth-last-child(1){
     top: 30px;
     padding: 10px;
     border-radius: 0 0 5px 5px;
-    border: 1px solid;
+    border: 1px solid #aeaeae;
     border-top: none;
     font-size: 21px;
+    width: 100%;
     @include respond-to(mobile){
         padding: 14px;
     } 
-    // @include respond-to(small-screens){
-    //     font-size: 19px;
-    //     padding: 10px 11px;
-    // }
-    // @include respond-to(medium-screens){
-    //     font-size: 19px;
-    // }
 }
 .contacts__inner-item{
     margin-bottom: 3px;
@@ -734,10 +732,11 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .phone{
-    color: #686868;
+    color: $text-color;
     position: relative;
-    &:hover, &:active, &:focus{
-        color: #686868;
+    &:hover{
+        color: $text-color;
+        cursor: pointer;
     }
 }
 

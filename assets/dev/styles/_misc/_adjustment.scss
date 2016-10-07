@@ -3,14 +3,10 @@ $container-width: 1200px;
 $footer-height: 272px;
 $body-font: 'HeliosCondRegular', arial;
 
-// html{
-//     height: 100%;
-// }
 
 body{
     font: 16px/1.41 $body-font;
     -webkit-font-smoothing: antialiased;
-    // height:100%;
 }
 
 .container {
@@ -34,16 +30,6 @@ body{
     }
 }
 
-// .wrapper{
-//     min-height: 100%;
-//     margin-bottom: -$footer-height; 
-//     &:after{
-//        content: "";
-//         display: block;
-//         height: $footer-height; 
-//     }
-
-// }
 .wrapper__main{
     min-height: 100%;
 }
@@ -56,10 +42,6 @@ body{
         padding-top: 250px;
     }
 }
-
-// footer{
-//     height: $footer-height; 
-// }
 
 table {
     border-collapse: collapse;

@@ -4,7 +4,7 @@
 		{$i=0}
 			{foreach $phones as $phone}
 				{if $i == 0}
-					<a href="tel:+38{str_replace(' ', '',$phone)}" class="phone contacts__link">{mb_substr($phone, 0,4)}<span class="contacts__link_span">{mb_substr($phone, 4)}</span></a><span class="contacts__tel_arrow"></span>
+					<span class="phone">{mb_substr($phone, 0,4)}{mb_substr($phone, 4)}</span><span class="contacts__tel_arrow"></span>
 				{/if}
 				{if $i == 1}
 					<ul class="contacts__content_list">
