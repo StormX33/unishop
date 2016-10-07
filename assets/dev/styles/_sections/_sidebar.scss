@@ -122,6 +122,7 @@
     font-size: em(16.5px);
     text-decoration: none;
     display: block;
+    font-family: 'HeliosCondBold', arial;
     &:hover,
     &:active,
     &:focus{
@@ -191,11 +192,14 @@
     display: block;
     position: relative;
     float: left;
+    font-family: "Arial";
+    font-weight: normal;
     :hover{
         cursor: pointer;
     }
 }
 .filter__chose-span{
+    font-family: "Arial";
     display: block;
     float: right;
     color: $title-color-blue;

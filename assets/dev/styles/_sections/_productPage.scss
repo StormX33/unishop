@@ -106,6 +106,7 @@
     	color: $title-color-blue;
     	font-size: em(16px);
         line-height: 20px;
+        font-family: "Arial";
     }
 }
 .tab__pane.active{
@@ -165,7 +166,7 @@
         }
         &:last-child{
             float: right;
-            font-family: 'HeliosCondBold', arial;
+            font-family: "Arial";
         }
     }
     p{
@@ -348,6 +349,7 @@
 .product_info_content{
     margin-bottom: 14px;
 }
+
 .info__block_title {
     color: #da261d;     
     margin-bottom: 5px;
@@ -616,6 +618,7 @@
 .description_text p,
 .delivery__text p{
     color: #4c475a;
+    font-family: "Arial";
 }
 .delivery__text_title h3{
     color: #083354;
@@ -684,6 +687,9 @@
     font-size: 0;
     margin-bottom: 30px;    
 }
+// .product-fullinfo__inner{
+//     font-family: 'Arial';
+// }
 .product__reviews_title-text,
 .product__reviews_title-link{
     @include inlineblock();
