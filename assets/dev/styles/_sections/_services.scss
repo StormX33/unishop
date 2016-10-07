@@ -203,7 +203,7 @@
 
 	}
 	.item__content_text{
-		font-family: 'HeliosCondRegular', arial;
+		font-family: 'Arial';
 		font-size: em(18px);
 		margin-bottom: 18px;
 		@include respond-to(mobile){
@@ -268,7 +268,7 @@
 	font-size: 15px;
 	text-align: center;
 	color: $title-color-blue;
-	font-family: 'HeliosCondRegular', arial;
+	font-family: 'Arial';
 	margin-bottom: 30px;
 }
 .description__image_wrap{

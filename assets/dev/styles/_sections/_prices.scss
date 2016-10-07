@@ -1,0 +1,66 @@
+.price__title_text{
+	color: $text-color;
+	margin-bottom: 27px;
+}
+.table__prices{
+	tbody>tr>td{
+		height: 68px;
+		vertical-align: middle;
+		border-top: 1px solid #083253;
+	}
+	td{
+		&:first-child{
+			text-align: center;
+		}
+	}
+	.prices__img_wrap{
+		height: 57px;
+		@include inlineblock(middle);
+		line-height: 57px;
+		text-align:center;
+		img{
+			vertical-align: middle;
+			max-height: 100%;
+		}
+	} 
+	.price__text{
+		font-family: "HeliosCondBold", arial;
+		font-size: em(16px);
+		color: $text-color;
+	}
+	.prices_link{
+		color: $nav-bg;
+		text-decoration: underline;
+		display: block;
+		position: relative;
+		margin-left: 26px;
+		&:hover, &:active, &:focus{
+			color: lighten($nav-bg, 5%);
+		}
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+		}
+	}
+	.prices_link_xls{
+		&:before{
+			@include get-sprite($misc-sprite, xls-icon);
+			left: -26px;
+		}
+	}
+	.prices_link_pdf{
+		&:before{
+			@include get-sprite($misc-sprite, pdf-icon);
+			left: -26px;
+		}
+	}
+	.prices_link_zip{
+		// margin-left: 33px;
+		&:before{
+			@include get-sprite($misc-sprite, zip-icon);
+			left: -33px;
+		}
+	}
+}
