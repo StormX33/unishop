@@ -273,57 +273,10 @@ img.mfp-img{box-sizing:border-box;padding:40px 0;margin:0 auto}
 .use .pagination__button{
 	top:-7px;
 }
-<<<<<<< HEAD
-/*gallery-menu__item:before, .gallery-menu__item_active:before {
-=======
+
 .title-cat{
 	position: absolute;
     left: 15px;
     transform: translate(0, 50%);
     top: 5px;
 }
-./*gallery-menu__item:before, .gallery-menu__item_active:before {
->>>>>>> edd629987159b5db817d3537ff343268d5892a5f
-    content: "";
-    display: block;
-    width: 12px;
-    height: 50%;
-    left: 0px;
-    top: 0%;
-    background: linear-gradient(to right top, #ececec 50%,rgba(0,0,0,0) 50%);
-    position: absolute;
-}
-.gallery-menu__item, .gallery-menu__item_active {
-    display: inline-block;
-    position: relative;
-    padding-left: 17px;
-    background: #204664;
-    max-width: 240px;
-    color: #fff;
-}
-.gallery-menu__item:hover, .gallery-menu__item_active{
-	background:#e42826;
-	color:#fff;
-}
-.gallery-menu__item:after, .gallery-menu__item_active:after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 50%;
-    left: 0px;
-    top: 50%;
-    background: linear-gradient(to right bottom, #ececec 50%,rgba(0,0,0,0) 50%);
-    position: absolute;
-}
-
-.gallery-menu__link, .gallery-menu__active, .gallery-menu__link:hover {
-    font-family: "PTSansRegular", sans-serif;
-    font-size: 1em;
-    padding: 7px 6px 7px 0;
-    position: relative;
-	color:#fff;
-}
-.gallery-menu__link, .gallery-menu__active{
-    display: inline-block;
-    vertical-align: top;
-}*/

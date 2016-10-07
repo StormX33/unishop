@@ -93,7 +93,6 @@
 
     <!-- Final compiled and minified JS -->
   <script type="text/javascript" src="{$THEME}assets/js/jquery-migrate.min.js"></script>
-  <script type="text/javascript" src="{$THEME}assets/js/jquery.autocolumnlist.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/slick.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/jquery.bpopup.min.js"></script>
 	<script type="text/javascript" src="{$THEME}assets/js/select2.min.js"></script>
