@@ -20,7 +20,7 @@
 			</ul>
 		{/if}
         </div>
-        		<div class="contacts__callback">
-        <a href="{site_url('callbacks')}?subj=1" data-modal="callbacks_modal" rel="nofollow" class="callback__link"><i aria-hidden="true" class="fa fa-volume-up"></i><span class="callback__span">{tlang('Callback')}</span></a></div>
+        	<div class="contacts__callback">
+        <a href="{site_url('callbacks')}?subj=1" data-modal="callbacks_modal" rel="nofollow" class="callback__link"><span class="callback__span">{tlang('Callback')}</span></a></div>
 
 {/if}

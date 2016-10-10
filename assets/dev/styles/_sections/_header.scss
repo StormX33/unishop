@@ -49,13 +49,9 @@
             display: none;
         }
         .contacts__tel_arrow{
+            width: 25px;
             &:after{   
                 @include get-sprite($misc-sprite, arrow_down_affix);
-            }
-            &.opened{
-                &:after{
-                    @include get-sprite($misc-sprite, arrow_up_affix);
-                }
             }
         }
         .contacts__content_list{
@@ -201,6 +197,13 @@
         @media screen and (max-width: 1176px) and (min-width: 1024px){
             font-size: 19px;
             padding: 0 25px 0 10px;
+        }
+         &.opened{
+            .contacts__tel_arrow{
+                &:after{
+                    @include get-sprite($misc-sprite, arrow_up_affix);
+                }
+            }
         }
 
     }
@@ -577,12 +580,12 @@ li.top__header_nav-item:nth-last-child(1){
 .search{
     float: left;
     @include border-radius(2px);
-    margin: 0 14px 0 23px;
+    margin: 0 14px 0 -5px;
     @include respond-to(small-screens){
         margin: 0 10px 0 10px;
     }
     @include respond-to(medium-screens){
-        margin: 0 11px 0 30px;
+        margin: 0 11px 0 5px;
     }
 }
 .search__form{
@@ -660,9 +663,9 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .contacts__tel{
-    font-size: em(23px);
+    font-size: em(24px);
     font-family: 'HeliosCondBold', arial;
-    padding-right: 39px;
+    padding-right: 25px;
     padding-bottom: 3px;
     position: relative;
     @include respond-to(mobile){
@@ -670,7 +673,7 @@ li.top__header_nav-item:nth-last-child(1){
         font-size: em(22px);
     } 
     @include respond-to(small-screens){
-        font-size: em(19px);
+        font-size: em(21px);
         padding-right: 25px;
     }
     @include respond-to(medium-screens){
@@ -686,12 +689,12 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .contacts__tel_arrow{
-    width: 39px;
+    width: 12px;
     height: 31px;
     position: absolute;
     display: block;
     @include transform(translate(-50%, -50%));
-    right: -20px;
+    right: -6px;
     top: 50%;
     &:hover{
         cursor: pointer;
@@ -704,9 +707,6 @@ li.top__header_nav-item:nth-last-child(1){
         @include respond-to(medium-screens){
             right: 7px;
         }
-    }
-    @include respond-to(medium-screens){
-        width: 25px;
     }
 }
 .contacts__content_list{
@@ -813,12 +813,16 @@ li.top__header_nav-item:nth-last-child(1){
     color: $accent-color; 
     font-size: em(15px);
     font-family: "HeliosCondRegular", arial;
+    position: relative; 
+    display: block; 
     &:hover, &:active, &:focus{
         color: $accent-color; 
     }
-    .fa{
-        margin: 0 11px 0 2px; 
-        vertical-align: middle;
+    &:before{
+        content: '';
+        @include inlineblock(middle); 
+        margin-right: 14px;
+        @include get-sprite($misc-sprite, phone_icon);
     }
 }
 .callback__span{
