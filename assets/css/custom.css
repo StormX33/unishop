@@ -285,3 +285,13 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
     display: table;
 	clear: both;
 }
+.popup-lightbox .popup_footer{
+	display:inherit;
+}
+.popup-lightbox .buy-btn-wrap{
+	float: right;
+    margin-left: 10px;
+}
+.popup-lightbox .produt__change-count{
+ margin-left: 10px;
+}
