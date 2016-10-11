@@ -11,7 +11,7 @@
 
 			<ul class="nav__list">
 				<li class="nav__item nav__item_dropdown">
-                	<a href="/katalog" class="nav__link sf-with-ul">{tlang('Product Catalog')}<span class="nav__span_arrow"></span></a>
+                	<a href="/shop/categories" class="nav__link sf-with-ul">{tlang('Product Catalog')}<span class="nav__span_arrow"></span></a>
 					<div class="cbp-hrsub">
 						<div class="cbp-hrsub-inner">
 							<div class="sub__menu_content">

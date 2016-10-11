@@ -6,20 +6,12 @@
 		<div class="category_sidebar_wrap">
   			{view('shop/includes/category/category_subnav.tpl')}
 		</div>
-<!-- Filter toggle button on mobile devices -->
-<!--    <div class="content__sidebar-item visible-xs">
-  <button class="btn btn-default btn-block" data-filter-toggle--btn>
-    <span data-filter-toggle--btn-text>{tlang('Show filter')} <i class="btn-default__ico btn-default__ico--down"><svg class="svg-icon"><use xlink:href="#svg-icon__arrow-down"></use></svg></i></span>
-    <span class="hidden" data-filter-toggle--btn-text>{tlang('Hide filter')} <i class="btn-default__ico btn-default__ico--top"><svg class="svg-icon"><use xlink:href="#svg-icon__arrow-top"></use></svg></i></span>
-  </button>
-</div>-->
-
 		<!-- Filter -->
 		<div class="filter" data-filter-toggle--filter>
   			{module('smart_filter')->init();}
 		</div>
 	</div>
-	<!-- END Left -->
+ 	<!-- END Left -->
 	<!-- Center BEGIN -->
 	<div class="content">
 		<!-- Horisontal banner -->

@@ -295,3 +295,6 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
 .popup-lightbox .produt__change-count{
  margin-left: 10px;
 }
+.catalog__item_img{
+	width:100%;
+}
