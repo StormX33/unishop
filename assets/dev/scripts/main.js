@@ -177,9 +177,6 @@ var accordeon = (function(){
             otherContant = $this.closest(".filter").find(".filter__content");
 
         if (!container.hasClass("active")){
-            // otherContant.slideUp().closest(".filter__item").removeClass("active");
-
-
             container.addClass("active");
             content.stop(true, true).slideUp()
         }else{
@@ -500,4 +497,62 @@ $(function(){
     $(".gallery__item_text").dotdotdot();
 
 });
+/*-----------header menu----------*/
+(function(jQuery, window, document, undefined){
+        function setMainNavigationItemsWidth($navigation){
+        var navWidth = $navigation.width(),
+            $menuItems = $navigation.find(' > li'),
+            itemsWidth = 0;
 
+
+        $menuItems.each(function() {
+            var $this = $(this);
+            itemsWidth += ($this[0].getBoundingClientRect().width);
+        });
+
+
+        $navigation.width('100%');
+
+        $menuItems.each(function(){
+            var $this = $(this),
+
+            itemWidth = ($this[0].getBoundingClientRect().width);
+            fluidWidth = (itemWidth/itemsWidth)*100;
+            
+            $this.width(fluidWidth + '%');
+        });
+    }
+
+    function unsetMainNavigationItemsWidth($navigation){
+        var navWidth = $navigation.width(),
+            $menuItems = $navigation.find(' > li');
+
+        $navigation.removeAttr('style');
+        $menuItems.removeAttr('style');
+    }
+
+    $(function(){
+        var $navigation = $('.nav__list'),
+            $header = $('#header');
+
+        setMainNavigationItemsWidth($navigation);
+        $header.data('setMainNavigationItemsWidth', true);
+
+        $(window).on('scroll orientationChange resize', function(){
+            var windowWidth = $(this).width();
+            if(windowWidth < 1024 ){
+                unsetMainNavigationItemsWidth($navigation);    
+                return;
+            } 
+
+            if($header.hasClass('scroll')){
+                unsetMainNavigationItemsWidth($navigation);
+                return;
+            }
+
+            unsetMainNavigationItemsWidth($navigation);   
+            setMainNavigationItemsWidth($navigation);
+        });
+    });
+
+})(jQuery, window, document)
