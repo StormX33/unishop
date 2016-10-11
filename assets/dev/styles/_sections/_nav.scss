@@ -141,7 +141,7 @@
     position: absolute;
     background: $main-color;
     // width: 100%;
-    left: 15px;
+    // left: 15px;
     border: 1px solid rgba(0,0,0,.15);
 }
 
@@ -364,6 +364,12 @@
         width: 100%;
         float: none;
         padding: 0 2em;
+        margin-left: 0;
+        margin-right: 0;
+        .col-md-4{
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
     .inner__title{
         display: none;
@@ -399,7 +405,7 @@
     .cbp-hrmenu .cbp-hrsub {
         position: relative;
     }
-    .cbp-hrsub-content>ul{
+    .cbp-hrsub-content .collumn{
         border-bottom: 1px solid #9a9fa3;
         &:last-child{
             border-bottom: none;
@@ -436,6 +442,12 @@
     .cbp-hrsub-content>ul{
         padding: 15px;
         border-bottom: 1px solid #9a9fa3;
+        margin-left: 0;
+        margin-right: 0;
+        .col-md-4{
+            padding-right: 0;
+            padding-left: 0;
+        }
         &:last-child{
             border-bottom: none;
         } 
@@ -473,6 +485,12 @@
     .cbp-hrmenu .cbp-hrsub-content > ul{
         width: 100%;
         padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+        .col-md-4{
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 
     .cbp-hrmenu .cbp-hrsub-inner {
@@ -503,11 +521,11 @@
   // }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px){
-    .cbp-hrmenu .cbp-hrsub-content > ul{
-        width: 100%;
-        float: none;
-        padding: 0 2em;
-    }
+    // .cbp-hrmenu .cbp-hrsub-content > ul{
+    //     width: 100%;
+    //     float: none;
+    //     padding: 0 2em;
+    // }
     .inner__title{
         display: none;
     }
@@ -522,6 +540,13 @@
     .cbp-hrmenu .cbp-hrsub-content > ul{
         width: 100%;
         padding: 0;
+        float: none;
+        margin-right: 0;
+        margin-left: 0;
+        .col-md-4{
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 
     .cbp-hrmenu .cbp-hrsub-inner {
@@ -542,7 +567,7 @@
     .cbp-hrmenu .cbp-hrsub {
         position: relative;
     }
-    .cbp-hrsub-content>ul{
+    .cbp-hrsub-content .collumn{
         border-bottom: 1px solid #9a9fa3;
         &:last-child{
             border-bottom: none;
@@ -573,10 +598,3 @@
     }
 }
 
-// @media screen and (max-width: 36em) {
-//     .cbp-hrmenu .cbp-hrsub-content > ul{
-//         width: 100%;
-//         float: none;
-//         padding: 0 2em;
-//     }
-// }

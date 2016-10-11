@@ -126,7 +126,7 @@
 	}
     .services__description{
     	padding: 50px 0 50px 5%;
-    	width: 30%;
+    	width: 34%;
     	@include respond-to(mobile){
     		width: 100%;
     		padding: 0;
@@ -141,10 +141,13 @@
        	}
     }
     .services__description_wrap{
-    	width: 	35%;
+    	width: 35%;
 	 	@include respond-to(small-screens){
 	 		width: 50%;
 	 	}
+    }
+    .item__image_wrap{
+    	width: 31%;
     }
 }
 .individuals{
@@ -260,6 +263,7 @@
 }
 .services__description_list{
 	font-size: 0;
+	padding: 0 30px;
 }
 
 

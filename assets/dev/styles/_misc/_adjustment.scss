@@ -36,10 +36,10 @@ body{
 .maincontent{
     padding-top: 200px;
     @include respond-to(mobile){
-        padding-top: 250px;
+        padding-top: 233px;
     } 
     @include respond-to(extraSmall-screens){
-        padding-top: 250px;
+        padding-top: 233px;
     }
 }
 
