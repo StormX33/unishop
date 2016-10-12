@@ -347,11 +347,11 @@ $(function() {
         activationDelay:   200
     });
     function activate(row) {
-      $(row).find('.cbp-hrsub').slideDown();
+      $(row).find('.cbp-hrsub').slideDown(400);
     }
 
     function deactivate(row) {
-      $(row).find('.cbp-hrsub').slideUp();
+      $(row).find('.cbp-hrsub').slideUp(200);
     }
 });
 

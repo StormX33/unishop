@@ -11,7 +11,7 @@
     }
 }
 .nav__item_dropdown .sf-with-ul{
-    padding-right: 50px;
+    padding-right: 44px;
     padding-left: 30px;
     @include respond-to(small-screens){
         padding-right: 25px;
@@ -35,13 +35,17 @@
     }
 }
 .nav__list>li>a{
-    padding: 10px 32px;
+    padding: 10px 24px;
     @include respond-to(small-screens){
         padding: 10px 10px;
     }
     @include respond-to(medium-screens){
         padding: 10px 15px;
     }
+}
+li.nav__item.nav__item_dropdown:nth-child(n-3){
+    // display: none;
+
 }
 .cbp-hrmenu .nav__list>li>a{
     display: block;
@@ -51,6 +55,8 @@
     text-transform: uppercase;
     padding-top: 9px;
     padding-bottom: 9px;
+    font-stretch: ultra-condensed;
+    // font-family: arial;
     position: relative;
     -webkit-box-shadow: 1px 0px 1px 0px rgba(255, 255, 255, 0.4);
     -moz-box-shadow:    1px 0px 1px 0px rgba(255, 255, 255, 0.4);
@@ -100,6 +106,12 @@
 }
 .wf-helioscondregular-n4-active .nav__list>li>a{
     font-size: 18px;
+    padding: 10px 32px;
+    font-stretch: normal;
+    &.sf-with-ul{
+        padding-right: 50px;
+        padding-left: 30px;
+    }
 }
 .cbp-hrmenu .nav__list>li{
     @include inlineblock(middle);

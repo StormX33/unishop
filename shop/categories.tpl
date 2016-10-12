@@ -7,15 +7,15 @@
     	<ul class="category__catalog_list">  
 			{foreach $scats as $scat}
             	<li class="category__catalog_item">
-					<h3 class="catalog__item_title">
-                		<a href="{shop_url('category/' . $scat->getFullPath())}" class="item__title_link">{echo $scat->getName()}</a>
-                	</h3>
                 	<div class="catalog__item_content">
                 		{if $scat->getImage()} 
 							<div class="catalog__item_img-wrap">
                     			<img src="{echo $scat->getImage()}" alt="{echo $scat->getName()}" class="catalog__item_img">
                     		</div>
 						{/if}	
+                        <h3 class="catalog__item_title">
+                            <a href="{shop_url('category/' . $scat->getFullPath())}" class="item__title_link">{echo $scat->getName()}</a>
+                        </h3>
                 		{$sub_items = getCatParentQuery($scat->getId())}
                 		{if count($sub_items) > 0}
                 			<div class="item__right_collumn">

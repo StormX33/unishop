@@ -64,6 +64,7 @@
 .category__catalog_list{
 	font-size: 0;
 	position: relative;
+	margin-bottom: 17px;
 	&:before{
 		content: '';
 		display: block;
@@ -93,15 +94,49 @@
 	border-bottom: 1px solid #e8e7eb;
 	overflow: hidden;
 	padding: 20px 23px;
-	height: 260px;
-}
-.category__catalog{
+	height: 390px;
+	position: relative;
+	@include respond-to(mobile){
+		width: 100%;
+		height: auto;
+	} 
+	@include respond-to(extraSmall-screens){
+		width: 50%;
+	}
+	@include respond-to(small-screens){
+		width: 33.33333333%;
+	}
+
+// 	&:before{
+// 		content: "";
+// 		display: block;
+// 	    position: absolute;
+// 	    z-index: 2;
+// 	    left: 0;
+// 	    bottom: 0;
+// 	    width: 100%;
+// 	    height: 25px;
+// /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,1+100 */
+// background: -moz-linear-gradient(top,  rgba(255,255,255,0.01) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+// background: -webkit-linear-gradient(top,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+// background: linear-gradient(to bottom,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+	// }
 	.catalog__item_title{
-		font-size: em(18px);
+		font-size: 18px;
 		display: table-cell;
 		vertical-align: top;
-		height: 35px;
+		height: 40px;
+		@include respond-to(mobile){
+			display: block;
+			margin-bottom: 15px;
+			height: auto;
+		} 
 	}
+}
+.category__catalog{
 	.item__title_link{
 		color: $title-color-blue;
 		@include inlineblock(middle);
@@ -123,14 +158,32 @@
 }
 .catalog__item_content{
 	@include clearfix;
-	padding-top: 10px;
+	// padding-top: 10px;
 }
 .catalog__item_img-wrap{
-	float: left;
-	width: 110px;
+	// float: left;
+	// width: 46%;
+	width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 auto 10px; 
+    text-align: center;
+}
+.catalog__item_img{
+	max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 .item__right_collumn{
-	float: right;
+	// float: right;
+	// width: 46%;
+	// @include respond-to(mobile){
+	// 	width: 250px;
+	// 	margin: 0 auto;
+	// 	text-align: left;
+	// } 
+
 }
 .catalog__inner_item{
 	font-size: em(14px);
@@ -157,6 +210,10 @@
 .catalog__inner_list{
 	min-height: 90px;
 	margin-bottom: 12px;
+	@include respond-to(mobile){
+		min-height: auto;
+		margin-bottom: 0;
+	} 
 }
 
 

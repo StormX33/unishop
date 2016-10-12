@@ -12,9 +12,10 @@
       {else:}
       <div class="user__login">
         <!-- User profile menu. Visible when user is logged in -->
-          <a class="user__login_link" href="{shop_url('profile')}" rel="nofollow">{tlang('Your Account')}</a>
-			<br/>
-          <a class="user__login_link" href="{site_url('auth/logout')}" rel="nofollow">{tlang('Sign out')}</a>
+         <div class="user__login_content">
+            <a class="user__login_link" href="{shop_url('profile')}" rel="nofollow">{tlang('Your Account')}</a>
+  			   <br/>
+            <a class="user__login_link" href="{site_url('auth/logout')}" rel="nofollow">{tlang('Sign out')}</a>
+          </div>
         </div>
-
       {/if}

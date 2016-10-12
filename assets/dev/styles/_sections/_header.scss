@@ -262,6 +262,11 @@
 }
 
 // HEADER TOP START
+.top__header_nav li:nth-child(9),
+.top__header_nav li:nth-child(8),
+.top__header_nav li:nth-child(7){
+    display: none;
+}
 .header__top{
     border-bottom: 1px solid $border-color;
     line-height: 39px;
@@ -277,6 +282,7 @@
 .top__header_nav-item{
     @include inlineblock(middle);
     font-size: 13px;
+
     @include respond-to(mobile){
         display: block;
     } 
@@ -663,7 +669,8 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .contacts__tel{
-    font-size: em(24px);
+    font-size: 0;
+    font-stretch: ultra-condensed;
     font-family: 'HeliosCondBold', arial;
     padding-right: 25px;
     padding-bottom: 3px;
@@ -687,6 +694,11 @@ li.top__header_nav-item:nth-last-child(1){
             }
         }
     }
+}
+.wf-helioscondregular-n4-active .contacts__tel{
+    font-stretch: normal;
+    font-family: 'HeliosCondBold', arial;
+    font-size: em(24px);
 }
 .contacts__tel_arrow{
     width: 12px;
