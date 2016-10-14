@@ -298,3 +298,54 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
 .catalog__item_img{
 	width:100%;
 }
+.star-rating:after,.star-voting__wrap:after{
+	clear:both;
+}
+.star-rating{display:inline-block;font-size:1rem}
+.star-rating:after,.star-rating:before{
+	content:" ";display:table
+	}
+.star-voting__ico .svg-icon{
+    color: #CDCDCD;
+}
+
+.star-rating__stars{float:left}
+.star-rating__star{float:left;margin-left:1px;color:#FFB300;width:14px;height:14px}
+.star-rating__star:first-child{margin-left:0}
+.star-rating__star .svg-icon{color:#CDCDCD;}
+.star-rating__star--active .svg-icon{fill:#FE3A3E}
+.star-rating__votes{float:left;font-size:.9em;margin-left:5px;color:#9aa1ab}
+.star-rating__votes-link{text-decoration:none;color:#9aa1ab;border-bottom:0}
+.star-rating__votes-link:hover{text-decoration:none}
+.star-voting__wrap{display:inline-block;font-size:1rem}
+.star-voting__wrap:after{content:"";display:table}
+.star-voting__ico{float: right;
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    cursor: pointer;}
+
+.star-voting__input{display:none}
+.star-voting__ico:hover .svg-icon,.star-voting__ico:hover~.star-voting__ico .svg-icon,.star-voting__input:checked~.star-voting__ico .svg-icon{fill:#FE3A3E}
+@media (min-width: 768px){
+.form__field--hor .form__inner {
+    width: calc(100% - 100px);
+    padding-left: 10px;
+}
+
+.form__field--hor .form__inner, .form__field--hor .form__label, .small-post__image, .small-post__inner {
+    display: table-cell;
+    vertical-align: top;
+}
+}
+.form__inner:after, .form__inner:before {
+    content: " ";
+    display: table;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.svg-icon{
+    max-width: 100%;
+}

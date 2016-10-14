@@ -21,7 +21,7 @@
                 			<div class="item__right_collumn">
                     			<ul class="catalog__inner_list">
                 					{foreach $sub_items as $sub_item}
-                            			<li class="catalog__inner_item"><a href="#" class="catalog__inner_link">{echo $sub_item->getName()}</a></li>
+                            			<li class="catalog__inner_item"><a href="{shop_url('category/' . $sub_item->getFullPath())}" class="catalog__inner_link">{echo $sub_item->getName()}</a></li>
                             		{/foreach}
                         		</ul>
                     		</div>

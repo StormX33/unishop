@@ -1,0 +1,109 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\000034}}
+.comments {
+  /* scrolling to form place on the page after non Ajax submit */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000311}}
+  .comments__list {
+    padding-bottom: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000315}}
+  .comments__post {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #dfe4eb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000320}}
+    .comments__post:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000326}}
+  .comments__post-header {
+    padding-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000329}}
+  .comments__post-author {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000336}}
+  .comments__post-date {
+    display: inline-block;
+    margin-right: 5px;
+    color: #9aa1ab; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000341}}
+  .comments__post-rate {
+    display: inline-block;
+    position: relative;
+    top: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000346}}
+  .comments__post-text {
+    margin-bottom: 10px;
+    color: #666; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000351}}
+  .comments__post-vote {
+    float: left;
+    font-size: 0;
+    color: #9aa1ab; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000356}}
+  .comments__post-vote-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1rem;
+    color: #9aa1ab;
+    text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000364}}
+    .comments__post-vote-item:not(:first-child) {
+      margin-left: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000368}}
+  .comments__post-vote-ico {
+    display: inline-block;
+    width: 16px;
+    height: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000372}}
+    .comments__post-vote-ico--dislike {
+      transform: scale(-1, -1); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000376}}
+  .comments__post-reply {
+    float: left;
+    font-size: .9rem;
+    margin-left: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000383}}
+  .comments__post-reply-form {
+    margin-top: 10px;
+    padding: 0 20px 20px 20px;
+    background-color: #f2f6f9; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000389}}
+  .comments__form-header {
+    background-color: #f2f6f9;
+    margin-bottom: 1px;
+    padding: 15px 15px 15px 15px;
+    color: #000;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\0000396}}
+  .comments__form-body {
+    background-color: #f2f6f9;
+    padding: 0 15px 15px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003101}}
+  .comments__parent {
+    margin-top: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003104}}
+  .comments__parent-item {
+    padding: 20px;
+    background: #f2f6f9; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003107}}
+    .comments__parent-item:not(:first-child) {
+      margin-top: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003112}}
+  .comments__parent-text {
+    color: #666; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003117}}
+  .comments #comments-anchor {
+    position: absolute;
+    margin-top: -50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/OpenServer\/domains\/winterm\.test\.local\/templates\/unishop\/assets\/css\/comments\.scss}line{font-family:\00003125}}
+#comments-list {
+  position: absolute;
+  margin-top: -50px; }
+
+/*# sourceMappingURL=comments.css.map */

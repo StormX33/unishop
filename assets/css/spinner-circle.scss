@@ -1,3 +1,18 @@
+$spinner-fa-size:                   45px;
+$spinner-fa-color:                  #000;
+$spinner-fa-image:                  '\f110';
+
+$spinner-circle_speed:              .675s;
+$spinner-circle_radius:             80%;
+$spinner-circle_fill_radius:        90px;
+
+$spinner-circle_size:               40px;
+$spinner-circle_thickness:          10px;
+$spinner-circle_inner_circle:       $spinner-circle_size - $spinner-circle_thickness;
+
+$spinner-circle_color:              black;
+$spinner-circle_bg:                 lightgray;
+$spinner-circle_inner_bg:           white;
 .spinner-circle{
   border-radius: 80%;
   display: block;

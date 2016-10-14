@@ -34,6 +34,12 @@
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
+<!--        <link rel="stylesheet" href="{$THEME}assets/css/svg/svg-icon.css">
+-->        <link rel="stylesheet" href="{$THEME}assets/css/likes.css">
+         <link rel="stylesheet" href="{$THEME}assets/css/comments.css">
+        <link rel="stylesheet" href="{$THEME}assets/css/shares.css">
+        <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
+        <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
             <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
@@ -50,6 +56,7 @@
           type="image/x-icon">
   </head>
   <body data-spy="scroll" data-target="#header" data-offset="1">
+  {view('includes/svg/sprite.tpl')}
     <!-- Main content frame -->
     <div class="wrapper__main">
       <div class="maincontent">
