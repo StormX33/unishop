@@ -78,7 +78,7 @@
         left: 0;
         background:#e8e7eb;
     }
-    .page__sale{
+    .page__teaser{
         @include inlineblock();
         width: 25%;
         border: 1px solid #e8e7eb;
@@ -86,6 +86,7 @@
         padding: 20px 15px;
         font-size: 16px;
         margin-bottom: 0;
+        position: relative;
         &:last-child{
             border-right: 1px solid #e8e7eb; 
             // margin-bottom: 30px;
@@ -101,16 +102,31 @@
             @include transition(box-shadow 0.2s, border 0.2s);
         }
     }
-    .page__sale .page__teaser_image{
-        max-width: 100%;
+    .page__teaser_sale .page__teaser_image{
+        width: 100%;
         float: none;
         margin-bottom: 14px;
+        height: 175px;
+        line-height: 175px;
+        text-align: center;
+        overflow: hidden;
+        a{
+            display: block;
+        }
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
     }
-    .page__sale .page__teaser_content{
+    .page__teaser_span{
+        font-size: em(18px);
+    }
+    .page__teaser_sale.page__teaser_content{
         margin-left: 0;
     }
     .page__teaser_title{
         text-align: center;
+        font-size: em(21px);
     }
     .page__teaser_text{
         height: 90px;
@@ -123,8 +139,6 @@
         overflow: hidden;
     }
     .content__gallery_header{
-        // display: table;
-        // width: 100%;
         margin-bottom: 0;
         .content__gallery_title{
             font-size: em(17px);
@@ -144,10 +158,25 @@
 
 .gallery__list{
     border-top: 1px solid #e8e7eb; 
-    .page__sale{
+    .page__teaser_sale{
         border-top: 1px solid transparent;
     }
 }
 .gallery__album_header{
     margin-bottom: 16px;
+}
+
+// PAGE SALE
+.page__teaser_sale{
+    height: 400px;
+    .page__teaser_content{
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        right: 15px;
+    }
+    header{
+        height: 50px;
+        overflow: hidden;
+    }
 }
