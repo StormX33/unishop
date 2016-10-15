@@ -43,10 +43,6 @@
         padding: 10px 15px;
     }
 }
-li.nav__item.nav__item_dropdown:nth-child(n-3){
-    // display: none;
-
-}
 .cbp-hrmenu .nav__list>li>a{
     display: block;
     border-right: 1px solid #c1150d;
@@ -56,6 +52,7 @@ li.nav__item.nav__item_dropdown:nth-child(n-3){
     padding-top: 9px;
     padding-bottom: 9px;
     font-stretch: ultra-condensed;
+    text-align: center;
     // font-family: arial;
     position: relative;
     -webkit-box-shadow: 1px 0px 1px 0px rgba(255, 255, 255, 0.4);
@@ -106,10 +103,10 @@ li.nav__item.nav__item_dropdown:nth-child(n-3){
 }
 .wf-helioscondregular-n4-active .nav__list>li>a{
     font-size: 18px;
-    padding: 10px 32px;
+    padding: 10px 21px;
     font-stretch: normal;
     &.sf-with-ul{
-        padding-right: 50px;
+        padding-right: 35px;
         padding-left: 30px;
     }
 }

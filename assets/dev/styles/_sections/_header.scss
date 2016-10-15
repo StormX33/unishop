@@ -52,7 +52,8 @@
             display: none;
         }
         .contacts__tel_arrow{
-            width: 25px;
+            // width: 25px;
+            right: 0;
             &:after{   
                 @include get-sprite($misc-sprite, arrow_down_affix);
             }
@@ -675,18 +676,18 @@ li.top__header_nav-item:nth-last-child(1){
     padding-right: 25px;
     padding-bottom: 3px;
     position: relative;
-    @include respond-to(mobile){
-        padding-right: 24px;
-        font-size: em(22px);
-    } 
-    @include respond-to(small-screens){
-        font-size: em(21px);
-        padding-right: 25px;
-    }
-    @include respond-to(medium-screens){
-        font-size: em(21px);
-        padding-right: 25px;
-    }
+    // @include respond-to(mobile){
+    //     padding-right: 24px;
+    //     font-size: em(22px);
+    // } 
+    // @include respond-to(small-screens){
+    //     font-size: em(21px);
+    //     padding-right: 25px;
+    // }
+    // @include respond-to(medium-screens){
+    //     font-size: em(21px);
+    //     padding-right: 25px;
+    // }
     &.opened{
         .contacts__tel_arrow{
             &:after{
@@ -699,6 +700,18 @@ li.top__header_nav-item:nth-last-child(1){
     font-stretch: normal;
     font-family: 'HeliosCondBold', arial;
     font-size: em(24px);
+    @include respond-to(mobile){
+        padding-right: 24px;
+        font-size: em(22px);
+    } 
+    @include respond-to(small-screens){
+        font-size: em(21px);
+        padding-right: 25px;
+    }
+    @include respond-to(medium-screens){
+        font-size: em(21px);
+        padding-right: 25px;
+    }
 }
 .contacts__tel_arrow{
     width: 12px;
@@ -708,6 +721,9 @@ li.top__header_nav-item:nth-last-child(1){
     @include transform(translate(-50%, -50%));
     right: -6px;
     top: 50%;
+    // @include respond-to(medium-screens){
+    //     right: 0;
+    // }
     &:hover{
         cursor: pointer;
     }
@@ -716,9 +732,9 @@ li.top__header_nav-item:nth-last-child(1){
         display: block;
         @include get-sprite($misc-sprite, arrow_down);
         @include absolute-center;
-        @include respond-to(medium-screens){
-            right: 7px;
-        }
+        // @include respond-to(medium-screens){
+        //     right: 0px;
+        // }
     }
 }
 .contacts__content_list{
