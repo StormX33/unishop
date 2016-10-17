@@ -1,5 +1,5 @@
 {widget('brands_top')}
-{widget('product_hits')}
+{view ('shop/categories_home.tpl')}
 				<section class="services">
 					<div class="section__content">
 						<!--PRODUCT PAGE-->
