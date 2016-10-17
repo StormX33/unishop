@@ -9,9 +9,11 @@
             	<li class="category__catalog_item">
                 	<div class="catalog__item_content">
                 		{if $scat->getImage()} 
+                        	<a href="{shop_url('category/' . $scat->getFullPath())}">
 							<div class="catalog__item_img-wrap">
                     			<img src="{echo $scat->getImage()}" alt="{echo $scat->getName()}" class="catalog__item_img">
                     		</div>
+                            </a>
 						{/if}	
                         <h3 class="catalog__item_title">
                             <a href="{shop_url('category/' . $scat->getFullPath())}" class="item__title_link">{echo $scat->getName()}</a>
