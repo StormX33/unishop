@@ -52,7 +52,8 @@
             display: none;
         }
         .contacts__tel_arrow{
-            width: 25px;
+            // width: 25px;
+            right: 0;
             &:after{   
                 @include get-sprite($misc-sprite, arrow_down_affix);
             }
@@ -262,6 +263,11 @@
 }
 
 // HEADER TOP START
+.top__header_nav li:nth-child(9),
+.top__header_nav li:nth-child(8),
+.top__header_nav li:nth-child(7){
+    display: none;
+}
 .header__top{
     border-bottom: 1px solid $border-color;
     line-height: 39px;
@@ -277,6 +283,7 @@
 .top__header_nav-item{
     @include inlineblock(middle);
     font-size: 13px;
+
     @include respond-to(mobile){
         display: block;
     } 
@@ -663,11 +670,36 @@ li.top__header_nav-item:nth-last-child(1){
     }
 }
 .contacts__tel{
-    font-size: em(24px);
+    font-size: 0;
+    font-stretch: ultra-condensed;
     font-family: 'HeliosCondBold', arial;
     padding-right: 25px;
     padding-bottom: 3px;
     position: relative;
+    // @include respond-to(mobile){
+    //     padding-right: 24px;
+    //     font-size: em(22px);
+    // } 
+    // @include respond-to(small-screens){
+    //     font-size: em(21px);
+    //     padding-right: 25px;
+    // }
+    // @include respond-to(medium-screens){
+    //     font-size: em(21px);
+    //     padding-right: 25px;
+    // }
+    &.opened{
+        .contacts__tel_arrow{
+            &:after{
+                @include get-sprite($misc-sprite, arrow_up);
+            }
+        }
+    }
+}
+.wf-helioscondregular-n4-active .contacts__tel{
+    font-stretch: normal;
+    font-family: 'HeliosCondBold', arial;
+    font-size: em(24px);
     @include respond-to(mobile){
         padding-right: 24px;
         font-size: em(22px);
@@ -680,13 +712,6 @@ li.top__header_nav-item:nth-last-child(1){
         font-size: em(21px);
         padding-right: 25px;
     }
-    &.opened{
-        .contacts__tel_arrow{
-            &:after{
-                @include get-sprite($misc-sprite, arrow_up);
-            }
-        }
-    }
 }
 .contacts__tel_arrow{
     width: 12px;
@@ -696,6 +721,9 @@ li.top__header_nav-item:nth-last-child(1){
     @include transform(translate(-50%, -50%));
     right: -6px;
     top: 50%;
+    // @include respond-to(medium-screens){
+    //     right: 0;
+    // }
     &:hover{
         cursor: pointer;
     }
@@ -704,9 +732,9 @@ li.top__header_nav-item:nth-last-child(1){
         display: block;
         @include get-sprite($misc-sprite, arrow_down);
         @include absolute-center;
-        @include respond-to(medium-screens){
-            right: 7px;
-        }
+        // @include respond-to(medium-screens){
+        //     right: 0px;
+        // }
     }
 }
 .contacts__content_list{

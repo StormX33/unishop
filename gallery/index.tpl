@@ -17,7 +17,7 @@
 					{foreach $albums as $item}
 						{if $item.count > 0}
 							{$loc_cover_url = "uploads/gallery/" .$item.id ."/" .$item.cover_name ."_prev".$item.cover_ext}
-	                        <article class="page__teaser page__sale">
+	                        <article class="page__teaser page__teaser_gallery">
                             <a href="{site_url('gallery/album/'.$item['id'])}"> 
 								<div class="page__teaser_image">
 									{if $item['cover_name']}

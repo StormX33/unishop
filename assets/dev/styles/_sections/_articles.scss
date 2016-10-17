@@ -124,7 +124,7 @@
 }
 .date__item_link{
 	float: right;
-	border-bottom: 1px solid;
+	text-decoration: underline;
 	&:hover, &:focus, &:active{
 		color: lighten($title-color-blue, 10%);
 	} 
