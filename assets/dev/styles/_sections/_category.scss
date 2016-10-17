@@ -91,6 +91,9 @@
 	overflow: hidden;
 	height: 350px;
 	position: relative;
+	&:hover{
+		cursor: pointer;
+	}
 	@include respond-to(mobile){
 		width: 100%;
 		height: auto;
@@ -101,8 +104,32 @@
 	@include respond-to(small-screens){
 		width: 33.33333333%;
 	}
-	&:hover{
-		cursor: pointer;
+	@include respond-to(wide-screens){
+		&:hover{
+			overflow: visible;
+			.catalog__item_content{
+				z-index: 2;
+				background: #fff;
+				border: 1px solid #5f6b74;
+				-webkit-box-shadow: 0px 5px 54px 0px rgba(0,0,0,0.73);
+				-moz-box-shadow: 0px 5px 54px 0px rgba(0,0,0,0.73);
+				box-shadow: 0px 5px 54px 0px rgba(0,0,0,0.73);
+				-webkit-transition: box-shadow 0.2s,border 0.2s;
+				-moz-transition: box-shadow 0.2s,border 0.2s;
+				-ms-transition: box-shadow 0.2s,border 0.2s;
+				-o-transition: box-shadow 0.2s,border 0.2s;
+				transition: box-shadow 0.2s,border 0.2s;
+			}
+			.item__right_collumn{
+				height: auto;
+				overflow: visible;
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+	&.active{
 		overflow: visible;
 		.catalog__item_content{
 			z-index: 2;
