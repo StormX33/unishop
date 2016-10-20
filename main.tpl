@@ -64,6 +64,7 @@
         </section>
 		{if $CI->core->core_data['data_type'] == 'main'}
             <section class="banner">
+            {view('includes/header_banners.tpl')}
             </section>
           {/if}
         <!-- Bread Crumbs -->
