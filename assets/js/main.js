@@ -23,16 +23,11 @@
 
 
 // Header dropdown
-$(function () {
-    var $phoneHandler = $('.contacts__tel'),
-       	$contactsList = $('.contacts__content_list');
-
-    $phoneHandler.on('click', function () {
-        $phoneHandler.toggleClass('opened');
-        $contactsList.slideToggle("400");
-    });
-});
-
+	
+function openclosetel(){
+	$('.contacts__tel').toggleClass('opened');
+    $('.contacts__content_list').slideToggle("400");
+}
 
 // Footer bottom
 function footerToBottom() {
@@ -278,8 +273,22 @@ var slideShow = (function () {
     }
 }());
 
+$(document).mouseup(function (e){ 
+		if ($('.contacts__tel').hasClass('opened')){ 
+		if (!$('.contacts__tel').is(e.target)
+		    && $('.contacts__tel').has(e.target).length === 0) { 
+			openclosetel(); 
+		}
+		}
+	});
+	
+
 $(document).ready(function (){
-    if ($(".filter").length){
+	 $('.contacts__tel').on('click', function () {
+        openclosetel();
+    });
+	
+	if ($(".filter").length){
         accordeon.init();
     }
     if ($(".cart__list").length){

@@ -2,9 +2,7 @@
 	<div class="content__container">
 
 		<div class="content__header">
-			<h1 class="content__title">
-				{tlang('Password retrieval')}
-			</h1>
+				<div class="cart__title">Смена пароля</div>
 		</div>
 		{if $auth_message}
 		<div class="content__row">

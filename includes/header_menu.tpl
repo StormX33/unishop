@@ -40,12 +40,26 @@
 		</div>
 		<div class="user__login_wrap">
 			<div class="user__login">
+            {if !$CI->dx_auth->is_logged_in()}
+            	<a href="{site_url('auth')}" data-modal="login_popup" rel="nofollow">
 				<div class="user__login_title">
 	            	<img src="{$THEME}images/logos/wt_prof.png" alt="WT-PROF">
 	            </div>
-	            <a href="{site_url('auth')}" class="user__login_link" data-modal="login_popup" rel="nofollow">
+	            <span href="{site_url('auth')}" class="user__login_link" data-modal="login_popup" rel="nofollow">
 	            	<span>Для партнеров</span>
+	            </span>
+                </a>
+             {else:}
+             	<div class="user__login_title">
+                	<a href="{shop_url('profile')}" rel="nofollow">
+	            		<img src="{$THEME}images/logos/wt_prof.png" alt="WT-PROF - {tlang('Your Account')}">
+                	</a>
+	            </div>
+	            <a href="{site_url('auth/logout')}" class="user__login_link" rel="nofollow">
+	            	<span>{tlang('Sign out')}</span>
 	            </a>
+
+             {/if}
 			</div>
 		</div>
 	</div>

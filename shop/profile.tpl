@@ -53,6 +53,14 @@
                     {view('shop/includes/profile/user_data.tpl')}
 				</div>
 			</div>
+            <div class="tab__pane pane__tab_password">
+            	<div class="contacts__form_widget">
+                    {view('change_password.tpl')}
+            	</div>
+            </div>
+		</div>
+	</div>
+</div>
           <!-- Discount info 
           {$loc_discount = module('mod_discount/discount_api');}
           {if $loc_discount->discountsExists() > 0}
@@ -71,4 +79,3 @@
               </div>
             </div>
           {/if}-->
-</div><!-- /.content -->
