@@ -263,11 +263,7 @@
 }
 
 // HEADER TOP START
-.top__header_nav li:nth-child(9),
-.top__header_nav li:nth-child(8),
-.top__header_nav li:nth-child(7){
-    display: none;
-}
+
 .header__top{
     border-bottom: 1px solid $border-color;
     line-height: 39px;

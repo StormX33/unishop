@@ -1,5 +1,5 @@
 <div class="main-content main-gallery-content">
-	<div class="content__sale">
+	
 		<div class="page__teaser_wrapper">
 			{$loc_main_title = $current_category.id ? $current_category.name : tlang('Projects')}
 			<h1 class="content__title content__sale_title">{$loc_main_title}</h1>
@@ -50,7 +50,7 @@
 					{/if}
 			</div>
 		</div>
-	</div><!-- ./pull-left content__sale -->
+	<!-- ./pull-left content__sale -->
 	<!-- Category Description -->
 	{if trim($current_category.description) != ""}
 		<div class="content__row">

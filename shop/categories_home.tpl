@@ -6,8 +6,8 @@
 		</div>
 		<div class="section__content">
         	<div class="recent__products">
-				<div class="recent__products_content slick__arrows-center">
-    				<ul class="products__list products__list_grid similar__products_list">  
+				<div class="slick__arrows-center">
+    				<ul class="category__catalog_list similar__products_list">  
 						{foreach $scats as $scat}
             				<li class="category__catalog_item">
                 				<div class="catalog__item_content">

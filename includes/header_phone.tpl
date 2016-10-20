@@ -11,7 +11,7 @@
 				{/if}
                 {if $i >0}
 				<li class="contacts__inner-item">
-                	<a href="tel:+38{str_replace(' ', '',$phone)}" class="phone__inner_link"><span class="contacts__inner-span{if $i == 1} lifecell-logo{else:}{if  $i == 2} kievstar-logo{else:} vodafone-logo{/if}{/if}">{$phone}</span></a>
+                	<span class="phone__inner_link"><span class="contacts__inner-span{if $i == 1} lifecell-logo{else:}{if  $i == 2} kievstar-logo{else:} vodafone-logo{/if}{/if}">{$phone}</span></span>
                 </li>
                 {/if}
 				{$i++}
