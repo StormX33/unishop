@@ -34,8 +34,8 @@
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
 		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
-<!--        <link rel="stylesheet" href="{$THEME}assets/css/svg/svg-icon.css">
--->        <link rel="stylesheet" href="{$THEME}assets/css/likes.css">
+        <link rel="stylesheet" href="{$THEME}assets/css/svg/svg-icon.css">
+       <link rel="stylesheet" href="{$THEME}assets/css/likes.css">
          <link rel="stylesheet" href="{$THEME}assets/css/comments.css">
         <link rel="stylesheet" href="{$THEME}assets/css/shares.css">
         <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
@@ -44,19 +44,17 @@
             <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
-		<script src="{$THEME}assets/js/bootstrap.min.js"></script>
+	<script src="{$THEME}assets/js/bootstrap.min.js"></script>
     <!--
     * Uncomment this file if you want to put custom styles and do not want to use Sass and Gulp
     -->
     <!-- <link rel="stylesheet" href="{$THEME}_css/custom.css"> -->
 
     <!-- Shortcut icons -->
-    <link rel="shortcut icon"
-          href="{siteinfo('siteinfo_favicon_url')}"
-          type="image/x-icon">
+    <link rel="shortcut icon" href="{siteinfo('siteinfo_favicon_url')}" type="image/x-icon">
   </head>
   <body data-spy="scroll" data-target="#header" data-offset="1">
-  {view('includes/svg/sprite.tpl')}
+  <!--{view('includes/svg/sprite.tpl')}-->
     <!-- Main content frame -->
     <div class="wrapper__main">
       <div class="maincontent">

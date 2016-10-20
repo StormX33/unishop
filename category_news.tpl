@@ -21,12 +21,12 @@
                             </div>
                         {/if}
                         {if trim($item.prev_text) != ""}
-                            <div class="page__teaser_content">
+                            <div class="page__teaser_content" {if trim($item.field_list_image) == ""}style="margin-left:0;"{/if}>
                                 <header>
                                     <h3 class="page__teaser_title">
                                         <a href="{site_url($item.full_url)}">{$item.title}</a>
                                     </h3>
-                                    <span class="page__teaser_span" datetime="{date('Y-m-d', $item.publish_date)}">{tpl_locale_date('d F Y', $item.publish_date)}</span>
+                                     <span style="text-transform: uppercase;font-weight: bold;">{echo get_category_name($item[category])} - </span><span class="page__teaser_span" datetime="{date('Y-m-d', $item.publish_date)}">{tpl_locale_date('d F Y', $item.publish_date)}</span>
                                 </header>
                                 <div class="page__teaser_text">
                                     {$item.prev_text}

@@ -1,0 +1,89 @@
+.comments {
+  /* scrolling to form place on the page after non Ajax submit */ }
+  .comments__list {
+    padding-bottom: 40px; }
+  .comments__post {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #dfe4eb; }
+    .comments__post:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0; }
+  .comments__post-header, .comments__parent-header {
+    padding-bottom: 5px; }
+  .comments__post-author, .comments__parent-author {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #000; }
+  .comments__post-date, .comments__parent-date {
+    display: inline-block;
+    margin-right: 5px;
+    color: #9aa1ab; }
+  .comments__post-rate {
+    display: inline-block;
+    position: relative;
+    top: 2px; }
+  .comments__post-text {
+    margin-bottom: 10px;
+    color: #666; }
+  .comments__post-vote {
+    float: left;
+    font-size: 0;
+    color: #9aa1ab; }
+  .comments__post-vote-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1rem;
+    color: #9aa1ab;
+    text-decoration: none; }
+    .comments__post-vote-item:not(:first-child) {
+      margin-left: 15px; }
+  .comments__post-vote-ico {
+    display: inline-block;
+    width: 16px;
+    height: 16px; }
+    .comments__post-vote-ico--dislike {
+      transform: scale(-1, -1); }
+  .comments__post-reply {
+    float: left;
+    font-size: .9rem;
+    margin-left: 25px; }
+  .comments__post-reply-form {
+    margin-top: 10px;
+    padding: 0 20px 20px 20px;
+    background-color: #f2f6f9; }
+  .comments__form-header {
+    background-color: #f2f6f9;
+    margin-bottom: 1px;
+    padding: 15px 15px 15px 15px;
+    color: #000;
+    font-weight: bold; }
+  .comments__form-body {
+    background-color: #f2f6f9;
+    padding: 0 15px 15px 15px; }
+  .comments__parent {
+    margin-top: 10px; }
+  .comments__parent-item {
+    padding: 20px;
+    background: #f2f6f9; }
+    .comments__parent-item:not(:first-child) {
+      margin-top: 1px; }
+  .comments__parent-author {
+    font-size: 0.9rem; }
+  .comments__parent-date {
+    font-size: 0.9rem; }
+  .comments__parent-text {
+    color: #666; }
+  .comments #comments-anchor {
+    position: absolute;
+    margin-top: -50px; }
+
+#comments-list {
+  position: absolute;
+  margin-top: -50px; }
+
+/*# sourceMappingURL=comments.css.map */

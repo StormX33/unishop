@@ -9,10 +9,10 @@
             	<li class="category__catalog_item">
                 	<div class="catalog__item_content">
                 		{if $scat->getImage()} 
-                        	<a href="{shop_url('category/' . $scat->getFullPath())}">
-							<div class="catalog__item_img-wrap">
-                    			<img src="{echo $scat->getImage()}" alt="{echo $scat->getName()}" class="catalog__item_img">
-                    		</div>
+                        	<a href="{shop_url('category/'.$scat->getFullPath())}">
+								<div class="catalog__item_img-wrap">
+                    				<img src="{echo $scat->getImage()}" alt="{echo $scat->getName()}" class="catalog__item_img">
+                    			</div>
                             </a>
 						{/if}	
                         <h3 class="catalog__item_title">
@@ -23,7 +23,9 @@
                 			<div class="item__right_collumn">
                     			<ul class="catalog__inner_list">
                 					{foreach $sub_items as $sub_item}
-                            			<li class="catalog__inner_item"><a href="{shop_url('category/' . $sub_item->getFullPath())}" class="catalog__inner_link">{echo $sub_item->getName()}</a></li>
+                            			<li class="catalog__inner_item">
+                                        	<a href="{shop_url('category/'.$sub_item->getFullPath())}" target="_self" title="{echo $sub_item->getName()}" class="catalog__inner_link">{echo $sub_item->getName()}</a>
+                                        </li>
                             		{/foreach}
                         		</ul>
                     		</div>
