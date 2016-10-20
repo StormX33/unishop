@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
         <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
-            <!--<link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.scss">-->
+        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
 	<script src="{$THEME}assets/js/bootstrap.min.js"></script>
@@ -66,7 +66,46 @@
             <section class="banner">
             {view('includes/header_banners.tpl')}
             </section>
-          {/if}
+            <section class="infoblock">
+					<div class="container">
+						<ul class="infoblock__list">
+							<!--PRODUCT PAGE-->
+							<li class="infoblock__item">
+								<div class="infoblock__item_content">
+									<div class="infoblock__img_wrap"><img src="{$THEME}/images/infoblock/for_infoblock1.png" alt="for_infoblock1" class="infoblock__img"></div>
+									<div class="infoblock__text"><span class="infoblock__span">4000</span>
+										<p>Довольных клиентов</p>
+									</div>
+								</div>
+							</li>
+							<li class="infoblock__item">
+								<div class="infoblock__item_content">
+									<div class="infoblock__img_wrap"><img src="{$THEME}/images/infoblock/for_infoblock2.png" alt="for_infoblock2" class="infoblock__img"></div>
+									<div class="infoblock__text">до<span class="infoblock__span">20 лет</span>
+										<p>Гарантии</p>
+									</div>
+								</div>
+							</li>
+							<li class="infoblock__item">
+								<div class="infoblock__item_content">
+									<div class="infoblock__img_wrap"><img src="{$THEME}/images/infoblock/for_infoblock3.png" alt="for_infoblock3" class="infoblock__img"></div>
+									<div class="infoblock__text"><span class="infoblock__span">1 000 000 м²</span>
+										<p>Обогретых помещений</p>
+									</div>
+								</div>
+							</li>
+							<li class="infoblock__item">
+								<div class="infoblock__item_content">
+									<div class="infoblock__img_wrap"><img src="{$THEME}/images/infoblock/for_infoblock4.png" alt="for_infoblock4" class="infoblock__img"></div>
+									<div class="infoblock__text"><span class="infoblock__span">10 лет</span>
+										<p>На рынке</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+        {/if}
         <!-- Bread Crumbs -->
         <div class="breadcrumbs">
         <div class="container">

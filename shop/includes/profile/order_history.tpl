@@ -42,7 +42,7 @@
                                 	</a>
                             	</td>
                             	<td class="cart__item_name">
-                            		<a href="#" class="cart__name_link">
+                            		<a href="{echo $prod_uri}" class="cart__name_link">
                                 		<span class="cart__item_name-span">{$item->getVariant()->getNumber()}</span>{echo $prod_name}
                                 	</a>
                             	</td>

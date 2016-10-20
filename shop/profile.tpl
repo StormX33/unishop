@@ -24,10 +24,10 @@
                        	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Персональные данные</span></a>
                     </li>
 					<li data-class="tab_password" class="sidebar-nav__item sidebar-nav__item_password">
-                      	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Изменить пароль</span></a>
+                      	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"><span>Изменить пароль</span></a>
                     </li>
 					<li class="sidebar-nav__item sidebar-nav__item_exit">
-                       	<a href="#" class="sidebar-nav__link"><span>Выйти</span></a>
+                       	<a href="{site_url('auth/logout')}" class="sidebar-nav__link"><span>Выйти</span></a>
                     </li>
 				</ul>
 			</div>
@@ -48,7 +48,7 @@
             <div class="tab__pane pane__tab_data">
 				<div class="contacts__form_widget">
 					<div class="check__content_title">
-						<div class="cart__title">Персональные данные  </div>
+						<div class="cart__title">Персональные данные</div>
 					</div>
                     {view('shop/includes/profile/user_data.tpl')}
 				</div>
