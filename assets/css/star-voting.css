@@ -1,0 +1,22 @@
+.star-voting__wrap {
+  display: inline-block;
+  font-size: 1rem; }
+.star-voting__wrap:after {
+  content: "";
+  display: table;
+  clear: both; }
+.star-voting__ico {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  width: 21px;
+  height: 21px; }
+  .star-voting__ico .svg-icon {
+    color: #F2AF1D;
+    fill: transparent; }
+.star-voting__input {
+  display: none; }
+.star-voting__ico:hover .svg-icon, .star-voting__ico:hover ~ .star-voting__ico .svg-icon, .star-voting__input:checked ~ .star-voting__ico .svg-icon {
+  fill: #F2AF1D; }
+
+/*# sourceMappingURL=star-voting.css.map */
