@@ -1,0 +1,50 @@
+.infoblock{
+	background: #375a6b;
+	height: 65px;
+}
+.infoblock__list{
+	font-size: 0;
+	line-height: 65px;
+}
+.infoblock__item{
+	@include inlineblock(middle);
+	@include clearfix;
+	width: 25%;
+	font-size: 14px;
+	color: $main-color;
+	line-height: 14px;
+	&:last-child{
+		padding-left: 5%;
+	}
+}
+.infoblock__img_wrap,
+.infoblock__text{
+	@include inlineblock(middle);
+	text-transform: lowercase;
+}
+.infoblock__img_wrap{
+	margin-right: 25px;
+}
+.infoblock__span{
+	font-size: 34px;
+}
+@include respond-to(medium-screens){
+	.infoblock__img_wrap{
+		margin-right: 6px;
+	}
+}
+@include respond-to(small-screens){
+	.infoblock{
+		display: none;
+	}
+}
+@include respond-to(extraSmall-screens){
+	.infoblock{
+		display: none;
+	}
+}
+@include respond-to(mobile){
+	.infoblock{
+		display: none;
+	}
+} 

@@ -172,22 +172,25 @@ var viewStateCange = (function(){
 }());
 var accordeon = (function(){
     var _openSection = function($this){
-        var container = $this.closest(".filter__item"),
-            content = container.find(".filter__content"),
-            otherContant = $this.closest(".filter").find(".filter__content");
+        var container = $this.closest(".filter__item, .cart__item"),
+            content = container.find(".filter__content, .cart__item_content"),
+            otherContant = $this.closest(".filter, .cart__list").find(".filter__content, .cart__item_content");
 
         if (!container.hasClass("active")){
+            otherContant.slideUp().closest(".cart__item").removeClass("active");
+
+
             container.addClass("active");
-            content.stop(true, true).slideUp()
+            content.stop(true, true).slideDown();
         }else{
             container.removeClass("active");
-            content.stop(true, true).slideDown();
+            content.stop(true, true).slideUp();
         }
     }
 
     return {
         init: function(){
-            $(".filter__title ").on("click", function(e){
+            $(".filter__title, .cart__item_header").on("click", function(e){
                 e.preventDefault();
                 _openSection($(this));
             });
@@ -227,7 +230,9 @@ $(document).ready(function (){
     if ($(".filter").length){
         accordeon.init();
     }
-
+    if ($(".cart__list").length){
+        accordeon.init();
+    }
     /* Init Price Slider */
     var $sliders = $(".filter__slider-element"); 
     if ($sliders.length){
@@ -293,20 +298,6 @@ $(window).on('scroll', function () {
     });
 });
    
-
-/*-----------select----------*/
-// $(function () {
-//     // if ($(".products__slideshow").length) {
-//     //     slideShow.init();
-//     // }
-
-//     if ($(".sort__select-element").length) {
-//         $(".sort__select-element").select2({
-//             minimumResultsForSearch: Infinity
-//         });
-//     }
-// });
-
 
 /*-----------menu----------*/
 $(function() {
@@ -379,6 +370,20 @@ $(document).ready(function(){
         e.preventDefault();
 
         var item = $(this).closest('.tabs__controls_item'),
+            contentItem = $('.tab__pane'),
+            itemPosition = item.data('class');
+
+        contentItem.filter('.pane__'+ itemPosition)
+            .add(item)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+    });
+
+    $('#sidebar-nav .sidebar-nav__tab-link').on('click', function(e){
+        e.preventDefault();
+
+        var item = $(this).closest('.sidebar-nav__item'),
             contentItem = $('.tab__pane'),
             itemPosition = item.data('class');
 
