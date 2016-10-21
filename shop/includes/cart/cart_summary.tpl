@@ -5,7 +5,7 @@
 			<th class="cart__item_delete-title"></th>
 			<th colspan="2" class="cart__item_name-title">{tlang('Product')}</th>
 			<th class="cart__item_quantity-title">{tlang('Qty')}</th>
-			<th class="cart__item_price-title hidden-xs">{tlang('Price')}</th>
+			<th class="cart__item_price-title">{tlang('Price')}</th>
 		</tr>
 	</thead>
     <tbody>

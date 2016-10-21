@@ -160,6 +160,9 @@ $table-border: #e1e1e1;
         }
     }
     .cart__item_quantity{
+        .amount-wrap{
+            @include clearfix;
+        }
         .produt__change-count{
             width: 95px;
         }
@@ -241,7 +244,12 @@ $table-border: #e1e1e1;
         background: #fff;
         z-index: 1;
         position: absolute;
-
+        @include respond-to(mobile) {
+            display: none;
+        } 
+        @include respond-to(extraSmall-screens) {
+            display: none;
+        }
     }
     &:after{
         content: "";
@@ -250,11 +258,36 @@ $table-border: #e1e1e1;
         height: 100%;
         @include absolute-center;
         background: $table-border;
+        @include respond-to(mobile) {
+            display: none;
+        } 
+        @include respond-to(extraSmall-screens) {
+            display: none;
+        }
     }
 }
 .contacts__form_widget{
-    max-width: 506px;
+    max-width: 85%;
     padding-left: 15px;
+    @include respond-to(mobile) {
+        max-width: 100%;
+        padding-left: 0;
+    } 
+    @include respond-to(extraSmall-screens) {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    @include respond-to(small-screens) {
+        .check__title_text{
+            margin-bottom: 10px;
+        }
+    }
+    @include respond-to(medium-screens) {
+       .check__title_text{
+        margin-bottom: 10px;
+       }
+    }
+
 }
 .check__content_title{
     @include clearfix;
@@ -276,6 +309,12 @@ $table-border: #e1e1e1;
     &:active{
         color: lighten($accent-color, 10%);
         text-decoration: underline;
+    }
+    @include respond-to(small-screens){
+        float: left;
+    }
+    @include respond-to(medium-screens){
+        float: left;
     }
 }
 .contacts__wrap{
@@ -314,7 +353,18 @@ $table-border: #e1e1e1;
 }
 
 .delivery__check_content{
-    padding-left: 65px;
+    // padding-left: 65px;
+    float: right;
+    width: 85%;
+    @include respond-to(mobile) {
+        max-width: 100%;
+        float: none;
+    } 
+    @include respond-to(extraSmall-screens) {
+        max-width: 100%;
+        float: none;
+
+    }
     .check__content_title{
         margin-bottom: 50px;
     }
@@ -405,5 +455,4 @@ $table-border: #e1e1e1;
             margin-right: 20px;
         }
     }
-
 }
