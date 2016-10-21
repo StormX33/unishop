@@ -22,7 +22,7 @@
 					<div class="form__input_wrap">
                       <!-- User Name field -->
                       {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('Name'),
+                        'placeholder' => tlang('Name'),
                         'type' => 'text',
                         'name' => 'Name',
                         'value' => get_value('Name'),
@@ -31,7 +31,7 @@
                       
                       <!-- User Phone field -->
                       {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('Phone number'),
+                        'placeholder' => tlang('Phone number'),
                         'type' => 'text',
                         'name' => 'Phone',
                         'value' => get_value('Phone'),
@@ -39,7 +39,7 @@
                       ])}
                       {if $subj == 5} 
 						{view('includes/forms/input-base.tpl', [
-                          'label' => tlang('E-mail'),
+                          'placeholder' => tlang('E-mail'),
                           'type' => 'email',
                           'name' => 'email',
                           'value' => get_value('email'),
