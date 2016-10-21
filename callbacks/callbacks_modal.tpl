@@ -4,13 +4,15 @@
 	<!-- Modal Header -->
 		<header class="popup_header">
 			<button class="popup-window-close" data-modal-close></button>
-			<div class="popup__header_img-wrap"><img src="{$THEME}images/icons/popup/for_popup1.png" /></div>
+            
+			<div class="popup__header_img-wrap"><img src="{$THEME}images/icons/popup/{echo $subj == 5 ? 'for_calc' : 'for_popup1'}.png" /></div>
 			<div class="popup__header_title">
 				<h3 class="popup__header_title-text">
                 {if $subj == 1}{tlang('Request a Call back')}{/if}
                 {if $subj == 2}Получить консультацию{/if}
                 {if $subj == 3}Заказать бесплатный замер{/if}
                 {if $subj == 4}Узнать свою скидку{/if}
+                {if $subj == 5}Расчет объекта{/if}
                 </h3>
 			</div>
 		</header>
@@ -35,6 +37,15 @@
                         'value' => get_value('Phone'),
                         'required' => true
                       ])}
+                      {if $subj == 5} 
+						{view('includes/forms/input-base.tpl', [
+                          'label' => tlang('E-mail'),
+                          'type' => 'email',
+                          'name' => 'email',
+                          'value' => get_value('email'),
+                          'required' => true
+                           ])}
+                      {/if}
                   	</div>
               {else:}
                 <div class="typo">{$success}</div>
@@ -42,7 +53,7 @@
     <!-- /.modal__content -->
 				<div class="feedback__button">
 					{if !$success}
-						<input class="submit__btn_accent feedback-submit" type="submit" value="{tlang('Call back')}">
+						<input class="submit__btn_accent feedback-submit" type="submit" value="{echo $subj == 5 ? 'Заказать просчет' : tlang('Call back')}">
 					{else:}
                     	<button class="submit__btn_accent feedback-submit" type="reset" data-modal-close>{tlang('Close')}</button>
         			{/if}

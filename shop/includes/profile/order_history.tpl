@@ -1,33 +1,60 @@
-<div class="order-history">
-	<ul class="order-history__row">
-		<li class="order-history__col order-history__col--header">{tlang('Id')}</li>
-		<li class="order-history__col order-history__col--header hidden-xs">{tlang('Date')}</li>
-		<li class="order-history__col order-history__col--header">{tlang('Status')}</li>
-		<li class="order-history__col order-history__col--header hidden-xs">{tlang('Total Price')}</li>
-	</ul>
+<ul class="cart__list">
 	{foreach $orders as $order}
-	{$loc_paid = $order->getPaid() ? tlang('Paid successfully') : tlang('Not paid')}
-	<ul class="order-history__row">
+		{if $order->getPaid()}
+        	{$paid_class = 'status__done'} 
+           {$order_st = $order->getSOrderStatuses()}
+            {if $order->getSOrderStatuses()->getId() == '1'}
+            	{$loc_paid = 'Выполняется'}
+            {else:}
+        		{$loc_paid = $order->getSOrderStatuses()->setLocale(MY_Controller::getCurrentLocale())->getName()}
+            {/if}
+        {else:}
+        	{$paid_class = 'status__awaiting'} 
+        	{$loc_paid = 'Ожидает оплаты'}
+        {/if}
+        {$items = $order->getOrderProducts()}
+		<li class="cart__item">
 		<!-- Order Id -->
-		<li class="order-history__col">
-			<a class="order-history__link" href="{shop_url('order/view/' . $order->getKey())}">{tlang('Order')}&nbsp;#{echo $order->getId()}</a>
-		</li>
-		<!-- Order Date -->
-		<li class="order-history__col hidden-xs">
-			{echo tpl_locale_date('d F Y', $order->getDateCreated())}
-		</li>
-		<!-- Order stage and payment status -->
-		<li class="order-history__col">
-			{echo $order->getSOrderStatuses()->setLocale(MY_Controller::getCurrentLocale())->getName()} &mdash; {$loc_paid}
-		</li>
-		<!-- Order total cost -->
-		<li class="order-history__col hidden-xs">
-			<div class="cart-price">
-				<div class="cart-price__main">
-					{echo emmet_money($order->getFinalPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}
-				</div>
+			<div class="table-responsive cart__item_header">
+				<table cellpadding="0" cellspacing="0" class="table table__cart">
+					<thead>
+						<tr>
+							<th class="cart__item_order-number"> <span class="order-number_span">№{echo $order->getId()}</span></th>
+							<th class="cart__item_data">{echo tpl_locale_date('d F Y', $order->getDateCreated())}</th>
+                           
+							<th class="cart__item_quantity"><span class="quantity_span">{echo count($items)} </span>{echo SStringHelper::Pluralize(count($items), array(tlang('pluralize item 1'), tlang('pluralize item 2'), tlang('pluralize item 3')))} на {echo emmet_money($order->getFinalPrice(), 'span.sum_span', '', 'span.cart-price__main-cur')}</th>
+							<th class="cart__item_status {$paid_class}">{$loc_paid}</th>
+						</tr>
+					</thead>
+				</table>
 			</div>
+            <div class="table-responsive cart__item_content">
+            	<table cellpadding="0" cellspacing="0" class="table table__cart">
+                	<tbody>
+                    	
+                        {foreach $items as $item}
+                        	{$prod_uri = 'product/'.$item->getSProducts()->getUrl()}
+                            {$prod_name = $item->getSProducts()->getName()}
+                    		<tr>
+                        		<td class="cart__item_image">
+                            		<a href="{echo $prod_uri}" class="cart__image_link">
+                                		<img src="{echo $item->getVariant()->getSmallPhoto()}" alt="{echo $prod_name}" class="cart_image">
+                                	</a>
+                            	</td>
+                            	<td class="cart__item_name">
+                            		<a href="{echo $prod_uri}" class="cart__name_link">
+                                		<span class="cart__item_name-span">{$item->getVariant()->getNumber()}</span>{echo $prod_name}
+                                	</a>
+                            	</td>
+								<td class="cart__item_quantity">{echo $item->getQuantity()} шт</td>
+								<td class="cart__item_total">
+									<p> <span>{echo emmet_money($item->getFinalPrice() * $item->getQuantity(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</span></p>
+								</td>
+                        	</tr>
+                        {/foreach}
+                    </tbody>
+            	</table>
+            </div>
 		</li>
-	</ul>
 	{/foreach}
-</div>
+</ul>
