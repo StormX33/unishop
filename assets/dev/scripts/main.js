@@ -172,13 +172,12 @@ var viewStateCange = (function(){
 }());
 var accordeon = (function(){
     var _openSection = function($this){
-        var container = $this.closest(".filter__item, .cart__item"),
-            content = container.find(".filter__content, .cart__item_content"),
-            otherContant = $this.closest(".filter, .cart__list").find(".filter__content, .cart__item_content");
+        var container = $this.closest(".filter__item, .cart__item, .product_info_block-item"),
+            content = container.find(".filter__content, .cart__item_content, .product_info_block-content"),
+            otherContant = $this.closest(".filter, .cart__list, .product_info_block-list").find(".filter__content, .cart__item_content, .product_info_block-content");
 
         if (!container.hasClass("active")){
-            otherContant.slideUp().closest(".cart__item").removeClass("active");
-
+            otherContant.slideUp().closest(".cart__item, .product_info_block-item").removeClass("active");
 
             container.addClass("active");
             content.stop(true, true).slideDown();
@@ -190,7 +189,7 @@ var accordeon = (function(){
 
     return {
         init: function(){
-            $(".filter__title, .cart__item_header").on("click", function(e){
+            $(".filter__title, .cart__item_header, .product_info_block-title").on("click", function(e){
                 e.preventDefault();
                 _openSection($(this));
             });
@@ -231,6 +230,9 @@ $(document).ready(function (){
         accordeon.init();
     }
     if ($(".cart__list").length){
+        accordeon.init();
+    }
+    if ($(".product_info_block-list").length){
         accordeon.init();
     }
     /* Init Price Slider */
@@ -470,11 +472,12 @@ $(function () {
         }
     });
 });
-
+/*-----------short-text----------*/
 $(document).ready(function(){
     $('.text-description-more').click(function(e){
+        var text = $('.short_text');
         e.preventDefault();
-        $('#short_text').removeClass('box-hide');
+        $(this).prev(text).removeClass('box-hide');
         $(this).css('display', 'none');
     })
 });

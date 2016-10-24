@@ -142,6 +142,14 @@
     }
     .services__description_wrap{
     	width: 35%;
+    	@include respond-to(mobile){
+    		width: 100%;
+    		padding: 70px 5%;
+    	} 
+    	@include respond-to(extraSmall-screens){
+    		width: 100%;
+    		padding: 40px 5%;
+    	}
 	 	@include respond-to(small-screens){
 	 		width: 50%;
 	 	}
