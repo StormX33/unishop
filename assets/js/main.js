@@ -530,7 +530,7 @@ $(document).ready(function(){
     $('.text-description-more').click(function(e){
         var text = $('.short_text');
         e.preventDefault();
-        $(this).prev(text).removeClass('box-hide');
+        $(text).removeClass('box-hide');
         $(this).css('display', 'none');
     })
 });

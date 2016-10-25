@@ -27,7 +27,7 @@
               				</ul>
 						</div><!-- ./product__raiting_block-->
                     </div><!-- ./price__wrap -->
-					<div class="sort">
+					<div class="sort hidden">
       					<div class="sort__select-wrapper">
       						<div class="sort__title">Модификации</div>
       						<div class="sort__select">
@@ -92,10 +92,16 @@
             {if trim(strip_tags($model->getFullDescription())) != ""}
       			 <li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
             {/if}
-            {if $model->enable_comments == 1 }
+            {if $comments_arr }
       		<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
             {/if}
       	</ul><!-- ./tabs__controls -->
+                           <div class="product__reviews col-right">
+        						<div class="product__reviews_form">
+            						{view('comments/product_form.tpl')}
+            					</div>
+        				</div>
+
         <ul id="description__list" class="description_list">
             <li class="tab__pane pane__tab_characteristics active">
             	<div class="product__description product_characteristics tab__content">
@@ -103,31 +109,23 @@
       				{if count($loc_params) > 0}
                         <div class="product_characteristics_content col-left">
                  			<h3 class="product__description_title">{tlang('All specifications')}</h3>
-                  			<div class="product__description_content short_text box-hide">
+                  			<div class="product__description_content">
       							{view('shop/includes/product/product_properties.tpl', ['items' => $loc_params])}
                    			</div>
                       	</div>
-                       	<div class="product__reviews col-right">
-        					{if $model->enable_comments == 1 && $comments_arr}
-        					{else:}
-        						<div class="product__reviews_form">
-            						{view('comments/product_form.tpl')}
-            					</div>
-        					{/if}
-        				</div>
                 	{/if}
             	</div>
             </li><!-- ./tab__pane pane__tab_characteristics -->
             {if trim(strip_tags($model->getFullDescription())) != ""}
 				<li class="tab__pane pane__tab_description">
-					<div class="product__description">
+					<div class="product__description col-left">
                   		<h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
-        				<div id="short_text" class="product__description_content box-hide">
+        				<div class="product__description_content short_text box-hide">
         					<div class="description_text">{echo $model->getFullDescription()}</div>
                   		</div>
                 	</div>
                 	<div class="text-description-more">
-                  		<a href="#" id='short_text_show_link' class="text-description-more-link">
+                  		<a href="#" class="text-description-more-link short_text_show_link">
                       		<span class="arrow-link-inner">Читать полностью</span>&nbsp;→
                   		</a>
                 	</div>
@@ -142,7 +140,8 @@
                     </div>
               	</li><!-- ./tab__pane pane__tab_reviews -->
             {/if}
-    	</ul><!-- ./description_list -->
+		</ul><!-- ./description_list -->
+
     </div><!-- ./description_main_col-left -->
   	<div class="product__buy table-responsive">
       <table  cellpadding="0" cellspacing="0">

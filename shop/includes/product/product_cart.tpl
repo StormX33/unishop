@@ -27,7 +27,7 @@
 			</a>
 		</li>
 		<li class="product__tools_item">
-        	<a href="#" class="product__tools_link">
+        	<a href="{site_url('callbacks')}?subj=2" class="product__tools_link" data-modal="callbacks_modal" rel="nofollow">
 				<div class="product__tools_img">
             		<img src="{$THEME}/images/icons/product_tools/advice.png" alt="advice" class="tools_img_main tools_img">
                		<img src="{$THEME}/images/icons/product_tools_hover/advice.png" alt="advice" class="tools_img">
@@ -36,7 +36,7 @@
         	</a>
         </li>
 		<li class="product__tools_item">
-        	<a href="#" class="product__tools_link">
+        	<a href="{site_url('callbacks')}?subj=5}" data-modal="callbacks_modal" rel="nofollow" class="product__tools_link">
 				<div class="product__tools_img">
                 	<img src="{$THEME}/images/icons/product_tools/calculate.png" alt="calculate" class="tools_img_main tools_img">
                     <img src="{$THEME}/images/icons/product_tools_hover/calculate.png" alt="calculate" class="tools_img">
