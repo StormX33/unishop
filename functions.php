@@ -260,6 +260,7 @@ if (!function_exists('tpl_load_comments')) {
 }
 
 
+
 if (!function_exists('tpl_per_page_selected')) {
 
     function tpl_per_page_selected($current_item, $use_get = true) {

@@ -6,17 +6,44 @@
   display: table;
   clear: both; }
 .star-voting__ico {
-  float: right;
+	float:right;
   padding-left: 2px;
   cursor: pointer;
-  width: 21px;
-  height: 21px; }
+  width: 41px;
+  height: 39px; 
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  position: relative;
+      margin: 0 1em;
+  }
+  span.rating-text-1{
+    left: 3px;
+  }
+  span.rating-text-2{
+    left: -1px;
+  }
+  span.rating-text-3{
+    left: -13px;
+  }
+  span.rating-text-4{
+    left: -2px;
+  }
+  span.rating-text-5{
+    left: -4px;
+  }
+  span.rating-text-1,span.rating-text-2,span.rating-text-3,span.rating-text-4,span.rating-text-5{
+  position: absolute;
+    bottom: -20px;
+	word-wrap:normal;
+	white-space: nowrap;
+  }
   .star-voting__ico .svg-icon {
-    color: #F2AF1D;
-    fill: transparent; }
+    color: #818181;
+     }
 .star-voting__input {
   display: none; }
 .star-voting__ico:hover .svg-icon, .star-voting__ico:hover ~ .star-voting__ico .svg-icon, .star-voting__input:checked ~ .star-voting__ico .svg-icon {
-  fill: #F2AF1D; }
+  color: #FE3A3E; }
 
 /*# sourceMappingURL=star-voting.css.map */

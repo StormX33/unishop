@@ -1,7 +1,7 @@
 {$required = $required ? "required" : ""}
 {$placeholder = $placeholder ? "placeholder=\"". $placeholder ."\"" : ""}
-{$label_class = $label_class ? $label_class : "feedback__form_label"}
-{$class = $class ? $class : "feedback__form-input"}
+{$label_class = $label_class != "" ? $label_class : "feedback__form_label"}
+{$class = $class !="" ? $class : "feedback__form-input"}
 
     <label class="{$label_class}" {if $label_place == 'outer'}for="{$name}">{echo $label}</label>{else:}>{/if}
     <input class="{$class}" type="{$type}" name="{$name}" value="{$value}" {$placeholder} {$required}>

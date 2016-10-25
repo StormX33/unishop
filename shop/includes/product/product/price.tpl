@@ -14,17 +14,13 @@
 				{echo emmet_money($variant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
 			</span>
 		{/if}
-	</div>
-	{$loc_additional_prices = emmet_money_additional($variant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
-	{if count($loc_additional_prices) > 0}
-		<div class="product-price__item">
-			<div class="product-price__addition col-price-buy">
-				{foreach $loc_additional_prices as $additional_price}
-					<div class="product-price__addition-item">
-						{$additional_price}
-					</div>
-				{/foreach}
-			</div>
-		</div>
-	{/if}
+		{$loc_additional_prices = emmet_money_additional($variant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
+		{if count($loc_additional_prices) > 0}
+			{foreach $loc_additional_prices as $additional_price}
+				<span class="current__price_eur pull-right">
+					{$additional_price}
+				</span>
+			{/foreach}
+		{/if}
+    </div>
 </div>
