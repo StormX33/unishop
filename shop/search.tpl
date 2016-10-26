@@ -1,5 +1,3 @@
-{var_dump($categories)}
-
 <div class="content-wrapper page__search">
   <div class="container">
     <div class="main-content">
