@@ -11,15 +11,15 @@
 		<div class="produt__count">
            	<!-- Input product quantity, you wish to buy -->
            	{if $parent_quantity}
-           		{if $in_cart == 0}
+            <span {echo $in_cart > 0 ? 'class="hidden"' : '' }  data-product-button--quantity data-product-button-item>
        				{view('includes/forms/input-quantity.tpl', ['parent_name' => 'quantity','parent_value' => 1])}
-                {/if}
+             </span>
            	{/if}
 
         <!-- Add to cart button -->
-		<button class="products__buy-btn {echo $in_cart > 0 ? 'hidden' : '' }" type="submit" data-product-button--add data-product-button-item data-product-button--loader><span class="products__buy-span">{tlang('Add to Cart')}</span></button>
+		<a style="cursor:pointer" onclick="$(this).submit();" class="products__buy-btn {echo $in_cart > 0 ? 'hidden' : '' }" data-product-button--add data-product-button-item data-product-button--loader><span class="products__buy-span">{tlang('Add to Cart')}</span></a>
     	<!-- Already in cart button -->
-        <a class="products__buy-btn product-buy__btn--in-cart {echo $in_cart > 0 ? '' : 'hidden' }" href="{shop_url('cart')}" data-modal="includes/cart/cart_modal"><span class="products__buy-span">{tlang('View in Cart')}</span></a>
+        <a class="products__buy-btn product-buy__btn--in-cart {echo $in_cart > 0 ? '' : 'hidden' }" href="{shop_url('cart')}" data-modal="includes/cart/cart_modal" data-product-button--view data-product-button-item><span class="products__buy-span">{tlang('View in Cart')}</span></a>
 		<input type="hidden" name="redirect" value="cart">
       	{form_csrf()}
         </div>
