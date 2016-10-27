@@ -13,7 +13,7 @@
 			<div class="feedback__wrap">
             <!-- User Name field -->
             {view('includes/forms/input-base.tpl', [
-            'label' => tlang('Name'),
+            'placeholder' => tlang('Name'),
             'type' => 'text',
             'name' => 'Name',
             'value' => get_value('Name'),
@@ -23,8 +23,8 @@
 			<div class="feedback__wrap">
             <!-- User Phone field -->
             {view('includes/forms/input-base.tpl', [
-            'label' => tlang('Phone number'),
-            'type' => 'text',
+            'placeholder' =>'+38 (0__) ___-__-__',
+            'type' => 'tel',
             'name' => 'Phone',
             'value' => get_value('Phone'),
             'required' => true

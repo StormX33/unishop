@@ -20,8 +20,8 @@
 
             <!-- User Email field -->
             {view('includes/forms/input-base.tpl', [
-            'placeholder' => tlang('E-mail'),
-            'type' => 'email',
+            'placeholder' => 'Ваш ID',
+            'type' => 'text	',
             'name' => 'email',
             'value' => get_value('email'),
             'required' => true

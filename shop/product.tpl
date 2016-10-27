@@ -92,9 +92,9 @@
             {if trim(strip_tags($model->getFullDescription())) != ""}
       			 <li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
             {/if}
-            {if $comments_arr }
+            
       		<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
-            {/if}
+           
       	</ul><!-- ./tabs__controls -->
                            <div class="product__reviews col-right">
         						<div class="product__reviews_form">

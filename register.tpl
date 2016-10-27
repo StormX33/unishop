@@ -21,7 +21,7 @@
 
                 <!-- Name field -->
                 {view('includes/forms/input-base.tpl', [
-                    'label' => tlang('Name'),
+                    'placeholder' => tlang('Name'),
                     'type' => 'text',
                     'name' => 'username',
                     'value' => get_value('username'),
@@ -30,7 +30,7 @@
 
                 <!-- Email field -->
                 {view('includes/forms/input-base.tpl', [
-                    'label' => tlang('E-mail'),
+                    'placeholder' => tlang('E-mail'),
                     'type' => 'email',
                     'name' => 'email',
                     'value' => get_value('email'),
@@ -44,7 +44,7 @@
                     {if $field['field_type_id'] == 0}
 
                         {view('includes/forms/input-base.tpl', [
-                            'label' => $field['field_label'],
+                            'placeholder' => $field['field_label'],
                             'type' => 'text',
                             'name' => 'custom_field[' . $field['id'] . ']',
                             'value' => get_value($field['field_name']),
@@ -58,7 +58,7 @@
                     {else:}
 
                         {view('includes/forms/textarea-base.tpl', [
-                            'label' => $field['field_label'],
+                            'placeholder' => $field['field_label'],
                             'name' => 'custom_field[' . $field['id'] . ']',
                             'value' => get_value($field['field_name']),
                             'required' => $field['is_required'],
@@ -72,7 +72,7 @@
 
                 <!-- Password field -->
                 {view('includes/forms/input-base.tpl', [
-                    'label' => tlang('Password'),
+                    'placeholder' => tlang('Password'),
                     'type' => 'password',
                     'name' => 'password',
                     'value' => '',
@@ -81,7 +81,7 @@
 
                 <!-- Confirm password field -->
                 {view('includes/forms/input-base.tpl', [
-                    'label' => tlang('Reenter password'),
+                    'placeholder' => tlang('Reenter password'),
                     'type' => 'password',
                     'name' => 'confirm_password',
                     'value' => '',
@@ -92,7 +92,7 @@
                 <!-- Captcha field -->
                 {if $cap_image}
                     {view('includes/forms/input-captcha.tpl', [
-                        'label' => tlang('Security code'),
+                        'placeholder' => tlang('Security code'),
                         'type' => 'text',
                         'name' => 'captcha',
                         'value' => get_value('captcha'),

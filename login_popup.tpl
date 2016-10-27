@@ -28,15 +28,15 @@
 				{if !$success}
 					<!-- User Email field -->
 					{view('includes/forms/input-base.tpl', [
-                        'label' => tlang('E-mail'),
-                        'type' => 'email',
-                        'name' => 'email',
-                        'value' => get_value('email'),
+                        'placeholder' => 'Ваш ID',
+                        'type' => 'number',
+                        'name' => 'iduser',
+                        'value' => get_value('id_user'),
                         'required' => true
                       ])}
 					<!-- User Password field -->
                       {view('includes/forms/input-base.tpl', [
-                        'label' => tlang('Password'),
+                        'placeholder' => tlang('Password'),
                         'type' => 'password',
                         'name' => 'password',
                         'value' => '',
@@ -68,10 +68,10 @@
             				<span>{tlang('Logining in...')}</span>
           				</button>
                 	{/if}
-         
+<!--         
           			{if !$success}
           				<a class="feedback__form_link" href="{site_url('auth/forgot_password')}">{tlang('Forgot password?')}</a>
-					{/if}
+					{/if}-->
                 </div>
     			<input type="hidden" name="template" value="login_popup">
     			{if strip_tags(trim($_REQUEST['wishlist']))}
@@ -80,13 +80,13 @@
     			{form_csrf()}
 			</form>
 		</div>
-        {if !$success}
+<!--        {if !$success}
 			<div class="popup_footer">
 				<div class="popup_footer_content">
 					<a class="feedback__form_link" href="{site_url('auth/register')}">Зарегестрируйтесь</a>
 					<span class="feedback__form_span"> если вы новый покупатель магазина</span>
 				</div>
 			</div>
-		{/if}
+		{/if}-->
   	</div><!--./ remodal-->
 </div><!-- ./modal-wrapper -->

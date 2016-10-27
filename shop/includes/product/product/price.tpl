@@ -22,5 +22,6 @@
 				</span>
 			{/foreach}
 		{/if}
+       
     </div>
 </div>

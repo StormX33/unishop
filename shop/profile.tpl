@@ -4,12 +4,10 @@
 			<div class="sidebar__title">WT-Prof</div>
 			<div class="sidebar__content">
 				<div class="personal__data_wrap">
-					<div class="personal__data_text">Ваш <span class="personal__data_span-id">id</span>: (user_id)</div>
-					<div class="personal__data_text">Баллы: <span class="personal__data_span">(user_points) </span></div>
+					<div class="personal__data_text">Ваш <span class="personal__data_span-id">id</span>: {echo $profile->getIdUser()}</div>
+					<div class="personal__data_text">Баллы: <span class="personal__data_span">{echo $profile->getUserPoints()} </span></div>
 				</div>
 				<div class="personal__data_wrap">
-					<div class="personal__info_text">До уровня <span class="personal__data_span">(user_poins_level)</span>осталось <span class="personal__data_span">(needed_user_poinst)</span>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -22,9 +20,6 @@
                     </li>
 					<li data-class="tab_data" class="sidebar-nav__item sidebar-nav__item_data">
                        	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Персональные данные</span></a>
-                    </li>
-					<li data-class="tab_password" class="sidebar-nav__item sidebar-nav__item_password">
-                      	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"><span>Изменить пароль</span></a>
                     </li>
 					<li class="sidebar-nav__item sidebar-nav__item_exit">
                        	<a href="{site_url('auth/logout')}" class="sidebar-nav__link"><span>Выйти</span></a>

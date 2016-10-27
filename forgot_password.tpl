@@ -36,7 +36,7 @@
 
 						<!-- User Email field -->
 						{view('includes/forms/input-base.tpl', [
-							'label' => tlang('E-mail'),
+							'placeholder' => tlang('E-mail'),
 							'type' => 'email',
 							'name' => 'email',
 							'value' => get_value('email'),
@@ -47,7 +47,7 @@
 						<!-- Captcha field -->      
 						{if $cap_image}
 							{view('includes/forms/input-captcha.tpl', [
-								'label' => tlang('Security code'),
+								'placeholder' => tlang('Security code'),
 								'type' => 'text',
 								'name' => 'captcha',
 								'value' => get_value('captcha'),
