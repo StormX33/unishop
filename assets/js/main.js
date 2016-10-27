@@ -419,7 +419,6 @@ $(window).bind('resize', (function ($) {
 
 /*-----------tabs----------*/
 $(document).ready(function(){
-	
 
     $('#tabs__controls .tabs__controls_link').on('click', function(e){
         e.preventDefault();
@@ -530,7 +529,7 @@ $(document).ready(function(){
     $('.text-description-more').click(function(e){
         var text = $('.short_text');
         e.preventDefault();
-        $(text).removeClass('box-hide');
+        $(this).prev(text).removeClass('box-hide');
         $(this).css('display', 'none');
     })
 });
@@ -979,4 +978,113 @@ $(function () {
         ]
     };
     $('.similar__products_list').slick(similarProductsSlickOpts);
+});
+// BannerSlider
+$(function () {
+    var $mainSliderWrapper = $('.banner__main_slide');
+    var $mainSliderWrapper = $('.banner__content_inner');
+    var $secondRoomWrapper = $('.banner__second_room');
+    var $thirdRoomWrapper = $('.banner__third_room');
+
+    var bannerProductsSlickOpts = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        fade: true,
+        speed: 300,
+        cssEase: 'linear',
+        appendDots: $('.right__column_image', $mainSliderWrapper),
+        dotsClass: 'slick-dots slick-dots-main'
+    };
+    var bannerSlideSlickOpts = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        fade: true,
+        speed: 300,
+        cssEase: 'linear',
+        dotsClass: 'slick-dots slick-dots-inner',
+        appendDots: $('.right__column_image', $mainSliderWrapper)
+    };
+    var bannerSecondSlideSlickOpts = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        fade: true,
+        speed: 300,
+        cssEase: 'linear',
+        dotsClass: 'slick-dots slick-dots-second-room',
+        appendDots: $('.right__column_image', $secondRoomWrapper)
+    };
+    var bannerThirdSlideSlickOpts = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        fade: true,
+        speed: 300,
+        cssEase: 'linear',
+        dotsClass: 'slick-dots slick-dots-third-room',
+        appendDots: $('.right__column_image',  $thirdRoomWrapper)
+    };
+
+    var $mainSlider = $('.banner__content'),
+        $innerSlider = $('.banner__first-slide_list'),
+        $secondInnerSlider = $('.banner__second-slide_list'),
+        $thirdInnerSlider = $('.banner__third-slide_list'),
+        $mainPrevButton = $('.banner__products_prev');
+
+    
+    // $mainSlider.on('init', function(){
+    //     var $dots = $('.right__column_image > .slick-dots', $mainSliderWrapper);
+    //     $dots.find('li').wrapAll('<div class="dots-wrap">');
+    // });
+
+    $innerSlider.on('init', function(){
+        var $dots = $('> .slick-dots', $innerSlider);
+        $dots.find('li').wrapAll('<div class="dots-wrap">');
+    });
+        
+    $mainSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var $mainDots = $('.right__column_image > .slick-dots-main', $mainSliderWrapper),
+            $innerDots = $('.right__column_image > .slick-dots-inner', $mainSliderWrapper),
+            $secondSlideDots = $('.right__column_image > .slick-dots-second-room', $secondRoomWrapper),
+            $thirdSlideDots = $('.right__column_image > .slick-dots-third-room', $thirdRoomWrapper);
+
+        if(nextSlide == 0){
+            $mainDots.show();
+            $innerDots.hide();
+            $secondSlideDots.hide();
+            $thirdSlideDots.hide();
+        } else {
+            $mainDots.hide();
+            $innerDots.show();
+            $secondSlideDots.show();
+            $thirdSlideDots.show();
+        }
+    });
+
+    $mainSlider.on('afterChange', function(slick, currentSlide){
+        var currentSlide = $mainSlider.slick('slickCurrentSlide'),
+            $mainDots = $('.right__column_image > .slick-dots-main', $mainSliderWrapper),
+            $innerDots = $('.right__column_image > .slick-dots-inner', $mainSliderWrapper);
+
+        if(currentSlide == 0){
+            $mainPrevButton.addClass('disabled');
+        }
+        else{
+            $mainPrevButton.removeClass('disabled');
+        }
+    });
+    $mainPrevButton.on('click', function(event) {
+        $mainSlider.slick("slickGoTo", 0, true);
+    });
+
+    $innerSlider.slick(bannerSlideSlickOpts); 
+    $secondInnerSlider.slick(bannerSecondSlideSlickOpts); 
+    $thirdInnerSlider.slick(bannerThirdSlideSlickOpts); 
+    $mainSlider.slick(bannerProductsSlickOpts);
 });
