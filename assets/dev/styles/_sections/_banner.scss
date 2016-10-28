@@ -7,13 +7,16 @@
     height: 470px;
     position: relative;
     overflow: hidden;
-  .container {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    right: 0;
-    transform: translate(0, -100%);
-  }
+	.container {
+		position: absolute;
+		height: 100%;
+		left: 0;
+		right: 0;
+		transform: translate(0, -100%);
+		@include respond-to(medium-screens){
+			width: 100%;
+		}
+  	}
 }
 
 .banner {
@@ -22,19 +25,6 @@
 	    .banner__img {
 	      min-height: 470px;
 	    }
-	    // @include respond-to(handhelds) {
-	    //   min-height: 235px;
-	    //   .banner__img {
-	    //     min-height: 235px;
-	    //   }
-	    // }
-	    // @include respond-to(medium-screens) {
-	    //   min-height: 450px;
-	    //   background: #ffffff;;
-	    //   .banner__img {
-	    //     min-height: 450px;
-	    //   }
-	    // }
   	}
   	.paginations__container {
 	    height: 10px;
@@ -42,7 +32,7 @@
 	    bottom: 34%;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
-	    z-index: 100;
+	    z-index: 99;
 	    @include respond-to(mobile){
 	      display: none;
 	    }
@@ -55,9 +45,9 @@
 	      &.disabled{
 	       	display: none !important;
 	      }
-	      @include respond-to(medium-screens){
-	      	left: -3px;
-	      }
+	      // @include respond-to(medium-screens){
+	      // 	left: -3px;
+	      // }
 	    }
     }
     .slick-dots{
@@ -67,6 +57,9 @@
     	left: 50%;
     	bottom: 0;
 		transform: translate(-50%, -50%);
+		@media screen and (max-width: 1150px) and (min-width: 320px){
+			display: none !important;
+		}
 		.dots-wrap{
 			position: relative;
 			height: 300px;
@@ -77,9 +70,6 @@
     		display: block;
     		position: absolute;
     		z-index: 1000;
-    		// @include transform(translate(-50%, -50%));
-   			// left: 50%;
-			// top: 50%;
     		&:first-child{
     			display: none !important;
     		}
@@ -88,21 +78,12 @@
     		}
     		button{
     			@include get-sprite($misc-sprite, banner_dot);
-    			// &:hover,
-    			// &:focus{
-    			// 	@include get-sprite($misc-sprite, banner_dot);
-    			// }
-    			&:before{
+       			&:before{
 					color: transparent;
 	    		}
     		}
     		&.slick-active{
 				button{
-		    		// @include get-sprite($misc-sprite, banner_dot);
-	    			// &:hover,
-	    			// &:focus{
-	    			// 	@include get-sprite($misc-sprite, banner_dot);
-	    			// }
 	    			&:before{
 						color: transparent;
 	    			}
@@ -144,26 +125,25 @@
   color: $text-color;
   height: 100%;
   padding-top: 70px;
-
 	.banner__offer + .right__column_image{
 		display: block;
 		max-width: 614px;
 		position: absolute;
 		right: 0;
 		top: 5px;
-	    img{
-	      min-height: auto!important;
-	    }
-	    @include respond-to(mobile) {
-	      display: none;
-	    }
-	    @include respond-to(extraSmall-screens) {
-	      display: none;
-	    }
-	    @include respond-to(small-screens){
-	    	display: none;
-	    }
-  	}
+		    img{
+		      min-height: auto!important;
+		    }
+		    @include respond-to(mobile) {
+		      display: none;
+		    }
+		    @include respond-to(extraSmall-screens) {
+		      display: none;
+		    }
+		    @include respond-to(small-screens){
+		    	display: none;
+		    }
+		}
 	@include respond-to(mobile){
 		width: 100%;
 	} 
@@ -217,6 +197,16 @@
 		@include transform(translate(-50%, 0));
 	}
  
+}
+.banner__content_slide{
+	.container {
+		@include respond-to(medium-screens){
+			width: 100%;
+		}
+  	}
+  	.banner__inner_content {
+  		max-width: 100%;
+  	}
 }
 
 .inner__text_header {
@@ -318,10 +308,10 @@
 	.offer__inner_buttons .banner__btn:first-child{
 		margin-right: 33px;
 	}
-	.banner__offer{
-		max-width: 810px;
-		width: 810px;
-	} 
+	// .banner__offer{
+	// 	max-width: 810px;
+	// 	width: 810px;
+	// } 
 	.banner__offer_content{
 		margin-bottom: 48px;
 	}
@@ -335,10 +325,15 @@
 		-moz-box-shadow:    0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 		box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 	}
+	.inner__text_header{
+		height: 90px;
+	}
 	.text__header_span{
-		font-size: 50px;
+		// font-size: 50px;
+		font-size: 47px;
+		line-height: 49px;
 		font-family: "HeliosCondBold", arial;
-		white-space: nowrap;
+		// white-space: nowrap;
 		color: $nav-bg;
 		@include respond-to(medium-screens){
 			font-size: 45px;
@@ -373,8 +368,6 @@
 		display: block;
 		margin-bottom: 15px;
 		line-height: 20px;
-		// height: 60px;
-		// overflow: hidden;
 		&:hover,
 		&:focus,
 		&:active{
@@ -454,7 +447,6 @@
 			left: 0;
 		}
 	}
-
 }
 
 .banner__second_room{
@@ -484,6 +476,23 @@
 				left: 22%;
 				bottom: 0;
 			}
+		}
+	}
+	.banner__inner_content .banner__offer+.right__column_image{
+		@include respond-to(medium-screens){
+			width: 750px;
+		}
+	}
+	.right__column_image{
+		
+		@media screen and (max-width: 1600px) and (min-width: 1300px){
+			left: 100px;
+		}
+		@media screen and (max-width: 1299px) and (min-width: 1200px){
+			left: 0;
+		}
+		@include respond-to(medium-screens){
+			left: 20px;
 		}
 	}
 }

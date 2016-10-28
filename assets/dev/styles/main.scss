@@ -110,7 +110,7 @@ $contacts-text: #282828;
 	}
 }
 .col-mob{
-	@media screen and (max-width: 570px) and (min-width: 320px){
+	@media screen and (max-width: 617px) and (min-width: 320px){
 		float: none;
 		width: 100%;
 	}
@@ -124,11 +124,11 @@ $contacts-text: #282828;
 		display: block;
 	}
 }
-.col-price-buy{
-	@include respond-to(mobile){
-		width: 46.875%;
-	} 
-}
+// .col-price-buy{
+// 	@include respond-to(mobile){
+// 		width: 46.875%;
+// 	} 
+// }
 @include respond-to(mobile){
 	.col-footer-mob{
 		float: none;

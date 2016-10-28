@@ -11,22 +11,22 @@
               			<div class="product__right_inner">
                 			{view('shop/includes/product/product_cart.tpl')}
               			</div>
-                        <div class="product__raiting_block">
-                        	<ul class="detail__tools">
-                            	<li class="detail__tools_item">
-                                	{view('shop/includes/product/product_rating.tpl', ['model' => $model])}
-                                </li>
-                                <li class="detail__tools_item">
-                                </li>
-                				<li class="detail__tools_item">
-                  					{module('wishlist')->renderWLButton($model->firstVariant->getId(), ['type' => 'link']);}
-                				</li>
-                				<li class="detail__tools_item">
-                  					{view('shop/includes/compare/compare_button.tpl', ['model' => $model, 'type' => 'link'])}
-                				</li>
-              				</ul>
-						</div><!-- ./product__raiting_block-->
-                    </div><!-- ./price__wrap -->
+                </div><!-- ./price__wrap -->
+                <div class="product__raiting_block">
+                  <ul class="detail__tools">
+                    <li class="detail__tools_item">
+                      {view('shop/includes/product/product_rating.tpl', ['model' => $model])}
+                    </li>
+                    <li class="detail__tools_item">
+                    </li>
+                    <li class="detail__tools_item">
+                      {module('wishlist')->renderWLButton($model->firstVariant->getId(), ['type' => 'link']);}
+                    </li>
+                    <li class="detail__tools_item">
+                      {view('shop/includes/compare/compare_button.tpl', ['model' => $model, 'type' => 'link'])}
+                    </li>
+                  </ul>
+                </div><!-- ./product__raiting_block-->
 					<div class="sort hidden">
       					<div class="sort__select-wrapper">
       						<div class="sort__title">Модификации</div>
