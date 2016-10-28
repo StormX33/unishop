@@ -31,9 +31,8 @@
            data-product-button-item>
         <button class="products__buy-btn" type="submit"
                 data-product-button--loader>
-          <div class="products__buy-content">
             <span class="products__buy-span">{tlang('Add to Cart')}</span>
-          </div>
+
           <i class="button--loader hidden"
              data-button-loader="loader"></i>
         </button>

@@ -55,3 +55,45 @@
 	font-size: em(18px);
 	text-decoration: underline;
 }
+/* --------- slick-dots  --------- */
+.catalog__banner{
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        @include transform(translate(-50%, 0));
+        & > li {
+            display: inline-block;
+            margin: 0 2px;
+            width: 9px;
+            height: 15px;
+            & > button {
+                background: none;
+                border: none;
+                outline: none;
+                background: $title-color-blue;
+                height: 9px;
+                width: 9px;
+                padding: 0;
+                border-radius: 50%;
+                margin: 0 auto;
+                &:before {
+                    content: "";
+                } 
+                &:hover, &:focus{
+                    opacity: 1;
+                    background: $title-color-blue;
+                }
+            }
+            &.slick-active{
+                & > button{
+                    height: 11px;
+                    width: 11px;
+                    color:  $accent-color;
+                    background: $accent-color;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

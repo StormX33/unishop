@@ -112,6 +112,7 @@
 }
 .produt__label_price{
     font-size: em(32px);
+    margin-right: 30px;
 }
 .current__price{
     font-size: em(26px);
@@ -132,8 +133,8 @@
 .product__page{
     .products__buy-btn{
         @include inlineblock();
-        font-size: 21px;
-        padding: 5px 36px;
+        // font-size: 21px;
+        // padding: 5px 36px;
     }
     .products__buy-span{
         &:before{
@@ -163,7 +164,7 @@
     .product__raiting_block{
         @include clearfix;
         padding: 12px 14px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
     .product_ective-element{
         @include clearfix;
@@ -207,18 +208,18 @@
     vertical-align: top;
     width: 175px;
     height: 44px;
-    background: #083354;
+    // background: #083354;
     color: #ffffff;
     font-family: "HeliosCondBold", arial;
     border: 1px solid #204664;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    position: relative;
-    &:hover, 
-    &:focus,
-    &:active{
-        background: lighten(#083354, 5%);
-    }
+    @include transition(all 0.3s ease-out);
+    // &:hover, 
+    // &:focus,
+    // &:active{
+    //     background: lighten(#083354, 5%);
+    // }
  
 }
 .buy__click_form-input::-webkit-input-placeholder{ 
@@ -731,11 +732,11 @@
     }
     .price__buy_content{
         // width: 380px;
-        width: 30%;
+        width: 35%;
     }
     .produt__funcs-buttons{
         // width: 300px;
-        width: 30%;
+        width: 25%;
         margin-bottom: 0;
     }
     .produt__price{
@@ -744,7 +745,9 @@
     }
     .produt__price{
         line-height: 18px;
-        margin-right: 15px;
+        &:last-child{
+            margin: 0 30px;
+        }
     }
     .old__price,
     .current__price_eur{
@@ -757,8 +760,8 @@
     .products__buy-btn{
         @include inlineblock();
         font-size: 21px;
-        margin-right: 15px;
-        padding: 6px 36px;
+        margin-left: 15px;
+        padding: 4px 36px;
 
     }
     .products__buy-content{
@@ -961,13 +964,13 @@
     .produt__change-count{
         margin-right: 7px;
     }
-    .products__buy-btn{
-        @include border-radius(3px);
-        background: rgb(199,21,19); 
-        background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-    }
+    // .products__buy-btn{
+    //     @include border-radius(3px);
+    //     background: rgb(199,21,19); 
+    //     background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
+    //     background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+    //     background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+    // }
     .product__tools_list{
         font-size: 0;
         border-bottom: 1px solid #cdd3d7;
@@ -986,9 +989,9 @@
         position: relative;
         float: left;
         background: rgb(230,230,230); 
-        background: -moz-linear-gradient(top,  rgba(230,230,230,1) 1%, rgba(241,241,241,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 1%,rgba(241,241,241,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(230,230,230,1) 1%,rgba(241,241,241,1) 100%); 
+        background: -moz-linear-gradient(top,  rgba(230,230,230,1) 0%, rgba(241,241,241,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(241,241,241,1) 100%);
+        background: linear-gradient(to bottom,  rgba(230,230,230,1) 0%,rgba(241,241,241,1) 100%); 
         -webkit-box-shadow: 0px 3px 0px 0px rgba(148, 148, 148, 1);
         -moz-box-shadow:    0px 3px 0px 0px rgba(148, 148, 148, 1);
         box-shadow:         0px 3px 0px 0px rgba(148, 148, 148, 1);
@@ -1045,7 +1048,6 @@
         }
     }
     .product__tools_credit{
-        .product__tools_link,
         .product__tools_link:hover{
             .product__tools_img{
                 background: rgb(7,210,7);
@@ -1075,106 +1077,6 @@
     .buy__click{
         float: right;
     }
-
-    // $tools: order, credit,  advice, calculate;  
-    // $menu-map: sprite-map('icons/product_tools/*.png', $spacing: 70px);
-    // $menu-map-hover: sprite-map('icons/product_tools_hover/*.png', $spacing: 70px);
-    // @each $icon in $tools {
-    //     .product__tools_item-#{$icon}{
-    //         .product__tools_link{
-    //             display: block;
-    //             max-width: 175px;
-    //             color: $title-color-blue;
-    //             &:hover,
-    //             &:focus,
-    //             &:active{
-    //                 color: $title-color-blue;
-    //             }
-    //             span{
-    //                 display: table-cell;
-    //                 height: 47px;
-    //                 vertical-align: middle;
-    //             }
-    //             .product__tools_icon{
-    //                 position: relative;
-    //                 display: block;
-    //                 width: 50px;
-    //                 height: 47px;
-    //                 float: left;
-    //                 background: rgb(230,230,230); 
-    //                 background: -moz-linear-gradient(top,  rgba(230,230,230,1) 1%, rgba(241,241,241,1) 100%); 
-    //                 background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 1%,rgba(241,241,241,1) 100%); 
-    //                 background: linear-gradient(to bottom,  rgba(230,230,230,1) 1%,rgba(241,241,241,1) 100%); 
-    //                 -webkit-box-shadow: 0px 3px 0px 0px rgba(148, 148, 148, 1);
-    //                 -moz-box-shadow:    0px 3px 0px 0px rgba(148, 148, 148, 1);
-    //                 box-shadow:         0px 3px 0px 0px rgba(148, 148, 148, 1);
-    //                 @include  border-radius(3px);
-    //                 border: 1px solid #e0e0e0;
-    //                 margin-right: 10px;
-    //                 &:before{
-    //                     content: "";
-    //                     display: block;
-    //                     position: absolute;
-    //                     @include get-sprite($menu-map, $icon);
-    //                     top: 50%;
-    //                     left: 50%;
-    //                     @include transform(translate(-50%, -50%));
-    //                 }
-    //             }
-    //             &:hover{
-    //                 .product__tools_icon{
-    //                     background: rgb(201,22,19); 
-    //                     background: -moz-linear-gradient(top,  rgba(201,22,19,1) 0%, rgba(231,37,27,1) 100%);
-    //                     background: -webkit-linear-gradient(top,  rgba(201,22,19,1) 0%,rgba(231,37,27,1) 100%);
-    //                     background: linear-gradient(to bottom,  rgba(201,22,19,1) 0%,rgba(231,37,27,1) 100%); 
-    //                     -webkit-box-shadow: 0px 2px 0px 0px rgba(130, 1, 1, 1);
-    //                     -moz-box-shadow:    0px 2px 0px 0px rgba(130, 1, 1, 1);
-    //                     box-shadow:         0px 2px 0px 0px rgba(130, 1, 1, 1);
-    //                     border: 1px solid #ca1713;
-    //                     &:before{
-    //                         @include get-sprite($menu-map-hover, $icon);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-    // .product__tools_item-credit{
-    //     .product__tools_link,
-    //     .product__tools_link:hover{
-    //         .product__tools_icon{
-    //             background: rgb(7,210,7);
-    //             background: -moz-linear-gradient(top,  rgba(7,210,7,1) 0%, rgba(0,180,0,1) 100%); 
-    //             background: -webkit-linear-gradient(top,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
-    //             background: linear-gradient(to bottom,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
-    //             -webkit-box-shadow: 0px 3px 0px 0px rgba(3, 141, 3, 1);
-    //             -moz-box-shadow:    0px 3px 0px 0px rgba(3, 141, 3, 1);
-    //             box-shadow:         0px 3px 0px 0px rgba(3, 141, 3, 1);
-    //             border: 1px solid transparent;
-    //         }
-    //     }
-    // }
-    // .product__tools_list-login{
-    //     $tools-login: advice, cost,  points, sale;  
-    //     $tools-map: sprite-map('icons/product_tools_login/*.png', $spacing: 70px);
-    //     $tols-map-hover: sprite-map('icons/product_tools_login_h/*.png', $spacing: 70px);
-    //     @each $item in $tools-login {
-    //         .product__tools_item-#{$item}{
-    //             .product__tools_link{
-    //                 max-width: 255px;
-    //                 .product__tools_icon{
-    //                     &:before{
-    //                         @include get-sprite($tools-map, $item);
-    //                     }
-    //                 }
-    //                 &:hover{
-    //                     @include get-sprite($tols-map-hover, $item);
-    //                 }
-                   
-    //             }
-    //         }
-    //     }
-    // }
 }  
 .col-left {
     width: 60%;

@@ -124,9 +124,13 @@
 //PRODUCT BUY
 .products__buy-btn{
     @extend  .filter__accept;
+    @include border-radius(3px);
     font-family: 'HeliosCondBold', arial;
-    background: #da251c;
     text-align: center;
+    background: rgb(199,21,19); 
+    background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%);
     -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
     -moz-box-shadow:    0px 3px 0px 0px rgba(166, 18, 11, 1);
     box-shadow:         0px 3px 0px 0px rgba(166, 18, 11, 1);
@@ -134,11 +138,14 @@
     &:hover,
     &:active,
     &:focus{
-        color: $main-color;
-        background: darken(#da251c, 5%);
+        color: $main-color;      
+        background: rgb(199,21,19); 
+        background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
     }
 }
-.products__buy-content{
+.products__buy-span{
     @include inlineblock(middle);
     &:before{
         content: "";
@@ -149,24 +156,38 @@
     @include respond-to(mobile){
         &:before{
             @include get-sprite($misc-sprite, catalog_cart_mob);
-             margin-right: 0;
+            margin-right: 0;
         }
     }
     @include respond-to(extraSmall-screens){
         &:before{
             @include get-sprite($misc-sprite, catalog_cart_mob);
-             margin-right: 0;
+            margin-right: 0;
         }
     }
 
 }
 
-// PAGE PRODUCT BLUE BUTTON
-$bg-submit:#083354;
-.buy__click_form-submit{
+// PAGE PRODUCT BLUE BUTTONS
+// $bg-submit:#083354;
+// .buy__click_form-submit{
+//     @include transition(all 0.3s ease-out);
+//     &:hover{
+//         background: lighten($bg-submit, 5%);
+//     }
+// }
+.buy__click_form-submit,
+.submit__btn_accent-blue{
     @include transition(all 0.3s ease-out);
+    background: rgb(6,40,65); 
+    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(9,60,99,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%);
+    background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%); 
     &:hover{
-        background: lighten($bg-submit, 5%);
+        background: rgb(6,40,65); 
+        background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(15,77,124,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%);
     }
 }
 
@@ -195,46 +216,45 @@ $login-submit: #083253;
 }
 
 /* --------- slick-dots  --------- */
-.slick-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    // transform: translate(-50%, 0);
-    @include transform(translate(-50%, 0));
-    & > li {
-        display: inline-block;
-        margin: 0 2px;
-        width: 9px;
-        height: 15px;
-        & > button {
-            background: none;
-            border: none;
-            outline: none;
-            background: $title-color-blue;
-            height: 9px;
-            width: 9px;
-            padding: 0;
-            border-radius: 50%;
-            margin: 0 auto;
-            &:before {
-                content: "";
-            } 
-            &:hover, &:focus{
-                opacity: 1;
-                background: $title-color-blue;
-            }
-        }
-        &.slick-active{
-            & > button{
-                height: 11px;
-                width: 11px;
-                color:  $accent-color;
-                background: $accent-color;
-                opacity: 1;
-            }
-        }
-    }
-}
+// .slick-dots {
+//     position: absolute;
+//     left: 50%;
+//     bottom: 0;
+//     @include transform(translate(-50%, 0));
+//     & > li {
+//         display: inline-block;
+//         margin: 0 2px;
+//         width: 9px;
+//         height: 15px;
+//         & > button {
+//             background: none;
+//             border: none;
+//             outline: none;
+//             background: $title-color-blue;
+//             height: 9px;
+//             width: 9px;
+//             padding: 0;
+//             border-radius: 50%;
+//             margin: 0 auto;
+//             &:before {
+//                 content: "";
+//             } 
+//             &:hover, &:focus{
+//                 opacity: 1;
+//                 background: $title-color-blue;
+//             }
+//         }
+//         &.slick-active{
+//             & > button{
+//                 height: 11px;
+//                 width: 11px;
+//                 color:  $accent-color;
+//                 background: $accent-color;
+//                 opacity: 1;
+//             }
+//         }
+//     }
+// }
 
 .banner__btn{
     font-size: 20px;
