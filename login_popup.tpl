@@ -30,8 +30,8 @@
 					{view('includes/forms/input-base.tpl', [
                         'placeholder' => 'Ваш ID',
                         'type' => 'number',
-                        'name' => 'iduser',
-                        'value' => get_value('id_user'),
+                        'name' => 'email',
+                        'value' => get_value('email'),
                         'required' => true
                       ])}
 					<!-- User Password field -->

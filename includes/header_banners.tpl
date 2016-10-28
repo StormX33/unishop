@@ -1,9 +1,9 @@
-<div class="container paginations__container">
-	<div class="pagination__item pagination__item_prev">
-		<button class="pagination__button banner__products_prev disabled"></button>
-	</div>
-</div>
-<div class="banner__content">
+					<div class="container paginations__container">
+						<div class="pagination__item pagination__item_prev">
+							<button class="pagination__button banner__products_prev disabled"></button>
+						</div>
+					</div>
+					<div class="banner__content">
 	<div class="banner__content_inner banner__main_slide">
        	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
 		<div class="container">
@@ -246,66 +246,290 @@
 			</div>
 		</div>
 	</div>
-	<div class="banner__content_inner banner__content_slide">
-       	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
-		<div class="container">
-			<div class="banner__inner_content">
-				<div class="banner__offer">
-					<ul class="banner__slide_list">
-                    	<li class="banner__slide_item">
-                        	<div class="banner__offer_content"> 
-                            	<div class="inner__text_header">
-                                	<span class="text__header_span">Газовые котлы</span>
+    <div class="banner__content_inner banner__content_slide banner__second_room">
+    	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
+        <div class="container">
+            <div class="banner__inner_content">
+                <div class="banner__offer">
+                    <ul class="banner__slide_list banner__second-slide_list">
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Инсталяции</span>
                                 </div>
-                            	<div class="offer__inner_buttons">
+                                <div class="offer__inner_buttons">
                                 	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                    <a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
-                            	</div>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
                             </div>
-                            <div class="slide__item__inner">
-                            	<div class="slide__item_img-wrap">
-                                	<img src="{$THEME}images/banner/for_banner_item1.png" alt="Viessman VITODENS 100-W WB1C258 35 кВт одноконтурный)">
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item15.png" alt="Инсталляция TECEbase">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Инсталляция TECEbase</a>
+                                        <div class="slide__item_price">Цена: 35 487 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                    </div>
                                 </div>
-                            	<div class="slide__item_content">
-                                	<a href="#" class="slide__item_title">Viessman VITODENS 100-W WB1C258 35 кВт (одноконтурный)</a>
-                            		<div class="slide__item_price">Цена: 35 487 грн </div><a href="#" class="slide__item_link">Подробнее </a>
-                            	</div>
-                           </div>
-						</li>
-					</ul>
-				</div>
-				<div class="right__column_image"><img src="{$THEME}images/banner/for_banner2.png" alt="Газовые котлы"></div>
-			</div>
-		</div>
-	</div>
-	<div class="banner__content_inner banner__content_slide">
-       	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
-		<div class="container">
-			<div class="banner__inner_content">
-				<div class="banner__offer">
-					<div class="banner__offer_content"> 
-						<div class="inner__text_header"><span class="text__header_span">Газовые котлы</span></div>
-						<div class="offer__inner_buttons">
-                       		<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                           	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
-                       	</div>
-					</div>
-                    <ul class="banner__slide_list">
-                       <li class="banner__slide_item">
-                           <div class="slide__item__inner">
-                               	<div class="slide__item_img-wrap">
-                                   	<img src="{$THEME}images/banner/for_banner_item1.png" alt="Viessman VITODENS 100-W WB1C258 35 кВт одноконтурный)">
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Радиаторы отопления</span>
                                 </div>
-                               	<div class="slide__item_content">
-                                   	<a href="#" class="slide__item_title">Viessman VITODENS 100-W WB1C258 35 кВт (одноконтурный)</a>
-                               		<div class="slide__item_price">Цена: 35 487 грн </div><a href="#" class="slide__item_link">Подробнее </a>
-                               	</div>
-                           </div>
-						</li>
-					</ul>
-				</div>
-				<div class="right__column_image"><img src="{$THEME}images/banner/for_banner2.png" alt="Газовые котлы"></div>
-			</div>
-		</div>
-	</div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="{shop_url('category/radiatory-i-vnutripolnye-konvektory/stalnye-radiatory')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                            {$banprod = getProduct(58532)}
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Радиаторная арматура </span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="{shop_url('category/zaporno-reguliruiushchaia-armatura/termogolovki')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                            {$banprod = getProduct(52238)}
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Солнечные коллекторы</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item12.png" alt="Плоский солнечный коллектор Heliomax arfa 2.0-Mm-K">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Плоский солнечный коллектор Heliomax arfa 2.0-Mm-K </a>
+                                        <div class="slide__item_price">Цена: 10 567 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Солнечные коллекторы</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item13.png" alt="Гофротруба helioflex с термоизоляцией">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Гофротруба helioflex с термоизоляцией</a>
+                                        <div class="slide__item_price">Цена: 10 567 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Инсталяции</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item15.png" alt="Инсталляция TECEbase">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Инсталляция TECEbase</a>
+                                        <div class="slide__item_price">Цена: 35 487 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right__column_image">
+                	<img src="{$THEME}images/banner/for_banner3.png" alt="Инсталяции">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner__content_inner banner__content_slide banner__third_room">
+    	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
+        <div class="container">
+            <div class="banner__inner_content">
+                <div class="banner__offer">
+                    <ul class="banner__third-slide_list banner__inner_list">
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Tермостаты и программаторы </span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item14.png" alt="Комнатный термостат TECH EU-280">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Комнатный термостат TECH EU-280 </a>
+                                        <div class="slide__item_price">Цена: 35 487 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Внутрипольные конвекторы</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="{shop_url('category/radiatory-i-vnutripolnye-konvektory/vnutripolnye-konvektory')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                            {$banprod = getProduct(50635)}
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Распределительные коллекторы</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="{shop_url('category/raspredelitelnye-kollektory')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                            {$banprod = getProduct(28146)}
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Трубы для отопления</span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="{shop_url('category/truby')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                            {$banprod = getProduct(27913)}
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="banner__slide_item">
+                            <div class="banner__offer_content"> 
+                                <div class="inner__text_header">
+                                	<span class="text__header_span">Tермостаты и программаторы </span>
+                                </div>
+                                <div class="offer__inner_buttons">
+                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                                	<a href="#" class="banner__btn banner__btn_catalog">В каталог</a>
+                                </div>
+                            </div>
+                            <div class="banner__slide_item-content">
+                                <div class="slide__item__inner">
+                                    <div class="slide__item_img-wrap">
+                                    	<img src="{$THEME}images/banner/for_banner_item14.png" alt="Комнатный термостат TECH EU-280">
+                                    </div>
+                                    <div class="slide__item_content">
+                                    	<a href="#" class="slide__item_title">Комнатный термостат TECH EU-280 </a>
+                                        <div class="slide__item_price">Цена: 35 487 грн </div>
+                                        <a href="#" class="slide__item_link">Подробнее </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right__column_image">
+                	<img src="{$THEME}images/banner/for_banner4.png" alt="Tермостаты и программаторы">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

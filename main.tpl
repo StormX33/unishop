@@ -44,7 +44,6 @@
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
         <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
-    <link rel="stylesheet" href="{$THEME}assets/css/temp_style.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
 	<script src="{$THEME}assets/js/bootstrap.min.js"></script>
     <!--
