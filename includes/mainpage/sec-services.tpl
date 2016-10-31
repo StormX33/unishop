@@ -8,8 +8,10 @@
                 <div class="item__content_text">
                     Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                 </div>
-                <a href="/uslugi" class="item__content_link">Подробнее об услуге</a>
-                <a href="{site_url('callbacks')}?subj=3" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent">Заказать бесплатный замер </a>
+                <a href="/uslugi" class="item__content_link">Подробнее об услуге  </a>
+                <a href="{site_url('callbacks')}?subj=3" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent"> 
+                    <span class="btn__accent_span">Заказать бесплатный замер </span>
+                </a>
             </div>
             <div class="services__description_wrap">
                 <div class="services__description_inner"> 
@@ -61,11 +63,9 @@
                 <h3 class="item__title"> <span class="item__title_span">Для профессионалов </span>Говорим на одном языке </h3>
                 <div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
                 <a href="#" class="item__content_link">Подробнее об услуге </a>
-                {if !$CI->dx_auth->is_logged_in()}
-                <a href="{site_url('callbacks')}?subj=6" class="submit__btn_accent" data-modal="callbacks_modal" rel="nofollow">Начать сотрудничество</a>
-                {else:}
-                <a href="{shop_url('profile')}" class="submit__btn_accent" rel="nofollow">В WT-PROF</a>
-                {/if}
+                <a href="{site_url('auth/register')}" class="submit__btn_accent" data-modal="register_popup" rel="nofollow">
+                    <span class="btn__accent_span">Начать сотрудничество</span>
+                </a>
             </div>
             <div class="item__image_wrap"></div>
         </div>
@@ -75,7 +75,9 @@
                 <h3 class="item__title"> <span class="item__title_span"> Для дилеров </span>С нами выгодно  </h3>
                 <div class="item__content_text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
                 <a href="#" class="item__content_link">Подробнее об услуге  </a>
-                <a href="{site_url('callbacks')}?subj=4" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent">Узнать свою скидку </a>
+                <a href="{site_url('callbacks')}?subj=4" data-modal="callbacks_modal" rel="nofollow" class="submit__btn_accent">
+                    <span class="btn__accent_span">Узнать свою скидку</span> 
+                </a>
             </div>
             <div class="services__description_wrap">
                 <div class="services__description_inner"> 

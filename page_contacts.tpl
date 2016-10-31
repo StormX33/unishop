@@ -5,4 +5,4 @@
     </div><!-- /.main-content -->
 </div>
    
- {view('includes/sections.tpl')}
+{view('includes/sections.tpl')}

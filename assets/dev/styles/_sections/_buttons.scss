@@ -1,43 +1,168 @@
-.submit__btn_accent{
-    @include inlineblock;
+.main__button{
+    @include inlineblock();
+    @include border-radius(3px);
     text-align: center;
     font-family: HeliosCondRegular, arial;
     font-size: em(21px);
-    color: $main-color;
-    background: $nav-bg;
     padding: 14px;
-    -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
-    -moz-box-shadow:    0px 3px 0px 0px rgba(166, 18, 11, 1);
-    box-shadow:         0px 3px 0px 0px rgba(166, 18, 11, 1);
     white-space: nowrap;
     cursor: pointer;
-    @include transition(all 0.2s ease-in-out);
-    &:hover, &:active, &:focus{
-        color: $main-color;
-    }
-    &:hover{
-        background: #ce1d1b;
-    }
-    &:active{
-        background: darken(#ce1d1b, 3%);
-    }
 }
+.submit__btn_accent{
+    @extend .main__button;
+}
+.feedback-submit{
+   font-family: 'HeliosCondBold', arial; 
+}
+
+//PRODUCT BUY
+.products__buy-btn,
+.product-buy__btn--in-cart,
+.submit__btn_accent,
 .submit__btn_main{
-    @extend .submit__btn_accent;
-    font-size: em(18px);
-    color: $title-color-blue;
-    background: #fff;
-    box-shadow: none;
-    padding: 12px 47px;
-    border: 1px solid $title-color-blue;
-    min-width: 190px;
-    &:hover, &:active, &:focus{
-        background: $title-color-blue;
-        border: 1px solid #fff;
-        color: #fff;
+    color: $main-color;
+    @include transition(opacity 0.25s ease-out);   
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;   
+    @include border-radius(3px);
+    font-family: 'HeliosCondBold', arial;
+    &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include transition(opacity 0.25s ease-out);  
+        z-index: 2;
+        opacity: 0;
+        @include border-radius(3px);
+    }
+    &:hover,
+    &:active,
+    &:focus{
+        color: $main-color;
+        &:after{
+            opacity: 1;
+        }
     }
 }
 
+.submit__btn_main{
+    @extend .main__button;
+    font-size: em(18px);
+    color: $title-color-blue;
+    background: $main-color;
+    padding: 12px 47px;
+    border: 1px solid $title-color-blue;
+    min-width: 190px;
+    &:hover, 
+    &:active, 
+    &:focus{
+        &:after{
+            background: rgb(6,40,65); 
+            background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(15,77,124,1) 100%); 
+            background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%); 
+            background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%);
+        }
+    }
+}
+
+.products__buy-btn,
+.submit__btn_accent{
+    text-align: center;
+    background: rgb(199,21,19); 
+    background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%);
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
+    -moz-box-shadow:    0px 3px 0px 0px rgba(166, 18, 11, 1);
+    box-shadow:         0px 3px 0px 0px rgba(166, 18, 11, 1);
+    &:after{
+        background: rgb(231,37,27); 
+        background: -moz-linear-gradient(top,  rgba(231,37,27,1) 0%, rgba(199,21,19,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
+    }
+}
+.product-buy__btn--in-cart{
+    // line-height: normal;
+    background: rgb(0,180,0); 
+    background: -moz-linear-gradient(top,  rgba(0,180,0,1) 0%, rgba(7,210,7,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(3, 141, 3, 1);
+    -moz-box-shadow:    0px 3px 0px 0px rgba(3, 141, 3, 1);
+    box-shadow:         0px 3px 0px 0px rgba(3, 141, 3, 1);
+    &:after{
+        background: rgb(7,210,7); 
+        background: -moz-linear-gradient(top,  rgba(7,210,7,1) 0%, rgba(0,180,0,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
+    }
+}
+
+.products__buy-span,
+.submit__btn_span,
+.submit__btn_span:before,
+.btn__accent_span{
+    position: relative;
+    z-index: 3;
+}
+.products__buy-content{
+    &:before{
+        content: "";
+        @include inlineblock(middle);
+        @include get-sprite($misc-sprite, catalog_cart);
+        margin-right: 8px;
+        position: relative;
+        z-index: 3;
+    }
+    @include respond-to(mobile){
+        &:before{
+            @include get-sprite($misc-sprite, catalog_cart_mob);
+        }
+    }
+    @include respond-to(extraSmall-screens){
+        &:before{
+            @include get-sprite($misc-sprite, catalog_cart_mob);
+        }
+    }
+}
+
+// PAGE PRODUCT BLUE BUTTONS
+.buy__click_btn-wrap{
+    @include transition(opacity 0.2s ease-out);  
+    position: relative;
+    z-index: 1;
+    background: rgb(6,40,65); 
+    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(9,60,99,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%);
+    background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%); 
+    &:hover{
+       .button-bg{
+            opacity: 1;
+       }
+    }
+}
+.button-bg {
+    display: inline-block;
+    position: absolute;
+    width: 175px;
+    height: 44px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: rgb(6,40,65); 
+    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(15,77,124,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%);
+    z-index: 2;
+    opacity: 0;
+    @include transition(opacity 0.2s ease-out);  
+    border: 1px solid #204664;
+}
 
 // SLISK BUTTON
 .paginations {
@@ -110,7 +235,6 @@
     background: -moz-linear-gradient(top,  #0a2e4b 0%, #073456 100%); 
     background: -webkit-linear-gradient(top,  #0a2e4b 0%,#073456 100%); 
     background: linear-gradient(to bottom,  #0a2e4b 0%,#073456 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2e4b', endColorstr='#073456',GradientType=0 ); /* IE6-9 */
     padding: 8px 30px;
     display: block;
     -webkit-box-shadow: 0px 3px 0px 0px rgba(2, 30, 51, 1);
@@ -121,75 +245,7 @@
     }
 }
 
-//PRODUCT BUY
-.products__buy-btn{
-    @extend  .filter__accept;
-    @include border-radius(3px);
-    font-family: 'HeliosCondBold', arial;
-    text-align: center;
-    background: rgb(199,21,19); 
-    background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-    background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%);
-    -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
-    -moz-box-shadow:    0px 3px 0px 0px rgba(166, 18, 11, 1);
-    box-shadow:         0px 3px 0px 0px rgba(166, 18, 11, 1);
-    @include transition(all 0.3s ease-out);   
-    &:hover,
-    &:active,
-    &:focus{
-        color: $main-color;      
-        background: rgb(199,21,19); 
-        background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-    }
-}
-.products__buy-span{
-    @include inlineblock(middle);
-    &:before{
-        content: "";
-        @include inlineblock(middle);
-        @include get-sprite($misc-sprite, catalog_cart);
-        margin-right: 8px;
-    }
-    @include respond-to(mobile){
-        &:before{
-            @include get-sprite($misc-sprite, catalog_cart_mob);
-            margin-right: 0;
-        }
-    }
-    @include respond-to(extraSmall-screens){
-        &:before{
-            @include get-sprite($misc-sprite, catalog_cart_mob);
-            margin-right: 0;
-        }
-    }
 
-}
-
-// PAGE PRODUCT BLUE BUTTONS
-// $bg-submit:#083354;
-// .buy__click_form-submit{
-//     @include transition(all 0.3s ease-out);
-//     &:hover{
-//         background: lighten($bg-submit, 5%);
-//     }
-// }
-.buy__click_form-submit,
-.submit__btn_accent-blue{
-    @include transition(all 0.3s ease-out);
-    background: rgb(6,40,65); 
-    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(9,60,99,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%);
-    background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%); 
-    &:hover{
-        background: rgb(6,40,65); 
-        background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(15,77,124,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%);
-    }
-}
 
 $login-submit: #083253;
 .login__submit{
@@ -213,6 +269,21 @@ $login-submit: #083253;
     &:hover{
         background: lighten($login-submit, 5%);
     }
+}
+
+.banner__btn{
+    font-size: 20px;
+    @include inlineblock;
+    text-align: center;
+    font-family: "HeliosCondBold", arial;
+    padding: 11px 23px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include  border-radius(10px); 
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow:    0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
 }
 
 /* --------- slick-dots  --------- */
@@ -255,18 +326,3 @@ $login-submit: #083253;
 //         }
 //     }
 // }
-
-.banner__btn{
-    font-size: 20px;
-    @include inlineblock;
-    text-align: center;
-    font-family: "HeliosCondBold", arial;
-    padding: 11px 23px;
-    white-space: nowrap;
-    cursor: pointer;
-    text-transform: uppercase;
-    @include  border-radius(10px); 
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
-    -moz-box-shadow:    0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
-    box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
-}

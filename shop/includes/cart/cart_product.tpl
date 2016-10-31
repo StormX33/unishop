@@ -1,6 +1,6 @@
     <td class="cart__item_image">
-      <a class="product-photo__item product-photo__item--xs" href="{echo shop_url($product_url)}">
-        <img class="product-photo__img" src="{echo $product_image}" alt="{echo $product_title}"
+      <a class="cart__image_link product-photo__item product-photo__item--xs" href="{echo shop_url($product_url)}">
+        <img class="cart_image product-photo__img" src="{echo $product_image}" alt="{echo $product_title}"
              title="{echo $product_title}">
       </a>
     </td>

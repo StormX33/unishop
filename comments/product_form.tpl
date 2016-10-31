@@ -105,9 +105,10 @@
 			<!-- Submit button BEGIN -->
             <div class="form__field form__field--hor feedback__button">
                	<div class="form__label"></div>
-
-               		<input type="submit" class="buy__click_form-submit feedback-submit" value="{tlang('Send')}">
-
+                  <div class="buy__click_btn-wrap">
+               		   <input type="submit" class="buy__click_form-submit feedback-submit" value="{tlang('Send')}">
+                    <span class="button-bg"></span>
+                  </div>
             </div>
             <!-- END Submit button -->
             <input type="hidden" name="action" value="newPost">

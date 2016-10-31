@@ -31,7 +31,7 @@
                   </li>
               {/foreach}
           </ul>
-          <div class="section__content_title-link"><a href="{site_url($loc_cat_url)}" class="submit__btn_main">Все {mb_strtolower(getWidgetTitle('latest_news'))}</a></div>
+          <div class="section__content_title-link"><a href="{site_url($loc_cat_url)}" class="submit__btn_main"><span class="btn__accent_span">Все {mb_strtolower(getWidgetTitle('latest_news'))}</span></a></div>
       </div>
       </div>
 {/if}

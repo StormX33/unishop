@@ -24,7 +24,9 @@
 										<input type="tel" name="phone" placeholder="+38 (_ _ _) _ _ _ - _ _ - _ _" class="feedback__form-input">
 									</div>
 									<div class="feedback__button">
-										<input type="submit" value="Получить консультацию" data-loading-text="Отправка..." data-complete-text="Сообщение отправлено" class="submit__btn_accent feedback-submit">
+										<div class="submit__btn_accent">
+											<input type="submit" value="Получить консультацию" data-loading-text="Отправка..." data-complete-text="Сообщение отправлено" class="feedback-submit">
+										</div>
 									</div>
 								</form>
 							</div>

@@ -17,9 +17,9 @@
            	{/if}
 
         <!-- Add to cart button -->
-		<a style="cursor:pointer" onclick="$(this).submit();" class="products__buy-btn {echo $in_cart > 0 ? 'hidden' : '' }" data-product-button--add data-product-button-item data-product-button--loader><span class="products__buy-span">{tlang('Add to Cart')}</span></a>
+		<a style="cursor:pointer" onclick="$(this).submit();" class="products__buy-btn {echo $in_cart > 0 ? 'hidden' : '' }" data-product-button--add data-product-button-item data-product-button--loader><div class="products__buy-content"><span class="products__buy-span">{tlang('Add to Cart')}</span></div></a>
     	<!-- Already in cart button -->
-        <a class="products__buy-btn product-buy__btn--in-cart {echo $in_cart > 0 ? '' : 'hidden' }" href="{shop_url('cart')}" data-modal="includes/cart/cart_modal" data-product-button--view data-product-button-item><span class="products__buy-span">{tlang('View in Cart')}</span></a>
+        <a class="products__buy-btn product-buy__btn--in-cart {echo $in_cart > 0 ? '' : 'hidden' }" href="{shop_url('cart')}" data-modal="includes/cart/cart_modal" data-product-button--view data-product-button-item><div class="products__buy-content"><span class="products__buy-span">{tlang('View in Cart')}</span></div></a>
 		<input type="hidden" name="redirect" value="cart">
       	{form_csrf()}
         </div>

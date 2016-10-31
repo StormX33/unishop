@@ -25,13 +25,17 @@
     			<!-- Modal Footer -->
     			{if count($items) > 0}    
     				<div class="popup_footer">
-        				<div class="pull-left">
-          					<button class="submit__btn_accent cart__return_link" type="reset" data-modal-close>{tlang('Continue Shopping')}</button>
-        				</div>
-        				<div class="pull-right">
-          					<a class="submit__btn_accent" href="{shop_url('cart')}" data-button-loader="button">
-            					<span>{tlang('Proceed to checkout')}</span>
-          					</a>
+                    <div class="feedback__button pull-left">
+                      <div class="product-buy__btn--in-cart">
+            					   <button class="feedback-submit" type="reset" data-modal-close>{tlang('Continue Shopping')}</button>
+                      </div>
+                    </div>
+        				<div class="feedback__button  pull-right">
+                    <div class="submit__btn_accent">
+            					<a class="feedback-submit" href="{shop_url('cart')}" data-button-loader="button">
+              					<span>{tlang('Proceed to checkout')}</span>
+            					</a>
+                    </div>
         				</div>
     				</div>
     			{/if}

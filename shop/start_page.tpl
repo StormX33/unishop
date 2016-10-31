@@ -5,12 +5,12 @@
 {view ('includes/mainpage/sec-advatnages.tpl')}
 {widget('projects')}
 <section class="articles">
-    <div class="container">
-        {widget('latest_news')}
-        {widget('latest_sales')}
-    </div>
+	<div class="container">
+		{widget('latest_news')}
+		{widget('latest_sales')}
+	</div>
 </section>
-{view ('includes/mainpage/sec-map.tpl')}				
+{view ('includes/mainpage/sec-map.tpl')}	
 {if widget('start_page_seo_text') && $CI->core->core_data['data_type'] == 'main'}
 	<article class="description__page">
 		<div class="description__page_wrapper">

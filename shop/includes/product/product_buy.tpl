@@ -31,8 +31,9 @@
            data-product-button-item>
         <button class="products__buy-btn" type="submit"
                 data-product-button--loader>
-            <span class="products__buy-span">{tlang('Add to Cart')}</span>
-
+            <div class='products__buy-content'>
+              <span class="products__buy-span">{tlang('Add to Cart')}</span>
+            </div>
           <i class="button--loader hidden"
              data-button-loader="loader"></i>
         </button>
@@ -43,7 +44,11 @@
            data-product-button--view
            data-product-button-item>
         <a class="product-buy__btn product-buy__btn--in-cart" href="{shop_url('cart')}"
-           data-modal="includes/cart/cart_modal">{tlang('View in Cart')}</a>
+           data-modal="includes/cart/cart_modal">
+            <div class='products__buy-content'>
+              <span class="products__buy-span">{tlang('View in Cart')}</span>
+            </div>
+        </a>
       </div>
 
       <input type="hidden" name="redirect" value="cart">
