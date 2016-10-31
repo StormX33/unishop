@@ -1,18 +1,34 @@
 <div class="modal-wrapper">
 {$subj = $_GET['subj']}
+                {if $subj == 2}
+                {$headertext = 'Получить консультацию'}
+                {/if}
+                {if $subj == 3}
+                {$headertext = 'Заказать бесплатный замер'}
+                {/if}
+                {if $subj == 4}
+                {$headertext = 'Узнать свою скидку'}
+                {/if}
+                {if $subj == 5}
+                {$headertext = 'Расчет объекта'}
+                {$imgname = 'for_calc'}
+                {$buttontext = 'Заказать просчет'}
+                {/if}
+                {if $subj == 6}
+                {$headertext = 'Начать сотрудничество'}
+                {$imgname = 'for_popup2'}
+                {$buttontext = 'Оставить заявку'}
+                {/if}
+
 	<div class="remodal remodal-is-initialized remodal-is-opened">
 	<!-- Modal Header -->
 		<header class="popup_header">
 			<button class="popup-window-close" data-modal-close></button>
             
-			<div class="popup__header_img-wrap"><img src="{$THEME}images/icons/popup/{echo $subj == 5 ? 'for_calc' : 'for_popup1'}.png" /></div>
+			<div class="popup__header_img-wrap"><img src="{$THEME}images/icons/popup/{echo $imgname ? $imgname : 'for_popup1'}.png" /></div>
 			<div class="popup__header_title">
 				<h3 class="popup__header_title-text">
-                {if $subj == 1}{tlang('Request a Call back')}{/if}
-                {if $subj == 2}Получить консультацию{/if}
-                {if $subj == 3}Заказать бесплатный замер{/if}
-                {if $subj == 4}Узнать свою скидку{/if}
-                {if $subj == 5}Расчет объекта{/if}
+                	{echo $headertext ? $headertext : tlang('Request a Call back')}
                 </h3>
 			</div>
 		</header>
@@ -32,17 +48,17 @@
                       <!-- User Phone field -->
                       {view('includes/forms/input-base.tpl', [
                         'placeholder' => tlang('Phone number'),
-                        'type' => 'text',
+                        'type' => 'tel',
                         'name' => 'Phone',
                         'value' => get_value('Phone'),
                         'required' => true
                       ])}
-                      {if $subj == 5} 
+                      {if $subj == 5 || $subj == 6} 
 						{view('includes/forms/input-base.tpl', [
                           'placeholder' => tlang('E-mail'),
                           'type' => 'email',
-                          'name' => 'email',
-                          'value' => get_value('email'),
+                          'name' => 'Email',
+                          'value' => get_value('Email'),
                           'required' => true
                            ])}
                       {/if}
@@ -53,13 +69,13 @@
     <!-- /.modal__content -->
 				<div class="feedback__button">
 					{if !$success}
-						<input class="submit__btn_accent feedback-submit" type="submit" value="{echo $subj == 5 ? 'Заказать просчет' : tlang('Call back')}">
+						<input class="submit__btn_accent feedback-submit" type="submit" value="{echo $buttontext ? $buttontext : tlang('Call back')}">
 					{else:}
                     	<button class="submit__btn_accent feedback-submit" type="reset" data-modal-close>{tlang('Close')}</button>
         			{/if}
                 </div>
     <input type="hidden" name="template" value="callbacks_modal">
-    <input type="hidden" name="subj" value="{$_GET['subj']}">
+    <input type="hidden" name="theme" value="{$_GET['subj']}">
     {form_csrf()}
   </form>
 </div><!-- /.modal -->

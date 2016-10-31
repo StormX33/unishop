@@ -14,8 +14,5 @@
    </div>
   {/if}
   {if $model->firstVariant->getDiscountPercent()}
-    <i class="product-photo__label product-photo__label--discount">
 			<span class="product-photo__label-text">-{echo $model->firstVariant->getDiscountPercent()}%</span>
-			<svg class="svg-icon"><use xlink:href="#svg-icon__new"></use></svg>
-		</i>
   {/if}

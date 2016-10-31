@@ -11,6 +11,7 @@
 <td class="cart__item_total">{echo emmet_money($model->getOriginPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
  {/if}
+
  <!-- Total discount -->
  {if $model->getDiscountValue() > 0}
 <tr>
@@ -45,6 +46,7 @@
       {/if}
       </p></td>
 <td class="cart__item_total">
+
 	     <div class="item__total_price">
           {echo emmet_money($model->getFinalPrice(), 'span.cart-price__main-value', '', 'i.cart-price__main-cur')}
         </div>
@@ -58,6 +60,7 @@
             {/foreach}
           </div>
         {/if}
+        
 </td>
 </tr>
   <!-- Gift coupon. Not visible in order view page -->
