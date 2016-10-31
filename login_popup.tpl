@@ -61,13 +61,15 @@
 				{/if}
                   
                 <div class="feedback__button">
-					{if !$success}
-          				<input class="submit__btn_accent feedback-submit" type="submit" value="{tlang('Log in')}">
-          			{else:}
-          				<button class="btn btn--va-m btn-primary" data-profile-button type="button">
-            				<span>{tlang('Logining in...')}</span>
-          				</button>
-                	{/if}
+                <div class="submit__btn_accent">
+  					     {if !$success}
+            				<input class="feedback-submit" type="submit" value="{tlang('Log in')}">
+            			{else:}
+            				<button class="btn btn--va-m btn-primary" data-profile-button type="button">
+              				<span>{tlang('Logining in...')}</span>
+            				</button>
+                  	{/if}
+                </div>
 <!--         
           			{if !$success}
           				<a class="feedback__form_link" href="{site_url('auth/forgot_password')}">{tlang('Forgot password?')}</a>

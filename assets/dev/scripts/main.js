@@ -226,9 +226,9 @@ var slideShow = (function () {
 }());
 
 $(document).ready(function (){
-    if ($(".filter").length){
-        accordeon.init();
-    }
+    // if ($(".filter").length){
+    //     accordeon.init();
+    // }
     if ($(".cart__list").length){
         accordeon.init();
     }

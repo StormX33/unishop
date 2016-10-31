@@ -18,6 +18,7 @@
                       {view('shop/includes/product/product_rating.tpl', ['model' => $model])}
                     </li>
                     <li class="detail__tools_item">
+                      <a href="#" class="detail__tools_link add__review">Оставить отзыв</a>
                     </li>
                     <li class="detail__tools_item">
                       {module('wishlist')->renderWLButton($model->firstVariant->getId(), ['type' => 'link']);}
@@ -96,49 +97,66 @@
       		<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
            
       	</ul><!-- ./tabs__controls -->
-                           <div class="product__reviews col-right">
-        						<div class="product__reviews_form">
-            						{view('comments/product_form.tpl')}
-            					</div>
-        				</div>
-
+          
         <ul id="description__list" class="description_list">
             <li class="tab__pane pane__tab_characteristics active">
             	<div class="product__description product_characteristics tab__content">
      				{$loc_params = ShopCore::app()->SPropertiesRenderer->renderPropertiesArray($model)}
       				{if count($loc_params) > 0}
-                        <div class="product_characteristics_content col-left">
+                    <div class="product_characteristics_content col-left">
                  			<h3 class="product__description_title">{tlang('All specifications')}</h3>
-                  			<div class="product__description_content">
-      							{view('shop/includes/product/product_properties.tpl', ['items' => $loc_params])}
+                  			<div class="product__description_content short_text box-hide">
+      							     {view('shop/includes/product/product_properties.tpl', ['items' => $loc_params])}
                    			</div>
-                      	</div>
+                        <div class="text-description-more">
+                          <a href="#" class="text-description-more-link short_text_show_link">
+                            <span class="arrow-link-inner">Читать полностью</span>&nbsp;→
+                          </a>
+                      </div>
+                    </div>
                 	{/if}
+                  <div class="product__reviews col-right">
+                    <div class="product__reviews_form">
+                        {view('comments/product_form.tpl')}
+                    </div>
+                  </div>
             	</div>
             </li><!-- ./tab__pane pane__tab_characteristics -->
             {if trim(strip_tags($model->getFullDescription())) != ""}
-				<li class="tab__pane pane__tab_description">
-					<div class="product__description col-left">
-                  		<h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
-        				<div class="product__description_content short_text box-hide">
-        					<div class="description_text">{echo $model->getFullDescription()}</div>
-                  		</div>
-                	</div>
-                	<div class="text-description-more">
-                  		<a href="#" class="text-description-more-link short_text_show_link">
-                      		<span class="arrow-link-inner">Читать полностью</span>&nbsp;→
-                  		</a>
-                	</div>
-              	</li><!-- ./tab__pane pane__tab_description -->
+				    <li class="tab__pane pane__tab_description">
+              <div class="tab__content">
+    					 <div class="product__description col-left">
+                  <h3 class="product__description_title">{tlang('Details')} {echo $model->getName()}</h3>
+          				<div class="product__description_content short_text box-hide">
+          					<div class="description_text">{echo $model->getFullDescription()}</div>
+                  </div>
+                  <div class="text-description-more">
+                    <a href="#" class="text-description-more-link short_text_show_link">
+                      <span class="arrow-link-inner">Читать полностью</span>&nbsp;→
+                     </a>
+                  </div>
+                </div>
+                <div class="product__reviews col-right">
+                  <div class="product__reviews_form">
+                      {view('comments/product_form.tpl')}
+                  </div>
+                </div>
+              </div>
+            </li><!-- ./tab__pane pane__tab_description -->
             {/if}
             {if $model->enable_comments == 1}
       			<li class="tab__pane pane__tab_reviews"> 
-                	<div class="tab__content">
-     					<div class="product__reviews col-left">
-         					{tpl_load_comments()}
-                		</div>
+              <div class="tab__content">
+         					<div class="product__reviews col-left">
+             					{tpl_load_comments()}
+                  </div>
+                  <div class="product__reviews col-right">
+                    <div class="product__reviews_form">
+                        {view('comments/product_form.tpl')}
                     </div>
-              	</li><!-- ./tab__pane pane__tab_reviews -->
+                  </div>
+              </div>
+            </li><!-- ./tab__pane pane__tab_reviews -->
             {/if}
 		</ul><!-- ./description_list -->
 
@@ -150,24 +168,30 @@
             <h3 class="product__buy_title">Купить {echo $model->getName()}</h3>
           </td>
           <td class="produt__offer price__buy_content">
-            <div class="produt__price">
-              <span class="produt__label_price">{tlang('Price')}</span>
-              <span class="current__price">
-                  {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}
-               </span>
-            </div>
-            <div class="produt__price">
-              <span class="old__price">
-                {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
-              </span>
-              {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
-                {if count($loc_additional_prices) > 0}
-                  {foreach $loc_additional_prices as $additional_price}
-                    <span class="current__price_eur">{$additional_price}</span>
-                  {/foreach}
-                {/if}
-            </div>
-          </td>
+            <table cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                    <span class="produt__label_price">{tlang('Price')}</span>
+                </td>
+                <td>
+                    <span class="current__price">
+                        {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}
+                     </span>
+                </td>
+                <td>
+                   <span class="old__price">
+                    {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
+                  </span>
+                  {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
+                    {if count($loc_additional_prices) > 0}
+                      {foreach $loc_additional_prices as $additional_price}
+                        <span class="current__price_eur">{$additional_price}</span>
+                      {/foreach}
+                  {/if}
+                </td>
+              </tr>
+            </table>
+           </td>
           <td class="produt__offer produt__funcs-buttons">
             {view('shop/includes/product/product/add_to_cart.tpl', ['parent_quantity' => true])}
           </td>

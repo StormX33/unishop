@@ -45,10 +45,12 @@
                 {/if}
       <!-- /.modal__content -->
   				<div class="feedback__button">
+            <div class="submit__btn_accent">
   					{if !$success}
-  						<input class="submit__btn_accent feedback-submit" type="submit" value="Хочу расчет">
+  						<input class="feedback-submit" type="submit" value="Хочу расчет">
           			{/if}
-                  </div>
+            </div>
+          </div>
       {form_csrf()}
     </form>
     </div>

@@ -114,13 +114,13 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
     backface-visibility: hidden;
 }
 .search-nav__inner-link--active{color:#fff;background:#e42826;border-bottom:1px solid transparent}
-.product-buy__btn--in-cart{
+/*.product-buy__btn--in-cart{
 	padding: 5px 15px !important;
     background: #a7a7a7;
     -webkit-box-shadow: 0px 3px 0px 0px #6d6d6d;
     -moz-box-shadow: 0px 3px 0px 0px #6d6d6d;
     box-shadow: 0px 3px 0px 0px #6d6d6d;
-}
+}*/
 .contacts__link_span{
 	display:inline-block;
 }
@@ -214,6 +214,7 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
     width: 100%;
     font-size: 24px;
     padding: 0 10px;
+    resize: none;
 }
 .page__page .form-wrap{
     margin-bottom: 40px;

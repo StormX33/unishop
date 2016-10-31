@@ -108,9 +108,11 @@
           {/if}
 	</div>
 </div>  
-</div>  
-
-          <button class="products__buy-btn" type="submit" value="{tlang('Confirm your order')}" data-cart-checkout-form-button>{tlang('Confirm your order')}</button>
+</div>    <div class="feedback__button">
+            <div class="products__buy-btn">
+              <button class="feedback-submit" type="submit" value="{tlang('Confirm your order')}" data-cart-checkout-form-button>{tlang('Confirm your order')}</button>
+            </div>
+          </div>
 
       <div class="hidden" data-ajax-inject="cart-coupon">
         {if $gift_key}

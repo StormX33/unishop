@@ -95,6 +95,9 @@
 	.feedback-submit{
 	    outline: none;
 	    border: transparent;
+	    background: transparent;
+	    position: relative;
+	    z-index: 3;
 	}
 }
 

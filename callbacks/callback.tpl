@@ -33,8 +33,10 @@
 
             <!-- Submit button -->
 			<div class="feedback__button">
-            	<input class="submit__btn_accent feedback-submit" type="submit" value="Получить консультацию">
-            </div>
+                        <div class="submit__btn_accent">
+            	           <input class="feedback-submit" type="submit" value="Получить консультацию">
+                       </div>
+                  </div>
 			<input type="hidden" name="subj" value="2"/>
             {form_csrf()}
           </form>

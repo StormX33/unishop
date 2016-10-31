@@ -52,12 +52,14 @@
               {/if}
     <!-- /.modal__content -->
 				<div class="feedback__button">
-					{if !$success}
-						<input class="submit__btn_accent feedback-submit" type="submit" value="{echo $subj == 5 ? 'Заказать просчет' : tlang('Call back')}">
-					{else:}
-                    	<button class="submit__btn_accent feedback-submit" type="reset" data-modal-close>{tlang('Close')}</button>
-        			{/if}
-                </div>
+          <div class="submit__btn_accent">
+  					{if !$success}
+  						<input class="feedback-submit" type="submit" value="{echo $subj == 5 ? 'Заказать просчет' : tlang('Call back')}">
+  					{else:}
+                <button class="feedback-submit" type="reset" data-modal-close>{tlang('Close')}</button>
+          			{/if}
+          </div>
+        </div>
     <input type="hidden" name="template" value="callbacks_modal">
     <input type="hidden" name="subj" value="{$_GET['subj']}">
     {form_csrf()}
