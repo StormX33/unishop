@@ -1,5 +1,5 @@
 {$categories_list = get_sub_categories($cat_id)}
-<div id="category__title" class="sidebar__title">
+<div class="sidebar__title">
   {if isset($cat_title_class)}
     <i class="title-cat {$cat_title_class}" aria-hidden="true"></i>
     {/if}

@@ -161,42 +161,44 @@
 		</ul><!-- ./description_list -->
 
     </div><!-- ./description_main_col-left -->
-  	<div class="product__buy table-responsive">
-      <table  cellpadding="0" cellspacing="0">
-        <tr>
-          <td class="product__buy_header">
-            <h3 class="product__buy_title">Купить {echo $model->getName()}</h3>
-          </td>
-          <td class="produt__offer price__buy_content">
-            <table cellpadding="0" cellspacing="0">
-              <tr>
-                <td>
-                    <span class="produt__label_price">{tlang('Price')}</span>
-                </td>
-                <td>
-                    <span class="current__price">
-                        {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}
-                     </span>
-                </td>
-                <td>
-                   <span class="old__price">
-                    {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
-                  </span>
-                  {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
-                    {if count($loc_additional_prices) > 0}
-                      {foreach $loc_additional_prices as $additional_price}
-                        <span class="current__price_eur">{$additional_price}</span>
-                      {/foreach}
-                  {/if}
-                </td>
-              </tr>
-            </table>
+  	<div class="product__buy">
+      <div class="table-responsive">
+        <table  cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="product__buy_header">
+              <h3 class="product__buy_title">Купить {echo $model->getName()}</h3>
+            </td>
+            <td class="produt__offer price__buy_content">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                      <span class="produt__label_price">{tlang('Price')}</span>
+                  </td>
+                  <td>
+                      <span class="current__price">
+                          {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}
+                       </span>
+                  </td>
+                  <td>
+                     <span class="old__price">
+                      {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
+                    </span>
+                    {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
+                      {if count($loc_additional_prices) > 0}
+                        {foreach $loc_additional_prices as $additional_price}
+                          <span class="current__price_eur">{$additional_price}</span>
+                        {/foreach}
+                    {/if}
+                  </td>
+                </tr>
+              </table>
            </td>
           <td class="produt__offer produt__funcs-buttons">
             {view('shop/includes/product/product/add_to_cart.tpl', ['parent_quantity' => true])}
           </td>
         </tr>
       </table>
+      </div>
   	</div>
 
   	{widget('products_similar_sidebar')}

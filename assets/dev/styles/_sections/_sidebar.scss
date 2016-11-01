@@ -414,7 +414,12 @@
     }
     .filter{
         border: none;
+    }
+    .sidebar__title{
         border-top: 1px solid #fff;
+        &:last-child{
+            border-top: none;
+        }
     }
     #filter-content{
         display: none;
@@ -477,7 +482,13 @@
     }
     .filter{
         border: none;
+        // border-top: 1px solid #fff;
+    }
+    .sidebar__title{
         border-top: 1px solid #fff;
+        &:last-child{
+            border-top: none;
+        }
     }
     #filter-content{
         display: none;

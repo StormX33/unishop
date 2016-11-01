@@ -499,18 +499,6 @@
         border-bottom: none;
     }
 }
-// .product__description{
-//     padding: 12px 0;
-// }
-// .product__delivery{
-//     padding: 12px 0 18px;
-// }
-// .product__description h3,
-// .product__delivery h3{
-//     margin-bottom: 28px; 
-//     font-size: em(21px);
-//     color: $title-color-blue;
-// }
 .product_characteristics h3{
     margin-bottom: 16px; 
 }
@@ -630,68 +618,111 @@
 // REVIEWS START
 
 .star-voting__wrap{
-    // width: 355px;
+    width: 90%;
     margin: 10px auto 27px;
+    @include respond-to(mobile){
+        width: 100%;
+    } 
 }
-.comments__review_star-big{
-    @include inlineblock(middle);
-    color: $title-color-blue;
-    font-size: 13px;
-    position: relative;
-    padding: 0 1em;
+
+.star-voting__wrap:after {
+  content: "";
+  display: table;
+  clear: both; 
+}
+.star-voting__ico {
+    float: right;
+    padding-left: 2px;
     cursor: pointer;
-    &:before{
-        content:"";
-        display: block;
-        @include get-sprite($misc-sprite, review_big_star_empty);
-    }
-    &:hover{
-        color: lighten($title-color-blue, 10%);
-        &:before{
-            @include get-sprite($misc-sprite, review_big_star_filled);
-        }
+    width: 20%;
+    height: 39px; 
+    font-size: 13px;
+    text-align: center;
+    @include respond-to(mobile){
+        font-size: 11px;
     }
 }
-.comments__review_star-big.bad{
-    &:after{
-        content: attr(data-bad);
-        bottom: -20px;
-        position: absolute;
-        left: 13px;
-    }
+span.rating-text-1,
+span.rating-text-2,
+span.rating-text-3,
+span.rating-text-4,
+span.rating-text-5{
+  word-wrap:normal;
+  white-space: nowrap;
 }
-.comments__review_star-big.not-nice{
-    &:after{
-        content: attr(data-not-nice);
-        bottom: -20px;
-        position: absolute;
-        left: 10px;
-    }
+.star-voting__ico .svg-icon {
+  color: #818181;
 }
-.comments__review_star-big.normal{
-    &:after{
-        content: attr(data-normal);
-        bottom: -20px;
-        position: absolute;
-        left: 0;
-    }
+.star-voting__input {
+  display: none; 
 }
-.comments__review_star-big.nice{
-    &:after{
-        content: attr(data-nice);
-        bottom: -20px;
-        position: absolute;
-        left: 12px;
-    }
+.star-voting__ico:hover .svg-icon,
+.star-voting__ico:hover ~ .star-voting__ico .svg-icon, 
+.star-voting__input:checked ~ .star-voting__ico .svg-icon {
+  color: #FE3A3E; 
 }
-.comments__review_star-big.awesome{
-    &:after{
-        content: attr(data-awesome);
-        bottom: -20px;
-        position: absolute;
-        left: 10px;
-    }
-}
+
+/*# sourceMappingURL=star-voting.css.map */
+
+// .comments__review_star-big{
+//     @include inlineblock(middle);
+//     color: $title-color-blue;
+//     font-size: 13px;
+//     position: relative;
+//     padding: 0 1em;
+//     cursor: pointer;
+//     &:before{
+//         content:"";
+//         display: block;
+//         @include get-sprite($misc-sprite, review_big_star_empty);
+//     }
+//     &:hover{
+//         color: lighten($title-color-blue, 10%);
+//         &:before{
+//             @include get-sprite($misc-sprite, review_big_star_filled);
+//         }
+//     }
+// }
+// .comments__review_star-big.bad{
+//     &:after{
+//         content: attr(data-bad);
+//         bottom: -20px;
+//         position: absolute;
+//         left: 13px;
+//     }
+// }
+// .comments__review_star-big.not-nice{
+//     &:after{
+//         content: attr(data-not-nice);
+//         bottom: -20px;
+//         position: absolute;
+//         left: 10px;
+//     }
+// }
+// .comments__review_star-big.normal{
+//     &:after{
+//         content: attr(data-normal);
+//         bottom: -20px;
+//         position: absolute;
+//         left: 0;
+//     }
+// }
+// .comments__review_star-big.nice{
+//     &:after{
+//         content: attr(data-nice);
+//         bottom: -20px;
+//         position: absolute;
+//         left: 12px;
+//     }
+// }
+// .comments__review_star-big.awesome{
+//     &:after{
+//         content: attr(data-awesome);
+//         bottom: -20px;
+//         position: absolute;
+//         left: 10px;
+//     }
+// }
 
 .review__submit{
     @include border-radius(3px);
@@ -736,7 +767,7 @@
 }
 
 // REVIEWS END
-.product__buy+ table{
+.product__buy{
     border: 1px solid #e8e7eb;
 }
 

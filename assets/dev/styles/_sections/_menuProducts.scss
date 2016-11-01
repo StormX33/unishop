@@ -16,9 +16,12 @@
 	@include respond-to(small-screens){
 		display: none;
 	}
-
+	.section__content{
+		position: relative;
+		padding: 27px 0 50px;
+		border-bottom: 3px solid #0d014d;
+	}
 }
-
 
 .menu__content{
 	// background: #da251c;

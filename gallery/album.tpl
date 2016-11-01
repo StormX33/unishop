@@ -15,7 +15,7 @@
                         	{$item.loc_image_url = $album_url .$item['full_name'];}
 							{$item.loc_thumb_url = $album_url ."_thumbs/" .$item['full_name'];}
 							{$item.loc_filter_desc = strip_tags(trim($item.description));}
-                    		<li class="page__teaser page__sale">
+                    		<li class="page__teaser">
                             <a href="{media_url($item.loc_image_url)}" data-gallery-image-item data-gallery-image-title="{$item.loc_filter_desc}">
                              <!--    <div class="products__item-inner">
                                 	<div class="project__title">

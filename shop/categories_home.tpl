@@ -37,19 +37,25 @@
                 					{/if}
                 				</div>	
                 			</li>
-					{/foreach}
-        		</ul>
-        		<div class="paginations">
-                	<ul class="pagination__list">
-                   		<li class="pagination__item">
-                       		<button class="pagination__button button_prev similar__products_prev"></button>
-                   		</li>
-                   		<li class="pagination__item">
-                       		<button class="pagination__button button_next similar__products_next"> </button>
-                   		</li>
-                	</ul>
+					    {/foreach}
+        		    </ul>
+            		<div class="paginations">
+                    	<ul class="pagination__list">
+                       		<li class="pagination__item">
+                           		<button class="pagination__button button_prev similar__products_prev"></button>
+                       		</li>
+                       		<li class="pagination__item">
+                           		<button class="pagination__button button_next similar__products_next"> </button>
+                       		</li>
+                    	</ul>
+                    </div>
                 </div>
 			</div>
+            <div class="section__content_title-link">
+                <a href="#" class="submit__btn_main">
+                    <span class="btn__accent_span">Все категории</span>
+                </a>
+            </div>
 		</div>
 	</div>
 </section>

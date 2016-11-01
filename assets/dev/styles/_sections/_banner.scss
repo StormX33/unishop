@@ -1,12 +1,10 @@
-.banner{
-    height: 470px;
-    position: relative;
-    overflow: hidden;
-}
 .banner {
     height: 470px;
     position: relative;
     overflow: hidden;
+    @include respond-to(mobile){
+    	height: 360px;
+    }
 	.container {
 		position: absolute;
 		height: 100%;
@@ -120,11 +118,15 @@
 }
 
 .banner__inner_content {
-  width: 1170px;
-  position: absolute;
-  color: $text-color;
-  height: 100%;
-  padding-top: 70px;
+	width: 1170px;
+	position: absolute;
+	color: $text-color;
+	height: 100%;
+	padding-top: 70px;
+	@include respond-to(mobile){
+		padding-top: 30px;
+	} 
+
 	.banner__offer + .right__column_image{
 		display: block;
 		max-width: 614px;
@@ -167,6 +169,9 @@
 	-moz-box-shadow:    0px 5px 5px 0px rgba(151, 155, 158, 1);
 	box-shadow:         0px 5px 5px 0px rgba(151, 155, 158, 1);
 	margin-bottom: 53px;
+	@include respond-to(mobile){
+		margin-bottom: 20px;
+	} 
   }
 }
 .banner__offer{
@@ -179,8 +184,9 @@
 	left: 0;
 	z-index: 10;
 	@include respond-to(mobile) {
-		max-width: 401px;
-		width: 401px;
+		max-width: 300px;
+		width: 300px;
+		padding: 0;
 		left: 50%;
 		@include transform(translate(-50%, 0));
 	}
@@ -219,6 +225,10 @@
 	margin-bottom: 15px;
 	text-align: left;
 	text-transform: uppercase;
+	@include respond-to(mobile){
+		font-size: 62px;
+		line-height: 64px;
+	} 
 }
 .text__header_span{
 	font-family: "HeliosCondRegular", arial;
@@ -228,6 +238,10 @@
 	font-weight: lighter;
 	text-shadow: none;
 	color: #5b626a;
+	@include respond-to(mobile){
+		font-size: 40px;
+		line-height: 42px;
+	} 
 }
 .right__column_image + .banner__offer {
   .offer__text {
@@ -247,7 +261,13 @@
 	.banner__btn{
 		&:first-child{
 			margin-right: 17px;
+			@include respond-to(mobile){
+				margin-right: 7px;
+			} 
 		}
+		@include respond-to(mobile){
+			padding: 11px 10px;
+		} 
 	}
 }
 .banner__btn_order{

@@ -72,34 +72,35 @@
 .products__buy-btn,
 .submit__btn_accent{
     text-align: center;
-    background: rgb(199,21,19); 
-    background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
-    background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%);
+    background: rgb(231,37,27); 
+    background: -moz-linear-gradient(top,  rgba(231,37,27,1) 0%, rgba(199,21,19,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
     -webkit-box-shadow: 0px 3px 0px 0px rgba(166, 18, 11, 1);
     -moz-box-shadow:    0px 3px 0px 0px rgba(166, 18, 11, 1);
     box-shadow:         0px 3px 0px 0px rgba(166, 18, 11, 1);
     &:after{
-        background: rgb(231,37,27); 
-        background: -moz-linear-gradient(top,  rgba(231,37,27,1) 0%, rgba(199,21,19,1) 100%);
-        background: -webkit-linear-gradient(top,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(231,37,27,1) 0%,rgba(199,21,19,1) 100%); 
+        background: rgb(199,21,19); 
+        background: -moz-linear-gradient(top,  rgba(199,21,19,1) 0%, rgba(231,37,27,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(199,21,19,1) 0%,rgba(231,37,27,1) 100%);
+   
     }
 }
 .product-buy__btn--in-cart{
     // line-height: normal;
-    background: rgb(0,180,0); 
-    background: -moz-linear-gradient(top,  rgba(0,180,0,1) 0%, rgba(7,210,7,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
-    background: linear-gradient(to bottom,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
+    background: rgb(7,210,7); 
+    background: -moz-linear-gradient(top,  rgba(7,210,7,1) 0%, rgba(0,180,0,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%);
     -webkit-box-shadow: 0px 3px 0px 0px rgba(3, 141, 3, 1);
     -moz-box-shadow:    0px 3px 0px 0px rgba(3, 141, 3, 1);
     box-shadow:         0px 3px 0px 0px rgba(3, 141, 3, 1);
     &:after{
-        background: rgb(7,210,7); 
-        background: -moz-linear-gradient(top,  rgba(7,210,7,1) 0%, rgba(0,180,0,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
+        background: rgb(0,180,0); 
+        background: -moz-linear-gradient(top,  rgba(0,180,0,1) 0%, rgba(7,210,7,1) 100%); 
+        background: -webkit-linear-gradient(top,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
+        background: linear-gradient(to bottom,  rgba(0,180,0,1) 0%,rgba(7,210,7,1) 100%); 
     }
 }
 
@@ -136,9 +137,9 @@
     @include transition(opacity 0.2s ease-out);  
     position: relative;
     z-index: 1;
-    background: rgb(6,40,65); 
-    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(9,60,99,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%);
+    background: rgb(6,40,65);
+    background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(9,60,99,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%); 
     background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(9,60,99,1) 100%); 
     &:hover{
        .button-bg{
@@ -154,7 +155,7 @@
     top: 0;
     left: 0;
     z-index: 0;
-    background: rgb(6,40,65); 
+    background: rgb(6,40,65);
     background: -moz-linear-gradient(top,  rgba(6,40,65,1) 0%, rgba(15,77,124,1) 100%); 
     background: -webkit-linear-gradient(top,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%); 
     background: linear-gradient(to bottom,  rgba(6,40,65,1) 0%,rgba(15,77,124,1) 100%);

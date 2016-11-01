@@ -90,6 +90,7 @@
 	@include inlineblock();
 	width: 25%;
 	font-size: 16px;
+	border: 1px solid transparent;
 	border-right: 1px solid #e8e7eb;
 	border-bottom: 1px solid #e8e7eb;
 	overflow: hidden;
@@ -117,6 +118,20 @@
 			margin-bottom: 15px;
 			height: auto;
 		} 
+	}
+}
+.category__catalog_content{
+	.category__catalog_item{
+		&:hover{
+	        position: relative;
+	        z-index: 3;
+	        cursor: pointer;
+	        border: 1px solid #5f6b74;
+	        -webkit-box-shadow: 0px 5px 54px 0px rgba(0, 0, 0, 0.73);
+	        -moz-box-shadow:    0px 5px 54px 0px rgba(0, 0, 0, 0.73);
+	        box-shadow:         0px 5px 54px 0px rgba(0, 0, 0, 0.73);
+	        @include transition(box-shadow 0.2s, border 0.2s);
+    	}
 	}
 }
 .category__catalog{
@@ -197,6 +212,7 @@
 	}
 	.category__catalog_list{
 		margin-bottom: 0;
+		padding: 0 18px;
 		.slick-slide img{
 			display: inline;
 		}

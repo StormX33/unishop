@@ -8,7 +8,7 @@
             {view('includes/cat_list.tpl', ['cat_id' => 72, 'cat_title_class' => 'fa fa-tag'])}
         </ul>
     </aside>
-    <div class="content pull-right content__sale">
+    <div class="content content__sale">
         <div class="page__teaser_wrapper">
             {if count($pages) > 0}
                 {foreach $pages as $item}

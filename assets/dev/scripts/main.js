@@ -1,7 +1,7 @@
 var toggleActiveClassClick= (function () {
 
     var _changeActiveClass = function ($this) {
-        $this.closest(".menu__item, .lang__switch_link, .page__pagination_item")
+        $this.closest(".menu__item, .lang__switch_link")
             .addClass("active")
             .siblings()
             .removeClass("active");
@@ -9,7 +9,7 @@ var toggleActiveClassClick= (function () {
 
     return {
         init: function () {
-            $(".menu__item, .lang__switch_link, .page__pagination_item").on("click", function (e) {
+            $(".menu__item, .lang__switch_link").on("click", function (e) {
                 e.preventDefault();
                 _changeActiveClass($(this));
             });
@@ -292,9 +292,9 @@ $(window).on('scroll', function () {
         var wid = $(window).width();
         if (wid < 768) {
             if ($(window).scrollTop() >= headerTopHeight) {
-                $content.css('padding-top', '230px');
+                $content.css('padding-top', '200px');
             } else {
-                $content.css('padding-top', '225px');
+                $content.css('padding-top', '229px');
             }
         }
     });

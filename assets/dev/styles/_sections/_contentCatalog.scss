@@ -13,7 +13,8 @@
     @include clearfix;
 }
 
-.content{
+.content,
+.content__sale{
     float: right;
     width: 860px;
     margin-bottom: 70px;

@@ -47,9 +47,10 @@
                                     <div class="slide__item_content">
                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                           	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                        <span class="products__buy-span">Подробнее</span></a>
                                     </div>
 								</div>
 							</div>
@@ -68,7 +69,8 @@
                                        	<img src="{$THEME}images/banner/for_banner_item2.png" alt="Дренажный тоннель Graf">
                                     </div>
 									<div class="slide__item_content"><a href="#" class="slide__item_title">Дренажный тоннель Graf </a>
-										<div class="slide__item_price">Цена: 25 569 грн </div><a href="#" class="slide__item_link">Подробнее </a>
+										<div class="slide__item_price">25 569 грн </div><a href="#" class="slide__item_link products__buy-btn">
+                      <span class="products__buy-span">Подробнее</span></a>
 									</div>
 								</div>
 							</div>
@@ -87,7 +89,7 @@
                                			<img src="{$THEME}images/banner/for_banner_item3.png" alt="Станция биологической очистки ТОПАС 5">
                                		</div>
                            			<div class="slide__item_content"><a href="#" class="slide__item_title">Станция биологической очистки ТОПАС 5 </a>
-                           				<div class="slide__item_price">Цена: 38 682 грн </div><a href="#" class="slide__item_link">Подробнее </a>
+                           				<div class="slide__item_price">38 682 грн </div><a href="#" class="slide__item_link products__buy-btn">  <span class="products__buy-span">Подробнее</span></a>
                            			</div>
                            		</div>
                            	</div>
@@ -109,9 +111,10 @@
                                     <div class="slide__item_content">
                                        	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                           	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           	 {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
+                                        <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -135,9 +138,10 @@
                                     <div class="slide__item_content">
                                        	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                          	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -159,9 +163,10 @@
                                     <div class="slide__item_content">
                                        	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                          	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
+                                        <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                             	</div>
                             </div>
@@ -183,9 +188,10 @@
                                     <div class="slide__item_content">
                                        	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                          	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                             	</div>
                             </div>
@@ -207,9 +213,10 @@
                                     <div class="slide__item_content">
                                        	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                          	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                        <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                             	</div>
                             </div>
@@ -233,9 +240,10 @@
                                     <div class="slide__item_content">
                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
                                         <div class="slide__item_price">
-                                           	Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
 								</div>
 							</div>
@@ -269,8 +277,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Инсталляция TECEbase</a>
-                                        <div class="slide__item_price">Цена: 35 487 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price"> 35 487 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -293,8 +302,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price">{echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -317,8 +327,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
+                                        <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -340,8 +351,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Плоский солнечный коллектор Heliomax arfa 2.0-Mm-K </a>
-                                        <div class="slide__item_price">Цена: 10 567 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price"> 10 567 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -363,8 +375,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Гофротруба helioflex с термоизоляцией</a>
-                                        <div class="slide__item_price">Цена: 10 567 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price"> 10 567 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -386,8 +399,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Инсталляция TECEbase</a>
-                                        <div class="slide__item_price">Цена: 35 487 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее</a>
+                                        <div class="slide__item_price"> 35 487 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -423,8 +437,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Комнатный термостат TECH EU-280 </a>
-                                        <div class="slide__item_price">Цена: 35 487 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее </a>
+                                        <div class="slide__item_price"> 35 487 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -447,8 +462,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -471,8 +487,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <div class="slide__item_price">{echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -495,8 +512,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">Цена: {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link">Подробнее </a>
+                                        <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
+                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -518,8 +536,9 @@
                                     </div>
                                     <div class="slide__item_content">
                                     	<a href="#" class="slide__item_title">Комнатный термостат TECH EU-280 </a>
-                                        <div class="slide__item_price">Цена: 35 487 грн </div>
-                                        <a href="#" class="slide__item_link">Подробнее </a>
+                                        <div class="slide__item_price">35 487 грн </div>
+                                        <a href="#" class="slide__item_link products__buy-btn">
+                                          <span class="products__buy-span">Подробнее</span></a>
                                     </div>
                                 </div>
                             </div>
