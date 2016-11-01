@@ -25,8 +25,11 @@
 						<li class="pagination__item"><button class="pagination__button projects__button_prev"> </button></li>
 						<li class="pagination__item"><button class="pagination__button projects__button_next"> </button></li>
 					</ul>
-				</div><a href="/gallery" class="submit__btn_main"><span class="btn__accent_span">Все проекты </span></a>
-			</div>
+				</div>
+                <div class="section__content_title-link">
+                    <a href="/gallery" class="submit__btn_main"><span class="btn__accent_span">Все проекты </span></a>
+                </div>
+            </div>
 		</div>
 	</div>
 </section>
