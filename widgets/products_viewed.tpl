@@ -9,6 +9,7 @@
 					<li class="products__item">
           				{view('shop/includes/product/product_cut.tpl', ['model' => $product])}
                     </li>
+                    
 				{/foreach}
 			</ul>
 			<div class="paginations">

@@ -1,4 +1,5 @@
 <div class="products__item-inner">
+
     <div class="product__title">{echo $model->getName()}</div>
 	<div class="products__label_content">
 		{view('shop/includes/product/product_labels.tpl', ['model' => $model])}

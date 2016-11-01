@@ -117,9 +117,13 @@
         	{$content}
         {else:}
         	<article class="content-wrapper {echo $CI->core->core_data['data_type']}__page">
-				<div class="container">
-                {$content}
-                </div>
+				{if $CI->core->core_data['data_type'] != 'page'}
+                	<div class="container">
+                		{$content}
+                	</div>
+                {else:}
+                	{$content}
+                {/if}
             </article>
         {/if}
           	

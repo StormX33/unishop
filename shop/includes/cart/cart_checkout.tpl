@@ -11,13 +11,15 @@
         <div class="contacts__form_widget">
             <div class="check__content_title">
                 <h3 class="check__title_text">{tlang('Contact details')}</h3>
+                {if !$CI->dx_auth->is_logged_in()}
                 <a href="{site_url('auth')}" class="contacts__title_link" data-modal="login_popup" rel="nofollow">
                     {tlang('Am a member WT-Prof')}
                 </a>
+                {/if}
             </div>
               <!-- Name field -->
               {view('includes/forms/input-base.tpl', [
-              'label' => tlang('Name'),
+              'placeholder' => tlang('Name'),
               'type' => 'text',
               'name' => 'userInfo[fullName]',
               'value' => get_value('userInfo[fullName]') ? : $profile['name'],
@@ -27,7 +29,7 @@
     
               <!-- Email field -->
               {view('includes/forms/input-base.tpl', [
-              'label' => tlang('E-mail'),
+              'placeholder' => tlang('E-mail'),
               'type' => 'email',
               'name' => 'userInfo[email]',
               'value' => get_value('userInfo[email]') ? : $profile['email'],
@@ -37,7 +39,7 @@
     
               <!-- Phone field -->
               {view('includes/forms/input-base.tpl', [
-              'label' => tlang('Phone number'),
+              'placeholder' => tlang('Phone number'),
               'type' => 'text',
               'name' => 'userInfo[phone]',
               'value' => get_value('userInfo[phone]') ? : $profile['phone'],
@@ -47,7 +49,7 @@
     
               <!-- Shipping address field -->
               {view('includes/forms/input-base.tpl', [
-              'label' => tlang('Shipping address'),
+              'placeholder' => tlang('Shipping address'),
               'type' => 'text',
               'name' => 'userInfo[deliverTo]',
               'value' => get_value('userInfo[deliverTo]') ? : $profile['address'],
@@ -61,7 +63,7 @@
                 <!-- Text field type. field_type_id == 0 -->
                 {if $field['field_type_id'] == 0}
                   {view('includes/forms/input-base.tpl', [
-                  'label' => $field['field_label'],
+                  'placeholder' => $field['field_label'],
                   'type' => 'text',
                   'name' => 'custom_field['.$field['id'].']',
                 'value' => get_value('custom_field['.$field["id"].']'),
@@ -74,7 +76,7 @@
                   <!-- Textarea field type. field_type_id == 1 -->
                 {else:}
                   {view('includes/forms/textarea-base.tpl', [
-                  'label' => $field['field_label'],
+                  'placeholder' => $field['field_label'],
                   'name' => 'custom_field['.$field['id'].']',
                 'value' => get_value('custom_field['.$field["id"].']'),
                 'required' => $field['is_required'],
@@ -88,7 +90,7 @@
     
               <!-- Comments about order -->
               {view('includes/forms/textarea-base.tpl', [
-              'label' => tlang('Comments about your order'),
+              'placeholder' => tlang('Comments about your order'),
               'name' => 'userInfo[commentText]',
               'value' => get_value('userInfo[commentText]'),
               'rows' => 5,
