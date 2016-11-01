@@ -1,3 +1,4 @@
+<div class="container">
 {$sale = array_key_exists('mod_link', $modules) ? module('mod_link')->getLinkByPage($page.id) : null}
 <div class="content">
   <div class="content__container">
@@ -129,3 +130,4 @@
 
   </div><!-- /.content__container -->
 </div><!-- /.content -->
+</span>

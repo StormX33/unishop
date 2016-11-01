@@ -7,5 +7,7 @@
             </div>
         </div>
     </div>
-    {view ('callbacks/callback.tpl')}
+    <div class="container">
+    	{view ('callbacks/callback.tpl')}
+    </div>
 </section>

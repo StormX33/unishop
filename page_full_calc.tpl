@@ -1,3 +1,4 @@
+<div class="container">
 <div class="main-content">
     <aside class="sidebar pull-right">
       <div class="form-wrap">
@@ -80,3 +81,4 @@
         </div>
     </div>
 </div><!-- /.main-content -->
+</div>

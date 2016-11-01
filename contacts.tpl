@@ -1,3 +1,4 @@
+<div class="container">
 <div class="content">
 	<div class="content__container">
 		<div class="content__header">
@@ -22,3 +23,4 @@
 		{/if}
 	</div><!-- /.content__container -->
 </div><!-- /.content -->
+</div>

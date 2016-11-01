@@ -309,3 +309,33 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
 .arrow-link-inner{
 	white-space:nowrap;
 }
+.page__page>.projects{
+margin-bottom:50px;
+}
+.page__page>.projects .section__wrapper{
+padding:0;
+}
+.page__page>.use{
+margin: 30px 0;
+}
+.content__blog .page__teaser_text p{
+	text-indent:30px;
+}
+.category__page .feedback{
+width: 100%;
+position:relative;
+top:0;
+padding: 20px 10px;
+margin-bottom:30px;
+}
+.category__page .feedback .feedback__title_text{
+	font-size: 1.8em;
+    color: #092e4a;
+    margin-bottom: 15px;
+}
+.category__page .feedback .feedback__text{
+	font-size:16px;
+}
+.category__page .feedback .feedback__form_label{
+    padding: 0 17px;
+}
