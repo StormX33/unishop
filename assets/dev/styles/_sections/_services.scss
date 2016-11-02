@@ -272,6 +272,9 @@
 .services__description_list{
 	font-size: 0;
 	padding: 0 30px;
+	@include respond-to(mobile){
+		padding: 0;
+	}
 }
 
 

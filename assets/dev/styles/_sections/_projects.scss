@@ -53,18 +53,23 @@
 		display: block;
 		overflow: hidden;
 		margin-bottom: 20px;
-		@include respond-to(mobile){
-			width: 80%;
-			margin: 0 auto 20px;
-		} 
 	}
 	.projects__item_image{
-		// width: 100%; 
-		// height: 100%; 
-		// object-fit: cover; 
 		height: 355px;
 		width: auto; 
 	}
+
+	@include respond-to(mobile){
+		.projects_item_link{
+			width: 80%;
+			margin: 0 auto 20px;
+		}
+		.projects__item_title,
+		.project__item_text{
+			width: 80%;
+			margin: 0 auto;
+		}
+	} 
 }
 
 .projects__button_prev{

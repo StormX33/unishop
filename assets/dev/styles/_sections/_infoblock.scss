@@ -48,3 +48,14 @@
 		display: none;
 	}
 } 
+@media screen and (max-width: 992px) and (min-width: 320px){
+	.infoblock__img_wrap{
+		margin: 0;
+	}
+	.infoblock{
+		.container{
+			width: 100%;
+		}
+	}
+}
+

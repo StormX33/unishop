@@ -123,11 +123,13 @@
     @include respond-to(mobile){
         &:before{
             @include get-sprite($misc-sprite, catalog_cart_mob);
+            margin-right: 0;
         }
     }
     @include respond-to(extraSmall-screens){
         &:before{
             @include get-sprite($misc-sprite, catalog_cart_mob);
+            margin-right: 0;
         }
     }
 }

@@ -202,7 +202,7 @@
             font-size: 19px;
             padding: 0 25px 0 10px;
         }
-         &.opened{
+        &.opened{
             .contacts__tel_arrow{
                 &:after{
                     @include get-sprite($misc-sprite, arrow_up_affix);
@@ -672,18 +672,12 @@ li.top__header_nav-item:nth-last-child(1){
     padding-right: 25px;
     padding-bottom: 3px;
     position: relative;
-    // @include respond-to(mobile){
-    //     padding-right: 24px;
-    //     font-size: em(22px);
-    // } 
-    // @include respond-to(small-screens){
-    //     font-size: em(21px);
-    //     padding-right: 25px;
-    // }
-    // @include respond-to(medium-screens){
-    //     font-size: em(21px);
-    //     padding-right: 25px;
-    // }
+    @include respond-to(mobile){
+        padding-bottom: 4px;
+    } 
+    @include respond-to(extraSmall-screens){
+        padding-bottom: 4px;
+    }
     &.opened{
         .contacts__tel_arrow{
             &:after{
@@ -709,6 +703,7 @@ li.top__header_nav-item:nth-last-child(1){
         padding-right: 25px;
     }
 }
+
 .contacts__tel_arrow{
     width: 12px;
     height: 31px;

@@ -91,7 +91,13 @@
 	position: relative;
 	a{
 		display: block;
-		height: 233px;
+		line-height: 228px;
+		vertical-align: middle;
+		text-align: center;
+		height: 230px;
+		@include respond-to(mobile){
+			line-height: normal;
+		} 
 	}
 }
 .item__link_content{
@@ -101,10 +107,28 @@
 	font-family: 'Arial';
 }
 .article__img{
-	display: block;
 	width: 100%;
-	max-height: 100%;
-	@include absolute-center;
+	height: auto;
+	// @include respond-to(mobile){
+	// 	width: auto;
+	// 	height: 233px;
+	// } 
+	@include respond-to(extraSmall-screens){
+		width: auto;
+		height: 230px;
+	}
+	@include respond-to(small-screens){
+		width: auto;
+		height: 230px;
+	}
+	@include respond-to(medium-screens){
+		width: auto;
+		height: 230px;
+	}
+	@media screen and (max-width: 650px) and (min-width: 320px){
+		width: 100%;
+		height: auto;
+	}
 }
 .date__item,
 .date__item_link{

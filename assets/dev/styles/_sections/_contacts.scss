@@ -52,3 +52,27 @@
 .contacts__address{
 	margin-bottom: 30px;
 }
+@include respond-to(mobile){
+	.contacts__item{
+		display: block;
+		width: 100%;
+		border-right: none;
+		min-height: auto;
+	}
+} 
+@include respond-to(extraSmall-screens){
+	.contacts__item{
+		display: block;
+		width: 100%;
+		border-right: none;
+		min-height: auto;
+	}
+}
+@include respond-to(small-screens){
+	.contacts__item{
+		min-height: 265px;
+	}
+	.contacts__address{
+		margin-bottom: 50px;
+	}
+}

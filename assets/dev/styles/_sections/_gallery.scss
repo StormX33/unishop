@@ -124,9 +124,14 @@
     .page__teaser_sale.page__teaser_content{
         margin-left: 0;
     }
+    .page__teaser header{
+       height: 45px;
+       margin-bottom: 0;
+    }
     .page__teaser_title{
         text-align: center;
         font-size: em(21px);
+        margin-bottom: 0;
     }
     .page__teaser_text{
         height: 90px;
@@ -151,8 +156,11 @@
         font-family: 'HeliosCondBold', arial;
     }
     .gallery__item_text{
-        height: 52px;
+        height: 60px;
         overflow: hidden;
+        @include respond-to(wide-screens){
+            height: 52px;
+        }
     }
 }
 
@@ -180,3 +188,25 @@
         overflow: hidden;
     }
 }
+@include respond-to(mobile){
+    .gallery__content{
+       .page__teaser{
+            width: 100%;
+        }
+    }
+} 
+@include respond-to(extraSmall-screens){
+    .gallery__content{
+       .page__teaser{
+            width: 50%;
+        }
+    }
+}
+@include respond-to(small-screens){
+    .gallery__content{
+       .page__teaser{
+            width: 33.33333333%;
+        }
+    }
+}
+
