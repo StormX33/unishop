@@ -52,7 +52,7 @@
                 </div>
 			</div>
             <div class="section__content_title-link">
-                <a href="#" class="submit__btn_main">
+                <a href="{shop_url('categories')}" class="submit__btn_main">
                     <span class="btn__accent_span">Все категории</span>
                 </a>
             </div>

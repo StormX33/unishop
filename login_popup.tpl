@@ -65,7 +65,7 @@
   					     {if !$success}
             				<input class="feedback-submit" type="submit" value="{tlang('Log in')}">
             			{else:}
-            				<button class="btn btn--va-m btn-primary" data-profile-button type="button">
+            				<button class="feedback-submit" data-profile-button type="button">
               				<span>{tlang('Logining in...')}</span>
             				</button>
                   	{/if}
