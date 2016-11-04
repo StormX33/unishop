@@ -273,7 +273,7 @@
 }
 
 @include respond-to(mobile){
-    .remodal__cart{
+    .remodal__product{
         .popup_header{
             padding: 12px 0 12px;
             margin-bottom: 0;
@@ -362,5 +362,57 @@
 //         }
 //     }
 // }
+// корзина попап 
+
+@include respond-to(mobile){
+    .remodal__cart{
+        .popup_header{
+            margin-bottom: 0;
+        }
+        .product-buy__btn--in-cart,
+        .cart__item_quantity-title,
+        .cart__item_quantity,
+        .cart__item_price-title,
+        .cart__item_total{
+            display: none;
+        }
+        .table__cart tfoot{
+            td{
+                &:first-child,
+                &:first-child + td{
+                    display: none;
+                }
+            }
+        }
+        .feedback__button{
+            float: none !important;
+        } 
+    }
+
+} 
+@include respond-to(extraSmall-screens){
+    .remodal__cart{
+        .popup_header{
+            margin-bottom: 0;
+        }
+        .product-buy__btn--in-cart,
+        .cart__item_quantity-title,
+        .cart__item_quantity{
+            display: none;
+        }
+        .table__cart tfoot{
+            td{
+                &:first-child{
+                    display: none;
+                }
+            }
+        }
+        .feedback__button{
+            float: none !important;
+        } 
+    }
+}
+
+
 
 

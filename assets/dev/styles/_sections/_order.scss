@@ -155,3 +155,14 @@
 		width: 60%;
 	}
 }
+@media screen and (max-width: 553px) and (min-width: 320px){
+	.order__page{
+	    .table__cart tfoot{
+	        td{
+	            &:first-child{
+	                display: table-cell;
+	            }
+	        }
+	    }
+	}
+}

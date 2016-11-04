@@ -40,8 +40,6 @@
 {/if}
 <tr>
 <td></td>
-<td></td>
-<td></td>
 <td class="cart__item_total">
       <p>{tlang('Estimated Total')}</p></td>
 <td class="cart__item_total">
