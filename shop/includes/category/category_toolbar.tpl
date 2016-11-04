@@ -20,11 +20,16 @@
 		{$loc_per_page_items = tpl_per_page_array()}
 		{if count($loc_per_page_items) > 1}
 			<div class="sort__title">
-				{tlang('Per page')}: 
+				{tlang('Per page')}:
+                <select class="sort__title sort__title_per_page" form="catalog-form" name="user_per_page" data-catalog-perpage-select> 
 				{foreach $loc_per_page_items as $per_page_item}
-					<span class="sotr__text {if tpl_per_page_selected($per_page_item)}active{/if}">{$per_page_item}</span>
+					<option value="{$per_page_item}" {if tpl_per_page_selected($per_page_item)}selected{/if}{if tpl_per_page_selected($per_page_item, false)}data-catalog-default{/if}>
+                    {$per_page_item}
+                  </option>
 				{/foreach}
-				<span class="sort__span"> </span>
+                <span class="sort__span"> </span>
+                </select>
+				
 			</div>
 		{/if}
 	</li>

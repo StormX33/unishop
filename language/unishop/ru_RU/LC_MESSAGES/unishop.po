@@ -2,8 +2,8 @@
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 03:00+0300\n"
-"PO-Revision-Date: 2016-09-08 03:00+0300\n"
+"POT-Creation-Date: 2016-11-04 02:06+0200\n"
+"PO-Revision-Date: 2016-11-04 02:06+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team:  <>\n"
 "Language: \n"
@@ -18,11 +18,85 @@ msgstr ""
 "X-Poedit-Country: \n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:12
+#: templates/unishop/comments/product_form.tpl:46
+msgid "Your Review"
+msgstr "Ваш Отзыв"
+
+#: templates/unishop/components/TColorScheme/assets/admin/main.tpl:6
+#: templates/unishop/components/TColorScheme/TColorScheme.php:97
+msgid "Color scheme"
+msgstr "Цветовая схема"
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:8
+msgid "Category"
+msgstr "Категория"
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:9
+msgid "Show in column"
+msgstr "Показывать в колонке"
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:14
+msgid "Open all levels"
+msgstr "Открыть все уровни"
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:15
+msgid "Open second level"
+msgstr "Открыть второй уровень"
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:25
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:51
+msgid "Toggle this category"
+msgstr ""
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:28
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:54
+msgid "Expand Category"
+msgstr ""
+
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:32
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:58
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:78
+msgid "Editing category"
+msgstr ""
+
+#: templates/unishop/components/TMenuColumn/TMenuColumn.php:172
+msgid "Menu Column"
+msgstr ""
+
+#: templates/unishop/gallery/index.tpl:3
+msgid "Projects"
+msgstr "Проекты"
+
+#: templates/unishop/shop/includes/product/product_rating.tpl:3
+msgid "pluralize review 1"
+msgstr "Отзыв"
+
+#: templates/unishop/shop/includes/product/product_rating.tpl:3
+msgid "pluralize review 2"
+msgstr "Отзыва"
+
+#: templates/unishop/shop/includes/product/product_rating.tpl:3
+msgid "pluralize review 3"
+msgstr "Отзывов"
+
+#: templates/unishop/widgets/cathit.tpl:84
+#: templates/unishop/widgets/hits.tpl:84
+msgid "Report message"
+msgstr ""
+
+#: templates/unishop/widgets/last_prop_comm.tpl:1
+msgid "Recent reviews"
+msgstr ""
+
+#: templates/unishop/widgets/latest_fotos.tpl:2
+msgid "My last photo"
+msgstr ""
+
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:13
 msgid "Contact details"
 msgstr "Контактная информация"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:14
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:16
 msgid "Am a member WT-Prof"
 msgstr "Состою в WT-Prof"
 
@@ -30,12 +104,15 @@ msgstr "Состою в WT-Prof"
 msgid "Photo"
 msgstr "Фото"
 
-#: templates/unishop/shop/includes/category/category_subnav.tpl:4
+#: templates/unishop/shop/brand.tpl:8
+#: templates/unishop/shop/includes/category/category_subnav.tpl:5
 #: templates/unishop/shop/search.tpl:9
 msgid "Categories"
 msgstr "Категории"
 
-#: templates/unishop/shop/includes/product/product_kit_button.tpl:10
+#: templates/unishop/shop/includes/product/product_kit_button.tpl:11
+#: templates/unishop/widgets/cathit.tpl:75
+#: templates/unishop/widgets/hits.tpl:75
 msgid "Buy"
 msgstr "Купить"
 
@@ -60,39 +137,35 @@ msgstr "Товар"
 msgid "Qty"
 msgstr "Кол-во"
 
-#: templates/unishop/shop/product.tpl:110
-#: templates/unishop/shop/product.tpl:137
+#: templates/unishop/shop/product.tpl:107
 msgid "All specifications"
 msgstr "Все характеристики"
 
 #: templates/unishop/shop/includes/cart/cart_delivery_radio.tpl:25
 #: templates/unishop/shop/includes/cart/cart_summary.tpl:8
 #: templates/unishop/shop/includes/product/product/price.tpl:4
+#: templates/unishop/shop/product.tpl:175
 msgid "Price"
 msgstr "Цена"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:44
+#: templates/unishop/shop/includes/cart/cart_total.tpl:45
 #: templates/unishop/shop/includes/cart/order_total.tpl:38
 msgid "Cart modal total price"
 msgstr "Итого"
 
-#: templates/unishop/shop/includes/profile/order_history.tpl:6
-msgid "Total Price"
-msgstr "К оплате"
-
-#: templates/unishop/smart_filter/main.tpl:12
+#: templates/unishop/smart_filter/main.tpl:14
 msgid "Price range"
 msgstr "Цена"
 
-#: templates/unishop/shop/includes/product/product_cut.tpl:43
+#: templates/unishop/shop/includes/product/product_cut.tpl:54
 msgid "Main characteristics"
 msgstr "Основные характеристики"
 
-#: templates/unishop/smart_filter/main.tpl:2
+#: templates/unishop/smart_filter/main.tpl:3
 msgid "Filter"
 msgstr "Фильтр"
 
-#: templates/unishop/smart_filter/main.tpl:3
+#: templates/unishop/smart_filter/main.tpl:5
 msgid "Reset"
 msgstr "Сбросить"
 
@@ -100,15 +173,11 @@ msgstr "Сбросить"
 msgid "Engineering Center"
 msgstr "Инженерный центр"
 
-#: templates/unishop/includes/header_menu.tpl:12
-msgid "Menu"
-msgstr "Меню"
-
-#: templates/unishop/includes/header_menu.tpl:17
+#: templates/unishop/includes/header_menu.tpl:14
 msgid "Product Catalog"
 msgstr "Каталог товаров"
 
-#: templates/unishop/includes/header_menu.tpl:23
+#: templates/unishop/includes/header_menu.tpl:20
 msgid "Recommended"
 msgstr "Рекомендованые"
 
@@ -116,65 +185,55 @@ msgstr "Рекомендованые"
 msgid "In cart"
 msgstr "В корзине"
 
-#: templates/unishop/shop/start_page.tpl:12
+#: templates/unishop/widgets/brands_top.tpl:5
 msgid "authorized dealer"
 msgstr "официальный диллер"
 
-#: templates/unishop/category_sales.tpl:42
-msgid "Left"
-msgstr "Осталось"
-
-#: templates/unishop/category_sales.tpl:33
-msgid "Offer!"
-msgstr "Акция!"
-
-#: templates/unishop/page_sales.tpl:68
+#: templates/unishop/page_full_sales.tpl:69
 msgid "Sales period"
 msgstr "Период проведения акции"
 
-#: templates/unishop/category_sales.tpl:59
-#: templates/unishop/page_sales.tpl:69
+#: templates/unishop/page_full_sales.tpl:70
 msgid "From"
 msgstr "с"
 
-#: templates/unishop/category_sales.tpl:63
-#: templates/unishop/page_sales.tpl:71
+#: templates/unishop/page_full_sales.tpl:72
 msgid "to"
 msgstr "по"
 
-#: templates/unishop/page_sales.tpl:73
+#: templates/unishop/page_full_sales.tpl:74
 msgid "year"
 msgstr "года"
 
-#: templates/unishop/page_sales.tpl:33
+#: templates/unishop/page_full_sales.tpl:34
 msgid "Sale expires after"
 msgstr "До окончания акции осталось"
 
-#: templates/unishop/page_sales.tpl:46
+#: templates/unishop/page_full_sales.tpl:47
 msgid "pluralize hour 1"
 msgstr "час"
 
-#: templates/unishop/page_sales.tpl:46
+#: templates/unishop/page_full_sales.tpl:47
 msgid "pluralize hour 2"
 msgstr "часа"
 
-#: templates/unishop/page_sales.tpl:46
+#: templates/unishop/page_full_sales.tpl:47
 msgid "pluralize hour 3"
 msgstr "часов"
 
-#: templates/unishop/page_sales.tpl:52
+#: templates/unishop/page_full_sales.tpl:53
 msgid "minutes"
 msgstr "мин"
 
-#: templates/unishop/page_sales.tpl:58
+#: templates/unishop/page_full_sales.tpl:59
 msgid "seconds"
 msgstr "сек"
 
-#: templates/unishop/page_sales.tpl:87
+#: templates/unishop/page_full_sales.tpl:88
 msgid "Description"
 msgstr "Описание"
 
-#: templates/unishop/page_sales.tpl:98
+#: templates/unishop/page_full_sales.tpl:99
 msgid "Sales product list"
 msgstr "Продукты участвующие в акции"
 
@@ -182,25 +241,22 @@ msgstr "Продукты участвующие в акции"
 msgid "Expires after"
 msgstr "Осталось"
 
-#: templates/unishop/category_sales.tpl:47
-#: templates/unishop/page_sales.tpl:39
+#: templates/unishop/page_full_sales.tpl:40
 #: templates/unishop/shop/includes/product/product_sales.tpl:36
 msgid "pluralize day 1"
 msgstr "день"
 
-#: templates/unishop/category_sales.tpl:47
-#: templates/unishop/page_sales.tpl:39
+#: templates/unishop/page_full_sales.tpl:40
 #: templates/unishop/shop/includes/product/product_sales.tpl:36
 msgid "pluralize day 2"
 msgstr "дня"
 
-#: templates/unishop/category_sales.tpl:47
-#: templates/unishop/page_sales.tpl:39
+#: templates/unishop/page_full_sales.tpl:40
 #: templates/unishop/shop/includes/product/product_sales.tpl:36
 msgid "pluralize day 3"
 msgstr "дней"
 
-#: templates/unishop/shop/includes/product/product_cut.tpl:29
+#: templates/unishop/shop/includes/product/product_cut.tpl:37
 #: templates/unishop/shop/includes/product/product_intro.tpl:104
 #: templates/unishop/shop/includes/product/product_snippet.tpl:113
 msgid "Product has been discontinued"
@@ -233,19 +289,18 @@ msgstr "Спецпредложения"
 msgid "Order date"
 msgstr "Дата заказа"
 
-#: templates/unishop/shop/includes/product/product/add_to_cart.tpl:14
-#: templates/unishop/shop/includes/product/product_buy.tpl:34
+#: templates/unishop/shop/includes/product/product/add_to_cart.tpl:20
+#: templates/unishop/shop/includes/product/product_buy.tpl:35
 msgid "Add to Cart"
 msgstr "Купить"
 
 #: templates/unishop/feedback/feedback.tpl:16
-#: templates/unishop/feedback/feedback_modal.tpl:13
+#: templates/unishop/feedback/feedback_modal.tpl:17
 msgid "Your message has been sent"
 msgstr "Ваше сообщение успешно отправлено! Мы обязательно свяжемся с Вами в ближайшее время."
 
-#: templates/unishop/callbacks/callback.tpl:43
 #: templates/unishop/feedback/feedback.tpl:51
-#: templates/unishop/feedback/feedback_modal.tpl:34
+#: templates/unishop/feedback/feedback_modal.tpl:38
 msgid "Message"
 msgstr "Комментарий"
 
@@ -261,15 +316,15 @@ msgstr "К сожалению, такой страницы не существу
 msgid "Main page"
 msgstr "На главную"
 
-#: templates/unishop/shop/includes/category/category_toolbar.tpl:22
+#: templates/unishop/shop/includes/category/category_toolbar.tpl:23
 msgid "Per page"
 msgstr "Товаров на странице"
 
-#: templates/unishop/shop/includes/category/category_toolbar.tpl:43
+#: templates/unishop/shop/includes/category/category_toolbar.tpl:47
 msgid "List"
 msgstr "Список"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:103
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:106
 msgid "Shipping & payment"
 msgstr "Доставка и оплата"
 
@@ -302,17 +357,16 @@ msgstr "В избранные"
 msgid "Add to list"
 msgstr "Добавить"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:42
+#: templates/unishop/shop/includes/cart/cart_total.tpl:43
 #: templates/unishop/shop/includes/cart/order_total.tpl:36
 msgid "Estimated Total"
 msgstr "К оплате"
 
-#: templates/unishop/callbacks/callback.tpl:6
-#: templates/unishop/callbacks/callbacks_modal.tpl:8
+#: templates/unishop/callbacks/callbacks_modal.tpl:31
 msgid "Request a Call back"
 msgstr "Заказать звонок"
 
-#: templates/unishop/shop/includes/category/category_toolbar.tpl:38
+#: templates/unishop/shop/includes/category/category_toolbar.tpl:42
 msgid "Card"
 msgstr "Таблица"
 
@@ -324,7 +378,7 @@ msgstr "Есть в наличии"
 msgid "Unavailable"
 msgstr "Нет в наличии"
 
-#: templates/unishop/shop/includes/product/product_buy.tpl:65
+#: templates/unishop/shop/includes/product/product_buy.tpl:71
 msgid "Notify when available"
 msgstr "Сообщить о появлении"
 
@@ -337,48 +391,45 @@ msgid "Email when available"
 msgstr "Отправить"
 
 #: templates/unishop/comments/main_form.tpl:29
+#: templates/unishop/comments/product_form.tpl:23
 #: templates/unishop/comments/reply_form.tpl:24
 msgid "Your comment will be published after moderation"
 msgstr "Ваш комментарий будет опубликован после модерации"
 
-#: templates/unishop/comments/comments_api.tpl:10
+#: templates/unishop/comments/comments_api.tpl:7
 msgid "Be the first to review this item. Share your rating and review so that other customers can decide if this is the right item for them."
 msgstr "Пока нет ни одного отзыва. Оставьте отзыв первым"
 
 #: templates/unishop/comments/main_form.tpl:110
+#: templates/unishop/comments/product_form.tpl:94
 #: templates/unishop/comments/reply_form.tpl:81
 #: templates/unishop/feedback/feedback.tpl:62
-#: templates/unishop/feedback/feedback_modal.tpl:43
+#: templates/unishop/feedback/feedback_modal.tpl:47
 #: templates/unishop/forgot_password.tpl:50
 #: templates/unishop/login.tpl:42
 #: templates/unishop/login_popup.tpl:48
-#: templates/unishop/register.tpl:98
+#: templates/unishop/register.tpl:95
+#: templates/unishop/register_popup.tpl:98
 msgid "Security code"
 msgstr "Код"
 
-#: templates/unishop/change_password.tpl:22
+#: templates/unishop/change_password.tpl:16
 msgid "Current password"
 msgstr "Введите текущий пароль"
 
-#: templates/unishop/change_password.tpl:31
+#: templates/unishop/change_password.tpl:29
 msgid "New password"
 msgstr "Введите новый пароль"
 
-#: templates/unishop/change_password.tpl:40
+#: templates/unishop/change_password.tpl:43
 msgid "Reenter new password"
 msgstr "Повторите новый пароль"
 
-#: templates/unishop/comments/comments_api.tpl:25
-msgid "Write a review"
-msgstr "Написать отзыв"
-
-#: templates/unishop/comments/comments_list.tpl:54
+#: templates/unishop/comments/comments_list.tpl:33
 msgid "Reply to this post"
 msgstr "Ответить"
 
 #: templates/unishop/shop/includes/product/product_full_info.tpl:37
-#: templates/unishop/shop/product.tpl:124
-#: templates/unishop/shop/product.tpl:158
 msgid "Customer Reviews"
 msgstr "Отзывы покупателей"
 
@@ -394,25 +445,20 @@ msgstr "Сайт временно отключен"
 msgid "This site is down for maintenance. We will be back shortly, please check back again soon"
 msgstr "Извините, но в настоящее время сайт находится на реконструкции. Зайдите к нам позже"
 
-#: templates/unishop/callbacks/callback.tpl:10
-msgid "Leave a number and we will call you back"
-msgstr "Оставьте свой номер телефона и мы вам перезвоним"
-
-#: templates/unishop/callbacks/callback.tpl:34
-#: templates/unishop/callbacks/callbacks_modal.tpl:26
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:39
+#: templates/unishop/callbacks/callbacks_modal.tpl:50
+#: templates/unishop/page_full_calc.tpl:29
+#: templates/unishop/page_full_services.tpl:41
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:42
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:29
-#: templates/unishop/shop/includes/profile/user_data.tpl:30
 msgid "Phone number"
 msgstr "Ваш телефон"
 
-#: templates/unishop/callbacks/callback.tpl:54
-#: templates/unishop/callbacks/callbacks_modal.tpl:39
+#: templates/unishop/callbacks/callbacks_modal.tpl:73
 msgid "Call back"
 msgstr "Перезвоните мне"
 
-#: templates/unishop/callbacks/callbacks_modal.tpl:41
-#: templates/unishop/feedback/feedback_modal.tpl:61
+#: templates/unishop/callbacks/callbacks_modal.tpl:75
+#: templates/unishop/feedback/feedback_modal.tpl:62
 #: templates/unishop/shop/includes/product/product_photo.tpl:8
 #: templates/unishop/shop/report_appearance.tpl:46
 #: templates/unishop/wishlist/wishlistEdit.tpl:38
@@ -420,18 +466,14 @@ msgstr "Перезвоните мне"
 msgid "Close"
 msgstr "Закрыть"
 
-#: templates/unishop/change_password.tpl:6
 #: templates/unishop/includes/footer_profile.tpl:14
-#: templates/unishop/includes/header_profile.tpl:16
 #: templates/unishop/includes/mobile_profile.tpl:13
 msgid "Change Password"
 msgstr "Изменить пароль"
 
-#: templates/unishop/change_password.tpl:51
-#: templates/unishop/shop/includes/profile/user_data.tpl:80
-msgid "Save changes"
-msgstr "Сохранить изменения"
-
+#: templates/unishop/change_password.tpl:56
+#: templates/unishop/components/TColorScheme/assets/admin/main.tpl:21
+#: templates/unishop/components/TMenuColumn/assets/admin/main.tpl:103
 #: templates/unishop/components/TProperties/assets/admin/main.tpl:4
 msgid "Save"
 msgstr ""
@@ -441,7 +483,6 @@ msgid "Start typing property name here"
 msgstr ""
 
 #: templates/unishop/components/TProperties/assets/admin/main.tpl:13
-#: templates/unishop/shop/includes/profile/order_history.tpl:3
 msgid "Id"
 msgstr "Номер"
 
@@ -457,20 +498,20 @@ msgstr ""
 msgid "Remembered your password?"
 msgstr "Вспомнили пароль?"
 
-#: templates/unishop/includes/footer.tpl:37
+#: templates/unishop/includes/footer.tpl:35
 #: templates/unishop/includes/mobile_frame.tpl:4
 msgid "Store"
 msgstr "Магазин"
 
-#: templates/unishop/includes/footer.tpl:41
+#: templates/unishop/includes/footer.tpl:39
 #: templates/unishop/includes/mobile_frame.tpl:6
 msgid "User menu"
 msgstr "Пользователь"
 
 #: templates/unishop/includes/footer_profile.tpl:11
-#: templates/unishop/includes/header_profile.tpl:12
+#: templates/unishop/includes/header_menu.tpl:55
+#: templates/unishop/includes/header_profile.tpl:18
 #: templates/unishop/includes/mobile_profile.tpl:10
-#: templates/unishop/shop/profile.tpl:6
 msgid "Your Account"
 msgstr "Персональные данные"
 
@@ -496,7 +537,6 @@ msgid "Cart"
 msgstr "Корзина"
 
 #: templates/unishop/login.tpl:63
-#: templates/unishop/login_popup.tpl:89
 msgid "Don't Have an Account?"
 msgstr "У вас  еще нет учетной записи?"
 
@@ -512,7 +552,7 @@ msgstr "Добро пожаловать!"
 msgid "You have successfully authenticated as "
 msgstr "Вы успешно вошли как"
 
-#: templates/unishop/login_popup.tpl:68
+#: templates/unishop/login_popup.tpl:69
 msgid "Logining in..."
 msgstr "Вход..."
 
@@ -526,47 +566,44 @@ msgstr "Назад"
 #: templates/unishop/navs/mobile_nav/level_2/container.tpl:10
 #: templates/unishop/navs/mobile_nav/level_3/container.tpl:10
 #: templates/unishop/widgets/brands.tpl:6
-#: templates/unishop/widgets/latest_news.tpl:9
 msgid "View all"
 msgstr "Смотреть все"
 
-#: templates/unishop/register.tpl:119
+#: templates/unishop/register.tpl:116
+#: templates/unishop/register_popup.tpl:119
 msgid "Already Have an Account?"
 msgstr "Уже зарегистрированы?"
 
 #: templates/unishop/shop/bestseller.tpl:58
-#: templates/unishop/shop/brand.tpl:33
 msgid "Result"
 msgstr "Найдено"
 
 #: templates/unishop/shop/bestseller.tpl:63
-#: templates/unishop/shop/brand.tpl:38
 msgid "of"
 msgstr "из"
 
 #: templates/unishop/shop/bestseller.tpl:66
-#: templates/unishop/shop/brand.tpl:41
 #: templates/unishop/shop/includes/cart/order_view_summary.tpl:21
+#: templates/unishop/shop/includes/profile/order_history.tpl:25
 #: templates/unishop/shop/search.tpl:23
 msgid "pluralize item 1"
 msgstr "товар"
 
 #: templates/unishop/shop/bestseller.tpl:66
-#: templates/unishop/shop/brand.tpl:41
 #: templates/unishop/shop/includes/cart/order_view_summary.tpl:21
+#: templates/unishop/shop/includes/profile/order_history.tpl:25
 #: templates/unishop/shop/search.tpl:23
 msgid "pluralize item 2"
 msgstr "товара"
 
 #: templates/unishop/shop/bestseller.tpl:66
-#: templates/unishop/shop/brand.tpl:41
 #: templates/unishop/shop/includes/cart/order_view_summary.tpl:21
+#: templates/unishop/shop/includes/profile/order_history.tpl:25
 #: templates/unishop/shop/search.tpl:23
 msgid "pluralize item 3"
 msgstr "товаров"
 
 #: templates/unishop/shop/bestseller.tpl:68
-#: templates/unishop/shop/brand.tpl:43
 #: templates/unishop/shop/search.tpl:25
 msgid "in"
 msgstr "в"
@@ -583,27 +620,19 @@ msgstr "Подробности заказа"
 msgid "One Step Checkout"
 msgstr "Оформление заказа"
 
-#: templates/unishop/shop/cart.tpl:24
+#: templates/unishop/shop/cart.tpl:22
 msgid "Cart is currently empty"
 msgstr "Ваша корзина пуста"
 
-#: templates/unishop/shop/cart.tpl:28
+#: templates/unishop/shop/cart.tpl:26
 #: templates/unishop/shop/includes/cart/cart_modal.tpl:22
 msgid "You have no items in your shopping cart"
 msgstr "В корзине нет товаров"
 
-#: templates/unishop/shop/cart.tpl:31
-#: templates/unishop/shop/includes/cart/cart_modal.tpl:29
+#: templates/unishop/shop/cart.tpl:29
+#: templates/unishop/shop/includes/cart/cart_modal.tpl:30
 msgid "Continue Shopping"
 msgstr "Продолжить покупки"
-
-#: templates/unishop/shop/category.tpl:17
-msgid "Show filter"
-msgstr "Показать фильтр"
-
-#: templates/unishop/shop/category.tpl:18
-msgid "Hide filter"
-msgstr "Спрятать фильтр"
 
 #: templates/unishop/shop/compare.tpl:6
 msgid "Product comparasion"
@@ -613,19 +642,19 @@ msgstr "Сравнение товаров"
 msgid "You have no items to compare"
 msgstr "Недостаточно товаров для сравнения"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:49
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:52
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:43
-#: templates/unishop/shop/includes/profile/user_data.tpl:40
+#: templates/unishop/shop/includes/profile/user_data.tpl:27
 msgid "Shipping address"
 msgstr "Адрес доставки"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:90
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:93
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:88
 msgid "Comments about your order"
 msgstr "Комментарий к заказу"
 
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:111
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:111
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:115
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:115
 msgid "Confirm your order"
 msgstr "Подтвердить заказ"
 
@@ -637,7 +666,7 @@ msgstr "Бесплатно от"
 msgid "Shopping cart"
 msgstr "Моя корзина"
 
-#: templates/unishop/shop/includes/cart/cart_modal.tpl:33
+#: templates/unishop/shop/includes/cart/cart_modal.tpl:36
 msgid "Proceed to checkout"
 msgstr "Оформить заказ"
 
@@ -646,37 +675,37 @@ msgstr "Оформить заказ"
 msgid "Subtotal"
 msgstr "Промежуточный итог"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:18
+#: templates/unishop/shop/includes/cart/cart_total.tpl:19
 #: templates/unishop/shop/includes/cart/order_total.tpl:12
 msgid "Your discount"
 msgstr "Ваша скидка"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:26
+#: templates/unishop/shop/includes/cart/cart_total.tpl:27
 #: templates/unishop/shop/includes/cart/order_total.tpl:20
 msgid "Shipping"
 msgstr "Стоимость доставки"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:34
+#: templates/unishop/shop/includes/cart/cart_total.tpl:35
 #: templates/unishop/shop/includes/cart/order_total.tpl:28
 msgid "Gift card"
 msgstr "Подарочный сертификат"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:68
+#: templates/unishop/shop/includes/cart/cart_total.tpl:71
 #: templates/unishop/shop/includes/cart/order_total.tpl:62
 msgid "Your card was successfully applied"
 msgstr "Ваш сертификат был успешно применен!"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:75
+#: templates/unishop/shop/includes/cart/cart_total.tpl:78
 #: templates/unishop/shop/includes/cart/order_total.tpl:69
 msgid "Enter gift card code"
 msgstr "Подарочный сертификат"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:77
+#: templates/unishop/shop/includes/cart/cart_total.tpl:80
 #: templates/unishop/shop/includes/cart/order_total.tpl:71
 msgid "Apply"
 msgstr "Активировать"
 
-#: templates/unishop/shop/includes/cart/cart_total.tpl:83
+#: templates/unishop/shop/includes/cart/cart_total.tpl:86
 #: templates/unishop/shop/includes/cart/order_total.tpl:77
 msgid "Code you entered was not valid"
 msgstr "Введен некорректный код"
@@ -694,12 +723,10 @@ msgid "Shipping method"
 msgstr "Способ доставки"
 
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:64
-#: templates/unishop/shop/includes/profile/order_history.tpl:9
 msgid "Paid successfully"
 msgstr "Оплачено"
 
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:64
-#: templates/unishop/shop/includes/profile/order_history.tpl:9
 msgid "Not paid"
 msgstr "Не оплачено"
 
@@ -733,11 +760,10 @@ msgstr "Удалить"
 
 #: templates/unishop/shop/includes/product/product/rating.tpl:10
 #: templates/unishop/shop/includes/product/product_snippet.tpl:54
-#: templates/unishop/smart_filter/main.tpl:35
+#: templates/unishop/smart_filter/main.tpl:37
 msgid "Brand"
 msgstr "Бренд"
 
-#: templates/unishop/shop/includes/product/product_cart.tpl:11
 #: templates/unishop/shop/includes/product/product_intro.tpl:12
 #: templates/unishop/shop/includes/product/product_snippet.tpl:62
 msgid "Number"
@@ -747,21 +773,20 @@ msgstr "Номер"
 msgid "Change list"
 msgstr "Переместить"
 
-#: templates/unishop/shop/includes/product/product/add_to_cart.tpl:24
-#: templates/unishop/shop/includes/product/product_buy.tpl:45
-#: templates/unishop/shop/includes/product/product_kit_button.tpl:16
+#: templates/unishop/shop/includes/product/product/add_to_cart.tpl:22
+#: templates/unishop/shop/includes/product/product_buy.tpl:49
+#: templates/unishop/shop/includes/product/product_kit_button.tpl:18
 msgid "View in Cart"
 msgstr "В корзине"
 
-#: templates/unishop/shop/includes/product/product_buy.tpl:57
+#: templates/unishop/shop/includes/product/product_buy.tpl:63
 #: templates/unishop/shop/includes/product/variants/radio.tpl:28
 #: templates/unishop/shop/includes/product/variants/select.tpl:23
 msgid "Not available"
 msgstr "Нет в наличии"
 
 #: templates/unishop/shop/includes/product/product_full_info.tpl:7
-#: templates/unishop/shop/product.tpl:98
-#: templates/unishop/shop/product.tpl:147
+#: templates/unishop/shop/product.tpl:129
 msgid "Details"
 msgstr "Описание"
 
@@ -817,18 +842,6 @@ msgstr "до"
 msgid "More than one discount type can be used for your account at the moment. You'll be offered the highest discount rate available for your order."
 msgstr "Вы используете более двух типов скидок. При покупке будет считаться максимальная из них."
 
-#: templates/unishop/shop/includes/profile/order_history.tpl:4
-msgid "Date"
-msgstr "Дата"
-
-#: templates/unishop/shop/includes/profile/order_history.tpl:5
-msgid "Status"
-msgstr "Статус"
-
-#: templates/unishop/shop/includes/profile/order_history.tpl:13
-msgid "Order"
-msgstr "Заказ"
-
 #: templates/unishop/shop/includes/search_and_brand/autocomplete.tpl:14
 msgid "Search by item name or number"
 msgstr "Поиск товаров"
@@ -849,19 +862,11 @@ msgstr "Все результаты поиска"
 msgid "Your order is confirmed"
 msgstr "Ваш заказ подтвержден"
 
-#: templates/unishop/shop/profile.tpl:19
+#: templates/unishop/shop/profile.tpl:65
 msgid "Discount information"
 msgstr "Ваши скидки"
 
-#: templates/unishop/shop/profile.tpl:36
-msgid "Personal information"
-msgstr "Личные данные"
-
-#: templates/unishop/shop/profile.tpl:51
-msgid "Order history"
-msgstr "История заказов"
-
-#: templates/unishop/shop/profile.tpl:57
+#: templates/unishop/shop/profile.tpl:39
 msgid "You haven't made any orders yet"
 msgstr "Вы пока не сделали ни одного заказа"
 
@@ -876,10 +881,6 @@ msgstr "от"
 #: templates/unishop/smart_filter/includes/filter_results.tpl:12
 msgid "max"
 msgstr "до"
-
-#: templates/unishop/shop/includes/product/product_rating.tpl:2
-msgid "Reviews"
-msgstr "Отзывы"
 
 #: templates/unishop/widgets/mobile_langs.tpl:2
 msgid "Language"
@@ -948,82 +949,89 @@ msgstr "К избранным"
 msgid "Page not found!"
 msgstr "Страница не найдена!"
 
-#: templates/unishop/category.tpl:35
-#: templates/unishop/category_sales.tpl:81
-#: templates/unishop/gallery/album.tpl:70
-#: templates/unishop/gallery/index.tpl:56
+#: templates/unishop/category.tpl:50
+#: templates/unishop/category_news.tpl:40
+#: templates/unishop/category_sales.tpl:41
+#: templates/unishop/category_services.tpl:38
+#: templates/unishop/gallery/album.tpl:48
+#: templates/unishop/gallery/index.tpl:47
 #: templates/unishop/shop/includes/category/category_products.tpl:27
 msgid "There are no items to display. Please come back later!"
 msgstr "К сожалению, на странице нет записей."
 
-#: templates/unishop/contacts.tpl:15
-#: templates/unishop/page_full.tpl:18
-#: templates/unishop/page_sales.tpl:120
+#: templates/unishop/contacts.tpl:16
+#: templates/unishop/page_full.tpl:17
+#: templates/unishop/page_full_calc.tpl:72
+#: templates/unishop/page_full_sales.tpl:121
 msgid "Comments"
 msgstr "Комментарии"
 
-#: templates/unishop/comments/comments_api.tpl:18
-msgid "You have to log in to leave a comment."
-msgstr "Только авторизованные пользователи могут оставлять комментарии"
-
-#: templates/unishop/comments/comments_api.tpl:18
 #: templates/unishop/forgot_password.tpl:71
 #: templates/unishop/includes/footer_profile.tpl:4
 #: templates/unishop/includes/mobile_profile.tpl:3
 #: templates/unishop/login.tpl:6
 #: templates/unishop/login_popup.tpl:8
-#: templates/unishop/register.tpl:119
+#: templates/unishop/register.tpl:116
+#: templates/unishop/register_popup.tpl:119
 msgid "Sign in"
 msgstr "Вход"
 
-#: templates/unishop/comments/comments_list.tpl:12
 #: templates/unishop/comments/main_form.tpl:97
+#: templates/unishop/comments/product_form.tpl:36
 msgid "out of 5 stars"
 msgstr "из 5 звезд"
 
-#: templates/unishop/comments/comments_list.tpl:26
+#: templates/unishop/comments/comments_list.tpl:19
 #: templates/unishop/shop/includes/product/product_intro.tpl:142
-#: templates/unishop/shop/product.tpl:182
 msgid "Like"
 msgstr "Нравится"
 
-#: templates/unishop/comments/comments_list.tpl:39
+#: templates/unishop/comments/comments_list.tpl:23
 msgid "Dislike"
 msgstr "Не нравится"
 
 #: templates/unishop/comments/main_form.tpl:31
+#: templates/unishop/comments/product_form.tpl:25
 #: templates/unishop/comments/reply_form.tpl:26
 msgid "Your comment has been successfully published"
 msgstr "Ваш комментарий был успешно опубликован"
 
-#: templates/unishop/callbacks/callback.tpl:25
-#: templates/unishop/callbacks/callbacks_modal.tpl:17
+#: templates/unishop/callbacks/callback.tpl:15
+#: templates/unishop/callbacks/callbacks_modal.tpl:41
 #: templates/unishop/comments/main_form.tpl:40
 #: templates/unishop/comments/main_form.tpl:49
+#: templates/unishop/comments/product_form.tpl:60
+#: templates/unishop/comments/product_form.tpl:70
 #: templates/unishop/comments/reply_form.tpl:38
 #: templates/unishop/comments/reply_form.tpl:46
 #: templates/unishop/components/TProperties/assets/admin/main.tpl:16
 #: templates/unishop/feedback/feedback.tpl:22
-#: templates/unishop/feedback/feedback_modal.tpl:18
-#: templates/unishop/register.tpl:27
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:19
+#: templates/unishop/feedback/feedback_modal.tpl:22
+#: templates/unishop/page_full_calc.tpl:20
+#: templates/unishop/page_full_services.tpl:32
+#: templates/unishop/register.tpl:24
+#: templates/unishop/register_popup.tpl:27
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:22
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:22
-#: templates/unishop/shop/includes/profile/user_data.tpl:13
+#: templates/unishop/shop/includes/profile/user_data.tpl:11
 #: templates/unishop/shop/report_appearance.tpl:20
 msgid "Name"
 msgstr "Имя"
 
+#: templates/unishop/callbacks/callbacks_modal.tpl:58
 #: templates/unishop/comments/main_form.tpl:59
+#: templates/unishop/comments/product_form.tpl:80
 #: templates/unishop/comments/reply_form.tpl:56
 #: templates/unishop/feedback/feedback.tpl:32
-#: templates/unishop/feedback/feedback_modal.tpl:26
+#: templates/unishop/feedback/feedback_modal.tpl:30
 #: templates/unishop/forgot_password.tpl:39
-#: templates/unishop/login.tpl:23
-#: templates/unishop/login_popup.tpl:31
-#: templates/unishop/register.tpl:36
-#: templates/unishop/shop/includes/cart/cart_checkout.tpl:29
+#: templates/unishop/page_full_calc.tpl:37
+#: templates/unishop/page_full_services.tpl:49
+#: templates/unishop/register.tpl:33
+#: templates/unishop/register_popup.tpl:36
+#: templates/unishop/shop/includes/cart/cart_checkout.tpl:32
 #: templates/unishop/shop/includes/cart/order_view_info.tpl:36
-#: templates/unishop/shop/includes/profile/user_data.tpl:23
+#: templates/unishop/shop/includes/profile/user_data.tpl:21
 #: templates/unishop/shop/report_appearance.tpl:29
 msgid "E-mail"
 msgstr "E-mail"
@@ -1038,26 +1046,29 @@ msgid "Review"
 msgstr "Отзыв"
 
 #: templates/unishop/comments/main_form.tpl:115
+#: templates/unishop/comments/product_form.tpl:99
 #: templates/unishop/comments/reply_form.tpl:86
 #: templates/unishop/feedback/feedback.tpl:67
-#: templates/unishop/feedback/feedback_modal.tpl:48
+#: templates/unishop/feedback/feedback_modal.tpl:52
 #: templates/unishop/forgot_password.tpl:55
 #: templates/unishop/login.tpl:47
 #: templates/unishop/login_popup.tpl:53
-#: templates/unishop/register.tpl:103
+#: templates/unishop/register.tpl:100
+#: templates/unishop/register_popup.tpl:103
 msgid "Type the characters you see in this image."
 msgstr "Введите символы с картинки."
 
 #: templates/unishop/comments/main_form.tpl:126
+#: templates/unishop/comments/product_form.tpl:109
 #: templates/unishop/comments/reply_form.tpl:94
 #: templates/unishop/feedback/feedback.tpl:76
-#: templates/unishop/feedback/feedback_modal.tpl:65
+#: templates/unishop/feedback/feedback_modal.tpl:60
 msgid "Send"
 msgstr "Отправить"
 
 #: templates/unishop/feedback/feedback.tpl:6
-#: templates/unishop/feedback/feedback_modal.tpl:5
-#: templates/unishop/includes/footer.tpl:57
+#: templates/unishop/feedback/feedback_modal.tpl:10
+#: templates/unishop/includes/footer.tpl:55
 msgid "Feedback"
 msgstr "Обратная связь"
 
@@ -1081,39 +1092,38 @@ msgstr "Продолжить"
 #: templates/unishop/includes/footer_profile.tpl:7
 #: templates/unishop/includes/mobile_profile.tpl:6
 #: templates/unishop/login.tpl:64
-#: templates/unishop/login_popup.tpl:88
-#: templates/unishop/register.tpl:6
-#: templates/unishop/register.tpl:111
+#: templates/unishop/register.tpl:3
+#: templates/unishop/register.tpl:108
+#: templates/unishop/register_popup.tpl:8
+#: templates/unishop/register_popup.tpl:111
 msgid "Create Account"
 msgstr "Регистрация"
 
-#: templates/unishop/gallery/index.tpl:4
-msgid "Gallery"
-msgstr "Галерея"
-
 #: templates/unishop/login.tpl:32
 #: templates/unishop/login_popup.tpl:39
-#: templates/unishop/register.tpl:78
+#: templates/unishop/register.tpl:75
+#: templates/unishop/register_popup.tpl:78
 msgid "Password"
 msgstr "Пароль"
 
 #: templates/unishop/login.tpl:55
-#: templates/unishop/login_popup.tpl:65
+#: templates/unishop/login_popup.tpl:66
 msgid "Log in"
 msgstr "Войти"
 
 #: templates/unishop/login.tpl:65
 #: templates/unishop/login_popup.tpl:75
-#: templates/unishop/register.tpl:119
+#: templates/unishop/register.tpl:116
+#: templates/unishop/register_popup.tpl:119
 msgid "Forgot password?"
 msgstr "Забыли пароль?"
 
 #: templates/unishop/shop/includes/product/product_intro.tpl:150
-#: templates/unishop/shop/product.tpl:190
 msgid "Share"
 msgstr "Поделиться"
 
-#: templates/unishop/register.tpl:87
+#: templates/unishop/register.tpl:84
+#: templates/unishop/register_popup.tpl:87
 msgid "Reenter password"
 msgstr "Повторите пароль"
 
@@ -1125,34 +1135,34 @@ msgstr "Спасибо за регистрацию!"
 msgid "Congratulations! Your registration has been successful."
 msgstr "Поздравляем! Ваша регистрация прошла успешно."
 
-#: templates/unishop/reset_password.tpl:6
-msgid "Password retrieval"
-msgstr "Восстановление пароля"
-
 #: templates/unishop/widgets/breadcrumbs.tpl:8
 msgid "Home"
 msgstr "Главная"
 
-#: templates/unishop/gallery/includes/gallery_menu.tpl:5
-#: templates/unishop/gallery/includes/gallery_menu.tpl:7
+#: templates/unishop/gallery/includes/gallery_menu.tpl:9
+#: templates/unishop/gallery/includes/gallery_menu.tpl:11
 msgid "All categories"
 msgstr "Все категории"
 
-#: templates/unishop/category.tpl:31
-#: templates/unishop/widgets/latest_news.tpl:32
+#: templates/unishop/category.tpl:46
+#: templates/unishop/category_news.tpl:34
+#: templates/unishop/category_sales.tpl:34
+#: templates/unishop/widgets/latest_news.tpl:27
+#: templates/unishop/widgets/latest_sales.tpl:27
 msgid "Read more"
 msgstr "Подробнее"
 
-#: templates/unishop/includes/footer.tpl:45
+#: templates/unishop/includes/footer.tpl:43
 msgid "Contacts"
 msgstr "Контакты"
 
-#: templates/unishop/includes/footer.tpl:33
+#: templates/unishop/includes/footer.tpl:31
 msgid "Conditions"
 msgstr "Условия"
 
 #: templates/unishop/includes/footer_profile.tpl:29
-#: templates/unishop/includes/header_profile.tpl:19
+#: templates/unishop/includes/header_menu.tpl:59
+#: templates/unishop/includes/header_profile.tpl:22
 #: templates/unishop/includes/mobile_profile.tpl:33
 msgid "Sign out"
 msgstr "Выйти"

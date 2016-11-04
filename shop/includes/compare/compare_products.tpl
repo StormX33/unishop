@@ -21,15 +21,12 @@
       <div class="row row--ib row--scroll row--gutter-collapse">
         {foreach $parent_products as $product}
           {if $product->getCategoryId() == $parent_category.Id}
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <div class="compare__product">
                 {view('shop/includes/product/product_thumb.tpl', [
                 'model' => $product
                 ])}
-                <div class="compare__delete">
-                  <a href="{shop_url('compare/remove/'.$product->getId())}"
-                     class="compare__delete-link">{tlang('Delete item')}</a>
-                </div>
+                  <a href="{shop_url('compare/remove/'.$product->getId())}"class="compare__delete_icon"></a>
               </div>
               <div class="compare__params">
                 {$params = tpl_product_compare_properties($product, $parent_params)}

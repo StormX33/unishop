@@ -341,3 +341,30 @@ margin-bottom:30px;
     padding: 0 17px;
 }
 
+.infoblock__text>.infoblock__span{
+	font-size:32px !important;
+}
+select.sort__title_per_page{
+    position: relative;
+    outline: 0px;
+    -webkit-appearance: button;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: url(../../images/icons/select.png) no-repeat;
+	background-position: right center;
+	cursor:pointer;
+}
+.page__pagination li.active{
+    font-size: 24px;
+    color: #da251c;
+	font-weight: bold;
+    margin-top: -2px;
+}
