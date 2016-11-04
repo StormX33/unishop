@@ -12,7 +12,6 @@
     "jquery-migrate": "~1.4.0",
     "bourbon": "^4.2.7",
     "jquery-ui": "~1.12.0",
-    "jQuery-menu-aim": "https://github.com/banesto/jQuery-menu-aim.git",
     "webfontloader": "^1.6.26",
     "object-fit-images": "*",
     "jQuery.dotdotdot": "^1.8.3"

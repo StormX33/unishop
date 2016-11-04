@@ -150,12 +150,6 @@
     _clickRow: function(e) {
       obj = e.data.obj;
       obj._activate(this);
-
-      // bind close event when submenu content is rendered
-      $(obj.el)
-        .find(obj.options.rowSelector)
-          .find(obj.options.handle)
-            .on('click', { obj: obj }, obj._clickRowHandle);
     },
 
 
@@ -163,10 +157,8 @@
      * Close already opened submenu
      */
     _clickRowHandle: function(e) {
-      obj = e.data.obj;
-      if ($(this).closest('li').hasClass(obj.options.openClassName)) {
-        obj._deactivate();
-        e.stopPropagation();
+      if (!$(this).closest('li').hasClass(obj.options.openClassName)) {
+          e.preventDefault();
       }
     },
 
@@ -395,7 +387,10 @@
 
     _clickTriggerOn: function() {
       $(this.el).find(this.options.rowSelector)
-        .on('click', { obj: this }, this._clickRow);
+        .on('click', { obj: this }, this._clickRow)
+        .end()
+        .find(this.options.rowSelector).find(this.options.handle)
+        .on('click', { obj: this }, this._clickRowHandle);
 
       // hide menu if clicked elsewere
       $(document).on('click', { obj: this }, this._outsideMenuClick);
@@ -404,7 +399,11 @@
     _clickTriggerOff: function() {
       $(this.el)
         .find(this.options.rowSelector)
-          .off('click', this._clickRow);
+          .off('click', this._clickRow)
+        .end()
+        .find(this.options.rowSelector).find(this.options.handle)
+        .off('click', this._clickRowHandle);
+
       $(document).off('click', this._outsideMenuClick);
     },
 

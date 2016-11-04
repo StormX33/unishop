@@ -304,19 +304,46 @@ $(window).on('scroll', function () {
 /*-----------menu----------*/
 $(function() {
     $('.cbp-hrmenu .nav__list').menuAim({
-        triggerEvent:       'hover',
+        triggerEvent:       'both',
         activateCallback:   activate,
         deactivateCallback: deactivate,
         submenuDirection:   'below',
         openClassName:      'cbp-hropen',
-        activationDelay:   200
+        activationDelay:   0
     });
     function activate(row) {
-      $(row).find('.cbp-hrsub').slideDown(400);
+        var $row = $(row),
+            $subItems = $row.find('.cbp-hrsub');
+
+        // Close other menu items
+        $row.siblings('.cbp-hrsub, .cbp-hropen-started').each(function(i, el){
+            deactivate(el);
+        })
+
+        // Indicate that open process is started
+        $row.addClass('cbp-hropen-started');
+
+
+        // Show sub items if present
+        if($subItems.length > 0){
+            $subItems.slideDown(400, function(){
+                $row.removeClass('cbp-hropen-started')
+                    .addClass('cbp-hropen');
+            });    
+        } else{
+            $row.addClass('cbp-hropen');
+        }   
     }
 
     function deactivate(row) {
-      $(row).find('.cbp-hrsub').slideUp(200);
+        var $row = $(row);
+
+        if($row.hasClass('cbp-hropen') || $row.hasClass('cbp-hropen-started')){
+            $row.removeClass('cbp-hropen')
+                .removeClass('cbp-hropen-started')
+                .find('.cbp-hrsub')
+                .slideUp(200);      
+        }
     }
 });
 

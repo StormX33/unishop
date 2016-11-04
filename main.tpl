@@ -26,27 +26,27 @@
 -->	<!--theme styles -->
     
     <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap.min.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap-theme.min.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/font-awesome.min.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick-theme.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/select2.min.css" media="screen, projection, print">
-		<link rel="stylesheet" href="{$THEME}assets/css/remodal.css">
-		<link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
-		<link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
-        <link rel="stylesheet" href="{$THEME}assets/css/svg/svg-icon.css">
-       <link rel="stylesheet" href="{$THEME}assets/css/likes.css">
-         <link rel="stylesheet" href="{$THEME}assets/css/comments.css">
-        <link rel="stylesheet" href="{$THEME}assets/css/shares.css">
-        <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
-        <link rel="stylesheet" href="{$THEME}assets/css/star-voting.css">
-        <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
-		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
-        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">c
-        <link rel="stylesheet" href="{$THEME}assets/css/compare.css">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/bootstrap-theme.min.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/font-awesome.min.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/slick-theme.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/select2.min.css" media="screen, projection, print">
+    <link rel="stylesheet" href="{$THEME}assets/css/remodal.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/remodal-default-theme.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/svg/svg-icon.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/likes.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/comments.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/shares.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/star-voting.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
+    <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/compare.css">
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
-	<script src="{$THEME}assets/js/bootstrap.min.js"></script>
+    <script src="{$THEME}assets/js/bootstrap.min.js"></script>
     <!--
     * Uncomment this file if you want to put custom styles and do not want to use Sass and Gulp
     -->
@@ -153,7 +153,6 @@
 	<script type="text/javascript" src="{$THEME}assets/js/remodal.min.js"></script>
   <script src="{$THEME}assets/js/jquery.magnific-popup.min.js"></script>
   <script src="{$THEME}assets/js/mlsMedia.js"></script>
-  <script src="{$THEME}assets/bower/jQuery-menu-aim/jquery.menu-aim.js"></script>
 	<script src="{$THEME}assets/js/jquery-ui.min.js"> </script>
   <script src="{$THEME}assets/bower/webfontloader/webfontloader.js"></script>
 	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
@@ -163,6 +162,7 @@
   <script src="{$THEME}assets/js/mlsCart.js"></script>
   <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
   <script src="{$THEME}assets/bower/jQuery.dotdotdot/src/jquery.dotdotdot.min.js"></script>
+  <script src="{$THEME}assets/js/jquery.menu-aim.ext.js"></script>
   <script type="text/javascript" src="{$THEME}assets/js/main.js"></script>
   <script src="{$THEME}assets/js/custom.js"> </script>
 
