@@ -1,9 +1,9 @@
 .cbp-hrmenu{
     border-radius: 0;
     margin-bottom: 0;
-    .cbp-hrsub {
-        display: block !important;
-    }
+    // .cbp-hrsub {
+    //     display: block !important;
+    // }
     
     .container{
         @include respond-to(mobile){
