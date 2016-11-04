@@ -39,6 +39,8 @@
 {/if}
 <tr>
     <td></td>
+    <td></td>
+    <td></td>
     <td class="cart__item_total"><p>{tlang('Cart modal total price')}</p></td>
     <td class="cart__item_total">
         <div class="item__total_price">
