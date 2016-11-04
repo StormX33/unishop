@@ -824,7 +824,15 @@ span.rating-text-5{
         font-size: 0;
     }
     .products__buy-btn{
-        margin-left: 5px;
+        // margin-left: 5px;
+        margin-left: 0;
+        display: block;
+        float: right;
+    }
+    .produt__funcs-buttons{
+        .produt__change-count{
+            display: none;
+        }
     }
     .product-buy__btn--in-cart{
         margin-left: 0;

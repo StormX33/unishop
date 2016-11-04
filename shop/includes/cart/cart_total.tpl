@@ -1,7 +1,7 @@
 {if $parent_type == 'order2'}
 {$colspan = 1} 
-<!-- {else:}
-{$colspan = 3} -->
+{else:}
+{$colspan = 3}
 {/if}
 
 {if $model->getOriginPrice() != $model->getFinalPrice()}
