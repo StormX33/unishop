@@ -56,21 +56,3 @@
 		</div>
 	</div>
 </div>
-          <!-- Discount info 
-          {$loc_discount = module('mod_discount/discount_api');}
-          {if $loc_discount->discountsExists() > 0}
-            <div class="content__row">
-              <div class="frame-content">
-                <div class="frame-content__header frame-content__header--sm">
-                  <div class="frame-content__title frame-content__title--sm">{tlang('Discount information')}</div>
-                </div>
-                <div class="frame-content__inner">
-                  <div class="frame-content__row">
-                    {view('shop/includes/profile/discount_info.tpl', [
-                    'discount' => $loc_discount
-                    ])}
-                  </div>
-                </div>
-              </div>
-            </div>
-          {/if}-->

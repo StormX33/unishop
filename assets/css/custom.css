@@ -368,3 +368,20 @@ select.sort__title_per_page{
 	font-weight: bold;
     margin-top: -2px;
 }
+.brand-image{
+	text-align:center;
+	max-height:140px;
+	display:table;
+}
+.brand-image__photo{
+	display:table-cell;
+	vertical-align:middle;
+	height: 70px;
+}
+.brand-image__photo .brand-image__img{
+	width:100%;
+}
+.brand-image__title{
+	text-align:center;
+	display:table-footer-group;
+}

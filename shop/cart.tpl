@@ -6,7 +6,7 @@
                 	<!-- Order cart -->
 					<h3 class="cart__title">{tlang('Order summary')}</h3>
 					<div class="cartForm" data-cart-summary="page" data-cart-summary--url="{shop_url('cart')}">
-                          {view('shop/includes/cart/cart_summary.tpl', [
+                          {view('shop/includes/cart/order_summary.tpl', [
                             'parent_type' => 'order',
                           'parent_coupon' => true
                           ])}

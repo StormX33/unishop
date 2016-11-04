@@ -1,4 +1,4 @@
-<div class="main-title">{echo $model->getName()}</div>
+<div class="main-title" 22>{echo $model->getName()}</div>
 <div class="main-content">
 	<div class="sidebar">
 		<!-- Sub categories -->
