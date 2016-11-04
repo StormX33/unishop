@@ -84,7 +84,7 @@
     </tbody>
   <!-- Gift coupon -->
   <tfoot>
-  {view('shop/includes/cart/order_total.tpl', [
+  {view('shop/includes/cart/cart_total.tpl', [
     'parent_type' => $parent_type,
     'parent_coupon' => $parent_coupon,
     'model' => $cart
