@@ -196,3 +196,11 @@
 	}
 }
 
+@include respond-to(small-screens){
+	.articles__item_link{
+		font-size: 16px;
+	}
+	.date__item{
+		font-size: 14px;
+	}
+}

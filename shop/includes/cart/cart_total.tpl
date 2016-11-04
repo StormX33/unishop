@@ -1,12 +1,14 @@
 {if $parent_type == 'order2'}
 {$colspan = 1} 
-{else:}
-{$colspan = 3}
+<!-- {else:}
+{$colspan = 3} -->
 {/if}
 
 {if $model->getOriginPrice() != $model->getFinalPrice()}
 <tr>
-<td colspan="{$colspan}"></td>
+<td></td>
+<td></td>
+<td></td>
 <td class="cart__item_total">{tlang('Subtotal')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getOriginPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -15,7 +17,9 @@
  <!-- Total discount -->
  {if $model->getDiscountValue() > 0}
 <tr>
-<td colspan="{$colspan}"></td>
+<td></td>
+<td></td>
+<td></td>
 <td class="cart__item_total">{tlang('Your discount')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getDiscountValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -23,7 +27,9 @@
 <!-- Delivery price -->
 {if $model->getDeliveryPrice() > 0}
 <tr>
-<td colspan="{$colspan}"></td>
+<td></td>
+<td></td>
+<td></td>
 <td class="cart__item_total">{tlang('Shipping')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getDeliveryPrice(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>
@@ -31,7 +37,9 @@
     <!-- Gift card code -->
   {if $model->getGiftValue() > 0}
 <tr>
-<td colspan="{$colspan}"></td>
+<td></td>
+<td></td>
+<td></td>
 <td class="cart__item_total">{tlang('Gift card')}</td>
 <td class="cart__item_total">{echo emmet_money($model->getGiftValue(), 'span.cart-price__main-value', '', 'span.cart-price__main-cur')}</td>
 </tr>

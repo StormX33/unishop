@@ -79,9 +79,13 @@
        			&:before{
 					color: transparent;
 	    		}
+	    		&:hover, &:focus{
+                    @include get-sprite($misc-sprite, banner_dot_hover);
+                }
     		}
     		&.slick-active{
 				button{
+					@include get-sprite($misc-sprite, banner_dot_hover);
 	    			&:before{
 						color: transparent;
 	    			}
@@ -350,7 +354,7 @@
 		padding: 0 7px;
 	}
 	.offer__inner_buttons .banner__btn:first-child{
-		margin-right: 33px;
+		margin-right: 27px;
 	}
 	// .banner__offer{
 	// 	max-width: 810px;
@@ -369,9 +373,9 @@
 		-moz-box-shadow:    0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 		box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 	}
-	.inner__text_header{
-		height: 90px;
-	}
+	// .inner__text_header{
+	// 	height: 90px;
+	// }
 	.text__header_span{
 		// font-size: 50px;
 		font-size: 47px;
@@ -428,7 +432,7 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		text-decoration: underline;
+		text-decoration: none;
 		color: $main-color;
 		background: $nav-bg;
 		padding: 0 12px;
@@ -437,6 +441,7 @@
     	&:active,
     	&:focus{
     		color: $main-color;
+    		text-decoration: none;
     	}
 	}
 	.slick-dots{

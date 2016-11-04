@@ -80,6 +80,7 @@
         background: #f1f1f1;
         span{
             color: #a1a1a1;
+            line-height: 30px;
         }
         &:hover, &:active{
             background: darken(#f1f1f1, 5%);

@@ -290,7 +290,7 @@ $(window).on('scroll', function () {
     }
     $(function () {
         var wid = $(window).width();
-        if (wid < 768) {
+        if (wid < 769) {
             if ($(window).scrollTop() >= headerTopHeight) {
                 $content.css('padding-top', '200px');
             } else {

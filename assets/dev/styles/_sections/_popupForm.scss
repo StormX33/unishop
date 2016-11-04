@@ -158,8 +158,9 @@
     }
 }
 .remodal__cart{
-    width: 760px;
+    max-width: 760px;
 }
+
 .popup__cart_form{
     .table>tbody>tr>td, 
     .table>tbody>tr>th, 
@@ -266,3 +267,27 @@
         color: $main-color;
     }
 }
+
+@include respond-to(mobile){
+    .remodal__cart{
+        img.mfp-img{
+            max-height: 200px !important;
+        }
+        .popup__header_title-text{
+            font-size: 20px;
+        }
+        .produt__label_price{
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        .current__price{
+            font-size: 24px;
+        }
+        .produt__funcs-buttons{
+            display: none;
+        }
+        .popup-window-close{
+            top: -7px;
+        }
+    }
+} 

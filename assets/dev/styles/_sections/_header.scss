@@ -898,6 +898,9 @@ li.top__header_nav-item:nth-last-child(1){
         width: 130px;
         height: 72px; 
     }
+    @include respond-to(small-screens){
+        width: 120px;
+    }
 }
 .user__login_link span{
     @include inlineblock(middle);

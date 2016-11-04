@@ -1,36 +1,18 @@
-var accordeon = (function(){
-    var _openSection = function($this){
-        var container = $this.closest(".filter__item"),
-            content = container.find(".filter__content"),
-            otherContant = $this.closest(".filter").find(".filter__content");
+$(document).ready(function() {
+    if ($(".filter").length) {
+        $(".filter__item").addClass("active");
+        
+        $(".filter__title").on("click", function(e) {
+            var $this = $(this),
+                container = $this.closest(".filter__item"),
+                content = container.find(".filter__content");
 
-        if (!container.hasClass("active")){
-            // otherContant.slideUp().closest(".filter__item").removeClass("active");
-
-            container.addClass("active");
-            content.stop(true, true).slideDown();
-        }else{
-            container.removeClass("active");
-            content.stop(true, true).slideUp();
-        }
+            container.toggleClass('active');
+            content.stop(true, true).slideToggle();
+        });
     }
-
-    return {
-        init: function(){
-            $(".filter__title").on("click", function(e){
-                e.preventDefault();
-                _openSection($(this));
-            });
-        }
-    }
-}());
-$(document).ready(function (){
-	var container = $(".filter__item").addClass("active");
-    if ($(".filter").length){
-        accordeon.init();
-    }
-
 });
+
 
 
 
@@ -354,7 +336,7 @@ $(window).on('scroll', function () {
     }
     $(function () {
         var wid = $(window).width();
-        if (wid < 768) {
+        if (wid < 769) {
             if ($(window).scrollTop() >= headerTopHeight) {
                 $content.css('padding-top', '200px');
             } else {

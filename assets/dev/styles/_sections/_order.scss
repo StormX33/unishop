@@ -1,5 +1,5 @@
 .main-title_order{
-	margin: 34px 0 30px;
+	margin: 0 0 30px;
 	h2{
 		font-size: 34px;
 	}
@@ -80,7 +80,78 @@
 			font-family: "HeliosCondRegular", arial;
 		}
 	}
-	.table__cart tfoot tr td{
-		line-height: 41px;
+}
+@include respond-to(mobile){
+	.order__left_collumn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.order__right_collumn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.order__right_collumn-inner{
+		padding-left: 0; 
+	}
+
+} 
+@media screen and (max-width: 391px) and (min-width: 320px){
+	.main-title_order{
+		margin: 0 0 20px;
+	 	h2{
+			font-size: 30px;
+		}
+	}
+	.order__left_collumn{
+		.table>tbody>tr>td{
+			font-size: 16px;
+		}
+	}
+    .order__right_collumn{
+        .table__cart{
+            tbody tr td{
+                padding: 0.3em 0.3em;
+                font-size: 14px;
+                line-height: 16px;
+            }   
+        } 
+    }
+    .table__cart{
+        .cart__item_total{
+            span{
+                font-size: em(16px);
+            }
+        }
+        tfoot .cart__item_total p {
+            font-size: em(16px);
+        }
+    }
+    .table__cart tfoot tr td{
+		line-height: 18px;
+	}
+	.table__cart .cart__item_price span, 
+	.table__cart .cart__item_total span{
+		margin-right: 5px;
+	}
+}
+@include respond-to(extraSmall-screens){
+	.order__left_collumn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.order__right_collumn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.order__right_collumn-inner{
+		padding-left: 0; 
+	}
+}
+@include respond-to(small-screens){
+	.order__left_collumn{
+		width: 40%;
+	}
+	.order__right_collumn{
+		width: 60%;
 	}
 }
