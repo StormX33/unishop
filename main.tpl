@@ -42,7 +42,8 @@
         <link rel="stylesheet" href="{$THEME}assets/css/star-voting.css">
         <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
-        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
+        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">c
+        <link rel="stylesheet" href="{$THEME}assets/css/compare.css">
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
 	<script src="{$THEME}assets/js/bootstrap.min.js"></script>

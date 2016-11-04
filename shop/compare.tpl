@@ -1,11 +1,6 @@
-<div class="content">
-  <div class="content__container">
-
-    <div class="content__header">
-      <h1 class="content__title">
+      <h1 class="main-title" style="text-align:center">
         {tlang('Product comparasion')}
       </h1>
-    </div>
 
     {if count($categories) > 0}
 
@@ -36,6 +31,3 @@
         <p class="typo">{tlang('You have no items to compare')}</p>
       </div>
     {/if}
-
-  </div><!-- /.content__container -->
-</div><!-- /.content -->
