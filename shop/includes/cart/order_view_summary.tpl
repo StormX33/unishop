@@ -57,7 +57,7 @@
 
 
 <tfoot>
-  {view('shop/includes/cart/cart_total.tpl', [
+  {view('shop/includes/cart/order_total.tpl', [
   'coupon' => false,
   'parent_type' => 'order2',
   ])}
