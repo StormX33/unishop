@@ -48,4 +48,19 @@ text-align: center;}
 padding: 1.1em 1.8em;
 margin:1.2em 0;
 background: #f2f2f2;}
-/*# sourceMappingURL=compare.css.map */
+.row--gutter-collapse {
+    margin: 0;
+}
+.row--scroll {
+    white-space: nowrap;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.row--ib {
+    font-size: 0;
+}
+.row--ib>[class*=col-] {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
