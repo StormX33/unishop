@@ -56,9 +56,7 @@ background: #f2f2f2;}
     overflow: auto;
     padding-bottom: 10px;
 }
-.row--ib {
-    font-size: 0;
-}
+
 .row--ib>[class*=col-] {
     float: none;
     display: inline-block;
