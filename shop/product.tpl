@@ -18,9 +18,6 @@
                       {view('shop/includes/product/product_rating.tpl', ['model' => $model])}
                     </li>
                     <li class="detail__tools_item">
-                      <a href="#" class="detail__tools_link add__review">Оставить отзыв</a>
-                    </li>
-                    <li class="detail__tools_item">
                       {module('wishlist')->renderWLButton($model->firstVariant->getId(), ['type' => 'link']);}
                     </li>
                     <li class="detail__tools_item">

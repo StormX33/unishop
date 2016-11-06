@@ -23,7 +23,7 @@
 				{tlang('Per page')}:
                 <select class="sort__title sort__title_per_page" form="catalog-form" name="user_per_page" data-catalog-perpage-select> 
 				{foreach $loc_per_page_items as $per_page_item}
-					<option value="{$per_page_item}" {if tpl_per_page_selected($per_page_item)}selected{/if}{if tpl_per_page_selected($per_page_item, false)}data-catalog-default{/if}>
+					<option value="{$per_page_item}" {if tpl_per_page_selected($per_page_item)}selected{/if} {if tpl_per_page_selected($per_page_item, false)}data-catalog-default{/if}>
                     {$per_page_item}
                   </option>
 				{/foreach}

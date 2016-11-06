@@ -385,3 +385,6 @@ select.sort__title_per_page{
 	text-align:center;
 	display:table-footer-group;
 }
+.form__field_capcha{
+	margin-bottom:25px;
+}

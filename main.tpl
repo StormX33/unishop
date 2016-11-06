@@ -3,13 +3,11 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-
     <!-- Page meta params. Should always be placed before any others head info -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Meta data -->
     <title>{$site_title}</title>
     <meta name="description" content="{$site_description}">
@@ -42,7 +40,7 @@
         <link rel="stylesheet" href="{$THEME}assets/css/star-voting.css">
         <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
 		<link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
-        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">c
+        <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
         <link rel="stylesheet" href="{$THEME}assets/css/compare.css">
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>

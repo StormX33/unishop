@@ -85,7 +85,7 @@
                 </a>
                 {else:}
                 <a href="{shop_url('profile')}" class="submit__btn_accent">
-                    <span class="btn__accent_span">Wt-Prof</span>
+                    <span class="btn__accent_span">WT-PROF</span>
                 </a>
                 {/if}
             </div>
