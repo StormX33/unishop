@@ -1,6 +1,10 @@
 .cbp-hrmenu{
     border-radius: 0;
     margin-bottom: 0;
+    // .cbp-hrsub {
+    //     display: block !important;
+    // }
+    
     .container{
         @include respond-to(mobile){
             padding: 0;
@@ -197,8 +201,10 @@
 }
 .cbp-hrmenu .cbp-hrsub-inner > div a {
   line-height: 1.5em;
-  padding: 9px 15px;
   display: block;
+  @include respond-to(wide-screens){
+    padding: 9px 15px;
+  }
   &:hover{
     background: #063255;
     color: $main-color;
@@ -604,6 +610,14 @@
     .navigation .container{
         width: 100%;
         padding: 0;
+    }
+    #product-cat{
+        div{
+            display: none;
+            &:first-child{
+                display: block;
+            }
+        }
     }
 }
 

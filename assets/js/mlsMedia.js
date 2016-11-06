@@ -41,7 +41,7 @@
 					fixedContentPos:true,
 					image: {
 						markup: '<div class="modal-wrapper">'+
-									'<div class="remodal remodal__cart remodal-is-initialized remodal-is-opened popup-lightbox">'+
+									'<div class="remodal remodal__product remodal-is-initialized remodal-is-opened popup-lightbox">'+
 										'<header class="popup_header">'+
 											'<div class="mfp-close"></div>'+
 											'<div class="popup__header_title">'+
