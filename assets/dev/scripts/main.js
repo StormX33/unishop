@@ -288,16 +288,15 @@ $(window).on('scroll', function () {
         $content.css('padding-top', '200px');
         $header.removeClass('scroll').find($headerContent).show();
     }
-    $(function () {
-        var wid = $(window).width();
-        if (wid < 769) {
-            if ($(window).scrollTop() >= headerTopHeight) {
-                $content.css('padding-top', '200px');
-            } else {
-                $content.css('padding-top', '229px');
-            }
+    var wid = $(window).width();
+    if (wid < 769) {
+        if ($(window).scrollTop() >= headerTopHeight) {
+            $content.css('padding-top', '200px');
+        } else {
+            $content.css('padding-top', '198px');
         }
-    });
+    }
+
 });
    
 

@@ -341,7 +341,7 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .card__button,
 .lang__switch{
-    @include inlineblock(middle); 
+    @include inlineblock(); 
 }
 .lang__switch{
     // margin-right: 20px;
@@ -473,7 +473,6 @@ li.top__header_nav-item:nth-last-child(1){
 }
 .header__bottom_content{
     padding: 29px 0;
-    // max-height: 113px;
     @include clearfix;
 }
 
@@ -673,10 +672,10 @@ li.top__header_nav-item:nth-last-child(1){
     padding-bottom: 3px;
     position: relative;
     @include respond-to(mobile){
-        padding-bottom: 4px;
+        padding-bottom: 5px;
     } 
     @include respond-to(extraSmall-screens){
-        padding-bottom: 4px;
+        padding-bottom: 5px;
     }
     &.opened{
         .contacts__tel_arrow{
@@ -694,6 +693,10 @@ li.top__header_nav-item:nth-last-child(1){
         padding-right: 24px;
         font-size: em(22px);
     } 
+    @include respond-to(extraSmall-screens){
+        padding-right: 24px;
+        font-size: em(22px);
+    }
     @include respond-to(small-screens){
         font-size: em(21px);
         padding-right: 25px;
@@ -927,6 +930,9 @@ li.top__header_nav-item:nth-last-child(1){
     display: none;
     @include get-sprite($misc-sprite, top_menu_icon);
     float: left;
+    @media screen and (max-width: 400px) and (min-width: 320px){
+        @include get-sprite($misc-sprite, top_menu_icon-mob);
+    }
     @include respond-to(mobile){
         display: block;
         &:hover{
@@ -940,10 +946,14 @@ li.top__header_nav-item:nth-last-child(1){
         }
     }
 }
+
 .top__cart_icon{
     display: none;
     @include get-sprite($misc-sprite, top_cart_icon);
     float: right;
+    @media screen and (max-width: 400px) and (min-width: 320px){
+        @include get-sprite($misc-sprite, top_cart_icon_320);
+    }
     @include respond-to(mobile){
         display: block;
     } 
@@ -954,10 +964,10 @@ li.top__header_nav-item:nth-last-child(1){
 // MEDIA
 .header__top{
     @include respond-to(mobile){
-        padding: 17px 0;
+        padding-top: 17px;
     } 
     @include respond-to(extraSmall-screens){
-        padding: 17px 0;
+        padding-top: 17px;
     }
     .top__header_nav,
     .lang__switch,
@@ -985,10 +995,10 @@ li.top__header_nav-item:nth-last-child(1){
 .header__bottom{
     .header__bottom_content{
         @include respond-to(mobile){
-            padding: 10px 0 16px;
+            padding: 10px 0 0;
         }
         @include respond-to(extraSmall-screens){
-            padding: 10px 0 16px;
+            padding: 10px 0 0;
         }
     }
     .logo{
@@ -1000,7 +1010,7 @@ li.top__header_nav-item:nth-last-child(1){
             @include clearfix;
             @include transform(translate(-50%, -100%));
             left: 50%;
-            top: -28px;
+            top: -11px;
         }
         @media screen and (max-width: 479px) and (min-width: 401px){
             max-width: 260px;
@@ -1010,7 +1020,7 @@ li.top__header_nav-item:nth-last-child(1){
             @include clearfix;
             @include transform(translate(-50%, -100%));
             left: 50%;
-            top: -17px;
+            top: 0;
         } 
         @include respond-to(extraSmall-screens){
             max-width: 260px;
@@ -1020,7 +1030,7 @@ li.top__header_nav-item:nth-last-child(1){
             @include clearfix;
             @include transform(translate(-50%, -100%));
             left: 50%;
-            top: -17px;
+            top: 0;
                 
         }
     }
@@ -1083,10 +1093,74 @@ li.top__header_nav-item:nth-last-child(1){
         font-size: 12px;
     }
 }
+@include respond-to(mobile){
+    .contacts{
+        width: 150px;
+    }
+    .contacts__content_list{
+        font-size: 20px;
+        padding: 10px 7px;
+        top: 31px;
+    }
+    .phone__inner_link{
+        margin-left: 19px
+    }
+    .contacts__inner-span:before{
+        left: -22px;
+    }
+    .lifecell-logo{
+        &:before{
+            @include get-sprite($misc-sprite, lifecell-logo-middle);
+        }
+    }
+    .kievstar-logo{
+        &:before{
+            @include get-sprite($misc-sprite, kievstar-logo-middle);
+        }
+    }
+    .vodafone-logo{
+        &:before{
+            @include get-sprite($misc-sprite, vodafone-logo-middle);
+        }
+    }
+} 
+
+@include respond-to(extraSmall-screens){
+    .contacts{
+        width: 150px;
+    }
+    .contacts__content_list{
+        font-size: 20px;
+        padding: 10px 7px;
+        top: 31px;
+    }
+    .phone__inner_link{
+        margin-left: 19px
+    }
+    .contacts__inner-span:before{
+        left: -22px;
+    }
+    .lifecell-logo{
+        &:before{
+            @include get-sprite($misc-sprite, lifecell-logo-middle);
+        }
+    }
+    .kievstar-logo{
+        &:before{
+            @include get-sprite($misc-sprite, kievstar-logo-middle);
+        }
+    }
+    .vodafone-logo{
+        &:before{
+            @include get-sprite($misc-sprite, vodafone-logo-middle);
+        }
+    }
+}
 @include respond-to(small-screens){
     .contacts__content_list{
         font-size: 17px;
         padding: 10px 7px;
+        top: 31px;
     }
     .phone__inner_link{
         margin-left: 19px
