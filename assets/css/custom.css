@@ -27,15 +27,15 @@
 	margin:0 auto;
 	text-align:left;
 	z-index:1045}
-.mfp-close,.mfp-preloader{text-align:center;position:absolute}
+.mfp-close{text-align:center;position:absolute}
 .mfp-ajax-holder .mfp-content,.mfp-inline-holder .mfp-content{width:100%;cursor:auto}
 .mfp-ajax-cur{cursor:progress}
 .mfp-zoom-out-cur,.mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor:-webkit-zoom-out;cursor:zoom-out}
 .mfp-zoom{cursor:pointer;cursor:-webkit-zoom-in;cursor:zoom-in}.mfp-auto-cursor .mfp-content{cursor:auto}
-.mfp-arrow,.mfp-close,.mfp-counter,.mfp-preloader{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.mfp-arrow,.mfp-close,.mfp-counter{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .mfp-loading.mfp-figure{display:none}.mfp-hide{display:none!important}
-.mfp-preloader{color:#CCC;top:50%;width:auto;margin-top:-.8em;left:8px;right:8px;z-index:1044}
-.mfp-preloader a{color:#CCC}.mfp-preloader a:hover{color:#FFF}
+/*.mfp-preloader{color:#CCC;top:50%;width:auto;margin-top:-.8em;left:8px;right:8px;z-index:1044}
+.mfp-preloader a{color:#CCC}.mfp-preloader a:hover{color:#FFF}*/
 .mfp-s-error .mfp-content,.mfp-s-ready .mfp-preloader{display:none}
 button.mfp-arrow,button.mfp-close{
 	overflow:visible;

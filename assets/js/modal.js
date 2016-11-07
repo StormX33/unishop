@@ -11,6 +11,7 @@
 					data: options.data
 				}
 			},
+			
 			callbacks: {
 				parseAjax: function(mfpResponse) {
 					if(options.transferData) {
