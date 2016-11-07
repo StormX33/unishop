@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{$THEME}assets/css/star-rating.css">
     <link rel="stylesheet" href="{$THEME}assets/css/star-voting.css">
     <link rel="stylesheet" href="{$THEME}assets/css/tooltip.css">
+    <link rel="stylesheet" href="{$THEME}assets/css/autocomplete.css">
     <link rel="stylesheet" type="text/css" href="{$THEME}assets/css/main.css" media="screen, projection, print">
     <link rel="stylesheet" href="{$THEME}assets/css/spinner-circle.css">
     <link rel="stylesheet" href="{$THEME}assets/css/compare.css">
@@ -149,6 +150,7 @@
     <script src="{$THEME}assets/js/mlsAjax.js"></script>
     <script src="{$THEME}assets/js/modal.js"></script>
     <script src="{$THEME}assets/js/mlsCart.js"></script>
+    <script src="{$THEME}assets/js/mlsWishList.js"></script>
     <script src="{$THEME}assets/js/jquery.maskedinput.min.js"></script>
     <script src="{$THEME}assets/bower/jQuery.dotdotdot/src/jquery.dotdotdot.min.js"></script>
     <script src="{$THEME}assets/js/jquery.menu-aim.ext.js"></script>

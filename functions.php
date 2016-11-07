@@ -392,3 +392,10 @@ if (!function_exists('tpl_product_comments_votes')) {
         return $model->getVotes();
     }
 }
+if (!function_exists('getWishList')) {
+	function getWishList() {
+        $ci = &get_instance();
+        
+        return $ci->load->module('wishlist/wishlist')->renderWL();
+	}
+}
