@@ -9,7 +9,9 @@
 				</ul>
 			</div> -->
 			<div class="cbp-hrsub-content">
-				{$wrapper}
+				<ul>
+					{$wrapper}
+				</ul>
 			</div>
     	</div>
     </div>

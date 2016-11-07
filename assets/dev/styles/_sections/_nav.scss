@@ -13,6 +13,18 @@
             padding: 0;
         }
     }
+    .all__categories{
+        display: none;
+        @media screen and (max-width: 1023px) and (min-width: 768px){
+            display: block;
+        }
+        @include respond-to(extraSmall-screens){
+            display: block;
+        }
+        @include respond-to(mobile){
+            display: block;
+        } 
+    }
 }
 .nav__item_dropdown .sf-with-ul{
     padding-right: 44px;
@@ -159,7 +171,6 @@
 }
 
 .cbp-hropen .cbp-hrsub {
-  // display: block;
   padding-bottom: 2em;
 }
 
@@ -172,37 +183,14 @@
 }
 .cbp-hrsub-inner{
     position: relative;
-    // &:before{
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     width: 1px;
-    //     height: 100%;
-    //     top: 0;
-    //     left: 34.1%;
-    //     background: #d9d9d9;
-    //     @media screen and (max-width: 1023px) and (min-width: 320px){
-    //         display: none;
-    //     }
-    // }
-    // &:after{
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     width: 1px;
-    //     height: 100%;
-    //     top: 0;
-    //     right: 34.1%;
-    //     background: #d9d9d9;
-    //     @media screen and (max-width: 1023px) and (min-width: 320px){
-    //         display: none;
-    //     }
-    // }
 }
 .cbp-hrmenu .cbp-hrsub-inner > div a {
   line-height: 1.5em;
   display: block;
   @include respond-to(wide-screens){
+    padding: 9px 15px;
+  }
+  @media screen and (max-width: 1199px) and (min-width: 1024px){
     padding: 9px 15px;
   }
   &:hover{
@@ -375,6 +363,10 @@
 
 
 @include respond-to(mobile){
+    #product-cat{
+        height: 200px;
+        overflow: hidden;
+    }
     .cbp-hrmenu .cbp-hrsub-content > ul{
         width: 100%;
         float: none;
@@ -415,6 +407,7 @@
     .cbp-hrmenu .nav__list>li>a{
         display: block;
         padding: 1em 1em;
+        text-align: left;
     }
 
     .cbp-hrmenu .cbp-hrsub {
@@ -454,6 +447,10 @@
 }
 
 @include respond-to(extraSmall-screens){
+    #product-cat{
+        height: 200px;
+        overflow: hidden;
+    }
     .cbp-hrsub-content>ul{
         padding: 15px;
         border-bottom: 1px solid #9a9fa3;
@@ -485,6 +482,12 @@
             top: 0px;
             @include get-sprite($misc-sprite, cbp-hrsub-arrow);
         }
+    }
+    .cbp-hrsub-content .collumn{
+        border-bottom: 1px solid #9a9fa3;
+        &:last-child{
+            border-bottom: none;
+        } 
     }
     .inner__title{
         display: none;
@@ -521,6 +524,7 @@
     .cbp-hrmenu .nav__list>li>a{
         display: block;
         padding: 1em 1em;
+        text-align: left;
     }
 
     .cbp-hrmenu .cbp-hrsub {
@@ -577,6 +581,7 @@
     .cbp-hrmenu .nav__list>li>a{
         display: block;
         padding: 1em 1em;
+        text-align: left;
     }
 
     .cbp-hrmenu .cbp-hrsub {
