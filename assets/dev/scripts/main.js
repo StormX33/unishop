@@ -172,9 +172,9 @@ var viewStateCange = (function(){
 }());
 var accordeon = (function(){
     var _openSection = function($this){
-        var container = $this.closest(".filter__item, .cart__item, .product_info_block-item"),
-            content = container.find(".filter__content, .cart__item_content, .product_info_block-content"),
-            otherContant = $this.closest(".filter, .cart__list, .product_info_block-list").find(".filter__content, .cart__item_content, .product_info_block-content");
+        var container = $this.closest(".cart__item, .product_info_block-item"),
+            content = container.find(".cart__item_content, .product_info_block-content, .wishlists__item_content"),
+            otherContant = $this.closest(".cart__list, .product_info_block-list").find(".cart__item_content, .product_info_block-content");
 
         if (!container.hasClass("active")){
             otherContant.slideUp().closest(".cart__item, .product_info_block-item").removeClass("active");
@@ -189,7 +189,7 @@ var accordeon = (function(){
 
     return {
         init: function(){
-            $(".filter__title, .cart__item_header, .product_info_block-title").on("click", function(e){
+            $(".cart__item_header, .product_info_block-title, .cart__item_order-number").on("click", function(e){
                 e.preventDefault();
                 _openSection($(this));
             });
@@ -226,9 +226,6 @@ var slideShow = (function () {
 }());
 
 $(document).ready(function (){
-    // if ($(".filter").length){
-    //     accordeon.init();
-    // }
     if ($(".cart__list").length){
         accordeon.init();
     }
@@ -298,7 +295,7 @@ $(window).on('scroll', function () {
     }
 
 });
-   
+  
 
 /*-----------menu----------*/
 $(function() {
@@ -452,8 +449,15 @@ $(function () {
         categoryToggle = $('#category__title'),
         categoryContent = $('.content__sidebar-item'),
         filterToggle = $('#filter__title'),
-        filterContent = $('#filter-content');
-
+        filterContent = $('#filter-content'),
+        salesToggle = $(".sales_sidebar_wrap > .sidebar__title");
+        salesContent = $(".sales_sidebar_wrap > .content__sidebar-item"),
+        blogToggle = $(".blog_sidebar_wrap > .sidebar__title"),
+        blogContent = $(".blog_sidebar_wrap > .content__sidebar-item"),
+        personalDataToggle =  $(".personal__data > .sidebar__title"),
+        personalDataContent =  $(".personal__data > .sidebar__content"),
+        cabinetDataToggle =  $(".cabinet__menu > .sidebar__title"),
+        cabinetDataContent =  $(".cabinet__menu > .sidebar__content");
     touch.click(function () {
         $(this).toggleClass("on");
         menu.slideToggle();
@@ -482,6 +486,26 @@ $(function () {
 
         return false;
     });
+    salesToggle.click(function () {
+        $(this).toggleClass("on");
+        salesContent.slideToggle();
+        return false;
+    });
+    blogToggle.click(function () {
+        $(this).toggleClass("on");
+        blogContent.slideToggle();
+        return false;
+    });
+    personalDataToggle.click(function () {
+        $(this).toggleClass("on");
+        personalDataContent.slideToggle();
+        return false;
+    });
+    cabinetDataToggle.click(function () {
+        $(this).toggleClass("on");
+        cabinetDataContent.slideToggle();
+        return false;
+    });
     $(window).resize(function () {
         var wid = $(window).width();
         if (wid > 768 && filterContent.is(':hidden')) {
@@ -495,6 +519,18 @@ $(function () {
         }
         if (wid > 760 && menu.is(':hidden')) {
             menu.removeAttr('style');
+        }
+        if (wid > 760 && salesContent.is(':hidden')) {
+           salesContent.removeAttr('style');
+        }
+        if (wid > 760 && blogContent.is(':hidden')) {
+           blogContent.removeAttr('style');
+        }
+        if (wid > 760 && personalDataContent.is(':hidden')) {
+           personalDataContent.removeAttr('style');
+        }
+        if (wid > 760 && cabinetDataContent.is(':hidden')) {
+           cabinetDataContent.removeAttr('style');
         }
     });
 });

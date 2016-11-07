@@ -13,8 +13,11 @@
                 	<thead>
                     	<tr>
                         	<th class="cart__item_order-number">
-                            	<span class="order-number_span">{$group.title}</span>
+                            	<div class="order-number_span">
+                            		<span class="wishlists__header_text">{$group.title}</span>	
+                            	</div>
                             </th>
+                            <th></th>
                             <th class="cart__item_quantity">
                             	<a class="frame-content__header-link" href="{site_url('/wishlist/editWL/'.$group.wish_list_id)}" data-modal>{tlang('Edit')}</a>
                                 

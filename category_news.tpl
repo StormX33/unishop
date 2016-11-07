@@ -3,9 +3,12 @@
         <h1>{$category.name}</h1>
     </div>
     <aside class="sidebar pull-left">
-        <ul class="main__sidebar__list">
+        <div class="blog_sidebar_wrap">
             {view('includes/cat_list.tpl', ['cat_id' => 69, 'cat_title_class' => 'fa fa-newspaper-o'])}
+        </div>
+        <div class="sales_sidebar_wrap">
             {view('includes/cat_list.tpl', ['cat_id' => 72, 'cat_title_class' => 'fa fa-tag'])}
+        </div>
         </ul>
     </aside>
     <div class="content content__sale">
