@@ -6,7 +6,7 @@
   <!-- Autocomplet Input Element BEGIN -->
   <div class="autocomplete__element">
     <form action="{shop_url('search')}" method="GET" class="search__form">
-        <input class="search__form-input" data-autocomplete-input type="text" name="text" autocomplete="off" placeholder="{tlang('Search by item name or number')}" value="{echo tpl_encode($CI->input->get('text'))}" required>
+        <input class="search__form-input ui-autocomplete-input" data-autocomplete-input type="text" name="text" autocomplete="off" placeholder="{tlang('Search by item name or number')}" value="{echo tpl_encode($CI->input->get('text'))}" required>
 		<label class="search__form-submit_label">
           <input class="search__form-submit" type="submit">
           <div class="search__form-submit_elem"></div>

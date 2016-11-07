@@ -1,0 +1,45 @@
+.overlay {
+  padding: 5px 0;
+  border: 1px solid #dfe4eb;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15); }
+  .overlay__item {
+    position: relative; }
+    .overlay__item:hover {
+      background: #f2f6f9; }
+      .overlay__item:hover > .overlay__drop {
+        display: block; }
+  .overlay__link {
+    display: block;
+    padding: 5px 30px 5px 10px;
+    white-space: nowrap;
+    color: #487ebb;
+    text-decoration: none; }
+    .overlay__link:hover {
+      color: #487ebb; }
+  .overlay__ico {
+    float: left;
+    margin-top: -1px;
+    margin-right: 4px; }
+  .overlay__arrow {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -8px;
+    display: inline-block;
+    fill: #487ebb; }
+    .overlay__arrow--right {
+      width: 4px;
+      height: 7px; }
+  .overlay__drop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap; }
+    .overlay__drop--rtl {
+      right: 100%;
+      left: auto; }
+
+/*# sourceMappingURL=overlay.css.map */
