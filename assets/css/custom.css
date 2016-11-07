@@ -385,3 +385,41 @@ select.sort__title_per_page{
 	text-align:center;
 	display:table-footer-group;
 }
+.form__field_capcha{
+	margin-bottom:25px;
+}
+.form__field:first-child {
+    padding-top: 0;
+}
+.form__label {
+    padding-bottom: 8px;
+    color: #666;
+}
+.form__inner:after, .form__inner:before {
+    content: " ";
+    display: table;
+}
+.form__checkbox {
+    display: table;
+}
+.form__checkbox-field {
+    width: 20px;
+}
+.form__checkbox-field, .form__checkbox-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.form__checkbox-title {
+    color: #000;
+    line-height: 1.1;
+}
+.cart__item_buy .products__buy-btn{
+	width:126px;
+	padding: 4px 8px;
+}
+.wishlists__item_content .table__cart tbody tr td{
+	vertical-align:middle;
+}
+.remodal a.feedback-submit{
+    color: #fff;
+}

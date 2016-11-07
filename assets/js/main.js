@@ -439,7 +439,6 @@ $(window).bind('resize', (function ($) {
 
 /*-----------tabs----------*/
 $(document).ready(function(){
-
     $('#tabs__controls .tabs__controls_link').on('click', function(e){
         e.preventDefault();
 
@@ -467,6 +466,7 @@ $(document).ready(function(){
             .siblings()
             .removeClass('active');
     });
+
 });
 
 /*-----------scrollup----------*/

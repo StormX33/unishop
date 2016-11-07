@@ -12,15 +12,19 @@
 			</div>
 		</div>
 		<div class="cabinet__menu"> 
-			<div class="sidebar__title">Меню </div>
+			<div class="sidebar__title">Меню</div>
 			<div class="sidebar__content">
 				<ul id="sidebar-nav" class="sidebar-nav">
 					<li data-class="tab_orders" class="active sidebar-nav__item sidebar-nav__item_orders">
-                       	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"><span>Мои заказы</span></a>
+                       	<a href="#tab_orders" class="sidebar-nav__link sidebar-nav__tab-link"><span>Мои заказы</span></a>
                     </li>
 					<li data-class="tab_data" class="sidebar-nav__item sidebar-nav__item_data">
-                       	<a href="#" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Персональные данные</span></a>
+                       	<a href="#tab_data" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Персональные данные</span></a>
                     </li>
+                	<li data-class="tab_wishlist" class="sidebar-nav__item sidebar-nav__item_data">
+                       	<a href="#tab_wishlist" class="sidebar-nav__link sidebar-nav__tab-link"><span>Избранное</span></a>
+                    </li>
+
 					<li class="sidebar-nav__item sidebar-nav__item_exit">
                        	<a href="{site_url('auth/logout')}" class="sidebar-nav__link"><span>Выйти</span></a>
                     </li>
@@ -30,7 +34,7 @@
 	</aside>
     <div class="content pull-right content__sale">
 		<div id="cart__content" class="cart__content">
-			<div class="tab__pane pane__tab_orders active"> 
+			<div class="tab__pane pane__tab_orders active}"> 
 				<div class="pane__tab_orders_inner">
 					<div class="cart__title">Мои заказы </div>
                		{if count($orders) > 0}
@@ -48,9 +52,9 @@
                     {view('shop/includes/profile/user_data.tpl')}
 				</div>
 			</div>
-            <div class="tab__pane pane__tab_password">
-            	<div class="contacts__form_widget">
-                    {view('change_password.tpl')}
+            <div class="tab__pane pane__tab_wishlist">
+            	<div class="pane__tab_orders_inner">
+					{getWishList()}
             	</div>
             </div>
 		</div>

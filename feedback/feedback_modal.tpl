@@ -44,12 +44,11 @@
                         <!-- Captcha field -->
                         {if $cap_image}
                           {view('includes/forms/input-captcha.tpl', [
-                            'label' => tlang('Security code'),
                             'type' => 'text',
                             'name' => 'captcha',
                             'value' => get_value('captcha'),
                             'required' => true,
-                            'desc' => tlang('Type the characters you see in this image.')
+                            'placeholder' => tlang('Security code')
                           ])}
                          {/if}
                     </div>

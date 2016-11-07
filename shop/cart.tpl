@@ -16,19 +16,12 @@
 
 				</div>
 			{else:}
-				<div data-ajax-grab="cart-empty">
-					<div class="content__header">
-						<h1 class="content__title">
-							{tlang('Cart is currently empty')}
-						</h1>
-					</div>
+				<div data-ajax-grab="cart-empty" class="cart__content">
 					<div class="content__row">
 						<p class="typo">{tlang('You have no items in your shopping cart')}</p>
 					</div>
-					<div class="content__row">
-						<a class="btn btn-primary" href="{site_url('')}">{tlang('Continue Shopping')}</a>
-					</div>
-					</div>
+					<a class="submit__btn_accent" href="{site_url('')}"><span class="btn__accent_span">{tlang('Continue Shopping')}</span></a>
+                 </div>   
             {/if}
 
     <!--

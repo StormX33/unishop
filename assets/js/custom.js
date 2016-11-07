@@ -25,15 +25,31 @@ $(document).on('ajaxStop', function(){
 	}
 
 })(jQuery);
+	var hash = window.location.hash;
+	hash = hash.slice(1);
+	if (hash){
+		$(document).ready(function(e){
+	        var item = $('.sidebar-nav__item_data[data-class="'+hash+'"]'),
+            contentItem = $('.tab__pane'),
+            itemPosition = item.data('class');
 
-$(document).ready(function(){
+        contentItem.filter('.pane__'+ itemPosition)
+            .add(item)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+    });
+	}
+
+
+/*$(document).ready(function(){
 var loc = window.location.hash.replace("#","");
 if (loc != "") {
 //var destination = $("#"+loc).offset().top - 150;
 var destination = $("#"+loc).offset().top ;
 $("html").animate({ scrollTop: destination}, 1000 );
 }
-});
+});*/
 
 /* Event listeners */
 
@@ -888,4 +904,208 @@ $(document).on('click', '[data-compare-scope="add_to"] [data-compare-add]', func
     });
 
 });
-/********************************** END COMPARE **********************************************/
+/********************************** END COMPARE ***********************************************/
+/********************************** WISHLIST **************************************************/
+/* Focusing text field if relative radio is checked */
+$(document).on('click', '[data-wishlist-new-input]', function(){
+  var radioNew = $(this).closest('[data-wishlist-new-scope]').find('[data-wishlist-new-radio]');
+  $(radioNew).trigger('click');
+});
+
+$(document).on('click', '[data-wishlist-new-radio]', function(){
+  var inputNew = $(this).closest('[data-wishlist-new-scope]').find('[data-wishlist-new-input]');
+  $(inputNew).trigger('focus');
+});
+
+
+/* Ajax Add to wishlist and moving between lists */
+$(document).on('submit', '[data-wishlist-ajax]' , function(e){
+  e.preventDefault();
+
+  var target = $(this);
+  var responseFrame = $('[data-wishlist-ajax]');
+  var moveButtonLoader = target.find('[data-button-loader="loader"]').closest('[data-wishlist-move-loader]');
+  
+  $.ajax({
+    url: target.attr('action'),
+    type: target.attr('method') ? target.attr('method') : 'get',
+    data: target.serialize(),
+    beforeSend: function(){
+    
+      if(target.data('wishlist-ajax') == 'move' && $.mlsWishList.moveListValidation(target)){       
+        $.mshButtons.addLoader(moveButtonLoader);
+      }else{
+        /* Submit Loader */
+        $.mlsAjax.preloaderShow({
+          type: 'frame',
+          frame: responseFrame
+        });
+      }
+      
+    },
+    success: function(data){
+      if(target.data('wishlist-ajax') == 'move' && $.mlsWishList.moveListValidation(target)){
+        location.assign(location.href);
+		window.location.reload();
+      }else{
+        /* Insert response into document */
+        $.mlsAjax.loadResponseFrame(data, responseFrame);
+
+        /* Grab extra data from response frame and insert it into remote places */
+        $.mlsAjax.transferData(data);
+      }     
+    }
+  });
+
+});
+
+
+
+/* Ajax Edit */
+$(document).on('submit', '[data-wishlist-edit]' , function(e){
+  e.preventDefault();
+
+  var target = $(this);
+  var scope = $('[data-wishlist-edit]');
+  var loaderFrame = $('[data-wishlist-edit]');
+  var editButtonLoader = scope.find('[data-wishlist-edit--button]');
+  var errorFrame = scope.find('[data-wishlist-edit--error]');
+
+  $.ajax({
+    url: target.attr('action'),
+    type: target.attr('method') ? target.attr('method') : 'get',
+    data: target.serialize(),
+    dataType: 'json',
+    beforeSend: function(){
+    
+      $.mlsAjax.preloaderShow({
+        type: 'frame',
+        frame: loaderFrame
+      });
+      
+    },
+    success: function(data){
+      if(data.answer == 'error'){
+        errorFrame.removeClass('hidden').find('[data-wishlist-edit--error-message]').html(data.data[0]);
+      }else{
+        errorFrame.addClass('hidden');
+        $.mshButtons.addLoader(editButtonLoader);
+		window.location.reload();
+      }
+    }
+  });
+
+});
+/********************************** END WISHLIST **********************************************/
+/********************************** AUTOCOMPLETE **********************************************/
+;(function ($) {
+
+
+  var scope = $('[data-autocomplete="header-search"]');
+  var responseFrame = scope.find('[data-autocomplete-frame]');
+  var itemsNum = scope.find('[data-autocomplete-product]').size();
+  var noItemsFrame = scope.find('[data-autocomplete-noitems]');
+  var productsCount;
+  var dataLength;
+  var productWrapper;
+
+  var appendProducts = function (data) {
+
+    /* Binding search result products json data into DOM vai data-attrs */
+    $.each(data, function (index, val) {
+
+      if (index != 'queryString') {
+        productWrapper = scope.find('[data-autocomplete-product="' + index + '"]');
+
+        productWrapper.find('[data-autocomplete-product-name]').html(val.name);
+        productWrapper.find('[data-autocomplete-product-price]').html(val.price);
+        productWrapper.find('[data-autocomplete-product-img]').attr({'src': val.smallImage, 'alt': val.name});
+        productWrapper.attr('href', location.origin + '/shop/product/' + val.url);
+        setAdditionaPrices(productWrapper.find('[data-autocomplete-product-addition-price]'), val.nextCurrency);
+        productWrapper.removeClass('hidden');
+
+
+      }
+    });
+
+    /* Calculate numbers of search results  Minus 1 filters "queryString" extra key */
+    dataLength = Object.keys(data).length - 1;
+
+    /* Hiding saved products from previous search results */
+    for (var i = itemsNum; i >= dataLength; i--) {
+      scope.find('[data-autocomplete-product="' + i + '"]').addClass('hidden');
+    }
+
+    return i;
+  }
+
+  /* Clone DOM element for additional prices and put there data
+  * @addPriceElem - DOM element where price should be places
+  * @additionalPrices - array of additional prices
+  * */
+  var setAdditionaPrices = function (addPriceElem, additionalPrices) {
+    $(additionalPrices).each(function (index, addPrice) {
+      if(addPriceElem.eq(index).size() > 0){
+        addPriceElem.eq(index).html(addPrice);
+      }else{
+        var clonedAddPriceElem = addPriceElem.eq(0).clone();
+        clonedAddPriceElem.html(addPrice);
+        addPriceElem.parent().append(clonedAddPriceElem);
+      }
+    });
+  };
+
+  var getAutocompleteData = function (request, response) {
+
+    $.ajax({
+      url: scope.attr('data-autocomplete-url'),
+      method: 'post',
+      data: {
+        queryString: request.term
+      },
+      dataType: 'json',
+      beforeSend: function () {
+      },
+      success: function (data) {
+
+        /*
+         * Append products into DOM after success search.
+         * Return numver of products
+         */
+        productsCount = appendProducts(data);
+
+        /* Show "no results" message if no items had been found and hide it in other case */
+        productsCount < 0 ? noItemsFrame.removeClass('hidden') : noItemsFrame.addClass('hidden');
+
+        /* Show autocomplete frame after search results */
+        responseFrame.removeClass('hidden');
+
+      }
+    });
+
+  }
+
+
+  /* Autocomplete plugin init */
+  $('[data-autocomplete-input]', scope).autocomplete({
+    source: getAutocompleteData,
+    minLength: 3,
+    delay: 300
+  });
+
+  /*
+   * Hide search results after clicking outside input field.
+   * Also prevent closing after click inside results frame
+   */
+  $(document).on('click', function (event) {
+
+    if ($(event.target).closest(responseFrame).size() > 0) {
+      event.stopPropagation();
+    } else {
+      responseFrame.addClass('hidden');
+    }
+
+  });
+
+})(jQuery);
+/********************************** END AUTOCOMPLETE **********************************************/
