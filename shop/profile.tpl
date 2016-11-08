@@ -34,7 +34,7 @@
 	</aside>
     <div class="content pull-right content__sale">
 		<div id="cart__content" class="cart__content">
-			<div class="tab__pane pane__tab_orders active}"> 
+			<div class="tab__pane pane__tab_orders active"> 
 				<div class="pane__tab_orders_inner">
 					<div class="cart__title">Мои заказы </div>
                		{if count($orders) > 0}
