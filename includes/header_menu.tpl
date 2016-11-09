@@ -8,7 +8,8 @@
             <b class="hidden-lg menu-hidden">Товары и услуги</b>
             <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="toggle-search"></button>
 		</div>
-
+	</div>
+	<div class="container container_nav">
 			<ul class="nav__list">
 				<li class="nav__item nav__item_dropdown">
                 	<a href="/shop/categories" class="nav__link sf-with-ul">{tlang('Product Catalog')}<span class="nav__span_arrow"></span></a>

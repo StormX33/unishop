@@ -7,7 +7,7 @@
 
 /* --------- fonts --------- */
 @import '../fonts/stylesheet.css';
-// @import "_misc/_fonts";
+
 /* --------- mixins --------- */
 @import "_misc/_mixins";
 
@@ -66,8 +66,6 @@ $border-contacts: #e4e4e4;
 $purple: #85549b;
 $contacts-text: #282828;
 
-/* --------- sections--------- */
-@import "_plugins/**/*";
 
 /* --------- widgets--------- */
 @import "_widgets/**/*";
@@ -94,12 +92,6 @@ $contacts-text: #282828;
 }
 .section__title_span{
     text-transform: uppercase;
-    //  @include respond-to(mobile){
-    //     text-transform: uppercase;
-    // }
-    // @include respond-to(extraSmall-screens){
-    //     text-transform: uppercase;
-    // }
 }
 .menu-hidden{
 	@media screen and (max-width: 1199px) and (min-width: 1022px){
@@ -124,11 +116,7 @@ $contacts-text: #282828;
 		display: block;
 	}
 }
-// .col-price-buy{
-// 	@include respond-to(mobile){
-// 		width: 46.875%;
-// 	} 
-// }
+
 @include respond-to(mobile){
 	.col-footer-mob{
 		float: none;
@@ -214,7 +202,7 @@ $contacts-text: #282828;
 	}
 }
 
-.page__page .feedback__button{
+.page__page .sidebar{
     .submit__btn_accent{
         width: 80%;
 		@include respond-to(mobile){

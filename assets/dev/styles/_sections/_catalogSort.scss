@@ -170,8 +170,33 @@ select.sort__title_price{
 	}
 }
 @include respond-to(small-screens){
+	.sort__list{
+		position: relative;
+		height: 125px;
+	}
 	.sort__item{
-		width: 50%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 6px;
+		@include transform(translate(0, 100%));
+		float: none;
+		border-right: none;
+	}
+	.sort-view{
+		top: 0;
+		@include transform(none);
+		float: none;
+		font-size: em(27px);
+		font-family: 'HeliosCondBold', arial;
+		.sort__title{
+			text-align: center;
+			float: none;
+			padding-right: 0;
+		}
+	}
+	.sort__view-list{
+		display: none;
 	}
 }
 // .sort__view{

@@ -31,3 +31,74 @@
         width: 70%;
     }
 }
+// SERVISES PAGES
+@include respond-to(mobile){
+    .services__content{
+        .content{
+            width: 100%;
+            float: none !important;
+        }
+        .sidebar{
+            width: 100%;
+            float: none !important;
+            margin: 0 auto;
+        }
+    }
+} 
+@include respond-to(extraSmall-screens){
+    .services__content{
+        .content{
+            width: 100%;
+            float: none !important;
+        }
+        .sidebar{
+            width: 80%;
+            float: none !important;
+            margin: 0 auto;
+        }
+    }
+}
+@include respond-to(small-screens){
+    .services__content{
+        .content{
+            width: 100%;
+            float: none !important;
+        }
+        .sidebar{
+            width: 80%;
+            float: none !important;
+            margin: 0 auto;
+        }
+    }
+}
+@include respond-to(medium-screens){
+    .services__content{
+        .content{
+            width: 70%;
+        }
+        .sidebar{
+            width: 30%;
+        }
+    }
+}
+// CATEGORY PAGE
+@include respond-to(small-screens){
+    .shop_category__page{
+        // .container{
+        //     width: 95%;
+        // }
+        .content{
+            width: 100%;
+        }
+    }
+}
+@include respond-to(medium-screens){
+    .shop_category__page{
+        .sidebar {
+            width: 32%;
+        }
+        .content{
+            width: 68%;
+        }
+    }
+}

@@ -1,12 +1,7 @@
-<div class="main_container">
+<div class="main_container services__content">
     <div class="main-title">
         <h1>{$category.name}</h1>
     </div>
-	<aside class="sidebar pull-right">
-    {view ('callbacks/callback.tpl', [titletext => 'Получите бесплатную <br> косультацию и выезд <br> на ваш объект'])}
-    {view('includes/cat_list.tpl', ['cat_id' => 72, 'cat_title_class' => 'fa fa-tag'])}
-    </aside>
-
     <div class="content pull-left">
         <div class="page__teaser_wrapper">
             {if count($pages) > 0}
@@ -51,4 +46,7 @@
             </div>
         {/if}
     </div>
+    <aside class="sidebar pull-right">
+        {view ('callbacks/callback.tpl', [titletext => 'Получите бесплатную <br> косультацию и выезд <br> на ваш объект'])}
+    </aside>
 </div><!-- /.content__container -->

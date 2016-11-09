@@ -344,6 +344,7 @@ $(window).on('scroll', function () {
   
 
 /*-----------menu----------*/
+/*-----------menu----------*/
 $(function() {
     $('.cbp-hrmenu .nav__list').menuAim({
         triggerEvent:       'both',
@@ -355,36 +356,65 @@ $(function() {
     });
     function activate(row) {
         var $row = $(row),
-            $subItems = $row.find('.cbp-hrsub');
+            $subItems = $row.find('.cbp-hrsub'),
+            actionDelayTimer = $row.data('actionDelayTimer');
 
-        // Close other menu items
-        $row.siblings('.cbp-hrsub, .cbp-hropen-started').each(function(i, el){
-            deactivate(el);
-        })
+        // If there is previous timer set, cancel that timer
+        if(typeof actionDelayTimer !== "undefined"){
+            clearTimeout(actionDelayTimer);
+            $row.data('actionDelayTimer', undefined);
+        }
 
-        // Indicate that open process is started
-        $row.addClass('cbp-hropen-started');
+        // Set action to happen in 300ms
+        actionDelayTimer = setTimeout(function(){
+            // Close other menu items
+            $row.siblings('.cbp-hrsub, .cbp-hropen-started').each(function(i, el){
+                deactivate(el);
+            })
 
+            // Indicate that open process is started
+            $row.addClass('cbp-hropen-started');
 
-        // Show sub items if present
-        if($subItems.length > 0){
-            $subItems.slideDown(400, function(){
-                $row.removeClass('cbp-hropen-started')
-                    .addClass('cbp-hropen');
-            });    
-        } else{
-            $row.addClass('cbp-hropen');
-        }   
+            // Show sub items if present
+            if($subItems.length > 0){
+                
+                // If animation have already started, do not repeat animation
+                if($subItems.data('isSlideDown')){
+                    return;
+                }
+
+                $subItems.data('isSlideDown', true);
+                $subItems.slideDown(400, function(){
+                    $row.removeClass('cbp-hropen-started')
+                        .addClass('cbp-hropen');
+
+                    $subItems.data('isSlideDown', false);
+                });    
+            } else{
+                $row.addClass('cbp-hropen');
+            }
+            $row.data('actionDelayTimer', undefined);
+        }, 300); 
+
+        $row.data('actionDelayTimer', actionDelayTimer);
     }
 
     function deactivate(row) {
-        var $row = $(row);
+        var $row = $(row),
+            $subItems = $row.find('.cbp-hrsub');
 
         if($row.hasClass('cbp-hropen') || $row.hasClass('cbp-hropen-started')){
             $row.removeClass('cbp-hropen')
                 .removeClass('cbp-hropen-started')
-                .find('.cbp-hrsub')
-                .slideUp(200);      
+
+            if($subItems.data('isSlideUp')){
+                return;
+            }
+
+            $subItems.data('isSlideUp', true);
+            $subItems.slideUp(200, function(){
+                $subItems.data('isSlideUp', false);
+            });
         }
     }
 });
@@ -515,7 +545,7 @@ $(function () {
         return false;
     });
     categoryToggle.click(function(){
-        if( $(window).width() > 768 && !$(this).hasClass('on')){
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
            return false;
         }
         $(this).toggleClass('on');
@@ -524,7 +554,7 @@ $(function () {
        return false;
     });
     filterToggle.click(function(){
-        if( $(window).width() > 768 && !$(this).hasClass('on')){
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
             return false;
         }
         $(this).toggleClass('on');
@@ -554,10 +584,10 @@ $(function () {
     });
     $(window).resize(function () {
         var wid = $(window).width();
-        if (wid > 768 && filterContent.is(':hidden')) {
+        if (wid > 992 && filterContent.is(':hidden')) {
             filterContent.removeAttr('style');
         }
-        if (wid > 768 && categoryContent.is(':hidden')) {
+        if (wid > 992 && categoryContent.is(':hidden')) {
             categoryContent.removeAttr('style');
         }
         if (wid > 1023 && navMenu.is(':hidden')) {

@@ -333,7 +333,7 @@
 .toggle-mnu{
     @include get-sprite($misc-sprite, toggle-mnu);
     @media screen and (max-width: 1023px) and (min-width: 768px){
-        left: 15px;
+        left: 0;
     }
     @include respond-to(mobile){
         left: 30px;
@@ -345,7 +345,7 @@
 .toggle-search{
     @include get-sprite($misc-sprite, toggle-search);
     @media screen and (max-width: 1023px) and (min-width: 768px){
-        right: 15px;
+        right: 0;
     }
     @include respond-to(mobile){
         right: 30px;
@@ -612,13 +612,15 @@
     .navigation .item__title_link{
         color: #0a2e4c;
     }
-    .navigation .container{
+    .navigation  .container_nav{
         width: 100%;
         padding: 0;
     }
     #product-cat{
         div{
             display: none;
+            float: none !important;
+            width: 100% !important;
             &:first-child{
                 display: block;
             }
