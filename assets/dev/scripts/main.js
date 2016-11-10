@@ -318,7 +318,7 @@ $(function() {
             $row.data('actionDelayTimer', undefined);
         }
 
-        // Set action to happen in 300ms
+        // Set action to happen in 200ms
         actionDelayTimer = setTimeout(function(){
             // Close other menu items
             $row.siblings('.cbp-hrsub, .cbp-hropen-started').each(function(i, el){
@@ -347,7 +347,7 @@ $(function() {
                 $row.addClass('cbp-hropen');
             }
             $row.data('actionDelayTimer', undefined);
-        }, 300); 
+        }, 200); 
 
         $row.data('actionDelayTimer', actionDelayTimer);
     }
