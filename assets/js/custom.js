@@ -1,4 +1,4 @@
-$("input[type=tel]").mask("+38(099) 999-99-99");
+$("input[type=tel]").mask("+38(999) 999-99-99");
 (function($){
  $('ul#product-cat').autocolumnlist({
                 columns: 3,
@@ -426,7 +426,6 @@ $(document).on('submit', '[data-product-button--form]', function(e){
       $.mshButtons.removeLoader(loaderButton);
     },
     success: function(){
-
       $.mlsModal({
         src: modalUrl,
         data: {
@@ -720,7 +719,8 @@ $('[data-gallery-image]').magnificPopup({
     },
     overflowY: "hidden",
     image: {
-        titleSrc: 'data-gallery-image-title'
+        titleSrc: 'data-gallery-image-title',
+		verticalFit: true
     }
 });
 /********************************** END GALLERY POPUP **********************************************/

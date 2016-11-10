@@ -1,34 +1,36 @@
-<div class="frame-crumbs">
-    {widget('path')}
-</div>
-<div class="frame-inside page-text">
-
-    <div class="container">
-        <div class="text-left" >{load_menu('left_menu')}</div>
-            <div class="text-right"  itemscope itemtype="http://schema.org/NewsArticle">
-            <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
-<span itemprop="author" itemscope itemtype="https://schema.org/Person">
-<meta itemprop="name" content="Teplo.ua">
-</span>
-<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-<meta itemprop="name" content="TeploUA">
-<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="{echo site_url(siteinfo('siteinfo_logo_url'))}">
-      <meta itemprop="width" content="181">
-      <meta itemprop="height" content="57">
-            </span>           
-</span>
-                <h1 itemprop="headline">{$page.title}</h1>
-                <div class="date">
-                <meta itemprop="datePublished" content="{echo date("Y-n-d", $page.publish_date)}"/>
-                <meta itemprop="dateModified" content="{echo date("Y-n-d", $page.updated)}"/>
-                            <span class="day">{echo date("d", $page.publish_date)} </span>
-                            <span class="month">{echo month(date("n", $page.publish_date))} </span>
-                            <span class="year">{echo date("Y ", $page.publish_date)}</span>
-                 </div>
-                 <a  href="{site_url($page['cat_url'])}" class="c_news">{$category.name}</a>
-                 {image_text_replace($page.full_text)}
+<div class="container">
+    <div class="main-content">
+    <aside class="sidebar pull-left">
+        <div class="blog_sidebar_wrap">
+            {view('includes/cat_list.tpl', ['cat_id' => 69, 'cat_title_class' => 'fa fa-newspaper-o'])}
+        </div>
+        <div class="sales_sidebar_wrap">
+            {view('includes/cat_list.tpl', ['cat_id' => 72, 'cat_title_class' => 'fa fa-tag'])}
+        </div>
+        </ul>
+    </aside>
+        <div class="content pull-right">
+            <div class="page__full_article-wrapper">
+                <article class="page__full_article">
+                    <header><h2>{$page.title}</h2></header>
+                    <div class="page__full_article-text">
+                        {$page.full_text}
+                    </div>
+                    <!-- Comments -->
+                    {if $page.comments_status == 1}
+                        <div class="content__row">
+                            <section class="frame-content">
+                                <div class="frame-content__header">
+                                    <h2 class="frame-content__title">{tlang('Comments')}</h2>
+                                </div>
+                                <div class="frame-content__inner" data-comments>
+                                    {tpl_load_comments()}
+                                </div>
+                            </section>
+                        </div>
+                    {/if}
+                </article>
             </div>
-
-    </div>
+        </div>
+    </div><!-- /.main-content -->
 </div>

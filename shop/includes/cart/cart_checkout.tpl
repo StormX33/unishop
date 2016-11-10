@@ -12,7 +12,7 @@
             <div class="check__content_title">
                 <h3 class="check__title_text">{tlang('Contact details')}</h3>
                 {if !$CI->dx_auth->is_logged_in()}
-                <a href="{site_url('auth')}" class="contacts__title_link" data-modal="login_popup" rel="nofollow">
+                <a href="{site_url('auth')}" class="contacts__title_link" data-modal="login_popup">
                     {tlang('Am a member WT-Prof')}
                 </a>
                 {/if}

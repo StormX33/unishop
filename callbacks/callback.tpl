@@ -22,7 +22,7 @@
         <div class="feedback__wrap">
         <!-- User Phone field -->
         {view('includes/forms/input-base.tpl', [
-        'placeholder' =>'+38 (0__) ___-__-__',
+        'placeholder' =>'+38 (___) ___-__-__',
         'type' => 'tel',
         'name' => 'Phone',
         'value' => get_value('Phone'),
