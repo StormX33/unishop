@@ -423,3 +423,7 @@ select.sort__title_per_page{
 .remodal a.feedback-submit{
     color: #fff;
 }
+.sidebar-nav__item i{
+	font-size: 24px;
+    margin-right: 16px;
+}

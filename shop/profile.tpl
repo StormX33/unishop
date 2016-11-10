@@ -21,8 +21,8 @@
 					<li data-class="tab_data" class="sidebar-nav__item sidebar-nav__item_data">
                        	<a href="#tab_data" class="sidebar-nav__link sidebar-nav__tab-link"> <span>Персональные данные</span></a>
                     </li>
-                	<li data-class="tab_wishlist" class="sidebar-nav__item sidebar-nav__item_data">
-                       	<a href="#tab_wishlist" class="sidebar-nav__link sidebar-nav__tab-link"><span>Избранное</span></a>
+                	<li data-class="tab_wishlist" class="sidebar-nav__item">
+                        <a href="#tab_wishlist" class="sidebar-nav__link sidebar-nav__tab-link"><i class="fa fa-heart" aria-hidden="true"></i><span>Избранное</span></a>
                     </li>
 
 					<li class="sidebar-nav__item sidebar-nav__item_exit">

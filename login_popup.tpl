@@ -59,21 +59,16 @@
                       <p>{tlang('You have successfully authenticated as ')} {echo $CI->dx_auth->get_username()}</p>
                     </div>
 				{/if}
-                  
                 <div class="feedback__button">
-                <div class="submit__btn_accent">
-  					     {if !$success}
+                	{if !$success}
+                		<div class="submit__btn_accent">
             				<input class="feedback-submit" type="submit" value="{tlang('Log in')}">
-            			{else:}
-            				<button class="feedback-submit" data-profile-button type="button">
-              				<span>{tlang('Logining in...')}</span>
-            				</button>
-                  	{/if}
-                </div>
-<!--         
-          			{if !$success}
-          				<a class="feedback__form_link" href="{site_url('auth/forgot_password')}">{tlang('Forgot password?')}</a>
-					{/if}-->
+                		</div>
+                	{else:}
+                    <button class="feedback-submit" data-profile-button type="button">
+                		<span>{tlang('Logining in...')}</span>
+                        </button>
+                    {/if}
                 </div>
     			<input type="hidden" name="template" value="login_popup">
     			{if strip_tags(trim($_REQUEST['wishlist']))}
