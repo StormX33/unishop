@@ -344,7 +344,6 @@ $(window).on('scroll', function () {
   
 
 /*-----------menu----------*/
-/*-----------menu----------*/
 $(function() {
     $('.cbp-hrmenu .nav__list').menuAim({
         triggerEvent:       'both',
@@ -401,7 +400,14 @@ $(function() {
 
     function deactivate(row) {
         var $row = $(row),
-            $subItems = $row.find('.cbp-hrsub');
+            $subItems = $row.find('.cbp-hrsub'),
+            actionDelayTimer = $row.data('actionDelayTimer');
+
+        // If there is previous timer set, cancel that timer
+        if(typeof actionDelayTimer !== "undefined"){
+            clearTimeout(actionDelayTimer);
+            $row.data('actionDelayTimer', undefined);
+        }
 
         if($row.hasClass('cbp-hropen') || $row.hasClass('cbp-hropen-started')){
             $row.removeClass('cbp-hropen')

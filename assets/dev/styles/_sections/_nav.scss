@@ -349,7 +349,7 @@
 .toggle-search{
     @include get-sprite($misc-sprite, toggle-search);
     @media screen and (max-width: 1023px) and (min-width: 768px){
-        right: 15px;
+        right: 0;
     }
     @include respond-to(mobile){
         right: 30px;
