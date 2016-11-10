@@ -258,8 +258,12 @@
     }
     .navbar-header{
         position: relative;
-         @media screen and (max-width: 1023px) and (min-width: 768px){
+        @media screen and (max-width: 1023px) and (min-width: 768px){
            float: none;
+        }
+        @include respond-to(small-screens){
+            width: 750px;
+            margin: 0 auto;
         }
         b{
             display: block;
@@ -333,7 +337,7 @@
 .toggle-mnu{
     @include get-sprite($misc-sprite, toggle-mnu);
     @media screen and (max-width: 1023px) and (min-width: 768px){
-        left: 0;
+        left: 15px;
     }
     @include respond-to(mobile){
         left: 30px;
@@ -345,7 +349,7 @@
 .toggle-search{
     @include get-sprite($misc-sprite, toggle-search);
     @media screen and (max-width: 1023px) and (min-width: 768px){
-        right: 0;
+        right: 15px;
     }
     @include respond-to(mobile){
         right: 30px;
@@ -612,7 +616,7 @@
     .navigation .item__title_link{
         color: #0a2e4c;
     }
-    .navigation  .container_nav{
+    .navigation .container{
         width: 100%;
         padding: 0;
     }
@@ -626,5 +630,6 @@
             }
         }
     }
+
 }
 
