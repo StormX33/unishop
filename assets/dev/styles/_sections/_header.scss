@@ -21,6 +21,11 @@
         background: $accent-color;
         box-shadow: none;
         transition: all 0.2s ease;
+        .navbar-header{
+            @include respond-to(small-screens){
+                width: 100%;
+            }
+        }
         .logo,
         .user__login,
         .contacts{
