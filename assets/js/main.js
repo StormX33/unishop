@@ -344,7 +344,6 @@ $(window).on('scroll', function () {
   
 
 /*-----------menu----------*/
-/*-----------menu----------*/
 $(function() {
     $('.cbp-hrmenu .nav__list').menuAim({
         triggerEvent:       'both',
@@ -365,7 +364,7 @@ $(function() {
             $row.data('actionDelayTimer', undefined);
         }
 
-        // Set action to happen in 300ms
+        // Set action to happen in 200ms
         actionDelayTimer = setTimeout(function(){
             // Close other menu items
             $row.siblings('.cbp-hrsub, .cbp-hropen-started').each(function(i, el){
@@ -394,14 +393,21 @@ $(function() {
                 $row.addClass('cbp-hropen');
             }
             $row.data('actionDelayTimer', undefined);
-        }, 300); 
+        }, 200); 
 
         $row.data('actionDelayTimer', actionDelayTimer);
     }
 
     function deactivate(row) {
         var $row = $(row),
-            $subItems = $row.find('.cbp-hrsub');
+            $subItems = $row.find('.cbp-hrsub'),
+            actionDelayTimer = $row.data('actionDelayTimer');
+
+        // If there is previous timer set, cancel that timer
+        if(typeof actionDelayTimer !== "undefined"){
+            clearTimeout(actionDelayTimer);
+            $row.data('actionDelayTimer', undefined);
+        }
 
         if($row.hasClass('cbp-hropen') || $row.hasClass('cbp-hropen-started')){
             $row.removeClass('cbp-hropen')
