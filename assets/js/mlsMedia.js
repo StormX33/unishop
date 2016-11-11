@@ -66,12 +66,21 @@
 	  						template.find('.pull-left').html(product_price);
 							template.find('.pull-right').html(product_butt);
 							return;
-    					}
+    					},
+						resize: function() {
+            				var img = this.content.find('img'),
+								footer =this.content.find('.popup_footer').height(),
+								header =this.content.find('header').height();
+							
+            				img.css('max-height', (parseFloat(img.css('max-height'))-footer-header)  * 0.8);
+        				},
+						change: function() {
+						this.close();
+  }
   					}
                 });
 
             });
         }
     };
-
 })(jQuery);

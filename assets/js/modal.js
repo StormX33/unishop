@@ -39,6 +39,18 @@ $(document).on('click', '[data-modal]', function(e){
 	});
 
 });
+/* Open modal window */
+$(document).on('click', '[data-popup]', function(e){
+	e.preventDefault();
+
+	$.mlsModal({
+		src: $(this).attr('href'),
+		data: {
+			template: $(this).data('modal')
+		}
+	});
+
+});
 
 
 /* Close modal window */

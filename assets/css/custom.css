@@ -427,3 +427,20 @@ select.sort__title_per_page{
 .remodal a.feedback-submit{
     color: #fff;
 }
+.sidebar-nav__item i{
+	font-size: 24px;
+    margin-right: 16px;
+}
+.popup_footer{
+	width:100%;
+}
+
+.popup_footer tr td:last-child{
+	display:none;
+}
+.popup_footer .products__buy-btn {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 21px;
+    padding: 4px 36px;
+}
