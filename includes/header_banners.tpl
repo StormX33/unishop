@@ -5,7 +5,6 @@
 					</div>
 					<div class="banner__content">
 	<div class="banner__content_inner banner__main_slide">
-       	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
 		<div class="container">
 			<div class="banner__inner_content">
 				<div class="banner__offer">
@@ -23,7 +22,7 @@
 		</div>
 	</div>
 	<div class="banner__content_inner banner__content_slide banner__first_room">
-       	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
+
 		<div class="container">
 			<div class="banner__inner_content">
 				<div class="banner__offer">
@@ -255,7 +254,6 @@
 		</div>
 	</div>
     <div class="banner__content_inner banner__content_slide banner__second_room">
-    	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
         <div class="container">
             <div class="banner__inner_content">
                 <div class="banner__offer">
@@ -415,7 +413,6 @@
         </div>
     </div>
     <div class="banner__content_inner banner__content_slide banner__third_room">
-    	<img src="{$THEME}images/banner/banner_img.jpg" alt="Баннер | Главная" class="img-responsive banner__img">
         <div class="container">
             <div class="banner__inner_content">
                 <div class="banner__offer">

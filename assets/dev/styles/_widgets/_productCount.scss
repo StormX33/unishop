@@ -6,14 +6,18 @@
         float: left;
         width: 58px;
         height: 38px;
+        line-height: 38px;
         outline: none;
         border: none;
-        border-right: 1px solid $title-color-blue;
+        // border-right: 1px solid $title-color-blue;
         text-align: center;
-        font-size: 29px;
+        font-size: 26px;
+        padding: 0;
+        font-family: "HeliosCondBold", arial;
     }
     .change__count_buttons{
         float: left;
+        border-left: 1px solid $title-color-blue;
     }
     .count_buttons{
         display: block;

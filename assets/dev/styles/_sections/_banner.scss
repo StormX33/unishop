@@ -1,4 +1,8 @@
 .banner {
+	background: rgb(234,238,239); 
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(234,238,239,1) 0%, rgba(154,165,176,1) 100%); 
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(234,238,239,1) 0%,rgba(154,165,176,1) 100%); 
+	background: radial-gradient(ellipse at center,  rgba(234,238,239,1) 0%,rgba(154,165,176,1) 100%); 
     height: 465px;
     position: relative;
     overflow: hidden;
@@ -25,7 +29,7 @@
 	    }
   	}
   	.paginations__container {
-	    height: 10px;
+	    height: 1px;
 	    position: absolute !important;
 	    bottom: 34%;
 	    left: 50%;
@@ -47,6 +51,9 @@
 	      // 	left: -3px;
 	      // }
 	    }
+    }
+    .slick-slide{
+    	outline: none;
     }
     .slick-dots{
     	position: absolute;
@@ -217,6 +224,23 @@
   	.banner__inner_content {
   		max-width: 100%;
   	}
+  	.slick-dots{
+		li{
+			width: 22px;
+			height: 22px;
+			button{
+				@include get-sprite($misc-sprite, banner_dot_inner);
+				&:hover, &:focus{
+			    	@include get-sprite($misc-sprite, banner_dot_inner_h);
+				}
+			}
+			&.slick-active{
+				button{
+					@include get-sprite($misc-sprite, banner_dot_inner_h);
+				}
+			}
+		}
+	}
 }
 
 .inner__text_header {
@@ -300,8 +324,8 @@
 	background: -moz-linear-gradient(top,  rgba(99,192,125,1) 0%, rgba(50,138,75,1) 100%); 
 	background: -webkit-linear-gradient(top,  rgba(99,192,125,1) 0%,rgba(50,138,75,1) 100%); 
 	background: linear-gradient(to bottom,  rgba(99,192,125,1) 0%,rgba(50,138,75,1) 100%); 
-	-webkit-box-shadow: 0px 3px 0px 0px rgba(16, 81, 34, 1), 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);;
-	-moz-box-shadow:    0px 3px 0px 0px rgba(16, 81, 34, 1), 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(16, 81, 34, 1), 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+	-moz-box-shadow:    0px 3px 0px 0px rgba(16, 81, 34, 1), 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
 	box-shadow:         0px 3px 0px 0px rgba(16, 81, 34, 1), 0px 5px 10px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);;
 	&:hover, 
 	&:focus,
@@ -315,6 +339,7 @@
 }
 
 .banner__content_slide{
+	display: none;
 	.banner__inner_content{
 		padding-top: 40px;
 		.banner__offer+.right__column_image{
@@ -455,11 +480,11 @@
 			left: auto;
 			&:nth-child(2){
 				left: -25px;
-				bottom: 10px;
+				bottom: 15px;
 			}
 			&:nth-child(3){
 			    left: 70px;
-    			bottom: -25px;
+    			bottom: -20px;
 				top: auto;
 			}
 			&:nth-child(4){
@@ -471,7 +496,7 @@
 				top: -25px;
 			}
 			&:nth-child(6){
-				bottom: 50px;
+				bottom: 70px;
 				right: 20%;
 			}
 			&:nth-child(7){
@@ -505,45 +530,51 @@
 	.slick-dots-second-room{
 		li{
 			&:nth-child(2){
-				left: 48%;
-				bottom: 52px;
+				left: 58%;
+				bottom: 55px;
 			}
 			&:nth-child(3){
-				left: 56%;
+				left: 64%;
 				top: auto; 
-				bottom: 85px;
+				bottom: 67px;
 			}
 			&:nth-child(4){
-				top: 0;
-				left: 82.5%;
+				top: -28px;
+				left: 90.5%;
 			}
 			&:nth-child(5){
-				left: 82%;
-				bottom: -30px;
+				left: 88%;
+				bottom: -50px;
 			}
 			&:nth-child(6){
-				left: 22%;
-				bottom: 0;
+				left: 34%;
+				bottom: 5px;
 			}
 		}
 	}
-	// .banner__inner_content .banner__offer+.right__column_image{
-	// 	@include respond-to(medium-screens){
-	// 		width: 0;
-	// 	}
-	// }
-	.right__column_image{
-		
-		@media screen and (max-width: 1600px) and (min-width: 1300px){
+	.banner__inner_content .banner__offer+.right__column_image{
+		@media screen and (max-width: 1600px) and (min-width: 1350px){
 			left: 100px;
 		}
-		@media screen and (max-width: 1299px) and (min-width: 1200px){
+		@media screen and (max-width: 1349px) and (min-width: 1200px){
 			left: 0;
 		}
 		@include respond-to(medium-screens){
-			left: 20px;
+			left: 0;
 		}
 	}
+	// .right__column_image{
+		
+	// 	@media screen and (max-width: 1600px) and (min-width: 1300px){
+	// 		left: 100px;
+	// 	}
+	// 	@media screen and (max-width: 1299px) and (min-width: 1200px){
+	// 		left: 0;
+	// 	}
+	// 	@include respond-to(medium-screens){
+	// 		left: 20px;
+	// 	}
+	// }
 }
 
 .banner__third_room{
@@ -553,7 +584,7 @@
 	.slick-dots-third-room{
 		li{
 			&:nth-child(2){
-				left: 18%;
+				left: 17%;
 				bottom: auto;
 				top: -5px;
 			}
@@ -564,10 +595,10 @@
 			&:nth-child(4){
 				top: auto;
 				left: 5%;
-				bottom: 45px;
+				bottom: 50px;
 			}
 			&:nth-child(5){
-				left: 88%;
+				left: 83%;
 				top: -95px;
 			}
 		}

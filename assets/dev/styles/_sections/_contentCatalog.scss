@@ -13,8 +13,7 @@
     @include clearfix;
 }
 
-.content,
-.content__sale{
+.content{
     float: right;
     width: 860px;
     margin-bottom: 70px;
@@ -31,6 +30,21 @@
         width: 70%;
     }
 }
+.content__sale{
+    @include respond-to(mobile){
+        width: 100%;
+    } 
+    @include respond-to(extraSmall-screens){
+        width: 100%;
+    }
+    @include respond-to(medium-screens){
+        width: 100%;
+    }
+    @include respond-to(small-screens){
+        width: 100%;
+    }
+}
+
 // SERVISES PAGES
 @include respond-to(mobile){
     .services__content{

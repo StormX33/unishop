@@ -359,7 +359,6 @@ $(function () {
     };
     $('.similar__products_list').slick(similarProductsSlickOpts);
 });
-// BannerSlider
 $(function () {
     var $mainSliderWrapper = $('.banner__main_slide');
     var $mainSliderWrapper = $('.banner__content_inner');

@@ -710,6 +710,11 @@ $(function(){
 })(jQuery, window, document)
 
 
+// BannerSlider
+$(window).on('load', function () {
+    var $bannerSlide = $('.banner__content_slide');
+    $bannerSlide.css('display', 'block');
+});
 // Projects
 $(function () {
     var advantagesSlickOpts = {
@@ -1071,7 +1076,6 @@ $(function () {
     };
     $('.similar__products_list').slick(similarProductsSlickOpts);
 });
-// BannerSlider
 $(function () {
     var $mainSliderWrapper = $('.banner__main_slide');
     var $mainSliderWrapper = $('.banner__content_inner');
