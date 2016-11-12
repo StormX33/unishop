@@ -235,7 +235,7 @@ var accordeon = (function(){
 
     return {
         init: function(){
-            $(".cart__item_header, .product_info_block-title, .cart__item_order-number").on("click", function(e){
+            $(".cart__item_header, .product_info_block-title, #cart__item_order-number").on("click", function(e){
                 e.preventDefault();
                 _openSection($(this));
             });
@@ -564,26 +564,37 @@ $(function () {
             return false;
         }
         $(this).toggleClass('on');
-            filterContent.slideToggle();
-
+        filterContent.slideToggle();
         return false;
     });
     salesToggle.click(function () {
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
+            return false;
+        }
         $(this).toggleClass("on");
         salesContent.slideToggle();
         return false;
     });
     blogToggle.click(function () {
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
+            return false;
+        }
         $(this).toggleClass("on");
         blogContent.slideToggle();
         return false;
     });
     personalDataToggle.click(function () {
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
+            return false;
+        }
         $(this).toggleClass("on");
         personalDataContent.slideToggle();
         return false;
     });
     cabinetDataToggle.click(function () {
+        if( $(window).width() > 992 && !$(this).hasClass('on')){
+            return false;
+        }
         $(this).toggleClass("on");
         cabinetDataContent.slideToggle();
         return false;
@@ -602,16 +613,16 @@ $(function () {
         if (wid > 760 && menu.is(':hidden')) {
             menu.removeAttr('style');
         }
-        if (wid > 760 && salesContent.is(':hidden')) {
+        if (wid > 992 && salesContent.is(':hidden')) {
            salesContent.removeAttr('style');
         }
-        if (wid > 760 && blogContent.is(':hidden')) {
+        if (wid > 992 && blogContent.is(':hidden')) {
            blogContent.removeAttr('style');
         }
-        if (wid > 760 && personalDataContent.is(':hidden')) {
+        if (wid > 992 && personalDataContent.is(':hidden')) {
            personalDataContent.removeAttr('style');
         }
-        if (wid > 760 && cabinetDataContent.is(':hidden')) {
+        if (wid > 992 && cabinetDataContent.is(':hidden')) {
            cabinetDataContent.removeAttr('style');
         }
     });
@@ -641,7 +652,7 @@ $(function() {
 /*-----------fonts----------*/
 WebFont.load({
     custom: {
-      families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic', 'HeliosCondRegular']
+      families: ['PTSansRegular', 'PTSansBold', 'PTSansItalic', 'HeliosCondRegular', 'HeliosCondBold']
     }
 });
 // /*-----------gallery text----------*/

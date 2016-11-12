@@ -2,10 +2,11 @@
     @include inlineblock();
     @include clearfix;
     border: 1px solid $title-color-blue;
+    // height: 39px;
     .amount{
         float: left;
         width: 58px;
-        height: 38px;
+        // height: 38px;
         line-height: 38px;
         outline: none;
         border: none;

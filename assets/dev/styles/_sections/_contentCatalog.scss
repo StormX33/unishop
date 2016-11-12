@@ -23,11 +23,11 @@
     @include respond-to(extraSmall-screens){
         width: 100%;
     }
-    @include respond-to(medium-screens){
-    	width: 75%;
-    }
     @include respond-to(small-screens){
         width: 70%;
+    }
+    @include respond-to(medium-screens){
+        width: 75%;
     }
 }
 .content__sale{
@@ -37,12 +37,12 @@
     @include respond-to(extraSmall-screens){
         width: 100%;
     }
-    @include respond-to(medium-screens){
-        width: 100%;
-    }
     @include respond-to(small-screens){
         width: 100%;
     }
+    // @include respond-to(medium-screens){
+    //     width: 100%;
+    // }
 }
 
 // SERVISES PAGES

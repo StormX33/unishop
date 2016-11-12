@@ -12,7 +12,7 @@
 				<table cellpadding="0" cellspacing="0" class="table table__cart">
                 	<thead>
                     	<tr>
-                        	<th class="cart__item_order-number">
+                        	<th id ="cart__item_order-number" class="cart__item_order-number">
                             	<div class="order-number_span">
                             		<span class="wishlists__header_text">{$group.title}</span>	
                             	</div>

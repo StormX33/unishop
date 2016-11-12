@@ -417,10 +417,7 @@ select.sort__title_per_page{
     color: #000;
     line-height: 1.1;
 }
-.cart__item_buy .products__buy-btn{
-	width:126px;
-	padding: 4px 8px;
-}
+
 .wishlists__item_content .table__cart tbody tr td{
 	vertical-align:middle;
 }

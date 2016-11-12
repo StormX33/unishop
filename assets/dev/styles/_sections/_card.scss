@@ -170,7 +170,9 @@ $table-border: #e1e1e1;
             width: 56px;
         }
         .count_buttons{
-            padding: 0 14px;
+            padding: 0;
+            width: 36.5px;
+            // line-height: 20px;
         }
     }
     .cart__item_price,
@@ -439,20 +441,20 @@ $table-border: #e1e1e1;
         }
     }
 }
-.cart__content{
+.check__wrap{
     .products__buy-btn{
         text-align: center;
         display: block;
         width: 310px;
         margin: 0 auto;
         font-size: 32px;
-        padding: 8px 25px;
+        padding: 8px 20px;
+        visibility: hidden;
     }
-    .products__buy-span{
-        &:before{
-            @include get-sprite($misc-sprite, cart-lg);
-            margin-right: 20px;
-        }
+}
+.wf-helioscondbold-n4-active{
+    .check__wrap .products__buy-btn{
+        visibility: visible;
     }
 }
 .table__cart tfoot tr td{

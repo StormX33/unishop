@@ -110,6 +110,7 @@
 .btn__accent_span{
     position: relative;
     z-index: 3;
+    @include inlineblock(middle);
 }
 .products__buy-content{
     &:before{
@@ -120,18 +121,18 @@
         position: relative;
         z-index: 3;
     }
-    @include respond-to(mobile){
-        &:before{
-            @include get-sprite($misc-sprite, catalog_cart_mob);
-            margin-right: 0;
-        }
-    }
-    @include respond-to(extraSmall-screens){
-        &:before{
-            @include get-sprite($misc-sprite, catalog_cart_mob);
-            margin-right: 0;
-        }
-    }
+    // @include respond-to(mobile){
+    //     &:before{
+    //         @include get-sprite($misc-sprite, catalog_cart_mob);
+    //         // margin-right: 0;
+    //     }
+    // }
+    // @include respond-to(extraSmall-screens){
+    //     &:before{
+    //         @include get-sprite($misc-sprite, catalog_cart_mob);
+    //         // margin-right: 0;
+    //     }
+    // }
 }
 
 // PAGE PRODUCT BLUE BUTTONS
