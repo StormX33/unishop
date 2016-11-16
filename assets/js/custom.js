@@ -1,5 +1,8 @@
 $("input[type=tel]").mask("+38(999) 999-99-99");
 (function($){
+	$('.writereview').on('click', function(e){
+		$('#tabs__controls .tabs__controls_link').click();
+		});
  $('ul#product-cat').autocolumnlist({
                 columns: 3,
                 classname: 'col-md-4',

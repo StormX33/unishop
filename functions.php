@@ -259,6 +259,17 @@ if (!function_exists('tpl_load_comments')) {
 
 }
 
+if (!function_exists('tpl_count_comments')) {
+
+    function tpl_count_comments() {
+
+        $ci = &get_instance();
+        $comments_module = $ci->load->module('comments/commentsapi')->renderAsArray($ci->uri->uri_string());
+        return $comments_module['total_comments'];
+    }
+
+}
+
 
 
 if (!function_exists('tpl_per_page_selected')) {

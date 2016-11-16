@@ -90,9 +90,9 @@
             {if trim(strip_tags($model->getFullDescription())) != ""}
       			 <li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
             {/if}
-            
+            {if tpl_product_comments_votes($model) > 0 }
       		<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
-           
+           {/if}
       	</ul><!-- ./tabs__controls -->
           
         <ul id="description__list" class="description_list">
@@ -114,7 +114,12 @@
                 	{/if}
                   <div class="product__reviews col-right">
                     <div class="product__reviews_form">
-                        {view('comments/product_form.tpl')}
+                      {if tpl_product_comments_votes($model) > 0}
+                      <a href="#tab_reviews" class="writereview">Написать отзыв</a>
+                  		{tpl_load_comments()}
+                  	  {else:}
+                      	{view('comments/product_form.tpl')}
+                      {/if}
                     </div>
                   </div>
             	</div>
@@ -135,7 +140,12 @@
                 </div>
                 <div class="product__reviews col-right">
                   <div class="product__reviews_form">
+                  {if tpl_product_comments_votes($model) > 0}
+                  	<span class="writereview">Написать отзыв</span>
+                    {tpl_load_comments()}
+                  {else:}
                       {view('comments/product_form.tpl')}
+                      {/if}
                   </div>
                 </div>
               </div>

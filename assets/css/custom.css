@@ -441,3 +441,7 @@ select.sort__title_per_page{
     font-size: 21px;
     padding: 4px 36px;
 }
+.review__left_collumm {
+	width:auto !important;
+    max-width: 565px;
+}
