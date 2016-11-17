@@ -30,27 +30,28 @@
 						<li class="banner__slide_item">
 							<div class="banner__offer_content"> 
 								<div class="inner__text_header">
-                                   	<span class="text__header_span">Газовые котлы </span>
-                                </div>
+                  <span class="text__header_span">Газовые котлы </span>
+                </div>
 								<div class="offer__inner_buttons">
-                                  	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                    <a href="{shop_url('category/gazovye-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                               </div>
+                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                  <a href="{shop_url('category/gazovye-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                </div>
 							</div>
 							<div class="banner__slide_item-content">
 								<div class="slide__item__inner">
                                    	{$banprod = getProduct(58022)}
-                                   	<div class="slide__item_img-wrap">
-                                       	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                      	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
-                                        <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
+                 	<div class="slide__item_img-wrap">
+                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                  </div>
+                  <div class="slide__item_content">
+                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                      <div class="slide__item_price">
+                         {echo emmet_money($banprod->firstVariant->getOriginPrice())}
+                      </div>
+                      <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                      <span class="products__buy-span">Подробнее</span>
+                      </a>
+                  </div>
 								</div>
 							</div>
 						</li>
@@ -93,133 +94,133 @@
                            		</div>
                            	</div>
 						</li>
-                        <li class="banner__slide_item">
-                            <div class="banner__offer_content"> 
-                            	<div class="inner__text_header"><span class="text__header_span">Пеллетные котлы</span></div>
-                            	<div class="offer__inner_buttons">
-                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                    <a href="{shop_url('category/tverdotoplivnye-kotly/pelletnye-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                                </div>
+            <li class="banner__slide_item">
+                <div class="banner__offer_content"> 
+                	<div class="inner__text_header"><span class="text__header_span">Пеллетные котлы</span></div>
+                	<div class="offer__inner_buttons">
+                    	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                        <a href="{shop_url('category/tverdotoplivnye-kotly/pelletnye-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                    </div>
+                </div>
+                <div class="banner__slide_item-content">
+                	<div class="slide__item__inner">
+                      	{$banprod = getProduct(65132)}
+                       	<div class="slide__item_img-wrap">
+                           	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                        </div>
+                        <div class="slide__item_content">
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                            <div class="slide__item_price">
+                               	 {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
-                            <div class="banner__slide_item-content">
-                            	<div class="slide__item__inner">
-                                  	{$banprod = getProduct(65132)}
-                                   	<div class="slide__item_img-wrap">
-                                       	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           	 {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
-                                        <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
-                                </div>
+                            <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
+                            <span class="products__buy-span">Подробнее</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="banner__slide_item">
+            	<div class="banner__offer_content"> 
+                	<div class="inner__text_header">
+                    	<span class="text__header_span">Расширительные баки</span>
+                    </div>
+                    <div class="offer__inner_buttons">
+                      	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                        <a href="{shop_url('category/rasshiritelnye-baki')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                    </div>
+	             </div>
+                <div class="banner__slide_item-content">
+                   	<div class="slide__item__inner">
+                       	{$banprod = getProduct(28203)}
+                       	<div class="slide__item_img-wrap">
+                          	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                        </div>
+                        <div class="slide__item_content">
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                            <div class="slide__item_price">
+                               {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
-                        </li>
-                        <li class="banner__slide_item">
-                        	<div class="banner__offer_content"> 
-                            	<div class="inner__text_header">
-                                	<span class="text__header_span">Расширительные баки</span>
-                                </div>
-                                <div class="offer__inner_buttons">
-                                  	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                    <a href="{shop_url('category/rasshiritelnye-baki')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                                </div>
-							</div>
-                            <div class="banner__slide_item-content">
-                               	<div class="slide__item__inner">
-                                   	{$banprod = getProduct(28203)}
-                                   	<div class="slide__item_img-wrap">
-                                      	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
-                                          <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
-                                </div>
+                            <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                              <span class="products__buy-span">Подробнее</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="banner__slide_item">
+                <div class="banner__offer_content"> 
+                	<div class="inner__text_header"><span class="text__header_span">Бойлеры косвенного нагрева </span></div>
+                	<div class="offer__inner_buttons">
+                    	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                        <a href="{shop_url('category/elektricheskie-vodonagrevateli/boilery-kosvennogo-nagreva')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                    </div>
+                </div>
+                <div class="banner__slide_item-content">
+                	<div class="slide__item__inner">
+                       	{$banprod = getProduct(60579)}
+                       	<div class="slide__item_img-wrap">
+                          	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                        </div>
+                        <div class="slide__item_content">
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                            <div class="slide__item_price">
+                               {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
-                        </li>
-                        <li class="banner__slide_item">
-                            <div class="banner__offer_content"> 
-                            	<div class="inner__text_header"><span class="text__header_span">Бойлеры косвенного нагрева </span></div>
-                            	<div class="offer__inner_buttons">
-                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                    <a href="{shop_url('category/elektricheskie-vodonagrevateli/boilery-kosvennogo-nagreva')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                                </div>
+                            <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
+                            <span class="products__buy-span">Подробнее</span></a>
+                        </div>
+                	</div>
+                </div>
+            </li>
+            <li class="banner__slide_item">
+            	<div class="banner__offer_content"> 
+                	<div class="inner__text_header"><span class="text__header_span">Системы быстрого монтажа </span></div>
+                	<div class="offer__inner_buttons">
+                    	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                   		<a href="{shop_url('category/sistemy-bystorogo-montazha')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                    </div>
+                </div>
+                <div class="banner__slide_item-content">
+                	<div class="slide__item__inner">
+                       	{$banprod = getProduct(48115)}
+                       	<div class="slide__item_img-wrap">
+                          	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                        </div>
+                        <div class="slide__item_content">
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                            <div class="slide__item_price">
+                               {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
-                            <div class="banner__slide_item-content">
-                            	<div class="slide__item__inner">
-                                   	{$banprod = getProduct(60579)}
-                                   	<div class="slide__item_img-wrap">
-                                      	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
-                                        <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
-                            	</div>
+                            <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                              <span class="products__buy-span">Подробнее</span></a>
+                        </div>
+                	</div>
+                </div>
+            </li>
+            <li class="banner__slide_item">
+                <div class="banner__offer_content"> 
+                	<div class="inner__text_header"><span class="text__header_span">Электрические котлы</span></div>
+                	<div class="offer__inner_buttons">
+                    	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
+                    	<a href="{shop_url('category/elektricheskie-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
+                    </div>
+                </div>
+                <div class="banner__slide_item-content">
+                	<div class="slide__item__inner">
+                       	{$banprod = getProduct(59595)}
+                       	<div class="slide__item_img-wrap">
+                          	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
+                        </div>
+                        <div class="slide__item_content">
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                            <div class="slide__item_price">
+                               {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
-                        </li>
-                        <li class="banner__slide_item">
-                        	<div class="banner__offer_content"> 
-                            	<div class="inner__text_header"><span class="text__header_span">Системы быстрого монтажа </span></div>
-                            	<div class="offer__inner_buttons">
-                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                               		<a href="{shop_url('category/sistemy-bystorogo-montazha')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                                </div>
-                            </div>
-                            <div class="banner__slide_item-content">
-                            	<div class="slide__item__inner">
-                                   	{$banprod = getProduct(48115)}
-                                   	<div class="slide__item_img-wrap">
-                                      	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
-                                          <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
-                            	</div>
-                            </div>
-                        </li>
-                        <li class="banner__slide_item">
-                            <div class="banner__offer_content"> 
-                            	<div class="inner__text_header"><span class="text__header_span">Электрические котлы</span></div>
-                            	<div class="offer__inner_buttons">
-                                	<a href="{site_url('callbacks')}?subj=5" data-modal="callbacks_modal" rel="nofollow" class="banner__btn banner__btn_order">Заказать просчет</a>
-                                	<a href="{shop_url('category/elektricheskie-kotly')}" class="banner__btn banner__btn_catalog">В каталог</a>
-                                </div>
-                            </div>
-                            <div class="banner__slide_item-content">
-                            	<div class="slide__item__inner">
-                                   	{$banprod = getProduct(59595)}
-                                   	<div class="slide__item_img-wrap">
-                                      	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
-                                    </div>
-                                    <div class="slide__item_content">
-                                       	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
-                                        <div class="slide__item_price">
-                                           {echo emmet_money($banprod->firstVariant->getOriginPrice())}
-                                        </div>
-                                        <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
-                                        <span class="products__buy-span">Подробнее</span></a>
-                                    </div>
-                            	</div>
-                            </div>
-                        </li>
+                            <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
+                            <span class="products__buy-span">Подробнее</span></a>
+                        </div>
+                	</div>
+                </div>
+            </li>
 						<li class="banner__slide_item">
 							<div class="banner__offer_content"> 
 								<div class="inner__text_header">

@@ -126,6 +126,9 @@
     &.sf-with-ul{
         padding-right: 35px;
         padding-left: 30px;
+        @media screen and (max-width: 1023px) and (min-width: 320px){
+            padding-left: 1em;
+        }
     }
 }
 .cbp-hrmenu .nav__list>li{
@@ -258,6 +261,7 @@
             color: darken(#0a2e4c, 10%);
         }
     }
+
     .navbar-header{
         position: relative;
         @media screen and (max-width: 1023px) and (min-width: 768px){
@@ -305,6 +309,36 @@
         }
     }
 
+}
+.category__hrsub{
+    width: 100%;
+    left: -15px;
+    .collumn{
+        position: relative;
+        .item__title_link{
+            margin-left: 22px;
+        }
+        span{
+            width: 22px;
+            height: 45px;
+            line-height: 45px;
+            overflow: hidden;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            @include transform(translate(0, -50%));
+            display: block;
+        }
+        @media screen and (max-width: 1023px) and (min-width: 320px){
+            span{
+                left: 15px;
+            }
+            .item__title_link{
+                margin-left: 32px;
+            }
+        }
+    }
 }
 .menu-hidden{
     &:hover{
@@ -428,6 +462,11 @@
     .navigation .collumn{
         padding: 15px;
         margin-bottom: 0;
+        img, 
+        .item__title_link{
+            @include inlineblock(middle);
+        }
+
     }
     .item__title_text{
         font-size: em(21px);

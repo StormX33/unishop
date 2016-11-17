@@ -181,15 +181,16 @@
                   <td>
                       <span class="produt__label_price">{tlang('Price')}</span>
                   </td>
-                  <td>
+                  <td> 
+                    <span class="old__price">
+                      {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
+                    </span>
                       <span class="current__price">
                           {echo emmet_money($model->firstVariant->getFinalPrice(), 'span.product-price__item-value[data-product-price--main]', 'span.product-price__item-coins[data-product-price--coins]' ,'span.product-price__item-cur')}
                        </span>
                   </td>
                   <td>
-                     <span class="old__price">
-                      {echo emmet_money($model->firstVariant->getOriginPrice(), 'span.product-price__item-value[data-product-price--origin]', '', 'span.product-price__item-cur')}
-                    </span>
+                   
                     {$loc_additional_prices = emmet_money_additional($model->firstVariant->getFinalPrice(), 'span.product-price__item-value', '', 'span.product-price__item-cur')}
                       {if count($loc_additional_prices) > 0}
                         {foreach $loc_additional_prices as $additional_price}

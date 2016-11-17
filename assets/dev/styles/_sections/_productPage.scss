@@ -857,10 +857,18 @@ span.rating-text-5{
 .recent__products{
     position: relative;
     margin-bottom: 36px;
+    .slick-list{
+        padding: 35px 0;
+    }
+    .products__item_long{
+        height: 392px;
+    }
+
+
 }
-.related__products_header{
-    margin-bottom: 27px;
-}
+// .related__products_header{
+//     margin-bottom: 27px;
+// }
 
 .recent__products{
     .products__list_grid{

@@ -53,10 +53,11 @@
 		margin-right: 30px;
 	}
 	.detail__tools{
-		@include inlineblock(middle);
-		font-size: 16px;
-		border: 1px solid $title-color-blue;
-		font-size: 0;
+		// @include inlineblock(middle);
+		// font-size: 16px;
+		// border: 1px solid $title-color-blue;
+		// font-size: 0;
+		display: none;
 	}
 	.detail__tools_item{
 		@include inlineblock();

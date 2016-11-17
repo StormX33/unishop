@@ -658,7 +658,6 @@ WebFont.load({
 // /*-----------gallery text----------*/
 $(function(){
     $(".gallery__item_text").dotdotdot();
-
 });
 /*-----------header menu----------*/
 (function(jQuery, window, document, undefined){

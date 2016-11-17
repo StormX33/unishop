@@ -11,12 +11,12 @@
 	@include inlineblock();
 	width: 33.33333333333333%;
 	font-size: 16px;
-	border-right: 1px solid #797674;
+	border-left: 1px solid #797674;
 	padding: 0 23px;
 	font-family: 'HeliosCondBold"', arial;
 	min-height: 211px;
-	&:last-child{ 
-		border-right: none;
+	&:first-child{ 
+		border-left: none;
 	}
 }
 .contacts__item div div,
