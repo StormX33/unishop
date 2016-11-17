@@ -410,3 +410,23 @@ if (!function_exists('getWishList')) {
         return $ci->load->module('wishlist/wishlist')->renderWL();
 	}
 }
+if (!function_exists('changeBanTitle')) {
+	function changeBanTitle($title, $lenght, $full) {
+		$lenght = isset($lenght) ? $lenght : 30;
+		$full = isset($full) ? $full : 0;
+		if ($title){
+			$count = mb_strlen($title);
+			if ($count > $lenght){
+				$temp = '<span class="title">';
+				$temp .= mb_substr($title, 0, ($lenght - 3));
+				$temp .= '</span><span class="continue">...</span>';
+				if ($full == 1){
+					$cut_title = mb_substr($title,($lenght - 3));
+					$temp .= '<span class="theend">'.$cut_title.'</span>';
+				}
+				$title = $temp;
+			}
+		}
+		return $title;
+	}
+}

@@ -44,7 +44,10 @@
                      	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                   </div>
                   <div class="slide__item_content">
-                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{changeBanTitle($banprod->getName(), 45, 1)}</a>
+                        <div class="slide__item_description">
+                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                        </div>
                       <div class="slide__item_price">
                          {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                       </div>
@@ -109,7 +112,10 @@
                            	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                         </div>
                         <div class="slide__item_content">
-                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                            <div class="slide__item_description">
+                            {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                            </div>
                             <div class="slide__item_price">
                                	 {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
@@ -136,7 +142,10 @@
                           	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                         </div>
                         <div class="slide__item_content">
-                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                            <div class="slide__item_description">
+                            {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                            </div>
                             <div class="slide__item_price">
                                {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
@@ -161,7 +170,10 @@
                           	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                         </div>
                         <div class="slide__item_content">
-                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                            <div class="slide__item_description">
+                            {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                            </div>
                             <div class="slide__item_price">
                                {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
@@ -186,7 +198,10 @@
                           	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                         </div>
                         <div class="slide__item_content">
-                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                            <div class="slide__item_description">
+                            {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                            </div>
                             <div class="slide__item_price">
                                {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
@@ -211,7 +226,10 @@
                           	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                         </div>
                         <div class="slide__item_content">
-                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                           	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                            <div class="slide__item_description">
+                            {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                            </div>
                             <div class="slide__item_price">
                                {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                             </div>
@@ -238,7 +256,10 @@
                                        	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                      	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                      	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price">
                                            {echo emmet_money($banprod->firstVariant->getOriginPrice())}
                                         </div>
@@ -300,7 +321,10 @@
                                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price">{echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
                                         <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
                                           <span class="products__buy-span">Подробнее</span></a>
@@ -325,7 +349,10 @@
                                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
                                         <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">  
                                         <span class="products__buy-span">Подробнее</span></a>
@@ -459,7 +486,10 @@
                                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
                                         <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
                                           <span class="products__buy-span">Подробнее</span></a>
@@ -484,7 +514,10 @@
                                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price">{echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
                                         <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
                                           <span class="products__buy-span">Подробнее</span></a>
@@ -509,7 +542,10 @@
                                     	<img src="{media_url($banprod->firstVariant->getMediumPhoto())}" alt="{echo $banprod->getName()}">
                                     </div>
                                     <div class="slide__item_content">
-                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo $banprod->getName()}</a>
+                                    	<a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_title">{echo changeBanTitle($banprod->getName(), 45, 1)}</a>
+                                        <div class="slide__item_description">
+                                        {echo mb_substr(trim(strip_tags($banprod->getFullDescription())), 0, 100)}...
+                                        </div>
                                         <div class="slide__item_price"> {echo emmet_money($banprod->firstVariant->getOriginPrice())}</div>
                                         <a href="{shop_url('product/'.$banprod->getUrl())}" class="slide__item_link products__buy-btn">
                                           <span class="products__buy-span">Подробнее</span></a>
