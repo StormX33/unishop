@@ -445,3 +445,20 @@ select.sort__title_per_page{
 	width:auto !important;
     max-width: 565px;
 }
+.slide__item_title .title{
+	display:inline;
+}
+.slide__item_title .theend{
+	display:none;
+}
+.slide__item_title:hover span.continue{
+	display:none;
+}
+.slide__item_title:hover span.theend{
+	display: inline;
+    position: absolute;
+    width: 100%;
+}
+.slide__item_description{
+	font-size:15px;
+}
