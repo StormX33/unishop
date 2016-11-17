@@ -414,7 +414,9 @@ $(function () {
         $innerSlider = $('.banner__first-slide_list'),
         $secondInnerSlider = $('.banner__second-slide_list'),
         $thirdInnerSlider = $('.banner__third-slide_list'),
-        $mainPrevButton = $('.banner__products_prev');
+        $mainPrevButton = $('.banner__products_prev'),
+        $customPrevButton = $('.banner__btn_prev'),
+        $customPrevButtonWrap  = $(".btn__prev_wrap")
 
     
     // $mainSlider.on('init', function(){
@@ -453,12 +455,25 @@ $(function () {
 
         if(currentSlide == 0){
             $mainPrevButton.addClass('disabled');
+            $customPrevButton.addClass('disabled');
+        }
+        else if(currentSlide == 1){
+            $customPrevButtonWrap.css({
+                "left": "44%",
+                "top": "62px"
+            });
+            $mainPrevButton.removeClass('disabled');
+            $customPrevButton.removeClass('disabled');
         }
         else{
             $mainPrevButton.removeClass('disabled');
+            $customPrevButton.removeClass('disabled');
         }
     });
     $mainPrevButton.on('click', function(event) {
+        $mainSlider.slick("slickGoTo", 0, true);
+    });
+    $customPrevButton.on('click', function(event) {
         $mainSlider.slick("slickGoTo", 0, true);
     });
 

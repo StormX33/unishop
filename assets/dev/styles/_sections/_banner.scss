@@ -22,6 +22,49 @@
 }
 
 .banner {
+	.container__btn_prev{
+		position: absolute;
+		width: 50%;
+		height: 1px;
+		right: 0;
+		@include transform(translate(0, -50%));
+		top: 50%;
+		z-index: 99;
+		.banner__btn_prev{
+			position: absolute;
+			@include get-sprite($misc-sprite, banner__btn_prev);
+		}
+		.btn__prev_wrap{
+			position: absolute;
+		}
+	}
+	.btn__title{
+		position: absolute;
+		background: #F4AA00;
+		width: 150px;
+		line-height: 35px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: "HeliosCondBold", arial;
+		border: 3px solid #fff;
+		left: -130px;
+		top: 1px;
+		border-top-left-radius: 20px;
+    	border-bottom-left-radius: 20px;
+        opacity: 0;
+    	// z-index: 0;
+    	// @include transition(opacity 0.2s ease-out);
+    	// // &:hover{
+    	// // 	opacity: 1;
+    	// // }
+	}
+	.banner__products_prev,
+    .banner__btn_prev{
+      &.disabled{
+       	display: none !important;
+      }
+    }
 	.slick-list {
 	    height: 470px;
 	    .banner__img {
@@ -31,7 +74,7 @@
   	.paginations__container {
 	    height: 1px;
 	    position: absolute !important;
-	    bottom: 34%;
+	    top: 14%;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
 	    z-index: 99;
@@ -41,15 +84,9 @@
 	    .pagination__item{
 	      margin: 0 30px;
 	    } 
-	    .banner__products_prev{
-	      left: 0;
-	      @include get-sprite($misc-sprite, banner_prew_arrow);
-	      &.disabled{
-	       	display: none !important;
-	      }
-	      // @include respond-to(medium-screens){
-	      // 	left: -3px;
-	      // }
+		.banner__products_prev{
+			left: 0;
+			@include get-sprite($misc-sprite, banner_prew_arrow);
 	    }
     }
     .slick-slide{
@@ -226,8 +263,8 @@
   	}
   	.slick-dots{
 		li{
-			width: 22px;
-			height: 22px;
+			width: 32px;
+			height: 32px;
 			button{
 				@include get-sprite($misc-sprite, banner_dot_inner);
 				&:hover, &:focus{
@@ -489,6 +526,11 @@
 	}
 }
 .banner__first_room{
+	// .banner__btn_prev{
+	// 	left: 53%;
+	// 	top: 40px;
+	// }
+
 	.slick-dots{
 		li{
 			left: auto;
@@ -506,24 +548,24 @@
 				top: 40px;
 			}
 			&:nth-child(5){
-				left: 29%;
-				top: -25px;
+				left: 27%;
+				top: -30px;
 			}
 			&:nth-child(6){
 				bottom: 70px;
 				right: 20%;
 			}
 			&:nth-child(7){
-				top: 60px;
-				right: 27%;
+				top: 27px;
+				right: 26%;
 			}
 			&:nth-child(8){
-				top: 30px;
-				right: 34%;
+				top: 4px;
+				right: 33%;
 			}
 			&:nth-child(9){
-				top: 20px;
-				right: 40%;
+				top: -20px;
+				right: 38%;
 			}
 		}
 	} 
@@ -550,7 +592,7 @@
 			&:nth-child(3){
 				left: 64%;
 				top: auto; 
-				bottom: 67px;
+				bottom: 60px;
 			}
 			&:nth-child(4){
 				top: -28px;
@@ -612,8 +654,8 @@
 				bottom: 50px;
 			}
 			&:nth-child(5){
-				left: 83%;
-				top: -95px;
+				left: 80%;
+				top: -102px;
 			}
 		}
 	}

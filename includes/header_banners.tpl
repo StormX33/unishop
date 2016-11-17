@@ -3,6 +3,12 @@
 							<button class="pagination__button banner__products_prev disabled"></button>
 						</div>
 					</div>
+          <div class="container__btn_prev">
+            <div class="btn__prev_wrap">
+              <div class="btn__title">На главную</div>
+              <button class="banner__btn_prev disabled"></button>
+            </div>
+          </div>
 					<div class="banner__content">
 	<div class="banner__content_inner banner__main_slide">
 		<div class="container">
@@ -250,7 +256,10 @@
 						</li>
 					</ul>
 				</div>
-				<div class="right__column_image"><img src="{$THEME}images/banner/for_banner2.png" alt="Газовые котлы"></div>
+				<div class="right__column_image">
+          <img src="{$THEME}images/banner/for_banner2.png" alt="Газовые котлы">
+          
+        </div>
 			</div>
 		</div>
 	</div>
