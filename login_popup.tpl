@@ -29,7 +29,7 @@
 					<!-- User Email field -->
 					{view('includes/forms/input-base.tpl', [
                         'placeholder' => 'Ваш ID',
-                        'type' => 'number',
+                        'type' => 'text',
                         'name' => 'email',
                         'value' => get_value('email'),
                         'required' => true
