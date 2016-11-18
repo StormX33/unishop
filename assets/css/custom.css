@@ -460,5 +460,6 @@ select.sort__title_per_page{
     width: 100%;
 }
 .slide__item_description{
-	font-size:15px;
+	font-size: 12px;
+    margin-bottom: 12px;
 }

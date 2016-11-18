@@ -1158,7 +1158,8 @@ $(function () {
         $thirdInnerSlider = $('.banner__third-slide_list'),
         $mainPrevButton = $('.banner__products_prev'),
         $customPrevButton = $('.banner__btn_prev'),
-        $customPrevButtonWrap  = $(".btn__prev_wrap")
+        $customPrevButtonWrap  = $(".btn__prev_wrap"),
+        $customContainer = $('.container__btn_prev');
 
     
     // $mainSlider.on('init', function(){
@@ -1169,6 +1170,8 @@ $(function () {
     $innerSlider.on('init', function(){
         var $dots = $('> .slick-dots', $innerSlider);
         $dots.find('li').wrapAll('<div class="dots-wrap">');
+        // $customContainer.appendTo('.right__column_image', $mainSliderWrapper);
+
     });
         
     $mainSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -1203,6 +1206,22 @@ $(function () {
             $customPrevButtonWrap.css({
                 "left": "44%",
                 "top": "62px"
+            });
+            $mainPrevButton.removeClass('disabled');
+            $customPrevButton.removeClass('disabled');
+        }
+        else if(currentSlide == 2){
+            $customPrevButtonWrap.css({
+                "left": "55%",
+                "top": "145px"
+            });
+            $mainPrevButton.removeClass('disabled');
+            $customPrevButton.removeClass('disabled');
+        }
+        else if(currentSlide == 3){
+            $customPrevButtonWrap.css({
+                "left": "30%",
+                "top": "-85px"
             });
             $mainPrevButton.removeClass('disabled');
             $customPrevButton.removeClass('disabled');

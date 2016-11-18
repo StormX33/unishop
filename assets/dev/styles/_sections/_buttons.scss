@@ -19,7 +19,8 @@
 .products__buy-btn,
 .product-buy__btn--in-cart,
 .submit__btn_accent,
-.submit__btn_main{
+.submit__btn_main,
+.writereview{
     color: $main-color;
     @include transition(opacity 0.25s ease-out);   
     position: relative;
@@ -45,6 +46,39 @@
         color: $main-color;
         &:after{
             opacity: 1;
+        }
+    }
+}
+.writereview{
+    color: #485c6b;
+    border: 1px solid #e1e1e1;
+    // font-size: 18px;
+    background: #f1f1f1;
+    background: -moz-linear-gradient(top,  #f1f1f1 0%, #e6e6e6 100%); 
+    background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e6e6e6 100%); 
+    background: linear-gradient(to bottom,  #f1f1f1 0%,#e6e6e6 100%); 
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(148, 148, 148, 1);
+    -moz-box-shadow:    0px 4px 0px 0px rgba(148, 148, 148, 1);
+    box-shadow:         0px 4px 0px 0px rgba(148, 148, 148, 1);
+    .arrow-link-inner{
+        @include inlineblock(middle);
+        border-bottom: none;
+        &:before{
+            content: "";
+            @include inlineblock(middle);
+            @include get-sprite($misc-sprite, comments_icon);
+            margin-right: 10px;
+        }
+    }
+    &:hover, 
+    &:active, 
+    &:focus{
+        color: #485c6b;
+        &:after{
+        background: #e6e6e6; 
+        background: -moz-linear-gradient(top,  #e6e6e6 0%, #f1f1f1 100%); 
+        background: -webkit-linear-gradient(top,  #e6e6e6 0%,#f1f1f1 100%); 
+        background: linear-gradient(to bottom,  #e6e6e6 0%,#f1f1f1 100%); 
         }
     }
 }
@@ -107,7 +141,8 @@
 .products__buy-span,
 .submit__btn_span,
 .submit__btn_span:before,
-.btn__accent_span{
+.btn__accent_span,
+.arrow-link-inner{
     position: relative;
     z-index: 3;
     @include inlineblock(middle);
