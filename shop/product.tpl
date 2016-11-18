@@ -144,8 +144,8 @@
                 <div class="product__reviews col-right">
                   <div class="product__reviews_form">
                   {if tpl_product_comments_votes($model) > 0}
-                  	<a href="#tab_reviews" class="writereview"><span class="arrow-link-inner">Написать отзыв</span></a>
                     {tpl_load_comments()}
+                    <a href="#tab_reviews" class="writereview"><span class="arrow-link-inner">Написать отзыв</span></a>
                   {else:}
                   <div class="product__reviews_form">
                   		{view('comments/product_form.tpl')}

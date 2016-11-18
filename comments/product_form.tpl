@@ -33,7 +33,7 @@
         					<div class="star-voting__wrap">
         						{for $i = 5; $i > 0; $i--}
           							<input class="star-voting__input" id="star-voting-{$i}" type="radio" name="ratec" value="{$i}" {if $i == $old_ratec} checked{/if}>
-           							<label class="star-voting__ico" for="star-voting-{$i}" title="{$i} {tlang('out of 5 stars')}"><svg class="svg-icon"><use xlink:href="#svg-icon__star"></use></svg><span class="rating-text-{echo $i}">{if $i == 5}Отличный{/if}{if $i == 4}Хороший{/if}{if $i == 3}Нормальный{/if}{if $i == 2}Так себе{/if}{if $i == 1}Плохой{/if}</span></label>
+           							<label class="star-voting__ico" for="star-voting-{$i}" title="{$i} {tlang('out of 5 stars')}"><svg class="svg-icon"><use xlink:href="#svg-icon__star"></use></svg></label>
         						{/for}
         					</div>
       					</div>
