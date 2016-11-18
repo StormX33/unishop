@@ -304,7 +304,7 @@ img.mfp-img{box-sizing:border-box;padding:10px 0;margin:0 auto}
  margin-left: 10px;
 }
 .product_characteristics .product__reviews_form, .product__right_inner .product__tools_list-login {
-    display: block !important;
+    display: block;
 }
 .description_main_col-left:after,.product__buy.table-responsive:before{
 	content:'';

@@ -776,12 +776,17 @@ $(document).on('submit', '[data-comments-form]', function (e) {
                         /* Success Message */
                         preloadframe.find(errorMessageFrame).addClass('hidden');
                         preloadframe.find(successMessage).removeClass('hidden');
+						if ($('[data-class=tab_reviews]').hasClass('hidden')){
+							$('[data-class=tab_reviews]').removeClass('hidden');
+						}
+						$('#review_added').removeClass('hidden');
+						$('.product__reviews_form').addClass('hidden');
+						ratingWidget.init();
 						$('.tab__pane').filter('.pane__tab_reviews')
             					.add($('[data-class=tab_reviews]'))
             					.addClass('active')
             					.siblings()
             					.removeClass('active');
-
                     }
                 });
             }
