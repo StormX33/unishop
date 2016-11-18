@@ -121,7 +121,6 @@
                               {view('comments/product_form.tpl')}
                           {/if}
                       </div>
-                    </div>
                   </div>
             	</div>
             </li><!-- ./tab__pane pane__tab_characteristics -->
