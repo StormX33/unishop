@@ -211,7 +211,15 @@
     .collumn{
         border: 1px solid transparent;
         &:hover{
-            border: 1px solid #e8e7eb;
+            border: 1px solid $nav-bg;
+        }
+        @media screen and (max-width: 1023px) and (min-width: 320px){
+            border: none;
+            border-bottom: 1px solid #9a9fa3;
+            &:hover{
+                border: none;
+                border-bottom: 1px solid #9a9fa3;
+            }
         }
     }
     .inner__title{
@@ -321,6 +329,7 @@
     left: 15px;
     .collumn{
         position: relative;
+        padding: 3px 0;
         .item__title_link{
             margin-left: 22px;
         }
@@ -331,10 +340,14 @@
             overflow: hidden;
             text-align: center;
             position: absolute;
-            left: 0;
+            left: 3px;
             top: 50%;
             @include transform(translate(0, -50%));
             display: block;
+            // img{
+            //     height: auto;
+            //     max-height: 100%;
+            // }
         }
         @media screen and (max-width: 1023px) and (min-width: 320px){
             span{
