@@ -90,9 +90,7 @@
             {if trim(strip_tags($model->getFullDescription())) != ""}
       			 <li data-class="tab_description" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Описание</a></li>
             {/if}
-            {if tpl_product_comments_votes($model) > 0 }
-      		<li data-class="tab_reviews" class="tabs__controls_item"><a href="#" class="tabs__controls_link">Отзывы</a></li>
-           {/if}
+      		<li data-class="tab_reviews" class="tabs__controls_item{if tpl_product_comments_votes($model) == 0 } hidden{/if}"><a href="#" class="tabs__controls_link">Отзывы</a></li>
       	</ul><!-- ./tabs__controls -->
           
         <ul id="description__list" class="description_list">
@@ -118,7 +116,12 @@
                               {tpl_load_comments()}
                              <a href="#tab_reviews" class="writereview"><span class="arrow-link-inner">Оставить отзыв</span></a>
                           {else:}
+                          <div class="product__reviews_form">
                               {view('comments/product_form.tpl')}
+                              </div> 
+                              <div id="review_added" class="hidden">
+                              {tpl_load_comments()}
+                              </div>
                           {/if}
                       </div>
                   </div>
@@ -141,11 +144,16 @@
                 <div class="product__reviews col-right">
                   <div class="product__reviews_form">
                   {if tpl_product_comments_votes($model) > 0}
-                  	<a href="#tab_reviews" class="writereview"><span class="arrow-link-inner">Написать отзыв</span></a>
                     {tpl_load_comments()}
+                    <a href="#tab_reviews" class="writereview"><span class="arrow-link-inner">Написать отзыв</span></a>
                   {else:}
-                      {view('comments/product_form.tpl')}
-                      {/if}
+                  <div class="product__reviews_form">
+                  		{view('comments/product_form.tpl')}
+                  </div>
+                    <div id="review_added" class="hidden">
+                             {tpl_load_comments()}
+                     </div>
+                  {/if}
                   </div>
                 </div>
               </div>
