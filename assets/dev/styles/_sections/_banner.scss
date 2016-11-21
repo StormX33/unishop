@@ -24,15 +24,38 @@
 .banner {
 	.container__btn_prev{
 		position: absolute;
-		width: 50%;
+		width: 100%;
 		height: 1px;
 		right: 0;
 		@include transform(translate(0, -50%));
 		top: 50%;
-		z-index: 99;
+		z-index: 1001;
 		.banner__btn_prev{
 			position: absolute;
-			@include get-sprite($misc-sprite, banner__btn_prev);
+			background-color: #2a803d;
+			width: 40px;
+			height: 40px;
+			color: #fff;
+			border: 3px solid #fff;
+			@include border-radius(50%);
+			z-index: 1001;
+			&:before{
+				content: '';
+				display: block;
+				@include get-sprite($misc-sprite, banner__btn_prev);
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+			}
+			&:hover{
+				background-color: #f4a500;
+				&:before{
+					@include get-sprite($misc-sprite, banner__btn_prev_h);
+				}
+			}
 		}
 		.btn__prev_wrap{
 			position: absolute;
@@ -40,9 +63,9 @@
 	}
 	.btn__title{
 		position: absolute;
-		background: #F4AA00;
+		background: #f4a500;
 		width: 150px;
-		line-height: 35px;
+		line-height: 33px;
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 20px;
@@ -395,15 +418,15 @@
 	&.banner__third_room{
 		.banner__inner_content{
 			.banner__offer+.right__column_image{
-				left: 217px;
+				left: 140px;
 				@media screen and (max-width: 1440px) and (min-width: 1340px){
-					left: 168px;
+					left: 120px;
 				}
 				@media screen and (max-width: 1339px) and (min-width: 1230px){
-					left: 117px;
+					left: 50px;
 				}
 				@media screen and (max-width: 1229px) and (min-width: 1110px){
-					left: 52px;
+					left: 0px;
 				}
 			}
 		}
@@ -525,11 +548,10 @@
 	}
 }
 .banner__first_room{
-	// .banner__btn_prev{
-	// 	left: 53%;
-	// 	top: 40px;
-	// }
-
+	.btn__prev_wrap{
+		left: 53%;
+		top: 64px;
+	}
 	.slick-dots{
 		li{
 			left: auto;
@@ -582,6 +604,10 @@
 	.slick-dots-inner{
 		display: none !important;
 	}
+	.btn__prev_wrap{
+		left: 60%;
+		top: 145px;
+	}
 	.slick-dots-second-room{
 		li{
 			&:nth-child(2){
@@ -609,7 +635,7 @@
 	}
 	.banner__inner_content .banner__offer+.right__column_image{
 		@media screen and (max-width: 1600px) and (min-width: 1350px){
-			left: 100px;
+			left: 88px;
 		}
 		@media screen and (max-width: 1349px) and (min-width: 1200px){
 			left: 0;
@@ -635,6 +661,10 @@
 .banner__third_room{
 	.slick-dots-inner{
 		display: none !important;
+	}
+	.btn__prev_wrap{
+		left: 19%;
+		top: -87px;
 	}
 	.slick-dots-third-room{
 		li{

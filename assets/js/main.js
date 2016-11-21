@@ -44,6 +44,49 @@ function footerToBottom() {
 	}
 );
 
+$(document).ready(function() {
+    if ($(".filter").length) {
+        $(".filter__item").addClass("active");
+        
+        $(".filter__title").on("click", function(e) {
+            var $this = $(this),
+                container = $this.closest(".filter__item"),
+                content = container.find(".filter__content");
+
+            container.toggleClass('active');
+            content.stop(true, true).slideToggle();
+        });
+    }
+});
+
+// Header dropdown
+$(function () {
+    var $phoneHandler = $('.contacts__tel'),
+        $contactsList = $('.contacts__content_list');
+
+    $phoneHandler.on('click', function () {
+        $phoneHandler.toggleClass('opened');
+        $contactsList.slideToggle("400");
+    });
+});
+
+
+// Footer bottom
+function footerToBottom() {
+    var browserHeight = $(window).height(),
+        footerOuterHeight = $('#footer').outerHeight(true),
+        mainHeightMarginPaddingBorder = $('.wrapper__main').outerHeight(true) - $('.wrapper__main').height();
+
+    $('.wrapper__main').css({
+        'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
+        });
+    };
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    }
+);
+
 var toggleActiveClassClick= (function () {
 
     var _changeActiveClass = function ($this) {
@@ -418,7 +461,7 @@ $(function() {
             }
 
             $subItems.data('isSlideUp', true);
-            $subItems.slideUp(200, function(){
+            $subItems.slideUp(100, function(){
                 $subItems.data('isSlideUp', false);
             });
         }
@@ -718,27 +761,10 @@ $(function(){
     });
 
 })(jQuery, window, document)
-
-
 // BannerSlider
 $(window).on('load', function () {
     var $bannerSlide = $('.banner__content_slide');
     $bannerSlide.css('display', 'block');
-});
-// BannerTooltip
-$(function() {
-    $customPrevButton =  $('.banner__btn_prev'),
-    $customButtonTooltip = $('.btn__title');
-
-    $customPrevButton.on('hover', function () {
-        $customButtonTooltip.toggleClass('on');
-        if ($customButtonTooltip.hasClass('on')){
-            $customButtonTooltip.fadeTo(300, 1);
-        }
-        else{
-            $customButtonTooltip.fadeOut(300);
-        }
-    });
 });
 // Projects
 $(function () {
@@ -1157,21 +1183,36 @@ $(function () {
         $secondInnerSlider = $('.banner__second-slide_list'),
         $thirdInnerSlider = $('.banner__third-slide_list'),
         $mainPrevButton = $('.banner__products_prev'),
-        $customPrevButton = $('.banner__btn_prev'),
-        $customPrevButtonWrap  = $(".btn__prev_wrap"),
         $customContainer = $('.container__btn_prev');
 
-    
-    // $mainSlider.on('init', function(){
-    //     var $dots = $('.right__column_image > .slick-dots', $mainSliderWrapper);
-    //     $dots.find('li').wrapAll('<div class="dots-wrap">');
-    // });
+
+    $customContainer.appendTo('.right__column_image', $mainSliderWrapper);
+    $customContainer.css('z-index', 1001)
+
+    // Enable tooltips
+    var $customPrevButton =  $('.banner__btn_prev'),
+        $customButtonTooltip = $('.btn__title');
+
+    $customPrevButton.hover(
+        //mouseenter
+        function(){
+            if (!$customButtonTooltip.hasClass('on')){
+                $customButtonTooltip.addClass('on');
+                $customButtonTooltip.fadeTo(300, 1);
+            }
+        },
+        //mouseleave
+        function(){
+            if ($customButtonTooltip.hasClass('on')){
+                $customButtonTooltip.removeClass('on');
+                $customButtonTooltip.fadeOut(300);
+            }
+        }
+    )
 
     $innerSlider.on('init', function(){
         var $dots = $('> .slick-dots', $innerSlider);
         $dots.find('li').wrapAll('<div class="dots-wrap">');
-        // $customContainer.appendTo('.right__column_image', $mainSliderWrapper);
-
     });
         
     $mainSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -1179,12 +1220,13 @@ $(function () {
             $innerDots = $('.right__column_image > .slick-dots-inner', $mainSliderWrapper),
             $secondSlideDots = $('.right__column_image > .slick-dots-second-room', $secondRoomWrapper),
             $thirdSlideDots = $('.right__column_image > .slick-dots-third-room', $thirdRoomWrapper);
-
+            
         if(nextSlide == 0){
             $mainDots.show();
             $innerDots.hide();
             $secondSlideDots.hide();
             $thirdSlideDots.hide();
+
         } else {
             $mainDots.hide();
             $innerDots.show();
@@ -1193,49 +1235,51 @@ $(function () {
         }
     });
 
-    $mainSlider.on('afterChange', function(slick, currentSlide){
-        var currentSlide = $mainSlider.slick('slickCurrentSlide'),
+    $mainSlider.on('afterChange', function(slick, $currentSlide){
+        var currentSlideIndex = $mainSlider.slick('slickCurrentSlide'),
             $mainDots = $('.right__column_image > .slick-dots-main', $mainSliderWrapper),
-            $innerDots = $('.right__column_image > .slick-dots-inner', $mainSliderWrapper);
+            $innerDots = $('.right__column_image > .slick-dots-inner', $mainSliderWrapper),
+            $customPrevButtonAll = $('.banner__btn_prev', $mainSliderWrapper)
+            $customPrevButtonWrap  = $(".btn__prev_wrap", $currentSlide);
 
-        if(currentSlide == 0){
+        if(currentSlideIndex == 0){
             $mainPrevButton.addClass('disabled');
-            $customPrevButton.addClass('disabled');
+            $customPrevButtonAll.addClass('disabled');
+        } else{
+            $mainPrevButton.removeClass('disabled');
+            $customPrevButtonAll.removeClass('disabled');
         }
-        else if(currentSlide == 1){
+        
+        if(currentSlideIndex == 1){
             $customPrevButtonWrap.css({
                 "left": "44%",
                 "top": "62px"
             });
-            $mainPrevButton.removeClass('disabled');
-            $customPrevButton.removeClass('disabled');
         }
-        else if(currentSlide == 2){
+        
+        if(currentSlideIndex == 2){
             $customPrevButtonWrap.css({
                 "left": "55%",
                 "top": "145px"
             });
-            $mainPrevButton.removeClass('disabled');
-            $customPrevButton.removeClass('disabled');
         }
-        else if(currentSlide == 3){
+        
+        if(currentSlideIndex == 3){
             $customPrevButtonWrap.css({
                 "left": "30%",
                 "top": "-85px"
             });
-            $mainPrevButton.removeClass('disabled');
-            $customPrevButton.removeClass('disabled');
-        }
-        else{
-            $mainPrevButton.removeClass('disabled');
-            $customPrevButton.removeClass('disabled');
         }
     });
+
     $mainPrevButton.on('click', function(event) {
         $mainSlider.slick("slickGoTo", 0, true);
     });
     $customPrevButton.on('click', function(event) {
         $mainSlider.slick("slickGoTo", 0, true);
+
+        $customButtonTooltip.removeClass('on');
+        $customButtonTooltip.fadeOut(100);
     });
 
     $innerSlider.slick(bannerSlideSlickOpts); 

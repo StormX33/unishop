@@ -474,10 +474,10 @@
 }
 .detail__related_products{
     .related__products_prev{
-        @include get-sprite($misc-sprite, related_arrow_prew);
+        @include get-sprite($misc-sprite, advantages_arrow_prev);
     }
     .related__products_next{
-        @include get-sprite($misc-sprite, related_arrow_next);
+        @include get-sprite($misc-sprite, advantages_arrow_next);
     }
     .slick-slider{
         margin-bottom: 20px;
@@ -862,13 +862,9 @@ span.rating-text-5{
     }
     .products__item_long{
         height: 392px;
+        overflow: hidden;
     }
-
-
 }
-// .related__products_header{
-//     margin-bottom: 27px;
-// }
 
 .recent__products{
     .products__list_grid{
@@ -891,13 +887,13 @@ span.rating-text-5{
 }
 .recent__products{
     .recent__products_prev{
-        @include get-sprite($misc-sprite, related_arrow_prew);
+        @include get-sprite($misc-sprite, advantages_arrow_prev);
         &:hover{
             opacity: 0.6;
         }
     }
     .recent__products_next{
-        @include get-sprite($misc-sprite, related_arrow_next);
+        @include get-sprite($misc-sprite, advantages_arrow_next);
         &:hover{
             opacity: 0.6;
         }

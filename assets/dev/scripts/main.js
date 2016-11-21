@@ -1,3 +1,46 @@
+$(document).ready(function() {
+    if ($(".filter").length) {
+        $(".filter__item").addClass("active");
+        
+        $(".filter__title").on("click", function(e) {
+            var $this = $(this),
+                container = $this.closest(".filter__item"),
+                content = container.find(".filter__content");
+
+            container.toggleClass('active');
+            content.stop(true, true).slideToggle();
+        });
+    }
+});
+
+// Header dropdown
+$(function () {
+    var $phoneHandler = $('.contacts__tel'),
+        $contactsList = $('.contacts__content_list');
+
+    $phoneHandler.on('click', function () {
+        $phoneHandler.toggleClass('opened');
+        $contactsList.slideToggle("400");
+    });
+});
+
+
+// Footer bottom
+function footerToBottom() {
+    var browserHeight = $(window).height(),
+        footerOuterHeight = $('#footer').outerHeight(true),
+        mainHeightMarginPaddingBorder = $('.wrapper__main').outerHeight(true) - $('.wrapper__main').height();
+
+    $('.wrapper__main').css({
+        'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
+        });
+    };
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    }
+);
+
 var toggleActiveClassClick= (function () {
 
     var _changeActiveClass = function ($this) {
@@ -372,7 +415,7 @@ $(function() {
             }
 
             $subItems.data('isSlideUp', true);
-            $subItems.slideUp(200, function(){
+            $subItems.slideUp(100, function(){
                 $subItems.data('isSlideUp', false);
             });
         }
@@ -672,25 +715,3 @@ $(function(){
     });
 
 })(jQuery, window, document)
-
-
-// BannerSlider
-$(window).on('load', function () {
-    var $bannerSlide = $('.banner__content_slide');
-    $bannerSlide.css('display', 'block');
-});
-// BannerTooltip
-$(function() {
-    $customPrevButton =  $('.banner__btn_prev'),
-    $customButtonTooltip = $('.btn__title');
-
-    $customPrevButton.on('hover', function () {
-        $customButtonTooltip.toggleClass('on');
-        if ($customButtonTooltip.hasClass('on')){
-            $customButtonTooltip.fadeTo(300, 1);
-        }
-        else{
-            $customButtonTooltip.fadeOut(300);
-        }
-    });
-});

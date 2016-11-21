@@ -114,6 +114,18 @@
         font-weight: normal;
         color: $title-color-blue; 
     }
+    .feedback__form-input:focus::-webkit-input-placeholder{
+        color: transparent;
+    }
+    .feedback__form-input:focus::-moz-placeholder{
+        color: transparent;
+    }
+    .feedback__form-input:focus:-moz-placeholder{
+        color: transparent;
+    }
+    .feedback__form-input:focus:-ms-input-placeholder{
+        color: transparent;
+    }
     .feedback-submit{
         min-width: 220px;
     }
