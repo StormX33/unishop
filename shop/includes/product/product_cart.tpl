@@ -9,7 +9,7 @@
 {if !$CI->dx_auth->is_logged_in()}
 	<ul class="product__tools_list">
 		<li class="product__tools_item">
-    		<a href="#" class="product__tools_link">
+    		<a href="{site_url('callbacks')}?subj=5" class="product__tools_link" data-modal="callbacks_modal" rel="nofollow" >
 				<div class="product__tools_img">
         			<img src="{$THEME}/images/icons/product_tools/order.png" alt="order" class="tools_img_main tools_img">
             		<img src="{$THEME}/images/icons/product_tools_hover/order.png" alt="order" class="tools_img">
@@ -48,7 +48,7 @@
 {else:}
 	<ul class="product__tools_list product__tools_list-login">
 		<li class="product__tools_item">
-        <a href="#" class="product__tools_link">
+        <a href="{site_url('callbacks')}?subj=2" data-modal="callbacks_modal" rel="nofollow"  class="product__tools_link">
 		<div class="product__tools_img"><img src="{$THEME}/images/icons/product_tools_login/advice.png" alt="advice" class="tools_img_main tools_img"><img src="{$THEME}/images/icons/product_tools_login_h/advice.png" alt="advice" class="tools_img"></div><span class="product__tools_span">Консультация инженера</span>
         </a>
         </li>
@@ -71,7 +71,7 @@
     	</a>
     </li>
   <li class="product__tools_item">
-    <a href="#" class="product__tools_link">
+    <a href="{site_url('sales')}" class="product__tools_link" data-modal="sales">
       <div class="product__tools_img">
         <img src="{$THEME}/images/icons/product_tools_login/sale.png" alt="sale" class="tools_img_main tools_img">
         <img src="{$THEME}/images/icons/product_tools_login_h/sale.png" alt="sale" class="tools_img">
