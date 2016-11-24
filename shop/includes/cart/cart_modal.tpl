@@ -26,7 +26,7 @@
     			{if count($items) > 0}    
     				<div class="popup_footer">
                     <div class="feedback__button pull-left">
-                      <div class="product-buy__btn--in-cart">
+                      <div class="writereview">
             					   <button class="feedback-submit" type="reset" data-modal-close>{tlang('Continue Shopping')}</button>
                       </div>
                     </div>

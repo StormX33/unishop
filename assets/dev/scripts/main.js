@@ -13,17 +13,6 @@ $(document).ready(function() {
     }
 });
 
-// Header dropdown
-$(function () {
-    var $phoneHandler = $('.contacts__tel'),
-        $contactsList = $('.contacts__content_list');
-
-    $phoneHandler.on('click', function () {
-        $phoneHandler.toggleClass('opened');
-        $contactsList.slideToggle("400");
-    });
-});
-
 
 // Footer bottom
 function footerToBottom() {
@@ -380,7 +369,7 @@ $(function() {
                 }
 
                 $subItems.data('isSlideDown', true);
-                $subItems.slideDown(400, function(){
+                $subItems.slideDown(100, function(){
                     $row.removeClass('cbp-hropen-started')
                         .addClass('cbp-hropen');
 
@@ -645,6 +634,47 @@ $(function() {
         overlay.attr('style', 'width:100%; height:600px; position:absolute; z-index:20;');
     });
 });
+
+(function(window, document){
+    var mark = [{ LatLang: { lat: 50.464361, lng: 30.373139 },  description: "<p><img src='http://s017.radikal.ru/i402/1611/41/adf6cebdf522.jpg'> <br>Киев<br> ул. Академика Крымского, 4-А <br>044 455 7898; 067 246 7225</p>" },
+    { LatLang: { lat: 49.242191, lng: 28.522813 }, description: "<p><img src='http://s017.radikal.ru/i402/1611/41/adf6cebdf522.jpg'> <br>Винница<br>ул. Максима Шимка, 56<br>офис 302<br>067 246 7445</p>" },
+
+        ];
+
+        function e() {
+            var centerLatLng = { lat: 50.063768, lng: 29.904968 };
+            var e = document.getElementById("map"),
+            t = {
+                center: centerLatLng,
+                zoom: 7,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var gmap = new google.maps.Map(e, t);
+            var image = 'http://s019.radikal.ru/i609/1611/c1/0dc69b704082.png';
+            var marker = [], infowindow=[];
+            for (i = 0; i < 4; i++) {
+                marker[i] = new google.maps.Marker({
+                    position: mark[i].LatLang,
+                    map: gmap,
+                    title: mark[i].description,
+                    icon: image
+
+                });
+                marker[i].setMap(gmap);
+
+                infowindow[i] = new google.maps.InfoWindow({
+                         content: mark[i].description
+                });
+                marker[i].id = i;
+                marker[i].addListener('click', function () {
+                    infowindow[this.id].open(gmap, this);
+                });
+
+            }
+        }
+        google.maps.event.addDomListener(window, 'load', e);
+
+}) (window, document, undefined)
 
 /*-----------fonts----------*/
 WebFont.load({

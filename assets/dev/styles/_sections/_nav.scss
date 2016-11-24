@@ -479,13 +479,7 @@
         } 
     }
     .navigation .collumn{
-        padding: 15px;
-        margin-bottom: 0;
-        img, 
-        .item__title_link{
-            @include inlineblock(middle);
-        }
-
+        padding: 0;
     }
     .item__title_text{
         font-size: em(21px);
@@ -501,6 +495,7 @@
     }
     .navigation .item__title_link{
         color: #0a2e4c;
+        padding: 15px;
     }
     .cbp-hrmenu .nav__list .nav__item_dropdown.cbp-hropen>a{
         .nav__span_arrow{
@@ -529,11 +524,11 @@
         } 
     }
     .navigation .collumn{
-        padding: 15px;
-        margin-bottom: 0;
+        padding: 0;
     }
     .navigation .item__title_link{
         color: #0a2e4c;
+        padding: 15px;
     }
     .item__title_text{
         font-size: em(21px);
@@ -658,8 +653,7 @@
         } 
     }
     .navigation .collumn{
-        padding: 15px;
-        margin-bottom: 0;
+        padding: 0;
     }
     .item__title_text{
         font-size: em(21px);
@@ -675,6 +669,7 @@
     }
     .navigation .item__title_link{
         color: #0a2e4c;
+        padding: 15px;
     }
     .navigation .container{
         width: 100%;

@@ -17,7 +17,7 @@
     }
 
     .advantages__button_prev{
-        @include get-sprite($misc-sprite, advantages_arrow_prev);
+        @include get-sprite($misc-sprite, advantages_arrow_prew);
         left: 0;
         @media screen and (max-width: 650px) and (min-width: 320px){
             @include get-sprite($misc-sprite, slick_arrow_prev_mob);

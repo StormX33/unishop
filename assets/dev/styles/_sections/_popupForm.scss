@@ -285,13 +285,12 @@
         text-transform: uppercase;
         font-size: em(24px);
     }
-    .product-buy__btn--in-cart{
+    .writereview{
         @extend .main__button;
         font-size: em(24px);
     }
     .feedback-submit{
         font-family: 'HeliosCondRegular', arial;
-        color: $main-color;
     }
 }
 
@@ -392,7 +391,7 @@
         .popup_header{
             margin-bottom: 0;
         }
-        .product-buy__btn--in-cart,
+        .writereview,
         .cart__item_quantity-title,
         .cart__item_quantity,
         .cart__item_price-title,
@@ -418,7 +417,7 @@
         .popup_header{
             margin-bottom: 0;
         }
-        .product-buy__btn--in-cart,
+        .writereview,
         .cart__item_quantity-title,
         .cart__item_quantity{
             display: none;

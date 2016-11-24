@@ -22,10 +22,10 @@
                 <div class="paginations">
                     <ul class="pagination__list">
                         <li class="pagination_item">
-                            <button class="pagination__button orders__button_prev"> <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></button>
+                            <button class="pagination__button orders__button_prev"></button>
                         </li>
                         <li class="pagination_item">
-                            <button class="pagination__button orders__button_next"> <span aria-hidden="true" class="glyphicon  glyphicon-menu-right">   </span></button>
+                            <button class="pagination__button orders__button_next"></button>
                         </li>
                     </ul>
                 </div>

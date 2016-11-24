@@ -1,5 +1,5 @@
 <div class="container">
-<div class="main-content">
+<div class="main-content services__content">
     <aside class="sidebar pull-right">
       <div class="form-wrap">
       	<header class="form_header">

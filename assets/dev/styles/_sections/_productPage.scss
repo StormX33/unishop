@@ -117,7 +117,6 @@
 .current__price{
     font-size: em(26px);
     font-family: "HeliosCondBold", arial;
-
 }
 .old__price{
     text-decoration: line-through;
@@ -209,6 +208,8 @@
     font-size: 16px;
     vertical-align: top;
     outline: none;
+    height: 44px;
+    line-height: 44px;
 }
 .buy__click_form-input::-webkit-input-placeholder{ 
     opacity: 0.5;
@@ -474,7 +475,7 @@
 }
 .detail__related_products{
     .related__products_prev{
-        @include get-sprite($misc-sprite, advantages_arrow_prev);
+        @include get-sprite($misc-sprite, advantages_arrow_prew);
     }
     .related__products_next{
         @include get-sprite($misc-sprite, advantages_arrow_next);
@@ -887,7 +888,7 @@ span.rating-text-5{
 }
 .recent__products{
     .recent__products_prev{
-        @include get-sprite($misc-sprite, advantages_arrow_prev);
+        @include get-sprite($misc-sprite, advantages_arrow_prew);
         &:hover{
             opacity: 0.6;
         }
@@ -916,9 +917,9 @@ span.rating-text-5{
 .tabs__controls_item{
     @include inlineblock();
     border-top:  1px solid $tabs-color;
-    border-left: 1px solid $tabs-color;
-    &:last-child{
-        border-right: 1px solid $tabs-color;
+    border-right: 1px solid $tabs-color;
+    &:first-child{
+        border-left: 1px solid $tabs-color;
     } 
     &.active,
     &:hover{
