@@ -6,7 +6,7 @@
 		<div class="navbar-header">
 			<button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="toggle-mnu"></button>
             <b class="hidden-lg menu-hidden">Товары и услуги</b>
-            <a href="{$THEME}login_popup.tpl" type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="toggle-search" data-modal=""></a>
+            <a href="{site_url('poisk')}" type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="toggle-search" data-modal="search_popup"></a>
 		</div>
 
 			<ul class="nav__list">
