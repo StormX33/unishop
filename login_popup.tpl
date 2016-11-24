@@ -77,13 +77,8 @@
     			{form_csrf()}
 			</form>
 		</div>
-<!--        {if !$success}
-			<div class="popup_footer">
-				<div class="popup_footer_content">
-					<a class="feedback__form_link" href="{site_url('auth/register')}">Зарегестрируйтесь</a>
-					<span class="feedback__form_span"> если вы новый покупатель магазина</span>
-				</div>
-			</div>
-		{/if}-->
+       {if !$success}
+				<a class="feedback__form_link" style="text-align:center; margin-bottom:20px;" href="{site_url('wt-prof')}">Подробнее о WT-Prof</a>
+		{/if}
   	</div><!--./ remodal-->
 </div><!-- ./modal-wrapper -->

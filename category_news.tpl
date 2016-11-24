@@ -29,7 +29,7 @@
                                     <h3 class="page__teaser_title">
                                         <a href="{site_url($item.full_url)}">{$item.title}</a>
                                     </h3>
-                                     <span style="text-transform: uppercase;font-weight: bold;">{echo get_category_name($item[category])} - </span><span class="page__teaser_span" datetime="{date('Y-m-d', $item.publish_date)}">{tpl_locale_date('d F Y', $item.publish_date)}</span>
+                                     <span style="text-transform: uppercase;font-weight: bold;"><a href="{echo get_category_uri($item[category])}"> {echo get_category_name($item[category])}</a> - </span><span class="page__teaser_span" datetime="{date('Y-m-d', $item.publish_date)}">{tpl_locale_date('d F Y', $item.publish_date)}</span>
                                 </header>
                                 <div class="page__teaser_text">
                                     {$item.prev_text}

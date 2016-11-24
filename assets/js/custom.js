@@ -186,8 +186,6 @@ $(document).on('submit', '[data-cart-checkout-form]', function () {
   $(this).find('[data-cart-checkout-form-button]').prop('disabled', true);
 });
 /********************************** END CART **********************************************/
-
-
 /********************************** CATALOG **********************************************/
 /*
  * Change Catalog View
