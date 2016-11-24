@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="{$THEME}assets/css/custom.css">
     <script src="{$THEME}assets/js/jquery.min.js"></script>
     <script src="{$THEME}assets/js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"> </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyCZXiULGxmzw0X7Q1Bn6TrnhAJL9q8Y5Xo"> </script>
+
     <!-- Shortcut icons -->
     <link rel="shortcut icon" href="{siteinfo('siteinfo_favicon_url')}" type="image/x-icon">
 </head>
