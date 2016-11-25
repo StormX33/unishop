@@ -163,6 +163,40 @@
     .popup__feedback_form{
         margin-bottom: 20px;
     }
+    .feedback__button{
+        @include clearfix;
+    }
+    .submit__btn_accent{
+        float:right;
+    }
+    .writereview{
+        float: left;
+        padding: 12.5px 33px;
+        font-size: em(21px);
+        text-transform: uppercase;
+        display: block;
+    }
+    @include respond-to(mobile){
+       .submit__btn_accent,
+        .writereview{
+            float: none;
+            width: 260px;
+            font-size: em(19px);
+        }
+        .writereview{
+            margin: 0 auto 20px;
+        }
+    } 
+    @include respond-to(extraSmall-screens){
+        .submit__btn_accent,
+        .writereview{
+            float: none;
+            width: 271px;
+        }
+        .writereview{
+            margin: 0 auto 20px;
+        }
+    }
 }
 .popup_footer{
     text-align: left;
@@ -288,6 +322,7 @@
     .writereview{
         @extend .main__button;
         font-size: em(24px);
+        padding: 13px 14px;
     }
     .feedback-submit{
         font-family: 'HeliosCondRegular', arial;

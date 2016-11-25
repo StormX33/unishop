@@ -213,12 +213,12 @@ $contacts-text: #282828;
 		}
     }
 }
-.page__page{
-	margin-top: 30px;
-	@include respond-to(wide-screens){
-		margin-top: 0;
-	}
-}
+// .page__page{
+// 	margin-top: 30px;
+// 	@include respond-to(wide-screens){
+// 		margin-top: 0;
+// 	}
+// }
 input:focus::-webkit-input-placeholder, 
 textarea:focus::-webkit-input-placeholder{
 	color: transparent;

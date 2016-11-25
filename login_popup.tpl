@@ -60,6 +60,9 @@
                     </div>
 				{/if}
                 <div class="feedback__button">
+                  {if !$success}
+                      <a class="writereview" href="{site_url('wt-prof')}"><span class="btn__accent_span">Подробнее о WT-Prof</span></a>
+                  {/if}
                 	{if !$success}
                 		<div class="submit__btn_accent">
             				<input class="feedback-submit" type="submit" value="{tlang('Log in')}">
@@ -69,6 +72,7 @@
                 		<span>{tlang('Logining in...')}</span>
                         </button>
                     {/if}
+                  
                 </div>
     			<input type="hidden" name="template" value="login_popup">
     			{if strip_tags(trim($_REQUEST['wishlist']))}
@@ -77,8 +81,6 @@
     			{form_csrf()}
 			</form>
 		</div>
-       {if !$success}
-				<a class="feedback__form_link" style="text-align:center; margin-bottom:20px;" href="{site_url('wt-prof')}">Подробнее о WT-Prof</a>
-		{/if}
+    
   	</div><!--./ remodal-->
 </div><!-- ./modal-wrapper -->

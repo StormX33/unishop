@@ -682,7 +682,7 @@ $(function() {
 });
 
 (function(window, document){
-    var mark = [{ LatLang: { lat: 50.464361, lng: 30.373139 },  description: "<p><img src='http://s017.radikal.ru/i402/1611/41/adf6cebdf522.jpg'> <br>Киев<br> ул. Академика Крымского, 4-А <br>044 455 7898; 067 246 7225</p>" },
+    var mark = [{ LatLang: { lat: 50.464361, lng: 30.373139 },  description: "<p><img src='http://s017.radikal.ru/i402/1611/41/adf6cebdf522.jpg'> <br>Киев<br> ул. Академика Крымского, 4-А <br>офис 117<br>044 455 7898; 067 246 7225</p>" },
     { LatLang: { lat: 49.242191, lng: 28.522813 }, description: "<p><img src='http://s017.radikal.ru/i402/1611/41/adf6cebdf522.jpg'> <br>Винница<br>ул. Максима Шимка, 56<br>офис 302<br>067 246 7445</p>" },
 
         ];
@@ -698,7 +698,7 @@ $(function() {
             var gmap = new google.maps.Map(e, t);
             var image = 'http://s019.radikal.ru/i609/1611/c1/0dc69b704082.png';
             var marker = [], infowindow=[];
-            for (i = 0; i < 4; i++) {
+            for (i = 0; i < mark.length; i++) {
                 marker[i] = new google.maps.Marker({
                     position: mark[i].LatLang,
                     map: gmap,

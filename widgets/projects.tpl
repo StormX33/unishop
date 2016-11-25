@@ -10,12 +10,14 @@
         						<a href="{$image.url}" class="projects_item_link">
                                 	<img src="{$image.file_path}" title="{$image.description}" class="projects__item_image" />
                                	</a>
-                                <div class="projects__item_title">
-                                	<h4 class="item_title_text">{$image.title}</h4>
-                                </div>
-                                <div class="project__item_text">
-                                	{$image.description}
-                                </div>
+                                <a href="{$image.url}">
+                                    <div class="projects__item_title">
+                                    	<h4 class="item_title_text">{$image.title}</h4>
+                                    </div>
+                                    <div class="project__item_text">
+                                    	{$image.description}
+                                    </div>
+                                </a>
                         	</div>
                         </li>
     				{/foreach}

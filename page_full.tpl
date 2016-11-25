@@ -2,7 +2,7 @@
     <div class="main-content">
         <aside class="sidebar pull-right">
         </aside>
-        <div class="content pull-left">
+        <div class="content  content__sale pull-left">
             <div class="page__full_article-wrapper">
                 <article class="page__full_article">
                     <header><h2>{$page.title}</h2></header>

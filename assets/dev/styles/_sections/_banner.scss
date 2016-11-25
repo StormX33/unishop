@@ -663,28 +663,28 @@
 		display: none !important;
 	}
 	.btn__prev_wrap{
-		left: 19%;
+		left: 12%;
 		top: -87px;
 	}
 	.slick-dots-third-room{
 		li{
 			&:nth-child(2){
-				left: 10%;
+				left: -2px;
 				bottom: auto;
-				top: -5px;
+				top: 0px;
 			}
 			&:nth-child(3){
-				left: 74%;
-				top: 30px
+				left: 52%;
+				top: 30px;
 			}
 			&:nth-child(4){
 				top: auto;
-				left: -5%;
-				bottom: 60px;
+				left: -15%;
+				bottom: 85px;
 			}
 			&:nth-child(5){
-				left: 80%;
-				top: -90px;
+				left: 57.5%;
+				top: -73px;
 			}
 		}
 	}

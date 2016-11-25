@@ -9,7 +9,7 @@
         </div>
         </ul>
     </aside>
-        <div class="content pull-right">
+        <div class="content content__sale pull-right">
             <div class="page__full_article-wrapper">
                 <article class="page__full_article">
                     <header><h2>{$page.title}</h2></header>

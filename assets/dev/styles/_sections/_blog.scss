@@ -17,14 +17,6 @@ $link-color: #ce1d2e;
 .page__teaser_wrapper{
     padding-top: 10px;
 }
-// .page__teaser{
-//     padding: 0 4px 25px 15px;
-//     border-bottom: 1px solid #eae9ec;
-//     margin-bottom: 30px;
-//     &:last-child{
-//         margin-bottom: 0;
-//     }
-// }
 .page__teaser header{
     margin-bottom: 8px;
 }
@@ -32,6 +24,12 @@ $link-color: #ce1d2e;
     margin-bottom: 8px;
     a{
         color: $title-color-blue;
+        &:hover,
+        &:focus,
+        &:active{
+            color: lighten($title-color-blue, 10%);
+        
+        }
     }
     .page__teaser_span{
         color: $title-color-black;
@@ -71,3 +69,25 @@ $link-color: #ce1d2e;
 .page__teaser_span-news{
     text-transform: uppercase;
 }
+// .page__full_article-text{
+//     img{
+//         float: none; 
+//         padding: 0;
+//         width: 358px;
+//         height: 230px;
+//         margin: 0 auto;
+//         display: block;
+//         @include respond-to(medium-screens){
+//             width: 358px;
+//             height: 230px;
+//             float: left; 
+//             padding: 0 15px;
+//         }
+//         @include respond-to(wide-screens){
+//             width: 358px;
+//             height: 230px;
+//             float: left; 
+//             padding: 0 15px;
+//         }
+//     }
+// }
