@@ -26,13 +26,6 @@
         margin: 0 10px 0 14px;
         @include get-sprite($misc-sprite, breadcrumbs_next);
     }
-    // &:first-child:before{
-    //     content: '';
-    //     @include inlineblock(middle);
-    //     @include get-sprite($misc-sprite, home_breadcrumbs);
-    //     margin-right: 8px;
-
-    // }
     &:last-child{
         &:after{
             display: none;

@@ -118,16 +118,6 @@ $select-map: sprite-map('icons/select/*.png', $spasing: 70px);
         width: 246px !important;
     }
 }
-@include respond-to(extraSmall-screens){
-    // .product__page .sort__title{
-    //     font-size: em(16px);
-    //     background: $tabs-color;
-    //     padding: 12px 6px;
-    // }
-    // .select2-container{
-    //     width: 153px !important;
-    // }
-}
 
 @include respond-to(small-screens){
     .select2-container{

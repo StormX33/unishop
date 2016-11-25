@@ -63,15 +63,9 @@
 		}
 	}
 	.prices_link_zip{
-		// margin-left: 33px;
 		&:before{
 			@include get-sprite($misc-sprite, zip-icon);
 			left: -33px;
 		}
 	}
 }
-// fieldset{
-//     display: table-cell;
-//     width: 100%;
-//     border: none;
-// }

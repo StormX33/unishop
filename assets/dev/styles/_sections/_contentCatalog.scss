@@ -40,9 +40,6 @@
     @include respond-to(small-screens){
         width: 100%;
     }
-    // @include respond-to(medium-screens){
-    //     width: 100%;
-    // }
 }
 
 // SERVISES PAGES
@@ -98,9 +95,6 @@
 // CATEGORY PAGE
 @include respond-to(small-screens){
     .shop_category__page{
-        // .container{
-        //     width: 95%;
-        // }
         .content{
             width: 100%;
         }

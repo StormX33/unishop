@@ -52,7 +52,6 @@
 .writereview{
     color: #485c6b;
     border: 1px solid #e1e1e1;
-    // font-size: 18px;
     background: #f1f1f1;
     background: -moz-linear-gradient(top,  #f1f1f1 0%, #e6e6e6 100%); 
     background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e6e6e6 100%); 
@@ -122,7 +121,6 @@
     }
 }
 .product-buy__btn--in-cart{
-    // line-height: normal;
     background: rgb(7,210,7); 
     background: -moz-linear-gradient(top,  rgba(7,210,7,1) 0%, rgba(0,180,0,1) 100%); 
     background: -webkit-linear-gradient(top,  rgba(7,210,7,1) 0%,rgba(0,180,0,1) 100%); 
@@ -156,18 +154,6 @@
         position: relative;
         z-index: 3;
     }
-    // @include respond-to(mobile){
-    //     &:before{
-    //         @include get-sprite($misc-sprite, catalog_cart_mob);
-    //         // margin-right: 0;
-    //     }
-    // }
-    // @include respond-to(extraSmall-screens){
-    //     &:before{
-    //         @include get-sprite($misc-sprite, catalog_cart_mob);
-    //         // margin-right: 0;
-    //     }
-    // }
 }
 
 // PAGE PRODUCT BLUE BUTTONS
@@ -247,7 +233,6 @@
         opacity: 1;
         cursor: pointer;
         position: absolute;
-        // @include transition(all 0.3s ease-out);
         &:hover, &:active{
             opacity: 0.6;
         }
@@ -322,43 +307,3 @@ $login-submit: #083253;
     @include  border-radius(3px); 
 }
 
-/* --------- slick-dots  --------- */
-// .slick-dots {
-//     position: absolute;
-//     left: 50%;
-//     bottom: 0;
-//     @include transform(translate(-50%, 0));
-//     & > li {
-//         display: inline-block;
-//         margin: 0 2px;
-//         width: 9px;
-//         height: 15px;
-//         & > button {
-//             background: none;
-//             border: none;
-//             outline: none;
-//             background: $title-color-blue;
-//             height: 9px;
-//             width: 9px;
-//             padding: 0;
-//             border-radius: 50%;
-//             margin: 0 auto;
-//             &:before {
-//                 content: "";
-//             } 
-//             &:hover, &:focus{
-//                 opacity: 1;
-//                 background: $title-color-blue;
-//             }
-//         }
-//         &.slick-active{
-//             & > button{
-//                 height: 11px;
-//                 width: 11px;
-//                 color:  $accent-color;
-//                 background: $accent-color;
-//                 opacity: 1;
-//             }
-//         }
-//     }
-// }

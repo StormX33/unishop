@@ -70,7 +70,6 @@
     font-stretch: ultra-condensed;
     text-align: center;
     visibility: hidden;
-    // font-family: arial;
     position: relative;
     -webkit-box-shadow: 1px 0px 1px 0px rgba(255, 255, 255, 0.4);
     -moz-box-shadow:    1px 0px 1px 0px rgba(255, 255, 255, 0.4);
@@ -170,8 +169,6 @@
     display: none;
     position: absolute;
     background: $main-color;
-    // width: 100%;
-    // left: 15px;
     border: 1px solid rgba(0,0,0,.15);
 }
 
@@ -199,8 +196,6 @@
     padding: 9px 15px;
   }
   &:hover{
-    // background: #063255;
-    // color: $main-color;
     @media screen and (max-width: 1023px) and (min-width: 320px){
         background: transparent;
         color: #0a2e4c;
@@ -344,10 +339,6 @@
             top: 50%;
             @include transform(translate(0, -50%));
             display: block;
-            // img{
-            //     height: auto;
-            //     max-height: 100%;
-            // }
         }
         @media screen and (max-width: 1023px) and (min-width: 320px){
             span{
@@ -460,7 +451,6 @@
 
     .cbp-hrmenu .nav__list>li{ 
         display: block;
-    // border-bottom: 4px solid #47a3da;
     }
 
     .cbp-hrmenu .nav__list>li>a{
@@ -577,7 +567,6 @@
 
     .cbp-hrmenu .nav__list>li{ 
         display: block;
-    // border-bottom: 4px solid #47a3da;
     }
 
     .cbp-hrmenu .nav__list>li>a{
@@ -594,16 +583,8 @@
             @include get-sprite($misc-sprite, nav_arrow_mob_up);
         }
     }
-  // .cbp-hrsub h4 {
-  //   padding-top: 0.6em;
-  // }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px){
-    // .cbp-hrmenu .cbp-hrsub-content > ul{
-    //     width: 100%;
-    //     float: none;
-    //     padding: 0 2em;
-    // }
     .inner__title{
         display: none;
     }
@@ -634,7 +615,6 @@
 
     .cbp-hrmenu .nav__list>li{ 
         display: block;
-    // border-bottom: 4px solid #47a3da;
     }
 
     .cbp-hrmenu .nav__list>li>a{

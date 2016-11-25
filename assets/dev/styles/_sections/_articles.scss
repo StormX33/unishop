@@ -104,15 +104,10 @@
 	padding: 0 14px;
 	display: table;
 	width: 100%;
-	// font-family: 'HeliosCondBold', arial;
 }
 .article__img{
 	width: 100%;
 	height: auto;
-	// @include respond-to(mobile){
-	// 	width: auto;
-	// 	height: 233px;
-	// } 
 	@include respond-to(extraSmall-screens){
 		width: auto;
 		height: 230px;
@@ -160,12 +155,6 @@
 	} 
 }
 .section__content_title-link{
-	// float: right;
-	// position: absolute;
-	// @include transform(translate(-50%, 50%)scale(2,2));
-	// left: 50%;
-	// bottom: 0;
-	// zoom: 0.6;
 	text-align: center;
 	margin-bottom: -90px;
 }
