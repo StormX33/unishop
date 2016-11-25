@@ -238,12 +238,14 @@
 			bottom: 40px;
 			@include transform(translate(-50%, 0));
 			left: 50%;
+			min-width: 282px;
 		}
 		@include respond-to(extraSmall-screens){
 			position: absolute;
 			bottom: 40px;
 			@include transform(translate(-50%, 0));
 			left: 50%;
+			min-width: 282px;
 		}
 	}
 	.item__content_link{

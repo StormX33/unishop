@@ -832,17 +832,17 @@ li.top__header_nav-item:nth-last-child(1){
 @include respond-to(medium-screens){}
 .lifecell-logo{
     &:before{
-        @include get-sprite($misc-sprite, lifecell-logo);
+        @include get-sprite($misc-sprite,  lifecell-logo-middle);
     }
 }
 .kievstar-logo{
     &:before{
-        @include get-sprite($misc-sprite, kievstar-logo);
+        @include get-sprite($misc-sprite, kievstar-logo-middle);
     }
 }
 .vodafone-logo{
     &:before{
-        @include get-sprite($misc-sprite, vodafone-logo);
+        @include get-sprite($misc-sprite, vodafone-logo-middle);
     }
 
 }

@@ -101,9 +101,9 @@
 	    left: 50%;
 	    transform: translate(-50%, -50%);
 	    z-index: 99;
-	    @include respond-to(mobile){
-	      display: none;
-	    }
+	    // @include respond-to(mobile){
+	    //   display: none;
+	    // }
 	    .pagination__item{
 	      margin: 0 30px;
 	    } 
@@ -413,7 +413,23 @@
 			@include respond-to(medium-screens){
 				left: 0;
 			}
+			@media screen and (max-width: 1150px) and (min-width: 320px){
+				display: none !important;
+			}
 		}
+	}
+	.banner__offer{
+		@media screen and (max-width: 1150px) and (min-width: 992px){
+		    left: 50%;
+		    @include transform(translate(-50%, 0));
+		}
+		@media screen and (max-width: 1150px) and (min-width: 480px){
+			max-width: 485px;
+			width: 485px;
+		}
+		@include respond-to(mobile){
+			display: none;	
+		} 
 	}
 	&.banner__third_room{
 		.banner__inner_content{
