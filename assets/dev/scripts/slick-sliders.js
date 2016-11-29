@@ -378,6 +378,9 @@ $(function () {
         fade: true,
         speed: 300,
         cssEase: 'linear',
+        draggable: false,
+        swipe: false,
+        touchMove: false,
         appendDots: $('.right__column_image', $mainSliderWrapper),
         dotsClass: 'slick-dots slick-dots-main'
     };

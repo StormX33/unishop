@@ -1,8 +1,20 @@
 .price__title_text{
 	color: $text-color;
 	margin-bottom: 27px;
+	@include respond-to(mobile){
+		font-size: 16px;
+	} 
+	@include respond-to(extraSmall-screens){
+		font-size: 16px;
+	}
 }
 .table__prices{
+	@include respond-to(mobile){
+		display: none;
+	} 
+	@include respond-to(extraSmall-screens){
+		display: none;
+	}
 	tbody>tr>td{
 		height: 68px;
 		vertical-align: middle;

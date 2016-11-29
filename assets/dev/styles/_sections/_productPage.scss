@@ -193,6 +193,13 @@
     outline: none;
     height: 44px;
     line-height: 44px;
+    -webkit-appearance: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-appearance: none;
 }
 .buy__click_form-input::-webkit-input-placeholder{ 
     opacity: 0.5;
@@ -225,6 +232,14 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-appearance: none;
 }
 .order_by_click{
     .button-bg{
