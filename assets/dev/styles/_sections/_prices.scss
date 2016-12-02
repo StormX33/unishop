@@ -81,3 +81,54 @@
 		}
 	}
 }
+.price-content{
+	position: relative;
+
+	.feedback{
+		display: none;
+		position: static;
+		width: 456px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		.submit__btn_accent{
+			min-width: 200px;
+			text-align: center;
+		}
+	}
+}
+@include respond-to(mobile){
+	.price__title_text{
+		margin-bottom: 10px;
+	}
+	.price-content{
+
+		.feedback{
+			display: block;
+			width: 100%;
+			padding: 20px;
+		}
+		.feedback__title_text{
+			margin-bottom: 5px;
+		}
+		.feedback__text{
+			font-size: 16px;
+			line-height: 18px;
+		}
+		.feedback__title{
+			margin-bottom: 10px;
+		}
+		fieldset{
+			display: none;
+		}
+	}
+} 
+@include respond-to(extraSmall-screens){
+	.price-content{
+		.feedback{
+			display: block;
+		}
+		fieldset{
+			display: none;
+		}
+	}
+}

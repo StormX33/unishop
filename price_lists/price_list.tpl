@@ -1,7 +1,7 @@
 <div class="main-title"> 
 	<h1 class="price__title_text">Прайс-листы на оборудование и материалы для систем отопления и водоснабжения</h1>
 </div>
-<div class="main-content">
+<div class="main-content price-content">
 	{if count($price_lists_items) > 0}
         <fieldset class="table-responsive">
     		<table class="table table-condensed table__prices">
@@ -33,5 +33,6 @@
                 </tbody>
                 </table>
         </fieldset>
+        {view ('callbacks/callback.tpl', [titletext => 'Заказать прайс', 'subj' => 7, 'butText' => 'Заказать', 'needMail'=> "true"])}
 {/if}
 

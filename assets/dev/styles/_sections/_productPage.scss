@@ -958,7 +958,7 @@ span.rating-text-5{
     }
     .tools_img{
         @include absolute-center;
-        transition: opacity .25s linear;
+        @include transition(all .25s linear);
         opacity: 0;
         z-index: 2;
     }
